@@ -1,8 +1,26 @@
 {
-  "revision": "2026-10-15-v1",
-  "referenceDate": "2026-10-14",
-  "publishedAt": "2026-10-15T07:13:42.910Z",
+  "revision": "2026-10-15-v2",
+  "referenceDate": "2026-10-15",
+  "publishedAt": "2026-10-15T11:57:08.850Z",
   "polls": [
+    {
+      "name": "Palver",
+      "date": "2026-10-15",
+      "field": "10 a 13/10",
+      "f": 50.51,
+      "l": 49.49,
+      "totalF": 50,
+      "totalL": 49,
+      "n": 5000,
+      "margin": "±2,3 p.p.",
+      "converted": true,
+      "url": "https://noticias.uol.com.br/eleicoes/2026/10/15/palver-flavio-bolsonaro-tem-50-e-lula-49-no-segundo-turno.ghtm",
+      "registration": "BR-08028/2026",
+      "method": "Questionário online",
+      "confidence": 95,
+      "conversionNote": "Normalização dos votos totais arredondados: 50/(50+49) e 49/(50+49). Margem publicada não recalculada.",
+      "sourceType": "Reportagem com ficha técnica"
+    },
     {
       "name": "Quaest",
       "date": "2026-10-14",
@@ -124,6 +142,15 @@
         "f": 55,
         "l": 45,
         "url": "https://www.cnnbrasil.com.br/eleicoes/gerp-flavio-tem-55-dos-votos-validos-no-2o-turno-lula-45/"
+      }
+    ],
+    "Palver": [
+      {
+        "date": "2026-10-15",
+        "f": 50.51,
+        "l": 49.49,
+        "converted": true,
+        "url": "https://noticias.uol.com.br/eleicoes/2026/10/15/palver-flavio-bolsonaro-tem-50-e-lula-49-no-segundo-turno.ghtm"
       }
     ]
   }
