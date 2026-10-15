@@ -80,3 +80,9 @@ header .brand-dot{width:15px;height:15px;flex:0 0 15px;background:var(--purple);
 .campaign-banner.text-countdown .campaign-pulse-dot{display:inline-block;vertical-align:baseline;width:.18em;height:.18em;margin-left:.065em;margin-bottom:.025em;background:#fff;border-radius:50%;clip-path:circle(50% at 50% 50%);transform-origin:center;animation:campaign-dot-star 2.8s ease-in-out infinite;will-change:transform,clip-path}
 @keyframes campaign-dot-star{0%,7%,27%,100%{transform:scale(1);clip-path:circle(50% at 50% 50%)}12%,20%{transform:scale(1.28);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 94%,50% 72%,21% 94%,32% 57%,2% 35%,39% 35%)}}
 @media(prefers-reduced-motion:reduce){.campaign-banner.text-countdown .campaign-pulse-dot{animation:none;will-change:auto}}
+
+/* Make the phrase-ending white dot unmissable, with a visible text fallback. */
+.campaign-banner.text-countdown .campaign-title{overflow:visible}
+.campaign-banner.text-countdown .campaign-title .campaign-pulse-dot{display:inline-flex!important;align-items:center;justify-content:center;position:relative;vertical-align:baseline;top:.025em;width:.28em!important;height:.28em!important;margin-left:.10em!important;margin-bottom:0!important;color:#fff!important;background:#fff!important;font-size:1em;line-height:1;letter-spacing:0;border-radius:50%;clip-path:circle(50% at 50% 50%);animation:campaign-dot-star-visible 2.8s ease-in-out infinite;transform-origin:center;white-space:nowrap;flex-shrink:0}
+@keyframes campaign-dot-star-visible{0%,7%,27%,100%{transform:scale(1);clip-path:circle(50% at 50% 50%)}12%,20%{transform:scale(1.16);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 94%,50% 72%,21% 94%,32% 57%,2% 35%,39% 35%)}}
+@media(prefers-reduced-motion:reduce){.campaign-banner.text-countdown .campaign-title .campaign-pulse-dot{animation:none}}
