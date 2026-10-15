@@ -1,5 +1,5 @@
 {
-  "revision": "2026-10-15-v5",
+  "revision": "2026-10-15-v6",
   "referenceDate": "2026-10-15",
   "publishedAt": "2026-10-15T18:56:00-03:00",
   "polls": [
@@ -156,6 +156,12 @@
       "date": "2026-10-15",
       "f": 51.63,
       "l": 48.37
+    },
+    {
+      "date": "2026-10-15",
+      "f": 51.55,
+      "l": 48.45,
+      "revision": "Datafolha 15/10"
     }
   ],
   "instituteHistory": {
@@ -266,13 +272,13 @@
     }
   ],
   "aggregate": {
-    "model": "Simulação experimental com inclusão provisória da Palver",
+    "model": "Simulação experimental com substituição da rodada Datafolha",
     "provisional": true,
-    "previousDate": "2026-10-14",
-    "newPoll": "Palver",
-    "newPollWeight": 10,
+    "previousDate": "2026-10-15",
+    "newPoll": "Datafolha",
+    "newPollWeight": 8.33,
     "uncertainty": "Sem intervalo de confiança agregado validado; a margem de ±3 p.p. é apenas uma análise ilustrativa de sensibilidade.",
-    "note": "A média de 15/10 usa 90% da média anterior (51,76%) e 10% da Palver (50,51%), com pesos provisórios. A evolução entre datas é atualização de composição, não tendência isolada do eleitorado."
+    "note": "Atualização incremental: média anterior 51,63% para Flávio, substituindo Datafolha 52% por 51% com peso provisório de 8,33%. Diferença de -0,0833 p.p. O agregado continua não auditado, e a mudança de composição não mede isoladamente a opinião pública."
   },
   "sourcePolicy": {
     "registry": "https://pesqele-divulgacao.tse.jus.br/",
