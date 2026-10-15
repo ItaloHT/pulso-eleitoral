@@ -1,0 +1,86 @@
+{
+  "revision": "2026-10-14-v2",
+  "referenceDate": "2026-10-14",
+  "publishedAt": "2026-10-14T20:27:00-03:00",
+  "polls": [
+    {
+      "name": "Quaest",
+      "date": "2026-10-14",
+      "field": "10 a 13/10",
+      "f": 51.11,
+      "l": 48.89,
+      "totalF": 46,
+      "totalL": 44,
+      "n": 2154,
+      "margin": "±2 p.p.",
+      "converted": true,
+      "url": "https://noticias.uol.com.br/eleicoes/2026/10/14/quaest-presidencial-intencao-de-voto-segundo-turno.ghtm"
+    },
+    {
+      "name": "PoderData/Aya",
+      "date": "2026-10-13",
+      "field": "Não recuperado",
+      "f": 51,
+      "l": 49,
+      "n": null,
+      "margin": "±1,8 p.p.",
+      "url": "https://www.poder360.com.br/poder-eleicoes-2026/saiba-como-estao-lula-e-flavio-nas-pesquisas-a-12-dias-do-2o-turno/"
+    },
+    {
+      "name": "BTG/Nexus",
+      "date": "2026-10-13",
+      "field": "10 a 12/10",
+      "f": 52,
+      "l": 48,
+      "n": 2002,
+      "margin": "±2 p.p.",
+      "url": "https://noticias.uol.com.br/eleicoes/2026/10/13/btgnexus-pesquisa-presidencial-segundo-turno.ghtm"
+    },
+    {
+      "name": "AtlasIntel",
+      "date": "2026-10-09",
+      "field": "03 a 08/10",
+      "f": 52.8,
+      "l": 47.2,
+      "n": 5026,
+      "margin": "±1 p.p.",
+      "url": "https://www.cnnbrasil.com.br/eleicoes/atlas-flavio-tem-528-dos-votos-validos-no-2o-turno-lula-472/"
+    },
+    {
+      "name": "Datafolha",
+      "date": "2026-10-08",
+      "field": "06 a 08/10",
+      "f": 52,
+      "l": 48,
+      "n": 2520,
+      "margin": "±2 p.p.",
+      "url": "https://noticias.uol.com.br/eleicoes/2026/10/13/ultima-pesquisa-presidente-segundo-turno-veja-numeros-atualizados-de-lula-e-flavio.ghtm"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-10-13",
+      "f": 51.87,
+      "l": 48.13
+    },
+    {
+      "date": "2026-10-14",
+      "f": 51.76,
+      "l": 48.24
+    }
+  ],
+  "instituteHistory": {
+    "PoderData/Aya": [
+      {
+        "date": "2026-10-08",
+        "f": 53,
+        "l": 47
+      },
+      {
+        "date": "2026-10-13",
+        "f": 51,
+        "l": 49
+      }
+    ]
+  }
+}
