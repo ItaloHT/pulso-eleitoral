@@ -22,7 +22,8 @@
       "voteBasis": "Votos válidos publicados; sem conversão pelo Pulso.",
       "additionalSources": [
         "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/indexa-broadcast-presidente-outubro-2026-segundo-turno/"
-      ]
+      ],
+      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente"
     },
     {
       "name": "Palver",
@@ -40,7 +41,8 @@
       "method": "Questionário online",
       "confidence": 95,
       "conversionNote": "Normalização dos votos totais arredondados: 50/(50+49) e 49/(50+49). Margem publicada não recalculada.",
-      "sourceType": "Reportagem com ficha técnica"
+      "sourceType": "Reportagem com ficha técnica",
+      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente"
     },
     {
       "name": "Quaest",
@@ -53,7 +55,9 @@
       "n": 2154,
       "margin": "±2 p.p.",
       "converted": true,
-      "url": "https://noticias.uol.com.br/eleicoes/2026/10/14/quaest-presidencial-intencao-de-voto-segundo-turno.ghtm"
+      "url": "https://noticias.uol.com.br/eleicoes/2026/10/14/quaest-presidencial-intencao-de-voto-segundo-turno.ghtm",
+      "registration": "BR-08729/2026",
+      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente"
     },
     {
       "name": "PoderData/Aya",
@@ -63,7 +67,10 @@
       "l": 49,
       "n": null,
       "margin": "±1,8 p.p.",
-      "url": "https://www.poder360.com.br/poder-eleicoes-2026/saiba-como-estao-lula-e-flavio-nas-pesquisas-a-12-dias-do-2o-turno/"
+      "url": "https://www.poder360.com.br/poder-eleicoes-2026/saiba-como-estao-lula-e-flavio-nas-pesquisas-a-12-dias-do-2o-turno/",
+      "registration": "BR-01209/2026",
+      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
+      "primaryUrl": "https://www.poder360.com.br/poderdata/pesquisa-poderdata-aya-leia-os-resultados-de-lula-e-flavio-no-2o-turno-2/"
     },
     {
       "name": "BTG/Nexus",
@@ -73,7 +80,9 @@
       "l": 48,
       "n": 2002,
       "margin": "±2 p.p.",
-      "url": "https://noticias.uol.com.br/eleicoes/2026/10/13/btgnexus-pesquisa-presidencial-segundo-turno.ghtm"
+      "url": "https://noticias.uol.com.br/eleicoes/2026/10/13/btgnexus-pesquisa-presidencial-segundo-turno.ghtm",
+      "registration": "BR-07997/2026",
+      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente"
     },
     {
       "name": "Futura/100% Cidades",
@@ -87,7 +96,8 @@
       "registration": "BR-00650/2026",
       "method": "Telefone",
       "confidence": 95,
-      "converted": false
+      "converted": false,
+      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente"
     },
     {
       "name": "Gerp",
@@ -101,7 +111,8 @@
       "registration": "BR-07877/2026",
       "method": "Telefone",
       "confidence": 95.55,
-      "converted": false
+      "converted": false,
+      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente"
     },
     {
       "name": "AtlasIntel",
@@ -111,7 +122,10 @@
       "l": 47.2,
       "n": 5026,
       "margin": "±1 p.p.",
-      "url": "https://www.cnnbrasil.com.br/eleicoes/atlas-flavio-tem-528-dos-votos-validos-no-2o-turno-lula-472/"
+      "url": "https://www.cnnbrasil.com.br/eleicoes/atlas-flavio-tem-528-dos-votos-validos-no-2o-turno-lula-472/",
+      "registration": "BR-03663/2026",
+      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
+      "primaryUrl": "https://atlasintel.org/poll/brazil-national-2026-10-09"
     },
     {
       "name": "Datafolha",
@@ -121,7 +135,10 @@
       "l": 48,
       "n": 2520,
       "margin": "±2 p.p.",
-      "url": "https://noticias.uol.com.br/eleicoes/2026/10/13/ultima-pesquisa-presidente-segundo-turno-veja-numeros-atualizados-de-lula-e-flavio.ghtm"
+      "url": "https://noticias.uol.com.br/eleicoes/2026/10/13/ultima-pesquisa-presidente-segundo-turno-veja-numeros-atualizados-de-lula-e-flavio.ghtm",
+      "registration": "BR-02949/2026",
+      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
+      "primaryUrl": "https://datafolha.folha.uol.com.br/eleicoes/2026/10/flavio-bolsonaro-pl-tem-49-na-largada-do-2o-turno-contra-45-de-lula-pt.shtml"
     }
   ],
   "history": [
@@ -244,5 +261,11 @@
     "newPollWeight": 10,
     "uncertainty": "Sem intervalo de confiança agregado validado; a margem de ±3 p.p. é apenas uma análise ilustrativa de sensibilidade.",
     "note": "A média de 15/10 usa 90% da média anterior (51,76%) e 10% da Palver (50,51%), com pesos provisórios. A evolução entre datas é atualização de composição, não tendência isolada do eleitorado."
+  },
+  "sourcePolicy": {
+    "registry": "https://pesqele-divulgacao.tse.jus.br/",
+    "openData": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
+    "note": "Os números de registro foram conferidos em divulgações públicas, mas a consulta individual ao PesqEle não pôde ser completada nesta revisão. O TSE registra dados metodológicos, não certifica os resultados.",
+    "checkedOn": "2026-10-15"
   }
 }
