@@ -1,0 +1,22 @@
+name: Validar dados eleitorais
+on:
+  push:
+    paths:
+      - data.json
+      - scripts/validate_data.py
+      - .github/workflows/validate-data.yml
+  pull_request:
+    paths:
+      - data.json
+      - scripts/validate_data.py
+      - .github/workflows/validate-data.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validar integridade dos dados
+        run: python3 scripts/validate_data.py
