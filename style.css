@@ -75,3 +75,8 @@ header .brand-dot{width:15px;height:15px;flex:0 0 15px;background:var(--purple);
 
 /* Paired institute weights, latest update */
 .weight-legend{display:flex;gap:16px;font-size:11px;color:var(--muted);margin:15px 0}.weight-key{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px}.weight-key.old{background:#c9c6d2}.weight-key.new{background:var(--purple)}.weight-comparison{margin:9px 0 15px}.weight-comparison .weight-row{margin:0 0 6px;font-size:12px}.weight-pair{display:grid;gap:3px}.weight-pair i,.weight-pair b{height:5px;display:block;border-radius:3px}.weight-pair i{background:#c9c6d2}.weight-pair b{background:var(--purple)}
+
+/* White animated period at the end of “o pulso ainda pulsa”. */
+.campaign-banner.text-countdown .campaign-pulse-dot{display:inline-block;vertical-align:baseline;width:.18em;height:.18em;margin-left:.065em;margin-bottom:.025em;background:#fff;border-radius:50%;clip-path:circle(50% at 50% 50%);transform-origin:center;animation:campaign-dot-star 2.8s ease-in-out infinite;will-change:transform,clip-path}
+@keyframes campaign-dot-star{0%,7%,27%,100%{transform:scale(1);clip-path:circle(50% at 50% 50%)}12%,20%{transform:scale(1.28);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 94%,50% 72%,21% 94%,32% 57%,2% 35%,39% 35%)}}
+@media(prefers-reduced-motion:reduce){.campaign-banner.text-countdown .campaign-pulse-dot{animation:none;will-change:auto}}
