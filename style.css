@@ -93,3 +93,26 @@ header .brand-dot{width:15px;height:15px;flex:0 0 15px;background:var(--purple);
 @keyframes campaign-dot-star-baseline{0%,7%,27%,100%{transform:scale(1);clip-path:circle(50% at 50% 50%)}12%,20%{transform:scale(1.4);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 94%,50% 72%,21% 94%,32% 57%,2% 35%,39% 35%)}}
 .campaign-banner.text-countdown .countdown-values > b{color:#fff!important}
 @media(prefers-reduced-motion:reduce){.campaign-banner.text-countdown .campaign-title .campaign-last-line .campaign-pulse-dot{animation:none!important}}
+
+/* Illustrative sensitivity bars below the primary vote split (not a confidence interval). */
+.sensitivity{border-top:1px solid #655f68;margin-top:32px;padding-top:25px;color:#f8f6f9}
+.sensitivity h3{font-size:18px;line-height:1.3;margin:0 0 18px;font-weight:700}
+.sensitivity-axis{display:flex;justify-content:space-between;margin:0 0 18px 23%;padding:0 2px 8px;border-bottom:1px solid #b4acb7;color:#e7e2e8;font-size:12px;font-variant-numeric:tabular-nums}
+.sensitivity-rows{display:grid;gap:20px}
+.sensitivity-row{display:grid;grid-template-columns:21% minmax(0,1fr);align-items:center;gap:2%}
+.sensitivity-name{font-size:13px;line-height:1.3}
+.sensitivity-data{min-width:0}
+.sensitivity-track{height:18px;position:relative;margin-bottom:7px}
+.sensitivity-midline{position:absolute;left:50%;top:-9px;bottom:-7px;border-left:1px dashed #c7c1cb;opacity:.8}
+.sensitivity-band{position:absolute;top:5px;height:9px;border-radius:5px;opacity:.85}
+.sensitivity-band.violet{background:#9290f4}.sensitivity-band.coral{background:#f66a60}
+.sensitivity-cap{position:absolute;top:-3px;width:5px;height:15px;border-radius:4px;background:inherit}
+.sensitivity-cap.start{left:-2px}.sensitivity-cap.end{right:-2px}
+.sensitivity-point{position:absolute;top:0;transform:translateX(-50%);height:19px;width:19px;border:2px solid #403a48;border-radius:50%;box-shadow:0 0 0 2px currentColor}
+.sensitivity-point.violet{background:#b2afff;color:#7774df}.sensitivity-point.coral{background:#ffa09a;color:#f44330}
+.sensitivity-values{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#dcd5e0;font-variant-numeric:tabular-nums}
+.sensitivity-values strong{color:white;font-size:12px;font-weight:700}
+.sensitivity-caption{text-align:center;margin:25px 0 0;font-size:11px;color:#cfc9d1;line-height:1.5}
+.sensitivity-caption strong,.sensitivity-caption span{display:block}.sensitivity-caption strong{color:#fff;font-size:11px;letter-spacing:.35px}
+.sensitivity+.hero-bottom{border-top:1px solid #655f68;padding-top:14px;margin-top:25px}
+@media(max-width:600px){.sensitivity{margin-top:26px;padding-top:20px}.sensitivity h3{font-size:16px}.sensitivity-axis{margin-left:0;font-size:10px;margin-bottom:15px}.sensitivity-row{display:block}.sensitivity-name{font-size:12px;margin-bottom:12px}.sensitivity-rows{gap:18px}.sensitivity-values{font-size:10px}.sensitivity-values strong{font-size:11px}.sensitivity-caption{margin-top:20px;font-size:10px}.sensitivity-caption strong{font-size:10px}}
