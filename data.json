@@ -1,7 +1,7 @@
 {
-  "revision": "2026-10-15-v2",
+  "revision": "2026-10-15-v3",
   "referenceDate": "2026-10-15",
-  "publishedAt": "2026-10-15T11:57:08.850Z",
+  "publishedAt": "2026-10-15T13:00:00Z",
   "polls": [
     {
       "name": "Palver",
@@ -113,6 +113,11 @@
       "date": "2026-10-14",
       "f": 51.76,
       "l": 48.24
+    },
+    {
+      "date": "2026-10-15",
+      "f": 51.63,
+      "l": 48.37
     }
   ],
   "instituteHistory": {
@@ -153,5 +158,61 @@
         "url": "https://noticias.uol.com.br/eleicoes/2026/10/15/palver-flavio-bolsonaro-tem-50-e-lula-49-no-segundo-turno.ghtm"
       }
     ]
+  },
+  "weights": [
+    {
+      "name": "Vox Brasil",
+      "previous": 14.59,
+      "current": 13.13
+    },
+    {
+      "name": "AtlasIntel",
+      "previous": 11.76,
+      "current": 10.58
+    },
+    {
+      "name": "Datafolha",
+      "previous": 9.26,
+      "current": 8.33
+    },
+    {
+      "name": "PoderData/Aya",
+      "previous": 15.96,
+      "current": 14.36
+    },
+    {
+      "name": "DataTrends",
+      "previous": 13.62,
+      "current": 12.26
+    },
+    {
+      "name": "Gerp",
+      "previous": 7.18,
+      "current": 6.46
+    },
+    {
+      "name": "BTG/Nexus",
+      "previous": 13.62,
+      "current": 12.26
+    },
+    {
+      "name": "Quaest",
+      "previous": 14,
+      "current": 12.6
+    },
+    {
+      "name": "Palver",
+      "previous": 0,
+      "current": 10
+    }
+  ],
+  "aggregate": {
+    "model": "Simulação experimental com inclusão provisória da Palver",
+    "provisional": true,
+    "previousDate": "2026-10-14",
+    "newPoll": "Palver",
+    "newPollWeight": 10,
+    "uncertainty": "Sem intervalo de confiança agregado validado; a margem de ±3 p.p. é apenas uma análise ilustrativa de sensibilidade.",
+    "note": "A média de 15/10 usa 90% da média anterior (51,76%) e 10% da Palver (50,51%), com pesos provisórios. A evolução entre datas é atualização de composição, não tendência isolada do eleitorado."
   }
 }
