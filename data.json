@@ -1,8 +1,29 @@
 {
-  "revision": "2026-10-15-v3",
+  "revision": "2026-10-15-v4",
   "referenceDate": "2026-10-15",
-  "publishedAt": "2026-10-15T13:00:00Z",
+  "publishedAt": "2026-10-15T12:49:55Z",
   "polls": [
+    {
+      "name": "Indexa/Broadcast",
+      "date": "2026-10-15",
+      "field": "13 a 14/10",
+      "f": 51,
+      "l": 49,
+      "totalF": 44,
+      "totalL": 42,
+      "n": 2000,
+      "margin": "±2,2 p.p.",
+      "converted": false,
+      "url": "https://viva.com.br/politica/indexabroadcast-no-2-turno-flavio-bolsonaro-tem-44-ante-42-de-lula.html",
+      "registration": "BR-04629/2026",
+      "method": "Entrevistas individuais por telefone",
+      "confidence": 95,
+      "sourceType": "Reportagem da Broadcast com ficha técnica",
+      "voteBasis": "Votos válidos publicados; sem conversão pelo Pulso.",
+      "additionalSources": [
+        "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/indexa-broadcast-presidente-outubro-2026-segundo-turno/"
+      ]
+    },
     {
       "name": "Palver",
       "date": "2026-10-15",
@@ -156,6 +177,15 @@
         "l": 49.49,
         "converted": true,
         "url": "https://noticias.uol.com.br/eleicoes/2026/10/15/palver-flavio-bolsonaro-tem-50-e-lula-49-no-segundo-turno.ghtm"
+      }
+    ],
+    "Indexa/Broadcast": [
+      {
+        "date": "2026-10-15",
+        "f": 51,
+        "l": 49,
+        "converted": false,
+        "url": "https://viva.com.br/politica/indexabroadcast-no-2-turno-flavio-bolsonaro-tem-44-ante-42-de-lula.html"
       }
     ]
   },
