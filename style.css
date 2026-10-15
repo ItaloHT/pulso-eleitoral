@@ -72,3 +72,6 @@ header .brand-dot{width:15px;height:15px;flex:0 0 15px;background:var(--purple);
 
 /* Restore original main-panel layout; retain only the simplified caption. */
 @media(max-width:600px){.scores{grid-template-columns:1fr auto 1fr;gap:10px}.candidate{font-size:12px}.score{font-size:44px;letter-spacing:-2px}.score small{font-size:20px}.difference strong{font-size:19px}.difference{font-size:10px}.hero{padding:22px}}
+
+/* Paired institute weights, latest update */
+.weight-legend{display:flex;gap:16px;font-size:11px;color:var(--muted);margin:15px 0}.weight-key{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px}.weight-key.old{background:#c9c6d2}.weight-key.new{background:var(--purple)}.weight-comparison{margin:9px 0 15px}.weight-comparison .weight-row{margin:0 0 6px;font-size:12px}.weight-pair{display:grid;gap:3px}.weight-pair i,.weight-pair b{height:5px;display:block;border-radius:3px}.weight-pair i{background:#c9c6d2}.weight-pair b{background:var(--purple)}
