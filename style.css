@@ -217,3 +217,6 @@ header .brand-dot{width:15px;height:15px;flex:0 0 15px;background:var(--purple);
  .trend-card .trend-svg{width:100%;min-width:0;min-height:0;margin:8px 0 12px}
  .trend-card .small{overflow-wrap:anywhere}
 }
+
+/* Conditional trend scenario */
+.conditional-forecast{border-top:1px solid var(--line);margin-top:30px;padding-top:28px}.conditional-forecast h3{font-size:clamp(21px,3vw,28px);margin:8px 0 12px}.forecast-numbers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}.forecast-numbers>div{background:var(--paper);border:1px solid var(--line);padding:16px;border-radius:14px}.forecast-numbers span{display:block;font-size:13px}.forecast-numbers strong{display:block;font-size:clamp(28px,5vw,40px);line-height:1.2;margin-top:5px}.projection-svg{width:100%;height:auto;display:block;overflow:visible;margin:16px 0}.conditional-forecast .legend{flex-wrap:wrap;gap:12px 24px}@media(max-width:600px){.forecast-numbers>div{padding:12px}.forecast-numbers span{font-size:12px}.conditional-forecast{padding-top:20px}}
