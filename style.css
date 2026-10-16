@@ -249,3 +249,8 @@ header .brand-dot{width:15px;height:15px;flex:0 0 15px;background:var(--purple);
  .experimental-trend-card .card-head .sub{font-size:14px;line-height:1.5}
  .experimental-trend-card .projection-svg{margin:12px 0}
 }
+
+/* Header logo: circular pulse only. The banner dot keeps its star morph. */
+header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:brand-dot-pulse-only 2.8s ease-in-out infinite}
+@keyframes brand-dot-pulse-only{0%,28%,100%{transform:scale(.85);opacity:1}10%{transform:scale(1.2);opacity:.9}18%{transform:scale(.9);opacity:1}23%{transform:scale(1.08);opacity:.96}}
+@media(prefers-reduced-motion:reduce){header .brand-dot{animation:none;transform:scale(.85)}}
