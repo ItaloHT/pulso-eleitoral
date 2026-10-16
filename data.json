@@ -1,5 +1,5 @@
 {
-  "revision": "2026-10-16-v5-futura-updated",
+  "revision": "2026-10-16-v6-agenda",
   "referenceDate": "2026-10-16",
   "publishedAt": "2026-10-16T12:15:00-03:00",
   "polls": [
@@ -383,5 +383,79 @@
     "policy": "One latest round per institute; all polls with valid fieldEnd and candidate shares included; equal base weights; symmetric robust treatment regardless of favored candidate.",
     "limitations": "Experimental parameters, not backtested. No validated aggregated confidence interval. Historical mean remains legacy and is not directly comparable.",
     "ageBasis": "Last fieldwork day; fixed bulletin reference date, not visitor clock"
-  }
+  },
+  "agenda": [
+    {
+      "name": "Ipespe",
+      "date": "2026-10-17",
+      "registration": "BR-00223/2026",
+      "field": "13 a 15/10",
+      "source": "https://depoisdas17.com.br/agenda/",
+      "status": "registered"
+    },
+    {
+      "name": "Vox Brasil",
+      "date": "2026-10-18",
+      "registration": "BR-04332/2026",
+      "field": "15 a 17/10",
+      "source": "https://e26.cog.ia.br/eleicoes/pesquisas",
+      "status": "registered"
+    },
+    {
+      "name": "AtlasIntel",
+      "date": "2026-10-19",
+      "registration": "BR-02418/2026",
+      "field": "13 a 18/10",
+      "source": "https://e26.cog.ia.br/eleicoes/pesquisas",
+      "status": "registered"
+    },
+    {
+      "name": "PoderData/Aya",
+      "date": "2026-10-19",
+      "registration": "BR-02586/2026",
+      "field": "16 a 18/10",
+      "source": "https://e26.cog.ia.br/eleicoes/pesquisas",
+      "status": "registered"
+    },
+    {
+      "name": "Nexus/BTG",
+      "date": "2026-10-19",
+      "registration": "BR-04499/2026",
+      "field": "16 a 18/10",
+      "source": "https://e26.cog.ia.br/eleicoes/pesquisas",
+      "status": "registered"
+    },
+    {
+      "name": "Futura/100% Cidades",
+      "date": "2026-10-19",
+      "registration": "BR-06715/2026",
+      "field": "16 a 17/10",
+      "source": "https://e26.cog.ia.br/eleicoes/pesquisas",
+      "status": "registered"
+    },
+    {
+      "name": "DataTrends",
+      "date": "2026-10-19",
+      "registration": "BR-04454/2026",
+      "field": "15 a 17/10",
+      "source": "https://e26.cog.ia.br/eleicoes/pesquisas",
+      "status": "registered"
+    },
+    {
+      "name": "Real Time Big Data",
+      "date": "2026-10-20",
+      "registration": "BR-02952/2026",
+      "field": "15 a 19/10",
+      "source": "https://e26.cog.ia.br/eleicoes/pesquisas",
+      "status": "registered"
+    },
+    {
+      "name": "Meio/Ideia",
+      "date": "2026-10-21",
+      "registration": "BR-08251/2026",
+      "field": "15 a 19/10",
+      "source": "https://e26.cog.ia.br/eleicoes/pesquisas",
+      "status": "registered"
+    }
+  ]
 }
