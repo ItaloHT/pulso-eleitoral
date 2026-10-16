@@ -1,5 +1,5 @@
 {
-  "revision": "2026-10-16-v4-11-institutes",
+  "revision": "2026-10-16-v5-futura-updated",
   "referenceDate": "2026-10-16",
   "publishedAt": "2026-10-16T12:15:00-03:00",
   "polls": [
@@ -91,19 +91,23 @@
     },
     {
       "name": "Futura/100% Cidades",
-      "date": "2026-10-13",
-      "field": "07 a 10/10",
-      "f": 51.8,
-      "l": 48.2,
+      "date": "2026-10-16",
+      "field": "14 a 15/10",
+      "f": 50.8,
+      "l": 49.2,
       "n": 2000,
       "margin": "±2,2 p.p.",
-      "url": "https://www.cnnbrasil.com.br/eleicoes/futura-flavio-tem-518-dos-votos-validos-no-2o-turno-lula-482/",
-      "registration": "BR-00650/2026",
+      "url": "https://www.cnnbrasil.com.br/eleicoes/futura-flavio-tem-508-dos-votos-validos-no-2o-turno-lula-492/",
+      "registration": "BR-03764/2026",
       "method": "Telefone",
       "confidence": 95,
       "converted": false,
       "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
-      "fieldEnd": "2026-10-10"
+      "fieldEnd": "2026-10-15",
+      "totalF": 49,
+      "totalL": 47.5,
+      "sourceType": "CNN Brasil, divulgação 16/10",
+      "voteBasis": "Votos válidos publicados; sem conversão."
     },
     {
       "name": "Gerp",
@@ -251,6 +255,12 @@
         "f": 51.8,
         "l": 48.2,
         "url": "https://www.cnnbrasil.com.br/eleicoes/futura-flavio-tem-518-dos-votos-validos-no-2o-turno-lula-482/"
+      },
+      {
+        "date": "2026-10-16",
+        "f": 50.8,
+        "l": 49.2,
+        "url": "https://www.cnnbrasil.com.br/eleicoes/futura-flavio-tem-508-dos-votos-validos-no-2o-turno-lula-492/"
       }
     ],
     "Gerp": [
@@ -345,9 +355,16 @@
     "model": "Modelo robusto experimental 2.0 (7 dias, pesos-base iguais, Huber 2,5 p.p.)",
     "provisional": true,
     "previousDate": "2026-10-16",
-    "newPoll": "CNT/MDA e Ipespe/Abrapel",
+    "newPoll": "Futura/100% Cidades 16/10 substitui rodada 13/10; CNT/MDA e Ipespe já cadastrados",
     "uncertainty": "Não há margem de erro agregada validada. Faixas de ±3 p.p. no painel são apenas ilustração.",
-    "note": "O painel calcula dinamicamente a média robusta a partir das 11 pesquisas mais recentes por instituto. O histórico legado é mantido sem recálculo e não é diretamente comparável."
+    "note": "O painel calcula dinamicamente a média robusta a partir das 11 pesquisas mais recentes por instituto. O histórico legado é mantido sem recálculo e não é diretamente comparável.",
+    "currentComputed": {
+      "f": 51.2701,
+      "l": 48.7299,
+      "institutes": 11,
+      "model": "recencyModel",
+      "note": "Cálculo da versão atual; histórico anterior usa outra composição e não é diretamente comparável."
+    }
   },
   "sourcePolicy": {
     "registry": "https://pesqele-divulgacao.tse.jus.br/",
