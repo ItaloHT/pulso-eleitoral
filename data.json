@@ -1,5 +1,5 @@
 {
-  "revision": "2026-10-16-v1",
+  "revision": "2026-10-16-v2",
   "referenceDate": "2026-10-16",
   "publishedAt": "2026-10-16T08:40:00-03:00",
   "polls": [
@@ -23,7 +23,8 @@
       "additionalSources": [
         "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/indexa-broadcast-presidente-outubro-2026-segundo-turno/"
       ],
-      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente"
+      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
+      "fieldEnd": "2026-10-14"
     },
     {
       "name": "Palver",
@@ -42,7 +43,8 @@
       "confidence": 95,
       "conversionNote": "Normalização dos votos totais arredondados: 50/(50+49) e 49/(50+49). Margem publicada não recalculada.",
       "sourceType": "Reportagem com ficha técnica",
-      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente"
+      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
+      "fieldEnd": "2026-10-13"
     },
     {
       "name": "Quaest",
@@ -57,7 +59,8 @@
       "converted": true,
       "url": "https://noticias.uol.com.br/eleicoes/2026/10/14/quaest-presidencial-intencao-de-voto-segundo-turno.ghtm",
       "registration": "BR-08729/2026",
-      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente"
+      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
+      "fieldEnd": "2026-10-13"
     },
     {
       "name": "PoderData/Aya",
@@ -70,7 +73,8 @@
       "url": "https://www.poder360.com.br/poderdata/flavio-e-lula-empatam-em-50-dos-votos-validos-diz-poderdata-aya/",
       "registration": "BR-04258/2026",
       "registrationSource": "Registro informado na divulgação; conferência direta no PesqEle pendente",
-      "primaryUrl": "https://www.poder360.com.br/poderdata/flavio-e-lula-empatam-em-50-dos-votos-validos-diz-poderdata-aya/"
+      "primaryUrl": "https://www.poder360.com.br/poderdata/flavio-e-lula-empatam-em-50-dos-votos-validos-diz-poderdata-aya/",
+      "fieldEnd": "2026-10-15"
     },
     {
       "name": "BTG/Nexus",
@@ -82,7 +86,8 @@
       "margin": "±2 p.p.",
       "url": "https://noticias.uol.com.br/eleicoes/2026/10/13/btgnexus-pesquisa-presidencial-segundo-turno.ghtm",
       "registration": "BR-07997/2026",
-      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente"
+      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
+      "fieldEnd": "2026-10-12"
     },
     {
       "name": "Futura/100% Cidades",
@@ -97,7 +102,8 @@
       "method": "Telefone",
       "confidence": 95,
       "converted": false,
-      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente"
+      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
+      "fieldEnd": "2026-10-10"
     },
     {
       "name": "Gerp",
@@ -112,7 +118,8 @@
       "method": "Telefone",
       "confidence": 95.55,
       "converted": false,
-      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente"
+      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
+      "fieldEnd": "2026-10-12"
     },
     {
       "name": "AtlasIntel",
@@ -125,7 +132,8 @@
       "url": "https://www.cnnbrasil.com.br/eleicoes/atlas-flavio-tem-528-dos-votos-validos-no-2o-turno-lula-472/",
       "registration": "BR-03663/2026",
       "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
-      "primaryUrl": "https://atlasintel.org/poll/brazil-national-2026-10-09"
+      "primaryUrl": "https://atlasintel.org/poll/brazil-national-2026-10-09",
+      "fieldEnd": "2026-10-08"
     },
     {
       "name": "Datafolha",
@@ -143,7 +151,8 @@
       "totalL": 45,
       "converted": false,
       "voteBasis": "Votos válidos publicados pelo Datafolha; sem conversão pelo Pulso.",
-      "sourceType": "Publicação da Folha, contratante da pesquisa, atualizada em 15/10 às 19h12"
+      "sourceType": "Publicação da Folha, contratante da pesquisa, atualizada em 15/10 às 19h12",
+      "fieldEnd": "2026-10-14"
     }
   ],
   "history": [
@@ -303,5 +312,15 @@
     "openData": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
     "note": "Os números de registro foram conferidos em divulgações públicas, mas a consulta individual ao PesqEle não pôde ser completada nesta revisão. O TSE registra dados metodológicos, não certifica os resultados.",
     "checkedOn": "2026-10-15"
+  },
+  "recencyModel": {
+    "enabled": true,
+    "halfLifeDays": 14,
+    "referenceDate": "2026-10-16",
+    "weightSource": "Pesos experimentais current, não auditados",
+    "policy": "Uma pesquisa mais recente por instituto. Apenas institutos com peso-base disponível e positivo entram na média. Pesos ausentes não são inventados; pesquisas excluídas aparecem separadamente.",
+    "formula": "peso bruto = peso-base × 2^(-idade_em_dias/14); peso efetivo = peso bruto / soma dos pesos brutos",
+    "ageBasis": "Data final da coleta, não data da publicação",
+    "limitations": "Meia-vida de 14 dias é parâmetro ilustrativo, sem calibração histórica brasileira; não representa previsão nem intervalo de confiança. Histórico legado não é recalculado."
   }
 }
