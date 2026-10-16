@@ -67,19 +67,52 @@ function trendModel(){
  }
  return {points,n:input.length};
 }
+
+function conditionalProjection(model){
+ const observed=model.points,last=observed.at(-1),lastTime=Date.parse(last.date+'T00:00:00Z');
+ const election='2026-10-25',days=Math.max(0,Math.round((Date.parse(election+'T00:00:00Z')-lastTime)/86400000));
+ const lookback=observed[Math.max(0,observed.length-5-1)];
+ const rawSlope=(last.f-lookback.f)/Math.max(1,(lastTime-Date.parse(lookback.date+'T00:00:00Z'))/86400000);
+ // Conservative sensitivity assumption: limit the trend to 0.15 pp per day.
+ const slope=Math.max(-.15,Math.min(.15,rawSlope));
+ const f=Math.max(0,Math.min(100,last.f+slope*days));
+ return {date:election,days,slope,rawSlope,f,l:100-f,from:last};
+}
+function projectionChart(points,projection){
+ const start=Date.parse(points[0].date),finish=Date.parse(projection.date),x=p=>65+(Date.parse(p.date)-start)/(finish-start||1)*815;
+ const vals=[...points.flatMap(p=>[p.f,p.l]),projection.f,projection.l];
+ const low=Math.floor(Math.min(43,...vals)-1),high=Math.ceil(Math.max(57,...vals)+1),y=v=>25+(high-v)/(high-low)*265;
+ const last=points.at(-1),xf=x(projection),xl=x(last);
+ let out=`<svg class="projection-svg" viewBox="0 0 970 350" role="img" aria-label="Curvas suavizadas até ${date(last.date)} e extrapolação condicional tracejada até 25 de outubro: Flávio ${fmt(projection.f)}%, Lula ${fmt(projection.l)}%. Não é previsão eleitoral.">`;
+ for(let i=0;i<=4;i++){const v=low+(high-low)*i/4;out+=`<path d="M65 ${y(v)}H880" stroke="#e3e0e5" stroke-dasharray="3 6"/><text x="10" y="${y(v)+5}" font-size="15" fill="#68636c">${fmt(v)}%</text>`;}
+ out+=`<path d="M${xl} 25V290" stroke="#aaa" stroke-dasharray="3 5"/>`;
+ for(const [key,color] of [['f','#7774df'],['l','#f44330']]){
+   out+=`<polyline fill="none" stroke="${color}" stroke-width="3" points="${points.map(p=>x(p)+','+y(p[key])).join(' ')}"/>`;
+   out+=`<path d="M${xl} ${y(last[key])}L${xf} ${y(projection[key])}" stroke="${color}" stroke-width="3" stroke-dasharray="9 7" fill="none"/>`;
+   out+=`<circle cx="${xf}" cy="${y(projection[key])}" r="5" fill="${color}"/><text x="890" y="${y(projection[key])+5}" fill="${color}" font-size="17" font-weight="700">${fmt(projection[key])}%</text>`;
+ }
+ out+=`<text x="65" y="326" fill="#68636c" font-size="15">${date(points[0].date)}</text><text x="${xl}" y="326" text-anchor="middle" fill="#68636c" font-size="15">${date(last.date)}</text><text x="${xf}" y="326" text-anchor="middle" fill="#68636c" font-size="15">25/10</text></svg>`;
+ return out;
+}
+
 function experimentalTrend(){
  const model=trendModel();
  if(!model)return intro('Tendência experimental.','Ainda não há observações suficientes para calcular uma trajetória.')+'<p class="notice">Aguarde novas pesquisas com datas de coleta verificadas.</p>';
- const ps=model.points,first=ps[0],last=ps.at(-1),change=last.f-first.f;
+ const ps=model.points,first=ps[0],last=ps.at(-1),change=last.f-first.f,projection=conditionalProjection(model);
  const direction=Math.abs(change)<.5?'Estabilidade aparente':change>0?'Alta aparente de Flávio':'Alta aparente de Lula';
  main.innerHTML=intro('Tendência experimental.','Uma leitura exploratória da direção das pesquisas, separada da média principal.')+
- `<section class="card trend-card"><div class="card-head"><div><div class="eyebrow">MODELO ESTATÍSTICO EXPERIMENTAL</div><h2>O movimento das pesquisas</h2><p class="sub">Suavização local com regressão linear regularizada · sem projeção futura</p></div><span class="badge">${model.n} institutos</span></div>
+ `<section class="card trend-card"><div class="card-head"><div><div class="eyebrow">MODELO ESTATÍSTICO EXPERIMENTAL</div><h2>O movimento das pesquisas</h2><p class="sub">Suavização local com regressão linear regularizada · cenário condicional até 25/10</p></div><span class="badge">${model.n} institutos</span></div>
  <div class="trend-summary"><div><span>Leitura do período</span><strong>${direction}</strong></div><div><span>Variação suavizada de Flávio</span><strong class="fv">${change>0?'+':''}${fmt(change)} p.p.</strong></div><div><span>Coletas analisadas</span><strong>${date(first.date)} a ${date(last.date)}</strong></div></div>
  <div class="legend"><span><i class="dot"></i>Flávio Bolsonaro</span><span><i class="dot r"></i>Lula · linha tracejada</span></div>
  ${timeChart(ps)}
+ <section class="conditional-forecast" aria-labelledby="conditional-title"><div class="eyebrow">SIMULAÇÃO · NÃO É PREVISÃO ELEITORAL</div><h3 id="conditional-title">E se a tendência continuar até 25/10?</h3><p class="small">Extrapolação da inclinação recente da curva suavizada, limitada a 0,15 ponto percentual por dia. Os valores abaixo são apenas um cenário matemático condicional.</p>
+ <div class="forecast-numbers"><div><span>Flávio Bolsonaro</span><strong class="fv">${fmt(projection.f)}%</strong></div><div><span>Lula</span><strong class="lv">${fmt(projection.l)}%</strong></div></div>
+ <div class="legend"><span><i class="dot"></i>Flávio</span><span><i class="dot r"></i>Lula</span><span>Linha tracejada: simulação</span></div>
+ ${projectionChart(ps,projection)}
+ <p class="notice">A simulação pressupõe continuidade da tendência recente e não incorpora eventos futuros, indecisos, abstenção nem mudanças de comportamento. Não possui intervalo de confiança validado. Não indica probabilidade de vitória.</p></section>
  <p class="small"><strong>Como ler:</strong> cada ponto é uma estimativa suavizada baseada nas pesquisas próximas daquela data, usando a data final da coleta. A regressão dá mais influência a levantamentos temporalmente próximos e restringe oscilações bruscas. Não são novas pesquisas nem percentuais de intenção de voto observados diariamente.</p>
  <p class="notice"><strong>Limitações:</strong> curva descritiva com poucos levantamentos e sem correção validada de efeitos próprios de cada instituto. Não é rede neural, previsão de resultado ou tendência estatisticamente comprovada. Não há intervalo de confiança calibrado. O modelo principal do Pulsa não foi alterado.</p>
- <details><summary>Dados da curva e parâmetros</summary><p class="small">Janela gaussiana: 3,5 dias; regularização da inclinação: 18; uma pesquisa recente por instituto. Parâmetros exploratórios, sem validação retrospectiva. Não há extrapolação além da última coleta.</p><div class="table-wrap"><table><tr><th>Data</th><th>Flávio suavizado</th><th>Lula suavizado</th></tr>${ps.map(p=>`<tr><td>${date(p.date)}</td><td>${fmt(p.f)}%</td><td>${fmt(p.l)}%</td></tr>`).join('')}</table></div></details></section>`;
+ <details><summary>Dados da curva e parâmetros</summary><p class="small">Janela gaussiana: 3,5 dias; regularização da inclinação: 18; uma pesquisa recente por instituto. Parâmetros exploratórios, sem validação retrospectiva. A extrapolação condicional usa a inclinação dos últimos cinco dias de observações suavizadas, limitada a ±0,15 p.p. por dia até 25/10. Não foi calibrada em eleições anteriores.</p><div class="table-wrap"><table><tr><th>Data</th><th>Flávio suavizado</th><th>Lula suavizado</th></tr>${ps.map(p=>`<tr><td>${date(p.date)}</td><td>${fmt(p.f)}%</td><td>${fmt(p.l)}%</td></tr>`).join('')}</table></div></details></section>`;
 }
 
 let current='';function route(){const h=location.hash.slice(1)||'media';if(['criterios','calculo','limites','historico'].includes(h)){if(current!=='metodologia'){methodology();current='metodologia';}requestAnimationFrame(()=>document.getElementById(h)?.scrollIntoView({behavior:'smooth'}));return;}current=['media','pesquisas','metodologia','tendencia'].includes(h)?h:'media';({media:average,pesquisas:research,metodologia:methodology,tendencia:experimentalTrend})[current]();document.querySelectorAll('nav a').forEach(a=>{if(a.hash==='#'+current)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});document.title=({media:'Média',pesquisas:'Pesquisas',metodologia:'Metodologia',tendencia:'Tendência experimental'})[current]+' • Pulsa';bindTrend();window.scrollTo(0,0);}window.addEventListener('hashchange',route);
