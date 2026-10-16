@@ -101,7 +101,7 @@ function experimentalTrend(){
  const ps=model.points,first=ps[0],last=ps.at(-1),change=last.f-first.f,projection=conditionalProjection(model);
  const direction=Math.abs(change)<.5?'Estabilidade aparente':change>0?'Alta aparente de Flávio':'Alta aparente de Lula';
  main.innerHTML=intro('Tendência experimental.','Uma leitura exploratória da direção das pesquisas, separada da média principal.')+
- `<section class="card trend-card"><div class="card-head"><div><div class="eyebrow">MODELO ESTATÍSTICO EXPERIMENTAL</div><h2>O movimento das pesquisas</h2><p class="sub">Suavização local com regressão linear regularizada · cenário condicional até 25/10</p></div><span class="badge">${model.n} institutos</span></div>
+ `<section class="card trend-card experimental-trend-card"><div class="card-head"><div><div class="eyebrow">MODELO ESTATÍSTICO EXPERIMENTAL</div><h2>O movimento das pesquisas</h2><p class="sub">Suavização local com regressão linear regularizada · cenário condicional até 25/10</p></div><span class="badge">${model.n} institutos</span></div>
  <div class="trend-summary"><div><span>Leitura do período</span><strong>${direction}</strong></div><div><span>Variação suavizada de Flávio</span><strong class="fv">${change>0?'+':''}${fmt(change)} p.p.</strong></div><div><span>Coletas analisadas</span><strong>${date(first.date)} a ${date(last.date)}</strong></div></div>
  <div class="legend"><span><i class="dot"></i>Flávio Bolsonaro</span><span><i class="dot r"></i>Lula · linha tracejada</span></div>
  ${timeChart(ps)}
