@@ -1,7 +1,7 @@
 {
-  "revision": "2026-10-16-v3-robust7",
+  "revision": "2026-10-16-v4-11-institutes",
   "referenceDate": "2026-10-16",
-  "publishedAt": "2026-10-16T08:40:00-03:00",
+  "publishedAt": "2026-10-16T12:15:00-03:00",
   "polls": [
     {
       "name": "Indexa/Broadcast",
@@ -153,6 +153,49 @@
       "voteBasis": "Votos válidos publicados pelo Datafolha; sem conversão pelo Pulso.",
       "sourceType": "Publicação da Folha, contratante da pesquisa, atualizada em 15/10 às 19h12",
       "fieldEnd": "2026-10-14"
+    },
+    {
+      "name": "CNT/MDA",
+      "date": "2026-10-16",
+      "field": "13 a 15/10",
+      "fieldEnd": "2026-10-15",
+      "f": 50.5,
+      "l": 49.5,
+      "totalF": 46.8,
+      "totalL": 45.9,
+      "n": 2014,
+      "margin": "±2,2 p.p.",
+      "converted": false,
+      "url": "https://www.poder360.com.br/poder-eleicoes-2026/cnt-mda-confirma-poderdata-aya-e-da-flavio-com-505-e-lula-com-495/",
+      "registration": "BR-00652/2026",
+      "method": "Entrevistas presenciais domiciliares e em pontos de fluxo",
+      "confidence": 95,
+      "sourceType": "Divulgação com ficha técnica e link para relatório integral",
+      "voteBasis": "Votos válidos publicados; sem conversão pelo Pulsa.",
+      "registrationSource": "Número informado em publicação; conferência individual no PesqEle pendente"
+    },
+    {
+      "name": "Ipespe/Abrapel",
+      "date": "2026-10-10",
+      "field": "6 a 8/10",
+      "fieldEnd": "2026-10-08",
+      "f": 52.7,
+      "l": 47.3,
+      "totalF": 49,
+      "totalL": 44,
+      "n": 1500,
+      "margin": "±2,6 p.p.",
+      "converted": false,
+      "url": "https://ipespe.org.br/pesquisa-presidente-2o-turno-flavio-bolsonaro-tem-49-e-lula-44-diz-ipespe-publicado-por-exame-10-10-2026/",
+      "registration": "BR-00933/2026",
+      "method": "Entrevistas telefônicas (CATI)",
+      "confidence": 95,
+      "sourceType": "Reprodução da reportagem no site do instituto",
+      "voteBasis": "Votos válidos divulgados pelo instituto; não recalculados a partir de totais arredondados.",
+      "registrationSource": "Número informado na divulgação; conferência individual no PesqEle pendente",
+      "additionalSources": [
+        "https://www.poder360.com.br/poder-eleicoes-2026/ipespe-confirma-poderdata-aya-e-da-flavio-com-527-e-lula-com-473/"
+      ]
     }
   ],
   "history": [
@@ -301,17 +344,16 @@
   "aggregate": {
     "model": "Modelo robusto experimental 2.0 (7 dias, pesos-base iguais, Huber 2,5 p.p.)",
     "provisional": true,
-    "previousDate": "2026-10-15",
-    "newPoll": "PoderData/Aya",
-    "newPollWeight": 14.36,
+    "previousDate": "2026-10-16",
+    "newPoll": "CNT/MDA e Ipespe/Abrapel",
     "uncertainty": "Não há margem de erro agregada validada. Faixas de ±3 p.p. no painel são apenas ilustração.",
-    "note": "O painel calcula dinamicamente a média robusta a partir das nove pesquisas mais recentes por instituto. O histórico legado é mantido sem recálculo e não é diretamente comparável."
+    "note": "O painel calcula dinamicamente a média robusta a partir das 11 pesquisas mais recentes por instituto. O histórico legado é mantido sem recálculo e não é diretamente comparável."
   },
   "sourcePolicy": {
     "registry": "https://pesqele-divulgacao.tse.jus.br/",
     "openData": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
     "note": "Os números de registro foram conferidos em divulgações públicas, mas a consulta individual ao PesqEle não pôde ser completada nesta revisão. O TSE registra dados metodológicos, não certifica os resultados.",
-    "checkedOn": "2026-10-15"
+    "checkedOn": "2026-10-16"
   },
   "recencyModel": {
     "enabled": true,
