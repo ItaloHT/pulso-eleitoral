@@ -56,10 +56,10 @@ function trendModel(){
  const day=s=>Date.parse(s+'T00:00:00Z')/86400000,asOf=day(dataset.referenceDate);
  const input=polls.filter(p=>p.fieldEnd&&Number.isFinite(p.f)&&day(p.fieldEnd)<=asOf).map(p=>({t:day(p.fieldEnd),f:p.f}));
  if(input.length<4)return null;
- const start=Math.min(...input.map(p=>p.t)),end=Math.max(...input.map(p=>p.t));
+ const start=Math.min(...input.map(p=>p.t)),end=Math.max(...input.map(p=>p.t)),displayEnd=Math.max(end,asOf);
  if(end-start<2)return null;
  const points=[],bandwidth=3.5,ridge=18;
- for(let t=start;t<=end;t++){
+ for(let t=start;t<=displayEnd;t++){
   let sw=0,sx=0,sxx=0,sy=0,sxy=0;
   for(const p of input){const x=p.t-t,w=Math.exp(-.5*(x/bandwidth)**2);sw+=w;sx+=w*x;sxx+=w*x*x;sy+=w*p.f;sxy+=w*x*p.f;}
   const denom=sw*(sxx+ridge)-sx*sx;
@@ -103,7 +103,9 @@ function experimentalTrend(){
  const direction=Math.abs(change)<.5?'Estabilidade aparente':change>0?'Alta aparente de Flávio':'Alta aparente de Lula';
  main.innerHTML=intro('Tendência experimental.','Uma leitura exploratória da direção das pesquisas, separada da média principal.')+
  `<section class="card trend-card experimental-trend-card"><div class="card-head"><div><div class="eyebrow">MODELO ESTATÍSTICO EXPERIMENTAL</div><h2>O movimento das pesquisas</h2><p class="sub">Suavização local com regressão linear regularizada · cenário condicional até 25/10</p></div><span class="badge">${model.n} institutos</span></div>
- <div class="trend-summary"><div><span>Leitura do período</span><strong>${direction}</strong></div><div><span>Variação suavizada de Flávio</span><strong class="fv">${change>0?'+':''}${fmt(change)} p.p.</strong></div><div><span>Coletas analisadas</span><strong>${date(first.date)} a ${date(last.date)}</strong></div></div>
+ <div class="trend-summary"><div><span>Leitura do período</span><strong>${direction}</strong></div><div><span>Variação suavizada de Flávio</span><strong class="fv">${change>0?'+':''}${fmt(change)} p.p.</strong></div><div><span>Período da curva</span><strong>${date(first.date)} a ${date(last.date)}</strong></div></div>
+ <div class="forecast-numbers trend-current-numbers" aria-label="Valores suavizados em ${date(last.date)}"><div><span>Flávio Bolsonaro</span><strong class="fv">${fmt(last.f)}%</strong></div><div><span>Lula</span><strong class="lv">${fmt(last.l)}%</strong></div></div>
+ <p class="small">Estimativas suavizadas em ${date(last.date)}. Não são resultados de uma pesquisa realizada nesse dia.</p>
  <div class="legend"><span><i class="dot"></i>Flávio Bolsonaro</span><span><i class="dot r"></i>Lula · linha tracejada</span></div>
  ${timeChart(ps)}
  <section class="conditional-forecast" aria-labelledby="conditional-title"><div class="eyebrow">SIMULAÇÃO · NÃO É PREVISÃO ELEITORAL</div><h3 id="conditional-title">E se a tendência continuar até 25/10?</h3><p class="small">Extrapolação da inclinação recente da curva suavizada, limitada a 0,15 ponto percentual por dia. Os valores abaixo são apenas um cenário matemático condicional.</p>
@@ -111,7 +113,7 @@ function experimentalTrend(){
  <div class="legend"><span><i class="dot"></i>Flávio</span><span><i class="dot r"></i>Lula</span><span>Linha tracejada: simulação</span></div>
  ${projectionChart(ps,projection)}
  <p class="notice">A simulação pressupõe continuidade da tendência recente e não incorpora eventos futuros, indecisos, abstenção nem mudanças de comportamento. Não possui intervalo de confiança validado. Não indica probabilidade de vitória.</p></section>
- <p class="small"><strong>Como ler:</strong> cada ponto é uma estimativa suavizada baseada nas pesquisas próximas daquela data, usando a data final da coleta. A regressão dá mais influência a levantamentos temporalmente próximos e restringe oscilações bruscas. Não são novas pesquisas nem percentuais de intenção de voto observados diariamente.</p>
+ <p class="small"><strong>Como ler:</strong> cada ponto é uma estimativa suavizada baseada nas pesquisas próximas daquela data, posicionadas pela data final da coleta. O ponto final pode corresponder ao dia de referência do painel, mesmo sem nova coleta concluída nessa data. A regressão dá mais influência a levantamentos temporalmente próximos e restringe oscilações bruscas. Não são novas pesquisas nem percentuais de intenção de voto observados diariamente.</p>
  <p class="notice"><strong>Limitações:</strong> curva descritiva com poucos levantamentos e sem correção validada de efeitos próprios de cada instituto. Não é rede neural, previsão de resultado ou tendência estatisticamente comprovada. Não há intervalo de confiança calibrado. O modelo principal do Pulsa não foi alterado.</p>
  <details><summary>Dados da curva e parâmetros</summary><p class="small">Janela gaussiana: 3,5 dias; regularização da inclinação: 18; uma pesquisa recente por instituto. Parâmetros exploratórios, sem validação retrospectiva. A extrapolação condicional usa a inclinação dos últimos cinco dias de observações suavizadas, limitada a ±0,15 p.p. por dia até 25/10. Não foi calibrada em eleições anteriores.</p><div class="table-wrap"><table><tr><th>Data</th><th>Flávio suavizado</th><th>Lula suavizado</th></tr>${ps.map(p=>`<tr><td>${date(p.date)}</td><td>${fmt(p.f)}%</td><td>${fmt(p.l)}%</td></tr>`).join('')}</table></div></details></section>`;
 }
