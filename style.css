@@ -254,3 +254,26 @@ header .brand-dot{width:15px;height:15px;flex:0 0 15px;background:var(--purple);
 header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:brand-dot-pulse-only 2.8s ease-in-out infinite}
 @keyframes brand-dot-pulse-only{0%,28%,100%{transform:scale(.85);opacity:1}10%{transform:scale(1.2);opacity:.9}18%{transform:scale(.9);opacity:1}23%{transform:scale(1.08);opacity:.96}}
 @media(prefers-reduced-motion:reduce){header .brand-dot{animation:none;transform:scale(.85)}}
+
+
+/* Published polls: desktop table, mobile cards. */
+.mobile-poll-cards{display:none}
+@media(max-width:680px){
+ .mobile-poll-cards{display:grid;gap:12px;margin:14px 0 24px}
+ .table-wrap{display:none}
+ .mobile-poll-card{padding:16px;border:1px solid var(--line);border-radius:15px;background:var(--paper)}
+ .mobile-poll-head strong{font-size:16px;line-height:1.4}
+ .mobile-poll-head .small{margin-top:3px}
+ .mobile-poll-scores{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+ .mobile-poll-scores>div{display:flex;flex-direction:column;gap:5px;padding:12px;border:1px solid var(--line);border-radius:10px;min-width:0}
+ .mobile-poll-scores span{font-size:12px}
+ .mobile-poll-scores strong{font-size:clamp(21px,6vw,28px);line-height:1.15}
+ .mobile-poll-card details{border-top:1px solid var(--line);padding-top:11px}
+ .mobile-poll-card summary{cursor:pointer;font-weight:650;font-size:13px}
+ .mobile-poll-card dl{margin:13px 0;display:grid;gap:8px}
+ .mobile-poll-card dl>div{display:flex;justify-content:space-between;gap:12px;font-size:13px}
+ .mobile-poll-card dt{opacity:.7}
+ .mobile-poll-card dd{margin:0;text-align:right}
+ .mobile-poll-links{display:flex;flex-wrap:wrap;gap:14px;font-size:13px}
+ .mobile-poll-links a{text-decoration:underline}
+}
