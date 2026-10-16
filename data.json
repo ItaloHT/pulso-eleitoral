@@ -1,7 +1,7 @@
 {
-  "revision": "2026-10-16-v6-agenda",
+  "revision": "2026-10-16-v7-gerp",
   "referenceDate": "2026-10-16",
-  "publishedAt": "2026-10-16T12:15:00-03:00",
+  "publishedAt": "2026-10-16T20:26:00-03:00",
   "polls": [
     {
       "name": "Indexa/Broadcast",
@@ -111,19 +111,23 @@
     },
     {
       "name": "Gerp",
-      "date": "2026-10-13",
-      "field": "08, 09 e 12/10",
-      "f": 55,
-      "l": 45,
+      "date": "2026-10-16",
+      "field": "14 a 16/10",
+      "f": 52,
+      "l": 48,
       "n": 2400,
       "margin": "±2 p.p.",
-      "url": "https://www.cnnbrasil.com.br/eleicoes/gerp-flavio-tem-55-dos-votos-validos-no-2o-turno-lula-45/",
-      "registration": "BR-07877/2026",
+      "url": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-52-e-lula-48-dos-votos-validos-no-2o-turno-diz-gerp/",
+      "registration": "BR-05187/2026",
       "method": "Telefone",
       "confidence": 95.55,
       "converted": false,
       "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
-      "fieldEnd": "2026-10-12"
+      "fieldEnd": "2026-10-16",
+      "totalF": 50,
+      "totalL": 45,
+      "sourceType": "Poder360 e CNN Brasil, divulgação 16/10 com ficha técnica",
+      "voteBasis": "Votos válidos publicados; sem conversão."
     },
     {
       "name": "AtlasIntel",
@@ -269,6 +273,12 @@
         "f": 55,
         "l": 45,
         "url": "https://www.cnnbrasil.com.br/eleicoes/gerp-flavio-tem-55-dos-votos-validos-no-2o-turno-lula-45/"
+      },
+      {
+        "date": "2026-10-16",
+        "f": 52,
+        "l": 48,
+        "url": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-52-e-lula-48-dos-votos-validos-no-2o-turno-diz-gerp/"
       }
     ],
     "Palver": [
@@ -355,16 +365,9 @@
     "model": "Modelo robusto experimental 2.0 (7 dias, pesos-base iguais, Huber 2,5 p.p.)",
     "provisional": true,
     "previousDate": "2026-10-16",
-    "newPoll": "Futura/100% Cidades 16/10 substitui rodada 13/10; CNT/MDA e Ipespe já cadastrados",
+    "newPoll": "Gerp 16/10 substitui rodada 13/10; Futura 16/10 já cadastrada",
     "uncertainty": "Não há margem de erro agregada validada. Faixas de ±3 p.p. no painel são apenas ilustração.",
-    "note": "O painel calcula dinamicamente a média robusta a partir das 11 pesquisas mais recentes por instituto. O histórico legado é mantido sem recálculo e não é diretamente comparável.",
-    "currentComputed": {
-      "f": 51.2701,
-      "l": 48.7299,
-      "institutes": 11,
-      "model": "recencyModel",
-      "note": "Cálculo da versão atual; histórico anterior usa outra composição e não é diretamente comparável."
-    }
+    "note": "O painel calcula dinamicamente a média robusta a partir das 11 pesquisas mais recentes por instituto. O histórico legado é mantido sem recálculo e não é diretamente comparável."
   },
   "sourcePolicy": {
     "registry": "https://pesqele-divulgacao.tse.jus.br/",
