@@ -1,7 +1,7 @@
 {
-  "revision": "2026-10-15-v7",
-  "referenceDate": "2026-10-15",
-  "publishedAt": "2026-10-15T22:21:00.338Z",
+  "revision": "2026-10-16-v1",
+  "referenceDate": "2026-10-16",
+  "publishedAt": "2026-10-16T08:40:00-03:00",
   "polls": [
     {
       "name": "Indexa/Broadcast",
@@ -61,16 +61,16 @@
     },
     {
       "name": "PoderData/Aya",
-      "date": "2026-10-13",
-      "field": "Não recuperado",
-      "f": 51,
-      "l": 49,
-      "n": null,
+      "date": "2026-10-16",
+      "field": "13 a 15/10",
+      "f": 50,
+      "l": 50,
+      "n": 3000,
       "margin": "±1,8 p.p.",
-      "url": "https://www.poder360.com.br/poder-eleicoes-2026/saiba-como-estao-lula-e-flavio-nas-pesquisas-a-12-dias-do-2o-turno/",
-      "registration": "BR-01209/2026",
-      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
-      "primaryUrl": "https://www.poder360.com.br/poderdata/pesquisa-poderdata-aya-leia-os-resultados-de-lula-e-flavio-no-2o-turno-2/"
+      "url": "https://www.poder360.com.br/poderdata/flavio-e-lula-empatam-em-50-dos-votos-validos-diz-poderdata-aya/",
+      "registration": "BR-04258/2026",
+      "registrationSource": "Registro informado na divulgação; conferência direta no PesqEle pendente",
+      "primaryUrl": "https://www.poder360.com.br/poderdata/flavio-e-lula-empatam-em-50-dos-votos-validos-diz-poderdata-aya/"
     },
     {
       "name": "BTG/Nexus",
@@ -167,6 +167,12 @@
       "f": 51.55,
       "l": 48.45,
       "revision": "Datafolha 15/10"
+    },
+    {
+      "date": "2026-10-16",
+      "f": 51.41,
+      "l": 48.59,
+      "revision": "PoderData/Aya 16/10"
     }
   ],
   "instituteHistory": {
@@ -180,6 +186,11 @@
         "date": "2026-10-13",
         "f": 51,
         "l": 49
+      },
+      {
+        "date": "2026-10-16",
+        "f": 50,
+        "l": 50
       }
     ],
     "Futura/100% Cidades": [
@@ -279,13 +290,13 @@
     }
   ],
   "aggregate": {
-    "model": "Simulação experimental com substituição da rodada Datafolha",
+    "model": "Simulação experimental com substituição da rodada PoderData/Aya",
     "provisional": true,
     "previousDate": "2026-10-15",
-    "newPoll": "Datafolha",
-    "newPollWeight": 8.33,
+    "newPoll": "PoderData/Aya",
+    "newPollWeight": 14.36,
     "uncertainty": "Sem intervalo de confiança agregado validado; a margem de ±3 p.p. é apenas uma análise ilustrativa de sensibilidade.",
-    "note": "Atualização incremental: média anterior 51,63% para Flávio, substituindo Datafolha 52% por 51% com peso provisório de 8,33%. Diferença de -0,0833 p.p. O agregado continua não auditado, e a mudança de composição não mede isoladamente a opinião pública."
+    "note": "Atualização incremental da simulação anterior (51,55%) pela substituição da rodada PoderData/Aya de 51% para 50%, peso provisório de 14,36%. Resultado 51,41% e 48,59%. Média não auditada; não representa intervalo de confiança ou previsão."
   },
   "sourcePolicy": {
     "registry": "https://pesqele-divulgacao.tse.jus.br/",
