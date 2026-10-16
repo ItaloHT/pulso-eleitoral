@@ -1,5 +1,5 @@
 {
-  "revision": "2026-10-16-v2",
+  "revision": "2026-10-16-v3-robust7",
   "referenceDate": "2026-10-16",
   "publishedAt": "2026-10-16T08:40:00-03:00",
   "polls": [
@@ -299,13 +299,13 @@
     }
   ],
   "aggregate": {
-    "model": "Simulação experimental com substituição da rodada PoderData/Aya",
+    "model": "Modelo robusto experimental 2.0 (7 dias, pesos-base iguais, Huber 2,5 p.p.)",
     "provisional": true,
     "previousDate": "2026-10-15",
     "newPoll": "PoderData/Aya",
     "newPollWeight": 14.36,
-    "uncertainty": "Sem intervalo de confiança agregado validado; a margem de ±3 p.p. é apenas uma análise ilustrativa de sensibilidade.",
-    "note": "Atualização incremental da simulação anterior (51,55%) pela substituição da rodada PoderData/Aya de 51% para 50%, peso provisório de 14,36%. Resultado 51,41% e 48,59%. Média não auditada; não representa intervalo de confiança ou previsão."
+    "uncertainty": "Não há margem de erro agregada validada. Faixas de ±3 p.p. no painel são apenas ilustração.",
+    "note": "O painel calcula dinamicamente a média robusta a partir das nove pesquisas mais recentes por instituto. O histórico legado é mantido sem recálculo e não é diretamente comparável."
   },
   "sourcePolicy": {
     "registry": "https://pesqele-divulgacao.tse.jus.br/",
@@ -315,12 +315,14 @@
   },
   "recencyModel": {
     "enabled": true,
-    "halfLifeDays": 14,
+    "halfLifeDays": 7,
     "referenceDate": "2026-10-16",
-    "weightSource": "Pesos experimentais current, não auditados",
-    "policy": "Uma pesquisa mais recente por instituto. Apenas institutos com peso-base disponível e positivo entram na média. Pesos ausentes não são inventados; pesquisas excluídas aparecem separadamente.",
-    "formula": "peso bruto = peso-base × 2^(-idade_em_dias/14); peso efetivo = peso bruto / soma dos pesos brutos",
-    "ageBasis": "Data final da coleta, não data da publicação",
-    "limitations": "Meia-vida de 14 dias é parâmetro ilustrativo, sem calibração histórica brasileira; não representa previsão nem intervalo de confiança. Histórico legado não é recalculado."
+    "baseWeights": "equal",
+    "huberThresholdPp": 2.5,
+    "referenceStatistic": "leave-one-out median of candidate F valid vote shares",
+    "formula": "raw_i = 2^(-ageDays_i/7) × min(1,2.5/abs(f_i - median(f_j for j != i))); normalize raw_i to 100%; mean = sum(weight_i × f_i)",
+    "policy": "One latest round per institute; all polls with valid fieldEnd and candidate shares included; equal base weights; symmetric robust treatment regardless of favored candidate.",
+    "limitations": "Experimental parameters, not backtested. No validated aggregated confidence interval. Historical mean remains legacy and is not directly comparable.",
+    "ageBasis": "Last fieldwork day; fixed bulletin reference date, not visitor clock"
   }
 }
