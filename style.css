@@ -365,3 +365,16 @@ header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:b
 .open-vote-institute h3{margin:0 0 8px}
 .open-vote-chart{display:block;width:100%;height:auto;max-height:280px;margin:10px 0 18px}
 .open-vote-institute table{min-width:500px}
+
+/* General overview uses only the most recent verified round per institute. */
+.open-vote-overview{background:#f1f0f8;border:1px solid #e0deee;border-radius:14px;padding:22px;margin:18px 0 24px}
+.open-vote-overview .eyebrow{margin-bottom:14px}
+.open-vote-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:19px}
+.open-vote-metrics>div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.open-vote-metrics span{font-size:12px;color:#57535f}
+.open-vote-metrics strong{font-size:clamp(24px,4vw,36px);font-variant-numeric:tabular-nums;line-height:1.15;color:#24212b}
+.open-vote-overview-track{display:flex;height:14px;border-radius:20px;overflow:hidden;background:#d9d6df;margin-bottom:13px}
+.open-vote-overview-track .blank{background:#7774df}
+.open-vote-overview-track .undecided{background:#e45440}
+.open-vote-overview .small{margin-bottom:0;line-height:1.55}
+@media(max-width:420px){.open-vote-overview{padding:16px}.open-vote-metrics{gap:7px}.open-vote-metrics span{font-size:11px}.open-vote-metrics strong{font-size:25px}}
