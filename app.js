@@ -20,7 +20,7 @@ function sensitivityChart(latest){
 }
 function recencyAggregate(){
  const model=dataset.standardModel;if(!model||!model.enabled)return null;
- const rows=model.institutes.map(i=>{const p=polls.find(q=>q.name===i.name);if(!p)return null;return {name:i.name,f:p.f,l:p.l,base:100/(1+i.firstRoundMaePp),raw:1/(1+i.firstRoundMaePp),firstRoundMaePp:i.firstRoundMaePp};}).filter(Boolean);
+ const rows=model.institutes.map(i=>{const cutoff=dataset.dataCutoffDate||dataset.referenceDate;const p=polls.filter(q=>q.name===i.name&&q.date<=cutoff).sort((a,b)=>b.date.localeCompare(a.date))[0];if(!p)return null;return {name:i.name,f:p.f,l:p.l,base:100/(1+i.firstRoundMaePp),raw:1/(1+i.firstRoundMaePp),firstRoundMaePp:i.firstRoundMaePp};}).filter(Boolean);
  const total=rows.reduce((s,r)=>s+r.raw,0);if(!total)return null;
  rows.forEach(r=>r.effective=100*r.raw/total);
  const f=rows.reduce((s,r)=>s+r.f*r.effective/100,0);
