@@ -378,3 +378,31 @@ header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:b
 .open-vote-overview-track .undecided{background:#e45440}
 .open-vote-overview .small{margin-bottom:0;line-height:1.55}
 @media(max-width:420px){.open-vote-overview{padding:16px}.open-vote-metrics{gap:7px}.open-vote-metrics span{font-size:11px}.open-vote-metrics strong{font-size:25px}}
+
+/* Aligned metric cards in the open-vote overview, including narrow iPhones. */
+.open-vote-overview{background:#f5f4fa;padding:20px}
+.open-vote-overview .eyebrow{margin-bottom:4px;letter-spacing:.11em;line-height:1.5}
+.open-vote-overview-subtitle{font-size:13px;color:#625d70;margin:0 0 18px}
+.open-vote-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:8px;margin-bottom:20px}
+.open-vote-metrics .open-vote-metric{display:flex;flex-direction:column;justify-content:space-between;min-width:0;min-height:104px;gap:12px;background:#fff;border:1px solid #e1deed;border-radius:10px;padding:13px 10px 12px}
+.open-vote-metrics .open-vote-metric span{display:block;font-size:12px;font-weight:500;line-height:1.25;color:#605c69;min-height:30px;overflow-wrap:normal}
+.open-vote-metrics .open-vote-metric strong{display:block;font-size:clamp(20px,3vw,32px);line-height:1.05;letter-spacing:-.045em;white-space:nowrap;font-variant-numeric:tabular-nums lining-nums;color:#24212b;margin-top:auto}
+.open-vote-metric.blank{border-top:3px solid #7774df}
+.open-vote-metric.undecided{border-top:3px solid #e45440}
+.open-vote-metric.total{border-top:3px solid #303039}
+.open-vote-overview-summary{font-size:14px;line-height:1.45;margin:0 0 9px}
+.open-vote-overview .small{font-size:12px}
+@media(max-width:680px){
+ .open-vote-overview{padding:16px}
+ .open-vote-metrics{gap:7px}
+ .open-vote-metrics .open-vote-metric{padding:11px 8px;min-height:98px}
+ .open-vote-metrics .open-vote-metric span{font-size:11px}
+ .open-vote-metrics .open-vote-metric strong{font-size:clamp(19px,5vw,27px)}
+}
+@media(max-width:360px){
+ .open-vote-overview{padding:12px}
+ .open-vote-metrics{gap:5px}
+ .open-vote-metrics .open-vote-metric{padding:10px 6px}
+ .open-vote-metrics .open-vote-metric strong{font-size:19px}
+ .open-vote-metrics .open-vote-metric span{font-size:10px}
+}
