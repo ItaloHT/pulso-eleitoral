@@ -56,17 +56,28 @@ function trendModel(){
   const f=Math.max(0,Math.min(100,denom>0?(sy*(sxx+ridge)-sx*sxy)/denom:sy/sw));
   points.push({date:new Date(t*86400000).toISOString().slice(0,10),f,l:100-f});
  }
+ // Preserve the fitted series before anchoring the last displayed estimate.
+ const fittedPoints=points.map(p=>({...p}));
  // Anchor the most recent estimate to the same documented weighted mean as the main panel.
  const current=recencyAggregate();
  if(current)points[points.length-1]={...points[points.length-1],f:current.f,l:current.l};
- return {points,n:input.length,cutoff,displayDate:new Date(end*86400000).toISOString().slice(0,10),lastPollDate:new Date(end*86400000).toISOString().slice(0,10)};
+ return {points,fittedPoints,n:input.length,cutoff,displayDate:new Date(end*86400000).toISOString().slice(0,10),lastPollDate:new Date(end*86400000).toISOString().slice(0,10)};
 }
 
 function conditionalProjection(model){
  const observed=model.points,last=observed.at(-1),lastTime=Date.parse(last.date+'T00:00:00Z');
  const election='2026-10-25',days=Math.max(0,Math.round((Date.parse(election+'T00:00:00Z')-lastTime)/86400000));
- const lookback=observed[Math.max(0,observed.length-6)];
- const rawSlope=(last.f-lookback.f)/Math.max(1,(lastTime-Date.parse(lookback.date+'T00:00:00Z'))/86400000);
+ // Estimate the recent slope from unanchored fitted values; the last point
+ // is anchored to the main aggregate and must not create a fictitious swing.
+ const trend=Array.isArray(model.fittedPoints)?model.fittedPoints:observed;
+ const recent=trend.slice(-6);
+ const t0=Date.parse(recent[0].date+'T00:00:00Z')/86400000;
+ const xs=recent.map(p=>Date.parse(p.date+'T00:00:00Z')/86400000-t0);
+ const xm=xs.reduce((a,b)=>a+b,0)/xs.length;
+ const ym=recent.reduce((a,p)=>a+p.f,0)/recent.length;
+ const covariance=recent.reduce((a,p,i)=>a+(xs[i]-xm)*(p.f-ym),0);
+ const variance=xs.reduce((a,x)=>a+(x-xm)**2,0);
+ const rawSlope=variance>0?covariance/variance:0;
  const slope=Math.max(-.15,Math.min(.15,rawSlope));
  const f=Math.max(0,Math.min(100,last.f+slope*days));
  return {date:election,days,slope,rawSlope,f,l:100-f,from:last};
@@ -152,12 +163,12 @@ function experimentalTrend(){
  <p class="small">Estimativas suavizadas em ${date(last.date)}. Não são resultados de uma pesquisa realizada nesse dia.</p>
  <div class="legend"><span><i class="dot"></i>Flávio Bolsonaro</span><span><i class="dot r"></i>Lula · linha tracejada</span></div>
  ${timeChart(ps)}
- <section class="conditional-forecast" aria-labelledby="conditional-title"><div class="eyebrow">SIMULAÇÃO · NÃO É PREVISÃO ELEITORAL</div><h3 id="conditional-title">E se a tendência continuar até 25/10?</h3><p class="small">Continuação condicional da curva suavizada até 25/10, com inclinação limitada a 0,15 ponto percentual por dia. Não é previsão eleitoral.</p>
+ <section class="conditional-forecast" aria-labelledby="conditional-title"><div class="eyebrow">SIMULAÇÃO · NÃO É PREVISÃO ELEITORAL</div><h3 id="conditional-title">E se a tendência continuar até 25/10?</h3><p class="small">Continuação condicional até 25/10, com inclinação estimada na curva suavizada antes do ajuste do ponto final e limitada a 0,15 ponto percentual por dia. Não é previsão eleitoral.</p>
  <div class="forecast-numbers"><div><span>Flávio Bolsonaro</span><strong class="fv">${fmt(projection.f)}%</strong></div><div><span>Lula</span><strong class="lv">${fmt(projection.l)}%</strong></div></div>
  <div class="legend"><span><i class="dot"></i>Flávio</span><span><i class="dot r"></i>Lula</span><span>Linha tracejada: simulação</span></div>
  ${projectionChart(ps,projection)}
  <p class="notice">A simulação pressupõe continuidade da tendência recente e não incorpora eventos futuros, indecisos, abstenção nem mudanças de comportamento. Não possui intervalo de confiança validado. Não indica probabilidade de vitória.</p></section>
- <p class="small"><strong>Como ler:</strong> cada ponto é uma estimativa suavizada baseada nas pesquisas próximas daquela data, posicionadas pela data final da coleta. A curva termina na última coleta documentada; não cria pontos em dias posteriores sem pesquisa. O ponto final é ancorado na média ponderada principal. A simulação começa nesse ponto. A regressão usa pesos institucionais e dá mais influência a levantamentos temporalmente próximos, restringindo oscilações bruscas. Não são novas pesquisas nem percentuais de intenção de voto observados diariamente.</p>
+ <p class="small"><strong>Como ler:</strong> cada ponto é uma estimativa suavizada baseada nas pesquisas próximas daquela data, posicionadas pela data final da coleta. A curva termina na última coleta documentada; não cria pontos em dias posteriores sem pesquisa. O ponto final é ancorado na média ponderada principal. A simulação começa nesse ponto, mas sua inclinação é calculada sem o ajuste final para evitar um salto artificial. A regressão usa pesos institucionais e dá mais influência a levantamentos temporalmente próximos, restringindo oscilações bruscas. Não são novas pesquisas nem percentuais de intenção de voto observados diariamente.</p>
  ${openVoteSection()}
  <p class="notice"><strong>Limitações:</strong> curva descritiva com poucos levantamentos e sem correção validada de efeitos próprios de cada instituto. Não é rede neural, previsão de resultado ou tendência estatisticamente comprovada. Não há intervalo de confiança calibrado. A tendência utiliza os mesmos pesos provisórios do modelo principal.</p>
  <details><summary>Dados da curva e parâmetros</summary><p class="small">Janela gaussiana: 3,5 dias; regularização da inclinação: 18; pesos do modelo padrão; uma pesquisa recente por instituto; ponto final ancorado na média principal. Parâmetros exploratórios, sem validação retrospectiva. A extrapolação condicional usa a inclinação dos últimos cinco dias de observações suavizadas, limitada a ±0,15 p.p. por dia até 25/10. Não foi calibrada em eleições anteriores.</p><div class="table-wrap"><table><tr><th>Data</th><th>Flávio suavizado</th><th>Lula suavizado</th></tr>${ps.map(p=>`<tr><td>${date(p.date)}</td><td>${fmt(p.f)}%</td><td>${fmt(p.l)}%</td></tr>`).join('')}</table></div></details></section>`;
