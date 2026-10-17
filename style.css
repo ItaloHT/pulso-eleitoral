@@ -332,3 +332,23 @@ header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:b
 .rejection-explainer p{max-width:78ch}
 .rejection-explainer p:last-child{margin-bottom:0}
 .rejection-explainer .small{border-top:1px solid #d8d3e4;padding-top:15px;margin-top:18px}
+
+/* Final mobile navigation: a single left-aligned, horizontally scrollable row. */
+@media(max-width:680px){
+  header{gap:12px;padding:18px 0 0;overflow:hidden}
+  header .brand{margin-left:22px}
+  header nav{
+    display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;
+    justify-content:flex-start;gap:22px;width:100%;max-width:100%;
+    padding:0 22px;min-width:0;overflow-x:auto;overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none;
+    scroll-snap-type:x proximity;overscroll-behavior-x:contain;
+  }
+  header nav::-webkit-scrollbar{display:none}
+  header nav a{display:block;flex:0 0 auto;white-space:nowrap;font-size:13px;line-height:1.4;padding:12px 0 11px;scroll-snap-align:start}
+}
+@media(max-width:360px){
+  header .brand{margin-left:18px}
+  header nav{padding-left:18px;padding-right:18px;gap:18px}
+  header nav a{font-size:13px}
+}
