@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261017-recency7d-v1",
+  "revision": "standard-20261017-ipespe-supplemental-v1",
   "referenceDate": "2026-10-17",
   "publishedAt": "2026-10-17",
   "polls": [
@@ -571,6 +571,22 @@
       "source": "https://datafolha.folha.uol.com.br/eleicoes/2026/10/flavio-bolsonaro-pl-tem-47-e-tem-empate-tecnico-com-lula-pt-que-aparece-com-45.shtml",
       "scope": "second_round",
       "scopeEvidence": "A publicação explicita rejeição exclusiva no segundo turno entre Lula e Flávio Bolsonaro."
+    },
+    {
+      "institute": "Ipespe/Abrapel",
+      "date": "2026-10-17",
+      "field": "13 a 15/10",
+      "f": 47,
+      "l": 47,
+      "n": 1500,
+      "margin": 2.6,
+      "group": "declared",
+      "question": "Não votaria de jeito nenhum no candidato (rejeição declarada; não exclusiva)",
+      "method": "Entrevistas telefônicas",
+      "registration": "BR-00223/2026",
+      "source": "https://www.cnnbrasil.com.br/eleicoes/ipespe-flavio-e-lula-sao-igualmente-rejeitados-por-47-dos-eleitores/",
+      "scope": "second_round",
+      "scopeEvidence": "Rejeição declarada de cada candidato, não rejeição exclusiva; não comparar diretamente com a categoria Datafolha."
     }
   ],
   "openVote": [
@@ -703,6 +719,19 @@
       "basis": "total_respondents",
       "categoriesExclusive": true,
       "question": "Votos estimulados totais do segundo turno"
+    },
+    {
+      "institute": "Ipespe/Abrapel",
+      "date": "2026-10-17",
+      "fieldEnd": "2026-10-15",
+      "blankNull": 3,
+      "undecided": 3,
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Intenção estimulada no segundo turno: branco/nulo/nenhum e não sabe/não respondeu",
+      "registration": "BR-00223/2026",
+      "source": "https://exame.com/brasil/pesquisa-para-presidente-flavio-tem-48-e-lula-46-aponta-ipespe/"
     }
   ],
   "experimentalArchive": {
