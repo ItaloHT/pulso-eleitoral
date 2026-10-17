@@ -1,5 +1,5 @@
 {
-  "revision": "2026-10-16-v7-gerp-rejection-verified",
+  "revision": "2026-10-17-rejection-second-round-only",
   "referenceDate": "2026-10-16",
   "publishedAt": "2026-10-16T20:26:00-03:00",
   "polls": [
@@ -463,19 +463,6 @@
   ],
   "rejection": [
     {
-      "institute": "Nexus/BTG",
-      "date": "2026-09-28",
-      "field": "25 a 27/09",
-      "f": 51,
-      "l": 48,
-      "n": 2000,
-      "margin": 2,
-      "group": "declared",
-      "question": "Não votaria de jeito nenhum",
-      "method": "Entrevistas telefônicas",
-      "source": "https://www.cnnbrasil.com.br/eleicoes/nexus-btg-flavio-e-rejeitado-por-51-lula-por-48/"
-    },
-    {
       "institute": "Datafolha",
       "date": "2026-10-13",
       "f": 43,
@@ -486,35 +473,9 @@
       "group": "exclusive",
       "question": "Rejeita exclusivamente um dos dois candidatos no segundo turno",
       "source": "https://datafolha.folha.uol.com.br/eleicoes/2026/10/flavio-bolsonaro-pl-tem-49-na-largada-do-2o-turno-contra-45-de-lula-pt.shtml",
-      "registration": "BR-02949/2026"
-    },
-    {
-      "institute": "Nexus/BTG",
-      "date": "2026-10-13",
-      "field": "10 a 12/10",
-      "f": 47,
-      "l": 51,
-      "n": 2002,
-      "margin": 2,
-      "group": "declared",
-      "question": "Não votaria de jeito nenhum",
-      "method": "Entrevistas telefônicas",
-      "registration": "BR-07997/2026",
-      "source": "https://www.cnnbrasil.com.br/eleicoes/nexus-btg-lula-e-rejeitado-por-51-flavio-por-47/"
-    },
-    {
-      "institute": "Quaest",
-      "date": "2026-10-14",
-      "field": "10 a 13/10",
-      "f": 54,
-      "l": 53,
-      "n": 2154,
-      "margin": 2,
-      "group": "declared",
-      "question": "Não votaria de jeito nenhum",
-      "method": "Entrevistas pessoais, domiciliares e presenciais",
-      "registration": "BR-08729/2026",
-      "source": "https://www.cnnbrasil.com.br/eleicoes/quaest-flavio-e-rejeitado-por-54-dos-eleitores-lula-por-53/"
+      "registration": "BR-02949/2026",
+      "scope": "second_round",
+      "scopeEvidence": "A publicação explicita rejeição exclusiva no segundo turno entre Lula e Flávio Bolsonaro."
     },
     {
       "institute": "Datafolha",
@@ -530,7 +491,9 @@
       "question": "Rejeita exclusivamente um dos dois candidatos no segundo turno",
       "method": "Entrevistas presenciais",
       "registration": "BR-00466/2026",
-      "source": "https://datafolha.folha.uol.com.br/eleicoes/2026/10/flavio-bolsonaro-pl-tem-47-e-tem-empate-tecnico-com-lula-pt-que-aparece-com-45.shtml"
+      "source": "https://datafolha.folha.uol.com.br/eleicoes/2026/10/flavio-bolsonaro-pl-tem-47-e-tem-empate-tecnico-com-lula-pt-que-aparece-com-45.shtml",
+      "scope": "second_round",
+      "scopeEvidence": "A publicação explicita rejeição exclusiva no segundo turno entre Lula e Flávio Bolsonaro."
     }
   ]
 }
