@@ -352,3 +352,16 @@ header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:b
   header nav{padding-left:18px;padding-right:18px;gap:18px}
   header nav a{font-size:13px}
 }
+
+/* Trends: observed white/null and undecided votes, only verified rounds. */
+.open-vote-section{margin-top:24px}
+.open-vote-legend{display:flex;flex-wrap:wrap;gap:12px 20px;margin:12px 0 20px;font-size:13px}
+.open-vote-legend span{display:inline-flex;align-items:center;gap:7px}
+.open-vote-key{width:16px;height:4px;display:inline-block;border-radius:3px}
+.key-blank{background:#7774df}
+.key-undecided{background:#e45440}
+.key-total{background:#303039}
+.open-vote-institute{border-top:1px solid var(--line);padding-top:18px;margin-top:18px}
+.open-vote-institute h3{margin:0 0 8px}
+.open-vote-chart{display:block;width:100%;height:auto;max-height:280px;margin:10px 0 18px}
+.open-vote-institute table{min-width:500px}
