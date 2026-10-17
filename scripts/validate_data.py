@@ -32,6 +32,13 @@ dates = []
 for point in data["history"]:
     dates.append(dt.date.fromisoformat(point["date"]))
     assert abs(point["f"] + point["l"] - 100) <= .12
-assert dates == sorted(set(dates)), "Histórico fora de ordem ou duplicado"
+assert dates == sorted(dates), "Histórico fora de ordem cronológica"
+# Mais de um boletim pode ser publicado no mesmo dia. Datas repetidas
+# são válidas quando os registros representam revisões distintas.
+history_keys = set()
+for point in data["history"]:
+    key = (point["date"], point["f"], point["l"], point.get("revision", ""))
+    assert key not in history_keys, f"Boletim histórico exatamente duplicado: {key}"
+    history_keys.add(key)
 print(f"Validação estrutural OK: {len(seen)} pesquisas, {len(dates)} médias históricas.")
 print("ATENÇÃO: não verifica a veracidade externa das fontes nem audita pesos históricos.")
