@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261017-cutoff-2",
+  "revision": "standard-20261017-ipespe-published",
   "referenceDate": "2026-10-17",
   "publishedAt": "2026-10-17",
   "polls": [
@@ -184,25 +184,23 @@
     },
     {
       "name": "Ipespe/Abrapel",
-      "date": "2026-10-10",
-      "field": "6 a 8/10",
-      "fieldEnd": "2026-10-08",
-      "f": 52.7,
-      "l": 47.3,
-      "totalF": 49,
-      "totalL": 44,
+      "date": "2026-10-17",
+      "field": "13 a 15/10",
+      "fieldEnd": "2026-10-15",
+      "f": 51.2,
+      "l": 48.8,
       "n": 1500,
       "margin": "±2,6 p.p.",
       "converted": false,
-      "url": "https://ipespe.org.br/pesquisa-presidente-2o-turno-flavio-bolsonaro-tem-49-e-lula-44-diz-ipespe-publicado-por-exame-10-10-2026/",
-      "registration": "BR-00933/2026",
+      "url": "https://www.cnnbrasil.com.br/eleicoes/ipespe-abrapel-flavio-tem-512-dos-votos-validos-no-2o-turno-lula-488/",
+      "registration": "BR-00223/2026",
       "method": "Entrevistas telefônicas (CATI)",
-      "confidence": 95,
-      "sourceType": "Reprodução da reportagem no site do instituto",
-      "voteBasis": "Votos válidos divulgados pelo instituto; não recalculados a partir de totais arredondados.",
-      "registrationSource": "Número informado na divulgação; conferência individual no PesqEle pendente",
+      "confidence": 95.45,
+      "sourceType": "CNN Brasil, divulgação 17/10 às 10h, com ficha técnica",
+      "voteBasis": "Votos válidos publicados; sem conversão pelo Pulso.",
+      "registrationSource": "Número informado pela CNN; consulta individual ao PesqEle pendente",
       "additionalSources": [
-        "https://www.poder360.com.br/poder-eleicoes-2026/ipespe-confirma-poderdata-aya-e-da-flavio-com-527-e-lula-com-473/"
+        "https://www.cnnbrasil.com.br/eleicoes/ipespe-flavio-e-lula-sao-igualmente-rejeitados-por-47-dos-eleitores/"
       ]
     }
   ],
@@ -297,6 +295,22 @@
         "url": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-flavio-bolsonaro-tem-51-e-lula-49-dos-votos-validos-um-empate-tecnico.shtml",
         "converted": false
       }
+    ],
+    "Ipespe/Abrapel": [
+      {
+        "date": "2026-10-10",
+        "f": 52.7,
+        "l": 47.3,
+        "url": "https://ipespe.org.br/pesquisa-presidente-2o-turno-flavio-bolsonaro-tem-49-e-lula-44-diz-ipespe-publicado-por-exame-10-10-2026/",
+        "registration": "BR-00933/2026"
+      },
+      {
+        "date": "2026-10-17",
+        "f": 51.2,
+        "l": 48.8,
+        "url": "https://www.cnnbrasil.com.br/eleicoes/ipespe-abrapel-flavio-tem-512-dos-votos-validos-no-2o-turno-lula-488/",
+        "registration": "BR-00223/2026"
+      }
     ]
   },
   "weights": [
@@ -348,7 +362,7 @@
     "registry": "https://pesqele-divulgacao.tse.jus.br/",
     "openData": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
     "note": "Os números de registro foram conferidos em divulgações públicas, mas a consulta individual ao PesqEle não pôde ser completada nesta revisão. O TSE registra dados metodológicos, não certifica os resultados.",
-    "checkedOn": "2026-10-16"
+    "checkedOn": "2026-10-17"
   },
   "recencyModel": {
     "enabled": false
@@ -360,7 +374,8 @@
       "registration": "BR-00223/2026",
       "field": "13 a 15/10",
       "source": "https://depoisdas17.com.br/agenda/",
-      "status": "registered"
+      "status": "published",
+      "publicationSource": "https://www.cnnbrasil.com.br/eleicoes/ipespe-abrapel-flavio-tem-512-dos-votos-validos-no-2o-turno-lula-488/"
     },
     {
       "name": "Vox Brasil",
