@@ -117,11 +117,15 @@ function openVoteSection(){
    const latest=ordered.at(-1);
    const latestText='<p class="small"><strong>Última rodada:</strong> '+date(latest.date)+' · Brancos/nulos: '+fmt(latest.blankNull)+'% · Indecisos: '+fmt(latest.undecided)+'% · Total: '+fmt(latest.blankNull+latest.undecided)+'%</p>';
    const table='<div class="table-wrap"><table><thead><tr><th>Data</th><th>Brancos/nulos</th><th>Indecisos</th><th>Total</th><th>Fonte</th></tr></thead><tbody>'+ordered.map(p=>'<tr><td>'+date(p.date)+'</td><td>'+fmt(p.blankNull)+'%</td><td>'+fmt(p.undecided)+'%</td><td>'+fmt(p.blankNull+p.undecided)+'%</td><td><a href="'+safe(p.source)+'" target="_blank" rel="noopener noreferrer">Fonte ↗</a></td></tr>').join('')+'</tbody></table></div>';
-   const graph=ordered.length<2?'<p class="small">A evolução será exibida após uma segunda rodada comparável.</p>':(()=>{
-     const w=640,h=220,pad=32;const values=ordered.flatMap(p=>[p.blankNull,p.undecided,p.blankNull+p.undecided]);const top=Math.max(5,Math.ceil(Math.max(...values)/5)*5);
-     const x=i=>pad+i*(w-2*pad)/(ordered.length-1),y=v=>h-pad-v/top*(h-2*pad);
-     const line=(key,color,dash='')=>'<polyline fill="none" stroke="'+color+'" stroke-width="3" '+(dash?'stroke-dasharray="'+dash+'" ':'')+'points="'+ordered.map((p,i)=>x(i)+','+y(key(p))).join(' ')+'"/>';
-     return '<svg class="open-vote-chart" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Evolução de brancos e nulos, indecisos e total no instituto '+safe(name)+'"><line x1="'+pad+'" y1="'+(h-pad)+'" x2="'+(w-pad)+'" y2="'+(h-pad)+'" stroke="#aaa"/><text x="'+pad+'" y="18" fill="currentColor" font-size="13">0 a '+top+'% · '+date(ordered[0].date)+' — '+date(latest.date)+'</text>'+line(p=>p.blankNull,'#7774df')+line(p=>p.undecided,'#e45440','5 4')+line(p=>p.blankNull+p.undecided,'#303039','3 3')+'</svg>';
+   const graph=ordered.length<2?'<p class="small">Ainda há apenas uma rodada comparável deste instituto.</p>':(()=>{
+     const first=ordered[0],last=ordered.at(-1);
+     const pct=v=>v.toLocaleString('pt-BR',{maximumFractionDigits:1})+'%';
+     const delta=v=>(v>0?'+':'')+v.toLocaleString('pt-BR',{maximumFractionDigits:1})+' p.p.';
+     const row=(label,key,kind)=>{
+       const before=key(first),after=key(last),change=Math.round((after-before)*10)/10;
+       return '<div class="open-vote-change-row '+kind+'"><span class="open-vote-change-label">'+label+'</span><div class="open-vote-change-values"><span>'+pct(before)+'</span><span aria-hidden="true">→</span><strong>'+pct(after)+'</strong></div><strong class="open-vote-change-delta">'+delta(change)+'</strong></div>';
+     };
+     return '<div class="open-vote-change" aria-label="Comparação entre '+date(first.date)+' e '+date(last.date)+'"><div class="open-vote-change-heading"><strong>O que mudou?</strong><span>'+date(first.date)+' → '+date(last.date)+'</span></div>'+row('Brancos/nulos',p=>p.blankNull,'blank')+row('Indecisos',p=>p.undecided,'undecided')+row('Total',p=>p.blankNull+p.undecided,'total')+'<p class="small">Diferença em pontos percentuais entre as rodadas. Duas pesquisas não bastam para confirmar uma tendência.</p></div>';
    })();
    return '<div class="open-vote-institute"><h3>'+safe(name)+'</h3>'+latestText+graph+table+'</div>';
  }).join('');
