@@ -101,6 +101,15 @@ function openVoteSection(){
  const rows=raw.filter(p=>p.scope==='second_round'&&p.basis==='total_respondents'&&p.categoriesExclusive===true&&typeof p.institute==='string'&&/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(p.date)&&Number.isFinite(p.blankNull)&&Number.isFinite(p.undecided)&&p.blankNull>=0&&p.undecided>=0&&p.blankNull+p.undecided<=100&&typeof p.source==='string'&&p.source.startsWith('https://'));
  const safe=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const groups=rows.reduce((a,p)=>((a[p.institute]??=[]).push(p),a),{});
+ const latest=[...new Map([...rows].sort((a,b)=>a.date.localeCompare(b.date)).map(p=>[p.institute,p])).values()];
+ const mean=k=>latest.reduce((sum,p)=>sum+p[k],0)/latest.length;
+ const overview=latest.length?(()=>{
+   const blank=mean('blankNull'),undecided=mean('undecided'),total=blank+undecided;
+   const count=latest.length;
+   const title=count===1?'Última pesquisa · '+safe(latest[0].institute):'Média simples · '+count+' institutos';
+   return '<div class="open-vote-overview" aria-label="'+safe(title)+'"><div class="eyebrow">PANORAMA GERAL · '+safe(title)+'</div><div class="open-vote-metrics"><div><span>Brancos e nulos</span><strong>'+fmt(blank)+'%</strong></div><div><span>Indecisos</span><strong>'+fmt(undecided)+'%</strong></div><div><span>Total</span><strong>'+fmt(total)+'%</strong></div></div><div class="open-vote-overview-track" role="img" aria-label="Brancos e nulos: '+fmt(blank)+'%; indecisos: '+fmt(undecided)+'%; demais respostas: '+fmt(100-total)+'%"><span class="blank" style="width:'+blank+'%"></span><span class="undecided" style="width:'+undecided+'%"></span></div><p class="small"><strong>'+fmt(total)+'%</strong> não indicaram voto em um dos finalistas nessas categorias. '+(count>1?'Cada instituto conta uma vez, com sua última rodada; média descritiva sem margem de erro própria.':'Resultado de um instituto, não uma média entre institutos.')+' Não significa que todos esses eleitores estejam disponíveis para mudar de voto.</p></div>';
+ })():'';
+
  const series=Object.entries(groups).sort(([a],[b])=>a.localeCompare(b)).map(([name,points])=>{
    const ordered=points.sort((a,b)=>a.date.localeCompare(b.date));
    const latest=ordered.at(-1);
@@ -114,7 +123,7 @@ function openVoteSection(){
    })();
    return '<div class="open-vote-institute"><h3>'+safe(name)+'</h3>'+latestText+graph+table+'</div>';
  }).join('');
- return '<section class="card open-vote-section" aria-labelledby="open-vote-title"><div class="card-head"><div><div class="eyebrow">ELEITORES SEM VOTO EM UM DOS FINALISTAS</div><h2 id="open-vote-title">O voto ainda em aberto</h2><p class="sub">Evolução de brancos/nulos e indecisos nas pesquisas de segundo turno.</p></div></div><div class="open-vote-legend"><span><i class="open-vote-key key-blank"></i>Brancos e nulos</span><span><i class="open-vote-key key-undecided"></i>Indecisos</span><span><i class="open-vote-key key-total"></i>Total</span></div>'+(rows.length?series:'<p class="notice">Aguardando rodadas verificadas com percentuais separados de brancos/nulos e indecisos sobre o total de entrevistados. Nenhum valor foi estimado ou convertido a partir de votos válidos.</p>')+'<p class="small">As séries são exibidas por instituto, sem misturar perguntas ou métodos distintos. O total soma brancos/nulos e indecisos apenas quando as categorias são mutuamente exclusivas na mesma pergunta. Não representa automaticamente votos que migrarão para algum candidato.</p></section>';
+ return '<section class="card open-vote-section" aria-labelledby="open-vote-title"><div class="card-head"><div><div class="eyebrow">ELEITORES SEM VOTO EM UM DOS FINALISTAS</div><h2 id="open-vote-title">O voto ainda em aberto</h2><p class="sub">Evolução de brancos/nulos e indecisos nas pesquisas de segundo turno.</p></div></div><div class="open-vote-legend"><span><i class="open-vote-key key-blank"></i>Brancos e nulos</span><span><i class="open-vote-key key-undecided"></i>Indecisos</span><span><i class="open-vote-key key-total"></i>Total</span></div>'+overview+(rows.length?series:'<p class="notice">Aguardando rodadas verificadas com percentuais separados de brancos/nulos e indecisos sobre o total de entrevistados. Nenhum valor foi estimado ou convertido a partir de votos válidos.</p>')+'<p class="small">As séries são exibidas por instituto, sem misturar perguntas ou métodos distintos. O total soma brancos/nulos e indecisos apenas quando as categorias são mutuamente exclusivas na mesma pergunta. Não representa automaticamente votos que migrarão para algum candidato.</p></section>';
 }
 function experimentalTrend(){
  const model=trendModel();
@@ -134,7 +143,8 @@ function experimentalTrend(){
  ${projectionChart(ps,projection)}
  <p class="notice">A simulação pressupõe continuidade da tendência recente e não incorpora eventos futuros, indecisos, abstenção nem mudanças de comportamento. Não possui intervalo de confiança validado. Não indica probabilidade de vitória.</p></section>
  <p class="small"><strong>Como ler:</strong> cada ponto é uma estimativa suavizada baseada nas pesquisas próximas daquela data, posicionadas pela data final da coleta. O ponto final pode corresponder ao dia de referência do painel, mesmo sem nova coleta concluída nessa data. A regressão dá mais influência a levantamentos temporalmente próximos e restringe oscilações bruscas. Não são novas pesquisas nem percentuais de intenção de voto observados diariamente.</p>
- ${openVoteSection()}\n <p class="notice"><strong>Limitações:</strong> curva descritiva com poucos levantamentos e sem correção validada de efeitos próprios de cada instituto. Não é rede neural, previsão de resultado ou tendência estatisticamente comprovada. Não há intervalo de confiança calibrado. O modelo principal do Pulsa não foi alterado.</p>
+ ${openVoteSection()}
+ <p class="notice"><strong>Limitações:</strong> curva descritiva com poucos levantamentos e sem correção validada de efeitos próprios de cada instituto. Não é rede neural, previsão de resultado ou tendência estatisticamente comprovada. Não há intervalo de confiança calibrado. O modelo principal do Pulsa não foi alterado.</p>
  <details><summary>Dados da curva e parâmetros</summary><p class="small">Janela gaussiana: 3,5 dias; regularização da inclinação: 18; uma pesquisa recente por instituto. Parâmetros exploratórios, sem validação retrospectiva. A extrapolação condicional usa a inclinação dos últimos cinco dias de observações suavizadas, limitada a ±0,15 p.p. por dia até 25/10. Não foi calibrada em eleições anteriores.</p><div class="table-wrap"><table><tr><th>Data</th><th>Flávio suavizado</th><th>Lula suavizado</th></tr>${ps.map(p=>`<tr><td>${date(p.date)}</td><td>${fmt(p.f)}%</td><td>${fmt(p.l)}%</td></tr>`).join('')}</table></div></details></section>`;
 }
 
