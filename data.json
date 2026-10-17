@@ -1,5 +1,5 @@
 {
-  "revision": "2026-10-17-open-vote-verified",
+  "revision": "2026-10-17-open-vote-verified-v2",
   "referenceDate": "2026-10-16",
   "publishedAt": "2026-10-16T20:26:00-03:00",
   "polls": [
@@ -548,20 +548,6 @@
       "question": "Intenção de voto estimulada no segundo turno: branco/nulo e indeciso",
       "registration": "BR-00652/2026",
       "source": "https://www.poder360.com.br/poder-eleicoes-2026/cnt-mda-confirma-poderdata-aya-e-da-flavio-com-505-e-lula-com-495/"
-    },
-    {
-      "institute": "Quaest",
-      "date": "2026-10-14",
-      "fieldEnd": "2026-10-13",
-      "blankNull": 9,
-      "undecided": 1,
-      "scope": "second_round",
-      "basis": "total_respondents",
-      "categoriesExclusive": true,
-      "question": "Intenção de voto estimulada no segundo turno: brancos/nulos/sem preferência (categoria conjunta) e indecisos",
-      "registration": "BR-08729/2026",
-      "source": "https://www.cnnbrasil.com.br/eleicoes/quaest-flavio-tem-46-no-2o-turno-lula-44/",
-      "note": "A categoria de 9% inclui eleitores sem preferência; não equivale estritamente à categoria branco/nulo do Datafolha."
     }
   ]
 }
