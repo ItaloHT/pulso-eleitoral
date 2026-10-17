@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261017-1",
+  "revision": "standard-20261017-cutoff-2",
   "referenceDate": "2026-10-17",
   "publishedAt": "2026-10-17",
   "polls": [
@@ -711,5 +711,12 @@
     "sensitivityPp": 3,
     "statisticalInterval": false,
     "policy": "Latest poll per institute; no automatic exclusion; no retrospective weight changes."
+  },
+  "dataCutoffDate": "2026-10-16",
+  "editorialPolicy": {
+    "dataCutoff": "Latest confirmed publication date, normally previous day",
+    "noNewPoll": "Preserve previous values and cutoff date",
+    "standardMean": "Weighted latest confirmed poll per included institute",
+    "projection": "Separate exploratory slope anchored at standard mean; not an election forecast"
   }
 }
