@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261017-expanded13-vox-corrected-v2",
+  "revision": "standard-20261017-expanded14-verita-v1",
   "referenceDate": "2026-10-17",
   "publishedAt": "2026-10-17",
   "polls": [
@@ -245,6 +245,29 @@
       "sourceType": "GP1, divulgação nacional com ficha técnica",
       "voteBasis": "Votos válidos publicados",
       "registrationSource": "Registro informado na reportagem; conferência individual no PesqEle pendente"
+    },
+    {
+      "name": "Veritá",
+      "date": "2026-10-17",
+      "field": "12 a 16/10",
+      "fieldEnd": "2026-10-16",
+      "f": 51.1,
+      "l": 48.9,
+      "totalF": 49.7,
+      "totalL": 47.7,
+      "n": 15554,
+      "margin": "±1,0 p.p.",
+      "converted": false,
+      "url": "https://www.gp1.com.br/eleicoes-2026/noticia/2026/10/17/flavio-bolsonaro-tem-511-dos-votos-validos-contra-489-de-lula-no-segundo-turno-diz-instituto-verita-634181.html",
+      "registration": "BR-01107/2026",
+      "method": "Entrevistas estruturadas automatizadas com reconhecimento de voz e transcrição",
+      "confidence": 95,
+      "sourceType": "GP1, notícia com votos válidos, amostra e ficha técnica; original e registro TSE ainda pendentes de conferência direta",
+      "voteBasis": "Votos válidos publicados: 51,1% × 48,9%; totais 49,7% × 47,7% reportados em catálogo de pesquisas.",
+      "additionalSources": [
+        "https://politondata.com.br/eleicoes/pesquisas"
+      ],
+      "registrationSource": "Registro citado em notícia; verificação direta no PesqEle pendente"
     }
   ],
   "history": [
@@ -371,6 +394,15 @@
         "l": 46.9,
         "url": "https://www.gp1.com.br/brasil/noticia/2026/10/11/flavio-bolsonaro-tem-531-dos-votos-validos-no-segundo-turno-e-lula-469-diz-datatrends-633734.html",
         "registration": "BR-03576/2026"
+      }
+    ],
+    "Veritá": [
+      {
+        "date": "2026-10-17",
+        "f": 51.1,
+        "l": 48.9,
+        "url": "https://www.gp1.com.br/eleicoes-2026/noticia/2026/10/17/flavio-bolsonaro-tem-511-dos-votos-validos-contra-489-de-lula-no-segundo-turno-diz-instituto-verita-634181.html",
+        "registration": "BR-01107/2026"
       }
     ]
   },
@@ -770,13 +802,13 @@
   },
   "standardModel": {
     "enabled": true,
-    "version": "2.3-provisional-regularized-13",
+    "version": "2.4-provisional-regularized-14",
     "institutes": [
       {
         "name": "Indexa/Broadcast",
         "firstRoundMaePp": 2.45,
         "weightBasis": "provisional_median_of_available_legacy_maes",
-        "weightPercent": 7.503370239672968,
+        "weightPercent": 6.979660472917834,
         "originalMaePp": 2.45,
         "effectiveMaePp": 2.45,
         "regularizationAlpha": 0.5
@@ -785,7 +817,7 @@
         "name": "Palver",
         "firstRoundMaePp": 2.45,
         "weightBasis": "provisional_median_of_available_legacy_maes",
-        "weightPercent": 7.503370239672968,
+        "weightPercent": 6.979660472917834,
         "originalMaePp": 2.45,
         "effectiveMaePp": 2.45,
         "regularizationAlpha": 0.5
@@ -794,7 +826,7 @@
         "name": "Quaest",
         "firstRoundMaePp": 2.45,
         "weightBasis": "provisional_median_of_available_legacy_maes",
-        "weightPercent": 7.503370239672968,
+        "weightPercent": 6.979660472917834,
         "originalMaePp": 2.45,
         "effectiveMaePp": 2.45,
         "regularizationAlpha": 0.5
@@ -803,7 +835,7 @@
         "name": "PoderData/Aya",
         "firstRoundMaePp": 2.45,
         "weightBasis": "legacy_first_round_mae_unverified",
-        "weightPercent": 7.503370239672968,
+        "weightPercent": 6.979660472917834,
         "originalMaePp": 2.45,
         "effectiveMaePp": 2.45,
         "regularizationAlpha": 0.5
@@ -812,7 +844,7 @@
         "name": "BTG/Nexus",
         "firstRoundMaePp": 4.595,
         "weightBasis": "legacy_first_round_mae_unverified",
-        "weightPercent": 5.723964030264619,
+        "weightPercent": 5.324450775360205,
         "originalMaePp": 4.595,
         "effectiveMaePp": 3.5225,
         "regularizationAlpha": 0.5
@@ -821,7 +853,7 @@
         "name": "Futura/100% Cidades",
         "firstRoundMaePp": 2.45,
         "weightBasis": "provisional_median_of_available_legacy_maes",
-        "weightPercent": 7.503370239672968,
+        "weightPercent": 6.979660472917834,
         "originalMaePp": 2.45,
         "effectiveMaePp": 2.45,
         "regularizationAlpha": 0.5
@@ -830,7 +862,7 @@
         "name": "Gerp",
         "firstRoundMaePp": 1.095,
         "weightBasis": "legacy_first_round_mae_unverified",
-        "weightPercent": 9.336925997068256,
+        "weightPercent": 8.685240263865294,
         "originalMaePp": 1.095,
         "effectiveMaePp": 1.7725,
         "regularizationAlpha": 0.5
@@ -839,7 +871,7 @@
         "name": "AtlasIntel",
         "firstRoundMaePp": 2.35,
         "weightBasis": "legacy_first_round_mae_unverified",
-        "weightPercent": 7.613713919668159,
+        "weightPercent": 7.082302538696037,
         "originalMaePp": 2.35,
         "effectiveMaePp": 2.4000000000000004,
         "regularizationAlpha": 0.5
@@ -848,7 +880,7 @@
         "name": "Datafolha",
         "firstRoundMaePp": 2.6,
         "weightBasis": "legacy_first_round_mae_unverified",
-        "weightPercent": 7.343724064360777,
+        "weightPercent": 6.831157058600433,
         "originalMaePp": 2.6,
         "effectiveMaePp": 2.5250000000000004,
         "regularizationAlpha": 0.5
@@ -857,7 +889,7 @@
         "name": "CNT/MDA",
         "firstRoundMaePp": 2.45,
         "weightBasis": "provisional_median_of_available_legacy_maes",
-        "weightPercent": 7.503370239672968,
+        "weightPercent": 6.979660472917834,
         "originalMaePp": 2.45,
         "effectiveMaePp": 2.45,
         "regularizationAlpha": 0.5
@@ -866,7 +898,7 @@
         "name": "Ipespe/Abrapel",
         "firstRoundMaePp": 2.45,
         "weightBasis": "provisional_median_of_available_legacy_maes",
-        "weightPercent": 7.503370239672968,
+        "weightPercent": 6.979660472917834,
         "originalMaePp": 2.45,
         "effectiveMaePp": 2.45,
         "regularizationAlpha": 0.5
@@ -878,7 +910,7 @@
         "effectiveMaePp": 1.5550000000000002,
         "regularizationAlpha": 0.5,
         "weightBasis": "legacy_first_round_mae_unverified",
-        "weightPercent": 10.131752378423382
+        "weightPercent": 9.424590462452652
       },
       {
         "name": "DataTrends",
@@ -887,14 +919,23 @@
         "effectiveMaePp": 2.53337,
         "regularizationAlpha": 0.5,
         "weightBasis": "legacy_first_round_mae_unverified",
-        "weightPercent": 7.326327932504023
+        "weightPercent": 6.814975117682701
+      },
+      {
+        "name": "Veritá",
+        "firstRoundMaePp": 2.45,
+        "originalMaePp": 2.45,
+        "effectiveMaePp": 2.45,
+        "regularizationAlpha": 0.5,
+        "weightBasis": "provisional_median_of_available_legacy_maes",
+        "weightPercent": 6.979660472917834
       }
     ],
-    "sd": 1.0849322160230652,
+    "sd": 1.046389608335293,
     "formula": "adjusted_error_i = 2.45 + 0.5*(source_error_i - 2.45); weight_i = [1/(1+adjusted_error_i)] / sum_j[1/(1+adjusted_error_j)]",
     "sensitivityPp": 3,
     "statisticalInterval": false,
-    "policy": "13 latest national second-round polls, one per institute; 7 legacy first-round errors unaudited and 6 imputed at 2.45 pp; 50% shrinkage toward median. Vox Brasil valid-vote split derived from published total-vote percentages.",
+    "policy": "14 latest national second-round polls, one per institute; 7 legacy first-round errors unaudited and 7 imputed at 2.45 pp; 50% shrinkage toward median.",
     "weightAudit": {
       "status": "provisional_regularized_not_audited",
       "penaltyMaePp": null,
@@ -911,7 +952,8 @@
       "priorPenaltyModelPreserved": true,
       "regularizationAlpha": 0.5,
       "centerMaePp": 2.45,
-      "interpretation": "Assumed 50% shrinkage, not measured accuracy. Historical errors remain unaudited."
+      "interpretation": "Assumed 50% shrinkage, not measured accuracy. Historical errors remain unaudited.",
+      "imputedCount": 7
     }
   },
   "dataCutoffDate": "2026-10-17",
@@ -1262,6 +1304,152 @@
       "penaltyMaePp": null,
       "penaltyRule": null,
       "legacyErrorStatus": "not_independently_audited",
+      "officialFirstRoundReference": "https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/flavio-bolsonaro-e-lula-vao-disputar-o-2o-turno-para-a-presidencia-da-republica",
+      "referenceSources": [
+        "https://noticias.uol.com.br/eleicoes/2026/10/03/como-esta-a-pesquisa-para-presidente-veja-levantamentos-atualizados-do-1-turno.ghtm",
+        "https://www.placardaspesquisas.com.br/"
+      ],
+      "updated": "2026-10-17",
+      "imputedMaePp": 2.45,
+      "imputationBasis": "Median of available five legacy MAEs among currently polled institutes; does not imply actual first-round error.",
+      "priorPenaltyModelPreserved": true,
+      "regularizationAlpha": 0.5,
+      "centerMaePp": 2.45,
+      "interpretation": "Assumed 50% shrinkage, not measured accuracy. Historical errors remain unaudited."
+    }
+  },
+  "standardModelBeforeExpansion14": {
+    "enabled": true,
+    "version": "2.3-provisional-regularized-13",
+    "institutes": [
+      {
+        "name": "Indexa/Broadcast",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "provisional_median_of_available_legacy_maes",
+        "weightPercent": 7.503370239672968,
+        "originalMaePp": 2.45,
+        "effectiveMaePp": 2.45,
+        "regularizationAlpha": 0.5
+      },
+      {
+        "name": "Palver",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "provisional_median_of_available_legacy_maes",
+        "weightPercent": 7.503370239672968,
+        "originalMaePp": 2.45,
+        "effectiveMaePp": 2.45,
+        "regularizationAlpha": 0.5
+      },
+      {
+        "name": "Quaest",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "provisional_median_of_available_legacy_maes",
+        "weightPercent": 7.503370239672968,
+        "originalMaePp": 2.45,
+        "effectiveMaePp": 2.45,
+        "regularizationAlpha": 0.5
+      },
+      {
+        "name": "PoderData/Aya",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "legacy_first_round_mae_unverified",
+        "weightPercent": 7.503370239672968,
+        "originalMaePp": 2.45,
+        "effectiveMaePp": 2.45,
+        "regularizationAlpha": 0.5
+      },
+      {
+        "name": "BTG/Nexus",
+        "firstRoundMaePp": 4.595,
+        "weightBasis": "legacy_first_round_mae_unverified",
+        "weightPercent": 5.723964030264619,
+        "originalMaePp": 4.595,
+        "effectiveMaePp": 3.5225,
+        "regularizationAlpha": 0.5
+      },
+      {
+        "name": "Futura/100% Cidades",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "provisional_median_of_available_legacy_maes",
+        "weightPercent": 7.503370239672968,
+        "originalMaePp": 2.45,
+        "effectiveMaePp": 2.45,
+        "regularizationAlpha": 0.5
+      },
+      {
+        "name": "Gerp",
+        "firstRoundMaePp": 1.095,
+        "weightBasis": "legacy_first_round_mae_unverified",
+        "weightPercent": 9.336925997068256,
+        "originalMaePp": 1.095,
+        "effectiveMaePp": 1.7725,
+        "regularizationAlpha": 0.5
+      },
+      {
+        "name": "AtlasIntel",
+        "firstRoundMaePp": 2.35,
+        "weightBasis": "legacy_first_round_mae_unverified",
+        "weightPercent": 7.613713919668159,
+        "originalMaePp": 2.35,
+        "effectiveMaePp": 2.4000000000000004,
+        "regularizationAlpha": 0.5
+      },
+      {
+        "name": "Datafolha",
+        "firstRoundMaePp": 2.6,
+        "weightBasis": "legacy_first_round_mae_unverified",
+        "weightPercent": 7.343724064360777,
+        "originalMaePp": 2.6,
+        "effectiveMaePp": 2.5250000000000004,
+        "regularizationAlpha": 0.5
+      },
+      {
+        "name": "CNT/MDA",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "provisional_median_of_available_legacy_maes",
+        "weightPercent": 7.503370239672968,
+        "originalMaePp": 2.45,
+        "effectiveMaePp": 2.45,
+        "regularizationAlpha": 0.5
+      },
+      {
+        "name": "Ipespe/Abrapel",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "provisional_median_of_available_legacy_maes",
+        "weightPercent": 7.503370239672968,
+        "originalMaePp": 2.45,
+        "effectiveMaePp": 2.45,
+        "regularizationAlpha": 0.5
+      },
+      {
+        "name": "Vox Brasil",
+        "firstRoundMaePp": 0.66,
+        "originalMaePp": 0.66,
+        "effectiveMaePp": 1.5550000000000002,
+        "regularizationAlpha": 0.5,
+        "weightBasis": "legacy_first_round_mae_unverified",
+        "weightPercent": 10.131752378423382
+      },
+      {
+        "name": "DataTrends",
+        "firstRoundMaePp": 2.61674,
+        "originalMaePp": 2.61674,
+        "effectiveMaePp": 2.53337,
+        "regularizationAlpha": 0.5,
+        "weightBasis": "legacy_first_round_mae_unverified",
+        "weightPercent": 7.326327932504023
+      }
+    ],
+    "sd": 1.0849322160230652,
+    "formula": "adjusted_error_i = 2.45 + 0.5*(source_error_i - 2.45); weight_i = [1/(1+adjusted_error_i)] / sum_j[1/(1+adjusted_error_j)]",
+    "sensitivityPp": 3,
+    "statisticalInterval": false,
+    "policy": "13 latest national second-round polls, one per institute; 7 legacy first-round errors unaudited and 6 imputed at 2.45 pp; 50% shrinkage toward median. Vox Brasil valid-vote split derived from published total-vote percentages.",
+    "weightAudit": {
+      "status": "provisional_regularized_not_audited",
+      "penaltyMaePp": null,
+      "penaltyRule": null,
+      "legacyErrorStatus": "seven_legacy_errors_not_independently_audited",
       "officialFirstRoundReference": "https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/flavio-bolsonaro-e-lula-vao-disputar-o-2o-turno-para-a-presidencia-da-republica",
       "referenceSources": [
         "https://noticias.uol.com.br/eleicoes/2026/10/03/como-esta-a-pesquisa-para-presidente-veja-levantamentos-atualizados-do-1-turno.ghtm",
