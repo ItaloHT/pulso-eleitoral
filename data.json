@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261017-expanded13-v1",
+  "revision": "standard-20261017-expanded13-vox-corrected-v2",
   "referenceDate": "2026-10-17",
   "publishedAt": "2026-10-17",
   "polls": [
@@ -208,20 +208,23 @@
       "date": "2026-10-09",
       "field": "05 a 07/10",
       "fieldEnd": "2026-10-07",
-      "f": 50.9,
-      "l": 49.1,
+      "f": 49.14,
+      "l": 50.86,
       "totalF": 42.7,
       "totalL": 44.2,
       "n": 2100,
       "margin": "±2,15 p.p.",
       "converted": true,
-      "url": "https://www.cnnbrasil.com.br/eleicoes/vox-lula-e-rejeitado-por-452-dos-eleitores-flavio-por-442/",
+      "url": "https://www.cnnbrasil.com.br/eleicoes/vox-lula-tem-442-das-intencoes-de-voto-no-2o-turno-flavio-427/",
       "registration": "BR-09623/2026",
       "method": "Entrevistas presenciais domiciliares",
       "confidence": 95,
-      "sourceType": "CNN Brasil (ficha técnica e rejeição); votos totais documentados por agregadores",
-      "voteBasis": "Votos válidos calculados de 42,7/(42,7+44,2) e 44,2/(42,7+44,2), arredondados a 1 casa",
-      "registrationSource": "Registro informado pela CNN; conferência individual no PesqEle pendente"
+      "sourceType": "CNN Brasil (votos totais e ficha técnica); Metrópoles (votos válidos, brancos/nulos e indecisos)",
+      "voteBasis": "Votos válidos calculados: Flávio 42,7/(42,7+44,2)=49,14%; Lula 44,2/(42,7+44,2)=50,86%.",
+      "registrationSource": "Registro informado pela CNN; conferência individual no PesqEle pendente",
+      "additionalSources": [
+        "https://archive.ph/2026.10.09-144112/https%3A/www.metropoles.com/brasil/vox-brasil-no-2o-turno-lula-tem-5086-e-flavio-4914-dos-votos-validos"
+      ]
     },
     {
       "name": "DataTrends",
@@ -355,9 +358,9 @@
     "Vox Brasil": [
       {
         "date": "2026-10-09",
-        "f": 50.9,
-        "l": 49.1,
-        "url": "https://www.cnnbrasil.com.br/eleicoes/vox-lula-e-rejeitado-por-452-dos-eleitores-flavio-por-442/",
+        "f": 49.14,
+        "l": 50.86,
+        "url": "https://www.cnnbrasil.com.br/eleicoes/vox-lula-tem-442-das-intencoes-de-voto-no-2o-turno-flavio-427/",
         "registration": "BR-09623/2026"
       }
     ],
@@ -652,6 +655,19 @@
       "basis": "total_respondents",
       "categoriesExclusive": true,
       "question": "Votos totais estimulados no segundo turno"
+    },
+    {
+      "institute": "Vox Brasil",
+      "date": "2026-10-09",
+      "fieldEnd": "2026-10-07",
+      "blankNull": 3.4,
+      "undecided": 9.7,
+      "registration": "BR-09623/2026",
+      "source": "https://www.cnnbrasil.com.br/eleicoes/vox-lula-tem-442-das-intencoes-de-voto-no-2o-turno-flavio-427/",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Votos estimulados totais do segundo turno"
     }
   ],
   "experimentalArchive": {
@@ -874,7 +890,7 @@
         "weightPercent": 7.326327932504023
       }
     ],
-    "sd": 0.8693870540452273,
+    "sd": 1.0849322160230652,
     "formula": "adjusted_error_i = 2.45 + 0.5*(source_error_i - 2.45); weight_i = [1/(1+adjusted_error_i)] / sum_j[1/(1+adjusted_error_j)]",
     "sensitivityPp": 3,
     "statisticalInterval": false,
