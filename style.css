@@ -289,3 +289,10 @@ header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:b
 .rejection-entry details{border-top:1px solid var(--line);padding-top:10px}
 .rejection-entry summary{cursor:pointer;font-weight:650}
 @media(max-width:680px){header nav{flex-wrap:wrap;justify-content:center;row-gap:8px}.rejection-entry{padding:14px}.rejection-scores span{font-size:12px}}
+
+/* Descriptive group summary sits above individual rejection rounds. */
+.rejection-summary{border:1px solid var(--line);border-radius:14px;padding:18px;margin:4px 0 18px;background:var(--paper)}
+.rejection-summary h3{font-size:clamp(16px,2.5vw,20px);margin:8px 0 12px}
+.rejection-summary .rejection-scores{margin:12px 0}
+.rejection-summary .small{margin-bottom:0}
+@media(max-width:680px){.rejection-summary{padding:14px}}
