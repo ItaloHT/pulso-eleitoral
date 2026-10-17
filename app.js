@@ -105,10 +105,12 @@ function openVoteSection(){
  const mean=k=>latest.reduce((sum,p)=>sum+p[k],0)/latest.length;
  const overview=latest.length?(()=>{
    const blank=mean('blankNull'),undecided=mean('undecided'),total=blank+undecided;
+   const display=v=>v.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1});
    const count=latest.length;
    const title=count===1?'Última pesquisa · '+safe(latest[0].institute):'Média simples · '+count+' institutos';
-   return '<div class="open-vote-overview" aria-label="'+safe(title)+'"><div class="eyebrow">PANORAMA GERAL · '+safe(title)+'</div><div class="open-vote-metrics"><div><span>Brancos e nulos</span><strong>'+fmt(blank)+'%</strong></div><div><span>Indecisos</span><strong>'+fmt(undecided)+'%</strong></div><div><span>Total</span><strong>'+fmt(total)+'%</strong></div></div><div class="open-vote-overview-track" role="img" aria-label="Brancos e nulos: '+fmt(blank)+'%; indecisos: '+fmt(undecided)+'%; demais respostas: '+fmt(100-total)+'%"><span class="blank" style="width:'+blank+'%"></span><span class="undecided" style="width:'+undecided+'%"></span></div><p class="small"><strong>'+fmt(total)+'%</strong> não indicaram voto em um dos finalistas nessas categorias. '+(count>1?'Cada instituto conta uma vez, com sua última rodada; média descritiva sem margem de erro própria.':'Resultado de um instituto, não uma média entre institutos.')+' Não significa que todos esses eleitores estejam disponíveis para mudar de voto.</p></div>';
- })():'';
+   const metric=(label,value,kind)=>'<div class="open-vote-metric '+kind+'"><span>'+label+'</span><strong>'+display(value)+'%</strong></div>';
+   return '<div class="open-vote-overview" aria-label="'+safe(title)+'"><div class="eyebrow">PANORAMA GERAL</div><p class="open-vote-overview-subtitle">'+title+'</p><div class="open-vote-metrics">'+metric('Brancos/nulos',blank,'blank')+metric('Indecisos',undecided,'undecided')+metric('Total',total,'total')+'</div><div class="open-vote-overview-track" role="img" aria-label="Brancos e nulos: '+display(blank)+'%; indecisos: '+display(undecided)+'%; demais respostas: '+display(100-total)+'%"><span class="blank" style="width:'+blank+'%"></span><span class="undecided" style="width:'+undecided+'%"></span></div><p class="open-vote-overview-summary"><strong>'+display(total)+'%</strong> não indicaram voto em um dos finalistas.</p><p class="small">'+(count>1?'Última rodada de cada instituto, com pesos iguais. Média descritiva, sem margem de erro própria.':'Resultado de um instituto; não é média entre institutos.')+' Brancos/nulos e indecisos não representam necessariamente votos disponíveis para os candidatos.</p></div>';
+ })();
 
  const series=Object.entries(groups).sort(([a],[b])=>a.localeCompare(b)).map(([name,points])=>{
    const ordered=points.sort((a,b)=>a.date.localeCompare(b.date));
