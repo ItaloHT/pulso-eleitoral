@@ -96,6 +96,26 @@ function projectionChart(points,projection){
  return out;
 }
 
+function openVoteSection(){
+ const raw=Array.isArray(dataset.openVote)?dataset.openVote:[];
+ const rows=raw.filter(p=>p.scope==='second_round'&&p.basis==='total_respondents'&&p.categoriesExclusive===true&&typeof p.institute==='string'&&/^\\d{4}-\\d{2}-\\d{2}$/.test(p.date)&&Number.isFinite(p.blankNull)&&Number.isFinite(p.undecided)&&p.blankNull>=0&&p.undecided>=0&&p.blankNull+p.undecided<=100&&typeof p.source==='string'&&/^https:\\/\\//.test(p.source));
+ const safe=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const groups=rows.reduce((a,p)=>((a[p.institute]??=[]).push(p),a),{});
+ const series=Object.entries(groups).sort(([a],[b])=>a.localeCompare(b)).map(([name,points])=>{
+   const ordered=points.sort((a,b)=>a.date.localeCompare(b.date));
+   const latest=ordered.at(-1);
+   const latestText='<p class="small"><strong>Última rodada:</strong> '+date(latest.date)+' · Brancos/nulos: '+fmt(latest.blankNull)+'% · Indecisos: '+fmt(latest.undecided)+'% · Total: '+fmt(latest.blankNull+latest.undecided)+'%</p>';
+   const table='<div class="table-wrap"><table><thead><tr><th>Data</th><th>Brancos/nulos</th><th>Indecisos</th><th>Total</th><th>Fonte</th></tr></thead><tbody>'+ordered.map(p=>'<tr><td>'+date(p.date)+'</td><td>'+fmt(p.blankNull)+'%</td><td>'+fmt(p.undecided)+'%</td><td>'+fmt(p.blankNull+p.undecided)+'%</td><td><a href="'+safe(p.source)+'" target="_blank" rel="noopener noreferrer">Fonte ↗</a></td></tr>').join('')+'</tbody></table></div>';
+   const graph=ordered.length<2?'<p class="small">A evolução será exibida após uma segunda rodada comparável.</p>':(()=>{
+     const w=640,h=220,pad=32;const values=ordered.flatMap(p=>[p.blankNull,p.undecided,p.blankNull+p.undecided]);const top=Math.max(5,Math.ceil(Math.max(...values)/5)*5);
+     const x=i=>pad+i*(w-2*pad)/(ordered.length-1),y=v=>h-pad-v/top*(h-2*pad);
+     const line=(key,color,dash='')=>'<polyline fill="none" stroke="'+color+'" stroke-width="3" '+(dash?'stroke-dasharray="'+dash+'" ':'')+'points="'+ordered.map((p,i)=>x(i)+','+y(key(p))).join(' ')+'"/>';
+     return '<svg class="open-vote-chart" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Evolução de brancos e nulos, indecisos e total no instituto '+safe(name)+'"><line x1="'+pad+'" y1="'+(h-pad)+'" x2="'+(w-pad)+'" y2="'+(h-pad)+'" stroke="#aaa"/><text x="'+pad+'" y="18" fill="currentColor" font-size="13">0 a '+top+'% · '+date(ordered[0].date)+' — '+date(latest.date)+'</text>'+line(p=>p.blankNull,'#7774df')+line(p=>p.undecided,'#e45440','5 4')+line(p=>p.blankNull+p.undecided,'#303039','3 3')+'</svg>';
+   })();
+   return '<div class="open-vote-institute"><h3>'+safe(name)+'</h3>'+latestText+graph+table+'</div>';
+ }).join('');
+ return '<section class="card open-vote-section" aria-labelledby="open-vote-title"><div class="card-head"><div><div class="eyebrow">ELEITORES SEM VOTO EM UM DOS FINALISTAS</div><h2 id="open-vote-title">O voto ainda em aberto</h2><p class="sub">Evolução de brancos/nulos e indecisos nas pesquisas de segundo turno.</p></div></div><div class="open-vote-legend"><span><i class="open-vote-key key-blank"></i>Brancos e nulos</span><span><i class="open-vote-key key-undecided"></i>Indecisos</span><span><i class="open-vote-key key-total"></i>Total</span></div>'+(rows.length?series:'<p class="notice">Aguardando rodadas verificadas com percentuais separados de brancos/nulos e indecisos sobre o total de entrevistados. Nenhum valor foi estimado ou convertido a partir de votos válidos.</p>')+'<p class="small">As séries são exibidas por instituto, sem misturar perguntas ou métodos distintos. O total soma brancos/nulos e indecisos apenas quando as categorias são mutuamente exclusivas na mesma pergunta. Não representa automaticamente votos que migrarão para algum candidato.</p></section>';
+}
 function experimentalTrend(){
  const model=trendModel();
  if(!model)return intro('Tendência experimental.','Ainda não há observações suficientes para calcular uma trajetória.')+'<p class="notice">Aguarde novas pesquisas com datas de coleta verificadas.</p>';
@@ -114,7 +134,7 @@ function experimentalTrend(){
  ${projectionChart(ps,projection)}
  <p class="notice">A simulação pressupõe continuidade da tendência recente e não incorpora eventos futuros, indecisos, abstenção nem mudanças de comportamento. Não possui intervalo de confiança validado. Não indica probabilidade de vitória.</p></section>
  <p class="small"><strong>Como ler:</strong> cada ponto é uma estimativa suavizada baseada nas pesquisas próximas daquela data, posicionadas pela data final da coleta. O ponto final pode corresponder ao dia de referência do painel, mesmo sem nova coleta concluída nessa data. A regressão dá mais influência a levantamentos temporalmente próximos e restringe oscilações bruscas. Não são novas pesquisas nem percentuais de intenção de voto observados diariamente.</p>
- <p class="notice"><strong>Limitações:</strong> curva descritiva com poucos levantamentos e sem correção validada de efeitos próprios de cada instituto. Não é rede neural, previsão de resultado ou tendência estatisticamente comprovada. Não há intervalo de confiança calibrado. O modelo principal do Pulsa não foi alterado.</p>
+ ${openVoteSection()}\n <p class="notice"><strong>Limitações:</strong> curva descritiva com poucos levantamentos e sem correção validada de efeitos próprios de cada instituto. Não é rede neural, previsão de resultado ou tendência estatisticamente comprovada. Não há intervalo de confiança calibrado. O modelo principal do Pulsa não foi alterado.</p>
  <details><summary>Dados da curva e parâmetros</summary><p class="small">Janela gaussiana: 3,5 dias; regularização da inclinação: 18; uma pesquisa recente por instituto. Parâmetros exploratórios, sem validação retrospectiva. A extrapolação condicional usa a inclinação dos últimos cinco dias de observações suavizadas, limitada a ±0,15 p.p. por dia até 25/10. Não foi calibrada em eleições anteriores.</p><div class="table-wrap"><table><tr><th>Data</th><th>Flávio suavizado</th><th>Lula suavizado</th></tr>${ps.map(p=>`<tr><td>${date(p.date)}</td><td>${fmt(p.f)}%</td><td>${fmt(p.l)}%</td></tr>`).join('')}</table></div></details></section>`;
 }
 
