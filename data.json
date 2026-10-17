@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261017-ipespe-published",
+  "revision": "standard-20261017-expanded11-provisional",
   "referenceDate": "2026-10-17",
   "publishedAt": "2026-10-17",
   "polls": [
@@ -683,6 +683,102 @@
   },
   "standardModel": {
     "enabled": true,
+    "version": "2.0-provisional",
+    "institutes": [
+      {
+        "name": "Indexa/Broadcast",
+        "firstRoundMaePp": 5,
+        "weightBasis": "provisional_penalty_no_audited_mae",
+        "weightPercent": 6.6079922111204
+      },
+      {
+        "name": "Palver",
+        "firstRoundMaePp": 5,
+        "weightBasis": "provisional_penalty_no_audited_mae",
+        "weightPercent": 6.6079922111204
+      },
+      {
+        "name": "Quaest",
+        "firstRoundMaePp": 5,
+        "weightBasis": "provisional_penalty_no_audited_mae",
+        "weightPercent": 6.6079922111204
+      },
+      {
+        "name": "PoderData/Aya",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "legacy_first_round_mae_unverified",
+        "weightPercent": 11.492160367165912
+      },
+      {
+        "name": "BTG/Nexus",
+        "firstRoundMaePp": 4.595,
+        "weightBasis": "legacy_first_round_mae_unverified",
+        "weightPercent": 7.086318725062092
+      },
+      {
+        "name": "Futura/100% Cidades",
+        "firstRoundMaePp": 5,
+        "weightBasis": "provisional_penalty_no_audited_mae",
+        "weightPercent": 6.6079922111204
+      },
+      {
+        "name": "Gerp",
+        "firstRoundMaePp": 1.095,
+        "weightBasis": "legacy_first_round_mae_unverified",
+        "weightPercent": 18.925037358817377
+      },
+      {
+        "name": "AtlasIntel",
+        "firstRoundMaePp": 2.35,
+        "weightBasis": "legacy_first_round_mae_unverified",
+        "weightPercent": 11.835209930364895
+      },
+      {
+        "name": "Datafolha",
+        "firstRoundMaePp": 2.6,
+        "weightBasis": "legacy_first_round_mae_unverified",
+        "weightPercent": 11.013320351867334
+      },
+      {
+        "name": "CNT/MDA",
+        "firstRoundMaePp": 5,
+        "weightBasis": "provisional_penalty_no_audited_mae",
+        "weightPercent": 6.6079922111204
+      },
+      {
+        "name": "Ipespe/Abrapel",
+        "firstRoundMaePp": 5,
+        "weightBasis": "provisional_penalty_no_audited_mae",
+        "weightPercent": 6.6079922111204
+      }
+    ],
+    "sd": 1.4661540420961179,
+    "formula": "w_i = [1/(1+MAE_i)] / sum_j[1/(1+MAE_j)]",
+    "sensitivityPp": 3,
+    "statisticalInterval": false,
+    "policy": "Latest confirmed national second-round poll per institute. 11 currently listed institutes; legacy MAEs retained as unverified, missing MAEs assigned explicit conservative proxy 5.0 pp, NOT measured error. Reaudit and replace proxy on documentary evidence.",
+    "weightAudit": {
+      "status": "provisional_not_audited",
+      "penaltyMaePp": 5,
+      "penaltyRule": "For institutes without a historical MAE in the legacy model, use a provisional 5.0 pp denominator in 1/(1+MAE), normalized across all included institutes. This is a disclosed modeling assumption, not measured historical accuracy.",
+      "legacyErrorStatus": "not_independently_audited",
+      "officialFirstRoundReference": "https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/flavio-bolsonaro-e-lula-vao-disputar-o-2o-turno-para-a-presidencia-da-republica",
+      "referenceSources": [
+        "https://noticias.uol.com.br/eleicoes/2026/10/03/como-esta-a-pesquisa-para-presidente-veja-levantamentos-atualizados-do-1-turno.ghtm",
+        "https://www.placardaspesquisas.com.br/"
+      ],
+      "updated": "2026-10-17"
+    }
+  },
+  "dataCutoffDate": "2026-10-17",
+  "editorialPolicy": {
+    "dataCutoff": "Latest confirmed publication date, normally previous day",
+    "noNewPoll": "Preserve previous values and cutoff date",
+    "standardMean": "Weighted latest confirmed poll per included institute",
+    "projection": "Separate exploratory slope anchored at standard mean; not an election forecast"
+  },
+  "standardModelLegacy": {
+    "enabled": true,
     "version": "1.0",
     "institutes": [
       {
@@ -726,12 +822,5 @@
     "sensitivityPp": 3,
     "statisticalInterval": false,
     "policy": "Latest poll per institute; no automatic exclusion; no retrospective weight changes."
-  },
-  "dataCutoffDate": "2026-10-16",
-  "editorialPolicy": {
-    "dataCutoff": "Latest confirmed publication date, normally previous day",
-    "noNewPoll": "Preserve previous values and cutoff date",
-    "standardMean": "Weighted latest confirmed poll per included institute",
-    "projection": "Separate exploratory slope anchored at standard mean; not an election forecast"
   }
 }
