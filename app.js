@@ -98,7 +98,7 @@ function projectionChart(points,projection){
 
 function openVoteSection(){
  const raw=Array.isArray(dataset.openVote)?dataset.openVote:[];
- const rows=raw.filter(p=>p.scope==='second_round'&&p.basis==='total_respondents'&&p.categoriesExclusive===true&&typeof p.institute==='string'&&/^\\d{4}-\\d{2}-\\d{2}$/.test(p.date)&&Number.isFinite(p.blankNull)&&Number.isFinite(p.undecided)&&p.blankNull>=0&&p.undecided>=0&&p.blankNull+p.undecided<=100&&typeof p.source==='string'&&/^https:\\/\\//.test(p.source));
+ const rows=raw.filter(p=>p.scope==='second_round'&&p.basis==='total_respondents'&&p.categoriesExclusive===true&&typeof p.institute==='string'&&/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(p.date)&&Number.isFinite(p.blankNull)&&Number.isFinite(p.undecided)&&p.blankNull>=0&&p.undecided>=0&&p.blankNull+p.undecided<=100&&typeof p.source==='string'&&p.source.startsWith('https://'));
  const safe=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const groups=rows.reduce((a,p)=>((a[p.institute]??=[]).push(p),a),{});
  const series=Object.entries(groups).sort(([a],[b])=>a.localeCompare(b)).map(([name,points])=>{
