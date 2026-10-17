@@ -277,3 +277,15 @@ header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:b
  .mobile-poll-links{display:flex;flex-wrap:wrap;gap:14px;font-size:13px}
  .mobile-poll-links a{text-decoration:underline}
 }
+
+/* Rejection: methodological groups, responsive score comparisons. */
+.rejection-list{display:grid;gap:14px}
+.rejection-entry{border:1px solid var(--line);border-radius:14px;padding:17px;min-width:0}
+.rejection-entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.rejection-scores{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0}
+.rejection-scores>div{border:1px solid var(--line);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.rejection-scores span{font-size:13px}
+.rejection-scores strong{font-size:clamp(24px,4vw,34px)}
+.rejection-entry details{border-top:1px solid var(--line);padding-top:10px}
+.rejection-entry summary{cursor:pointer;font-weight:650}
+@media(max-width:680px){header nav{flex-wrap:wrap;justify-content:center;row-gap:8px}.rejection-entry{padding:14px}.rejection-scores span{font-size:12px}}
