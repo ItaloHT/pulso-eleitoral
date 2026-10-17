@@ -110,7 +110,7 @@ function openVoteSection(){
    const title=count===1?'Última pesquisa · '+safe(latest[0].institute):'Média simples · '+count+' institutos';
    const metric=(label,value,kind)=>'<div class="open-vote-metric '+kind+'"><span>'+label+'</span><strong>'+display(value)+'%</strong></div>';
    return '<div class="open-vote-overview" aria-label="'+safe(title)+'"><div class="eyebrow">PANORAMA GERAL</div><p class="open-vote-overview-subtitle">'+title+'</p><div class="open-vote-metrics">'+metric('Brancos/nulos',blank,'blank')+metric('Indecisos',undecided,'undecided')+metric('Total',total,'total')+'</div><div class="open-vote-overview-track" role="img" aria-label="Brancos e nulos: '+display(blank)+'%; indecisos: '+display(undecided)+'%; demais respostas: '+display(100-total)+'%"><span class="blank" style="width:'+blank+'%"></span><span class="undecided" style="width:'+undecided+'%"></span></div><p class="open-vote-overview-summary"><strong>'+display(total)+'%</strong> não indicaram voto em um dos finalistas.</p><p class="small">'+(count>1?'Última rodada de cada instituto, com pesos iguais. Média descritiva, sem margem de erro própria.':'Resultado de um instituto; não é média entre institutos.')+' Brancos/nulos e indecisos não representam necessariamente votos disponíveis para os candidatos.</p></div>';
- })();
+ })():'';
 
  const series=Object.entries(groups).sort(([a],[b])=>a.localeCompare(b)).map(([name,points])=>{
    const ordered=points.sort((a,b)=>a.date.localeCompare(b.date));
