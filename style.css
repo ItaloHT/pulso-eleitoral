@@ -482,3 +482,6 @@ header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:b
  .open-vote-series-numbers{margin-left:auto}
  .open-vote-series-numbers strong{font-size:17px}
 }
+
+/* Weight comparison bars remain inside the card on narrow screens. */
+.weight-comparison,.weight-pair{min-width:0;max-width:100%}.weight-pair{width:100%;overflow:hidden}.weight-pair i,.weight-pair b{max-width:100%;box-sizing:border-box}.weight-comparison .weight-row{gap:10px;min-width:0}.weight-comparison .weight-row span{min-width:0;overflow-wrap:anywhere}.weight-comparison .weight-row strong{flex-shrink:0}
