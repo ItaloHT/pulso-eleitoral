@@ -406,3 +406,27 @@ header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:b
  .open-vote-metrics .open-vote-metric strong{font-size:19px}
  .open-vote-metrics .open-vote-metric span{font-size:10px}
 }
+
+/* Narrow-screen correction: one full-width card per metric, consistent right-aligned figures. */
+@media(max-width:680px){
+ .open-vote-metrics{grid-template-columns:minmax(0,1fr);gap:9px;margin-bottom:17px}
+ .open-vote-metrics .open-vote-metric{
+   display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;
+   min-height:64px;gap:12px;padding:12px 15px;
+   border:1px solid #e1deed;border-left-width:4px;border-top-width:1px;
+ }
+ .open-vote-metrics .open-vote-metric.blank{border-left-color:#7774df}
+ .open-vote-metrics .open-vote-metric.undecided{border-left-color:#e45440}
+ .open-vote-metrics .open-vote-metric.total{border-left-color:#303039}
+ .open-vote-metrics .open-vote-metric span{font-size:14px;line-height:1.3;min-height:0}
+ .open-vote-metrics .open-vote-metric strong{
+   font-size:clamp(25px,7vw,32px);line-height:1;letter-spacing:-.03em;
+   text-align:right;min-width:104px;margin:0;
+ }
+}
+@media(max-width:360px){
+ .open-vote-metrics{gap:8px}
+ .open-vote-metrics .open-vote-metric{padding:12px}
+ .open-vote-metrics .open-vote-metric span{font-size:13px}
+ .open-vote-metrics .open-vote-metric strong{font-size:25px;min-width:88px}
+}
