@@ -40,23 +40,25 @@ main.innerHTML=intro('Transparência faz parte do método.','Modelo padrão: pon
 function trendModel(){
  const day=s=>Date.parse(s+'T00:00:00Z')/86400000;
  const cutoff=dataset.dataCutoffDate||dataset.referenceDate;
- const today=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Sao_Paulo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
- const displayDate=today>cutoff?today:cutoff,asOf=day(displayDate);
- const allowed=new Set((dataset.standardModel?.institutes||[]).map(i=>i.name));
- // Only verified-source polls eligible for the standard model contribute to this curve.
- const input=polls.filter(p=>allowed.has(p.name)&&p.url&&p.registration&&p.fieldEnd&&Number.isFinite(p.f)&&p.date<=cutoff&&day(p.fieldEnd)<=day(cutoff)).map(p=>({t:day(p.fieldEnd),f:p.f}));
+ const weights=new Map((dataset.standardModel?.institutes||[]).map(i=>[i.name,i.weightPercent]));
+ // One latest documented round per institute. Keep all observations on or before the cutoff.
+ const input=polls.filter(p=>weights.has(p.name)&&p.url&&p.registration&&p.fieldEnd&&Number.isFinite(p.f)&&p.date<=cutoff&&p.fieldEnd<=cutoff)
+  .map(p=>({t:day(p.fieldEnd),f:p.f,w:weights.get(p.name)}));
  if(input.length<4)return null;
  const start=Math.min(...input.map(p=>p.t)),end=Math.max(...input.map(p=>p.t));
  if(end-start<2)return null;
  const points=[],bandwidth=3.5,ridge=18;
- for(let t=start;t<=asOf;t++){
+ for(let t=start;t<=end;t++){
   let sw=0,sx=0,sxx=0,sy=0,sxy=0;
-  for(const p of input){const x=p.t-t,w=Math.exp(-.5*(x/bandwidth)**2);sw+=w;sx+=w*x;sxx+=w*x*x;sy+=w*p.f;sxy+=w*x*p.f;}
+  for(const p of input){const x=p.t-t,w=p.w*Math.exp(-.5*(x/bandwidth)**2);sw+=w;sx+=w*x;sxx+=w*x*x;sy+=w*p.f;sxy+=w*x*p.f;}
   const denom=sw*(sxx+ridge)-sx*sx;
   const f=Math.max(0,Math.min(100,denom>0?(sy*(sxx+ridge)-sx*sxy)/denom:sy/sw));
   points.push({date:new Date(t*86400000).toISOString().slice(0,10),f,l:100-f});
  }
- return {points,n:input.length,cutoff,displayDate,lastPollDate:new Date(end*86400000).toISOString().slice(0,10)};
+ // Anchor the most recent estimate to the same documented weighted mean as the main panel.
+ const current=recencyAggregate();
+ if(current)points[points.length-1]={...points[points.length-1],f:current.f,l:current.l};
+ return {points,n:input.length,cutoff,displayDate:new Date(end*86400000).toISOString().slice(0,10),lastPollDate:new Date(end*86400000).toISOString().slice(0,10)};
 }
 
 function conditionalProjection(model){
@@ -143,7 +145,7 @@ function experimentalTrend(){
  const ps=model.points,first=ps[0],last=ps.at(-1),change=last.f-first.f,projection=conditionalProjection(model);
  const direction=Math.abs(change)<.5?'Estabilidade aparente':change>0?'Alta aparente de Flávio':'Alta aparente de Lula';
  main.innerHTML=intro('Tendência experimental.','Uma leitura exploratória da direção das pesquisas, separada da média principal.')+
- `<section class="card trend-card experimental-trend-card"><div class="card-head"><div><div class="eyebrow">MODELO ESTATÍSTICO EXPERIMENTAL</div><h2>Se a eleição fosse hoje?</h2><p class="sub">Curva suavizada de pesquisas com fonte e registro informados até ${date(model.cutoff)}/2026, estendida até ${date(model.displayDate)}. Estimativa experimental independente da média padrão.</p></div><span class="badge">${model.n} institutos</span></div>
+ `<section class="card trend-card experimental-trend-card"><div class="card-head"><div><div class="eyebrow">MODELO ESTATÍSTICO EXPERIMENTAL</div><h2>Se a eleição fosse hoje?</h2><p class="sub">Curva suavizada de pesquisas com fonte e registro informados até ${date(model.cutoff)}/2026, encerrada na última data de coleta, ${date(model.lastPollDate)}. Usa os pesos do modelo padrão e coincide com a média principal no ponto final.</p></div><span class="badge">${model.n} institutos</span></div>
  <div class="trend-summary"><div><span>Leitura do período</span><strong>${direction}</strong></div><div><span>Variação suavizada de Flávio</span><strong class="fv">${change>0?'+':''}${fmt(change)} p.p.</strong></div><div><span>Período da curva</span><strong>${date(first.date)} a ${date(last.date)}</strong></div></div>
  <div class="forecast-numbers trend-current-numbers" aria-label="Valores suavizados em ${date(last.date)}"><div><span>Flávio Bolsonaro</span><strong class="fv">${fmt(last.f)}%</strong></div><div><span>Lula</span><strong class="lv">${fmt(last.l)}%</strong></div></div>
  <p class="small">Estimativas suavizadas em ${date(last.date)}. Não são resultados de uma pesquisa realizada nesse dia.</p>
@@ -154,10 +156,10 @@ function experimentalTrend(){
  <div class="legend"><span><i class="dot"></i>Flávio</span><span><i class="dot r"></i>Lula</span><span>Linha tracejada: simulação</span></div>
  ${projectionChart(ps,projection)}
  <p class="notice">A simulação pressupõe continuidade da tendência recente e não incorpora eventos futuros, indecisos, abstenção nem mudanças de comportamento. Não possui intervalo de confiança validado. Não indica probabilidade de vitória.</p></section>
- <p class="small"><strong>Como ler:</strong> cada ponto é uma estimativa suavizada baseada nas pesquisas próximas daquela data, posicionadas pela data final da coleta. A curva é estendida até a data atual sem criar uma nova observação. A simulação começa no último ponto da mesma curva, sem salto metodológico. A regressão dá mais influência a levantamentos temporalmente próximos e restringe oscilações bruscas. Não são novas pesquisas nem percentuais de intenção de voto observados diariamente.</p>
+ <p class="small"><strong>Como ler:</strong> cada ponto é uma estimativa suavizada baseada nas pesquisas próximas daquela data, posicionadas pela data final da coleta. A curva termina na última coleta documentada; não cria pontos em dias posteriores sem pesquisa. O ponto final é ancorado na média ponderada principal. A simulação começa nesse ponto. A regressão usa pesos institucionais e dá mais influência a levantamentos temporalmente próximos, restringindo oscilações bruscas. Não são novas pesquisas nem percentuais de intenção de voto observados diariamente.</p>
  ${openVoteSection()}
- <p class="notice"><strong>Limitações:</strong> curva descritiva com poucos levantamentos e sem correção validada de efeitos próprios de cada instituto. Não é rede neural, previsão de resultado ou tendência estatisticamente comprovada. Não há intervalo de confiança calibrado. O modelo principal do Pulsa não foi alterado.</p>
- <details><summary>Dados da curva e parâmetros</summary><p class="small">Janela gaussiana: 3,5 dias; regularização da inclinação: 18; apenas pesquisas com fonte e registro informados, e uma pesquisa recente por instituto. Parâmetros exploratórios, sem validação retrospectiva. A extrapolação condicional usa a inclinação dos últimos cinco dias de observações suavizadas, limitada a ±0,15 p.p. por dia até 25/10. Não foi calibrada em eleições anteriores.</p><div class="table-wrap"><table><tr><th>Data</th><th>Flávio suavizado</th><th>Lula suavizado</th></tr>${ps.map(p=>`<tr><td>${date(p.date)}</td><td>${fmt(p.f)}%</td><td>${fmt(p.l)}%</td></tr>`).join('')}</table></div></details></section>`;
+ <p class="notice"><strong>Limitações:</strong> curva descritiva com poucos levantamentos e sem correção validada de efeitos próprios de cada instituto. Não é rede neural, previsão de resultado ou tendência estatisticamente comprovada. Não há intervalo de confiança calibrado. A tendência utiliza os mesmos pesos provisórios do modelo principal.</p>
+ <details><summary>Dados da curva e parâmetros</summary><p class="small">Janela gaussiana: 3,5 dias; regularização da inclinação: 18; pesos do modelo padrão; uma pesquisa recente por instituto; ponto final ancorado na média principal. Parâmetros exploratórios, sem validação retrospectiva. A extrapolação condicional usa a inclinação dos últimos cinco dias de observações suavizadas, limitada a ±0,15 p.p. por dia até 25/10. Não foi calibrada em eleições anteriores.</p><div class="table-wrap"><table><tr><th>Data</th><th>Flávio suavizado</th><th>Lula suavizado</th></tr>${ps.map(p=>`<tr><td>${date(p.date)}</td><td>${fmt(p.f)}%</td><td>${fmt(p.l)}%</td></tr>`).join('')}</table></div></details></section>`;
 }
 
 function rejection(){
