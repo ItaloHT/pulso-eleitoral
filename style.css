@@ -326,3 +326,9 @@ header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:b
 .rejection-hero-bottom span{color:#d8d2db;font-size:13px}
 .rejection-hero-note{font-size:12px;color:#d8d2db;margin:17px 0 0;line-height:1.5}
 @media(max-width:680px){.rejection-hero{padding:22px 20px}.rejection-hero-label{font-size:13px}.rejection-hero-bars{gap:20px}}
+
+/* Explanatory context directly beneath the rejection hero. */
+.rejection-explainer{background:#eeedf6;margin-bottom:24px}
+.rejection-explainer p{max-width:78ch}
+.rejection-explainer p:last-child{margin-bottom:0}
+.rejection-explainer .small{border-top:1px solid #d8d3e4;padding-top:15px;margin-top:18px}
