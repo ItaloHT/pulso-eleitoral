@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261017-expanded11-median-provisional",
+  "revision": "standard-20261017-regularized11-v1",
   "referenceDate": "2026-10-17",
   "publishedAt": "2026-10-17",
   "polls": [
@@ -683,84 +683,117 @@
   },
   "standardModel": {
     "enabled": true,
-    "version": "2.1-provisional-median",
+    "version": "2.2-provisional-regularized",
     "institutes": [
       {
         "name": "Indexa/Broadcast",
         "firstRoundMaePp": 2.45,
         "weightBasis": "provisional_median_of_available_legacy_maes",
-        "weightPercent": 8.887637425422344
+        "weightPercent": 9.090375251675072,
+        "originalMaePp": 2.45,
+        "effectiveMaePp": 2.45,
+        "regularizationAlpha": 0.5
       },
       {
         "name": "Palver",
         "firstRoundMaePp": 2.45,
         "weightBasis": "provisional_median_of_available_legacy_maes",
-        "weightPercent": 8.887637425422344
+        "weightPercent": 9.090375251675072,
+        "originalMaePp": 2.45,
+        "effectiveMaePp": 2.45,
+        "regularizationAlpha": 0.5
       },
       {
         "name": "Quaest",
         "firstRoundMaePp": 2.45,
         "weightBasis": "provisional_median_of_available_legacy_maes",
-        "weightPercent": 8.887637425422344
+        "weightPercent": 9.090375251675072,
+        "originalMaePp": 2.45,
+        "effectiveMaePp": 2.45,
+        "regularizationAlpha": 0.5
       },
       {
         "name": "PoderData/Aya",
         "firstRoundMaePp": 2.45,
         "weightBasis": "legacy_first_round_mae_unverified",
-        "weightPercent": 8.887637425422344
+        "weightPercent": 9.090375251675072,
+        "originalMaePp": 2.45,
+        "effectiveMaePp": 2.45,
+        "regularizationAlpha": 0.5
       },
       {
         "name": "BTG/Nexus",
         "firstRoundMaePp": 4.595,
         "weightBasis": "legacy_first_round_mae_unverified",
-        "weightPercent": 5.480312621574101
+        "weightPercent": 6.93461461985163,
+        "originalMaePp": 4.595,
+        "effectiveMaePp": 3.5225,
+        "regularizationAlpha": 0.5
       },
       {
         "name": "Futura/100% Cidades",
         "firstRoundMaePp": 2.45,
         "weightBasis": "provisional_median_of_available_legacy_maes",
-        "weightPercent": 8.887637425422344
+        "weightPercent": 9.090375251675072,
+        "originalMaePp": 2.45,
+        "effectiveMaePp": 2.45,
+        "regularizationAlpha": 0.5
       },
       {
         "name": "Gerp",
         "firstRoundMaePp": 1.095,
         "weightBasis": "legacy_first_round_mae_unverified",
-        "weightPercent": 14.635966165969974
+        "weightPercent": 11.311738365474842,
+        "originalMaePp": 1.095,
+        "effectiveMaePp": 1.7725,
+        "regularizationAlpha": 0.5
       },
       {
         "name": "AtlasIntel",
         "firstRoundMaePp": 2.35,
         "weightBasis": "legacy_first_round_mae_unverified",
-        "weightPercent": 9.152940035136446
+        "weightPercent": 9.224057240670293,
+        "originalMaePp": 2.35,
+        "effectiveMaePp": 2.4000000000000004,
+        "regularizationAlpha": 0.5
       },
       {
         "name": "Datafolha",
         "firstRoundMaePp": 2.6,
         "weightBasis": "legacy_first_round_mae_unverified",
-        "weightPercent": 8.517319199363081
+        "weightPercent": 8.89696301227773,
+        "originalMaePp": 2.6,
+        "effectiveMaePp": 2.5250000000000004,
+        "regularizationAlpha": 0.5
       },
       {
         "name": "CNT/MDA",
         "firstRoundMaePp": 2.45,
         "weightBasis": "provisional_median_of_available_legacy_maes",
-        "weightPercent": 8.887637425422344
+        "weightPercent": 9.090375251675072,
+        "originalMaePp": 2.45,
+        "effectiveMaePp": 2.45,
+        "regularizationAlpha": 0.5
       },
       {
         "name": "Ipespe/Abrapel",
         "firstRoundMaePp": 2.45,
         "weightBasis": "provisional_median_of_available_legacy_maes",
-        "weightPercent": 8.887637425422344
+        "weightPercent": 9.090375251675072,
+        "originalMaePp": 2.45,
+        "effectiveMaePp": 2.45,
+        "regularizationAlpha": 0.5
       }
     ],
-    "sd": 1.4661540420961179,
-    "formula": "w_i = [1/(1+MAE_i)] / sum_j[1/(1+MAE_j)]",
+    "sd": 0.7704609190215675,
+    "formula": "adjusted_error_i = 2.45 + 0.5*(source_error_i - 2.45); weight_i = [1/(1+adjusted_error_i)] / sum_j[1/(1+adjusted_error_j)]",
     "sensitivityPp": 3,
     "statisticalInterval": false,
-    "policy": "All 11 current national second-round institutes, latest confirmed poll each. Existing first-round MAEs remain legacy unverified; for 6 institutes missing comparable audit use median 2.45 pp of five available legacy MAEs. This is an imputation, not a measured error.",
+    "policy": "11 latest national second-round institutes. Five legacy first-round errors unaudited; six errors imputed at 2.45 pp. Shrink all source errors 50% toward median before weighting. No exclusions by result.",
     "weightAudit": {
-      "status": "provisional_median_imputation_not_audited",
+      "status": "provisional_regularized_not_audited",
       "penaltyMaePp": null,
-      "penaltyRule": "For institutes without a historical MAE in the legacy model, use a provisional 5.0 pp denominator in 1/(1+MAE), normalized across all included institutes. This is a disclosed modeling assumption, not measured historical accuracy.",
+      "penaltyRule": null,
       "legacyErrorStatus": "not_independently_audited",
       "officialFirstRoundReference": "https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/flavio-bolsonaro-e-lula-vao-disputar-o-2o-turno-para-a-presidencia-da-republica",
       "referenceSources": [
@@ -770,7 +803,10 @@
       "updated": "2026-10-17",
       "imputedMaePp": 2.45,
       "imputationBasis": "Median of available five legacy MAEs among currently polled institutes; does not imply actual first-round error.",
-      "priorPenaltyModelPreserved": true
+      "priorPenaltyModelPreserved": true,
+      "regularizationAlpha": 0.5,
+      "centerMaePp": 2.45,
+      "interpretation": "Assumed 50% shrinkage, not measured accuracy. Historical errors remain unaudited."
     }
   },
   "dataCutoffDate": "2026-10-17",
@@ -913,6 +949,98 @@
         "https://www.placardaspesquisas.com.br/"
       ],
       "updated": "2026-10-17"
+    }
+  },
+  "standardModelBeforeRegularization": {
+    "enabled": true,
+    "version": "2.1-provisional-median",
+    "institutes": [
+      {
+        "name": "Indexa/Broadcast",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "provisional_median_of_available_legacy_maes",
+        "weightPercent": 8.887637425422344
+      },
+      {
+        "name": "Palver",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "provisional_median_of_available_legacy_maes",
+        "weightPercent": 8.887637425422344
+      },
+      {
+        "name": "Quaest",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "provisional_median_of_available_legacy_maes",
+        "weightPercent": 8.887637425422344
+      },
+      {
+        "name": "PoderData/Aya",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "legacy_first_round_mae_unverified",
+        "weightPercent": 8.887637425422344
+      },
+      {
+        "name": "BTG/Nexus",
+        "firstRoundMaePp": 4.595,
+        "weightBasis": "legacy_first_round_mae_unverified",
+        "weightPercent": 5.480312621574101
+      },
+      {
+        "name": "Futura/100% Cidades",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "provisional_median_of_available_legacy_maes",
+        "weightPercent": 8.887637425422344
+      },
+      {
+        "name": "Gerp",
+        "firstRoundMaePp": 1.095,
+        "weightBasis": "legacy_first_round_mae_unverified",
+        "weightPercent": 14.635966165969974
+      },
+      {
+        "name": "AtlasIntel",
+        "firstRoundMaePp": 2.35,
+        "weightBasis": "legacy_first_round_mae_unverified",
+        "weightPercent": 9.152940035136446
+      },
+      {
+        "name": "Datafolha",
+        "firstRoundMaePp": 2.6,
+        "weightBasis": "legacy_first_round_mae_unverified",
+        "weightPercent": 8.517319199363081
+      },
+      {
+        "name": "CNT/MDA",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "provisional_median_of_available_legacy_maes",
+        "weightPercent": 8.887637425422344
+      },
+      {
+        "name": "Ipespe/Abrapel",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "provisional_median_of_available_legacy_maes",
+        "weightPercent": 8.887637425422344
+      }
+    ],
+    "sd": 1.4661540420961179,
+    "formula": "w_i = [1/(1+MAE_i)] / sum_j[1/(1+MAE_j)]",
+    "sensitivityPp": 3,
+    "statisticalInterval": false,
+    "policy": "All 11 current national second-round institutes, latest confirmed poll each. Existing first-round MAEs remain legacy unverified; for 6 institutes missing comparable audit use median 2.45 pp of five available legacy MAEs. This is an imputation, not a measured error.",
+    "weightAudit": {
+      "status": "provisional_median_imputation_not_audited",
+      "penaltyMaePp": null,
+      "penaltyRule": "For institutes without a historical MAE in the legacy model, use a provisional 5.0 pp denominator in 1/(1+MAE), normalized across all included institutes. This is a disclosed modeling assumption, not measured historical accuracy.",
+      "legacyErrorStatus": "not_independently_audited",
+      "officialFirstRoundReference": "https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/flavio-bolsonaro-e-lula-vao-disputar-o-2o-turno-para-a-presidencia-da-republica",
+      "referenceSources": [
+        "https://noticias.uol.com.br/eleicoes/2026/10/03/como-esta-a-pesquisa-para-presidente-veja-levantamentos-atualizados-do-1-turno.ghtm",
+        "https://www.placardaspesquisas.com.br/"
+      ],
+      "updated": "2026-10-17",
+      "imputedMaePp": 2.45,
+      "imputationBasis": "Median of available five legacy MAEs among currently polled institutes; does not imply actual first-round error.",
+      "priorPenaltyModelPreserved": true
     }
   }
 }
