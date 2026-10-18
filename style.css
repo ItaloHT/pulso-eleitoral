@@ -485,3 +485,9 @@ header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:b
 
 /* Weight comparison bars remain inside the card on narrow screens. */
 .weight-comparison,.weight-pair{min-width:0;max-width:100%}.weight-pair{width:100%;overflow:hidden}.weight-pair i,.weight-pair b{max-width:100%;box-sizing:border-box}.weight-comparison .weight-row{gap:10px;min-width:0}.weight-comparison .weight-row span{min-width:0;overflow-wrap:anywhere}.weight-comparison .weight-row strong{flex-shrink:0}
+
+/* Painéis principais de rejeição com hierarquia equivalente. */
+.rejection-hero-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:18px 0 24px;align-items:stretch}
+.rejection-hero-grid .rejection-hero{min-width:0;margin:0;box-sizing:border-box}
+.rejection-hero-grid .rejection-hero h2{font-size:clamp(19px,2vw,27px)}
+@media(max-width:760px){.rejection-hero-grid{grid-template-columns:1fr;gap:14px}}
