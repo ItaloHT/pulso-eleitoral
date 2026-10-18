@@ -50,6 +50,11 @@ def main():
                 low=title.lower()
                 if not ('lula' in low and ('flávio' in low or 'flavio' in low)): continue
                 if not any(a in low for a in AGENCIES): continue
+                # Notícias sem número de registro verificável não são novas rodadas.
+                # Google Notícias é descoberta, não validação documental.
+                match = re.search(r'BR[-– ]?\\d{5}/2026', title, re.I)
+                if not match: continue
+                if match.group(0).replace(' ','-').upper() in existing: continue
                 if link.split('?')[0] in existing_urls or link in seen: continue
                 key=re.sub(r'\\W+',' ',title.lower()).strip()
                 candidates[key]=(title,link,date)
