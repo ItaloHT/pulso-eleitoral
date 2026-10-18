@@ -491,3 +491,12 @@ header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:b
 .rejection-hero-grid .rejection-hero{min-width:0;margin:0;box-sizing:border-box}
 .rejection-hero-grid .rejection-hero h2{font-size:clamp(19px,2vw,27px)}
 @media(max-width:760px){.rejection-hero-grid{grid-template-columns:1fr;gap:14px}}
+
+/* Um unico painel de rejeicao com duas metodologias equivalentes. */
+.rejection-unified{margin:18px 0 24px}
+.rejection-unified>.rejection-hero-grid{margin:20px 0;gap:0;align-items:stretch}
+.rejection-unified .rejection-hero-grid>.rejection-hero{border:0;border-radius:0;box-shadow:none;background:transparent;margin:0;padding:12px 20px;min-width:0}
+.rejection-unified .rejection-hero-grid>.rejection-hero:first-child{border-right:1px solid rgba(128,128,128,.3)}
+.rejection-unified .rejection-hero-grid .eyebrow{display:none}
+.rejection-unified .rejection-hero-grid h2{font-size:20px}
+@media(max-width:760px){.rejection-unified .rejection-hero-grid>.rejection-hero{padding:18px 0}.rejection-unified .rejection-hero-grid>.rejection-hero:first-child{border-right:0;border-bottom:1px solid rgba(128,128,128,.3)}}
