@@ -1,0 +1,22 @@
+name: Testes de validacao do Pulsa
+on:
+  push:
+    paths:
+      - 'scripts/validate_incoming.py'
+      - 'tests/test_validate_incoming.py'
+      - '.github/workflows/test-validacao.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Executar testes
+        run: python -m unittest discover -s tests -v
+      - name: Validar fila de entrada sem publicar
+        run: python scripts/validate_incoming.py
