@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261018-restored-7-mae-v2",
+  "revision": "standard-20261018-vox-new-round-v1",
   "referenceDate": "2026-10-18",
   "publishedAt": "2026-10-18",
   "polls": [
@@ -305,12 +305,6 @@
       "f": 51.1515,
       "l": 48.8485,
       "revision": "Datafolha, PoderData/Aya e Gerp atualizados"
-    },
-    {
-      "date": "2026-10-18",
-      "f": 51.118843,
-      "l": 48.881157,
-      "revision": "Vox Brasil 18/10; modelo padrão sete institutos e MAE histórico"
     }
   ],
   "instituteHistory": {
@@ -910,60 +904,125 @@
   },
   "standardModel": {
     "enabled": true,
-    "version": "1.0-historical-mae",
+    "version": "3.0-recency-half-life-7d",
     "institutes": [
       {
-        "name": "Vox Brasil",
-        "firstRoundMaePp": 0.66,
-        "weightPercent": 25.08890231871525
+        "name": "Indexa/Broadcast",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "recency_7d_field_end",
+        "weightPercent": 7.605881689157369,
+        "originalMaePp": 2.45
       },
       {
-        "name": "AtlasIntel",
-        "firstRoundMaePp": 2.35,
-        "weightPercent": 12.432112790766363
+        "name": "Palver",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "recency_7d_field_end",
+        "weightPercent": 6.8888270334613635,
+        "originalMaePp": 2.45
       },
       {
-        "name": "Datafolha",
-        "firstRoundMaePp": 2.6,
-        "weightPercent": 11.568771624740922
+        "name": "Quaest",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "recency_7d_field_end",
+        "weightPercent": 6.8888270334613635,
+        "originalMaePp": 2.45
       },
       {
         "name": "PoderData/Aya",
         "firstRoundMaePp": 2.45,
-        "weightPercent": 12.07176169538183
-      },
-      {
-        "name": "DataTrends",
-        "firstRoundMaePp": 2.61674,
-        "weightPercent": 11.51522582465627
-      },
-      {
-        "name": "Gerp",
-        "firstRoundMaePp": 1.095,
-        "weightPercent": 19.87951209979347
+        "weightBasis": "recency_7d_field_end",
+        "weightPercent": 8.397574215242313,
+        "originalMaePp": 2.45
       },
       {
         "name": "BTG/Nexus",
         "firstRoundMaePp": 4.595,
-        "weightPercent": 7.4437136459459
+        "weightBasis": "recency_7d_field_end",
+        "weightPercent": 6.239373663226884,
+        "originalMaePp": 4.595
+      },
+      {
+        "name": "Futura/100% Cidades",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "recency_7d_field_end",
+        "weightPercent": 8.397574215242313,
+        "originalMaePp": 2.45
+      },
+      {
+        "name": "Gerp",
+        "firstRoundMaePp": 1.095,
+        "weightBasis": "recency_7d_field_end",
+        "weightPercent": 9.271673631346632,
+        "originalMaePp": 1.095
+      },
+      {
+        "name": "AtlasIntel",
+        "firstRoundMaePp": 2.35,
+        "weightBasis": "recency_7d_field_end",
+        "weightPercent": 4.198787107621156,
+        "originalMaePp": 2.35
+      },
+      {
+        "name": "Datafolha",
+        "firstRoundMaePp": 2.6,
+        "weightBasis": "recency_7d_field_end",
+        "weightPercent": 7.605881689157369,
+        "originalMaePp": 2.6
+      },
+      {
+        "name": "CNT/MDA",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "recency_7d_field_end",
+        "weightPercent": 8.397574215242313,
+        "originalMaePp": 2.45
+      },
+      {
+        "name": "Ipespe/Abrapel",
+        "firstRoundMaePp": 2.45,
+        "weightBasis": "recency_7d_field_end",
+        "weightPercent": 8.397574215242313,
+        "originalMaePp": 2.45
+      },
+      {
+        "name": "Vox Brasil",
+        "firstRoundMaePp": 0.66,
+        "originalMaePp": 0.66,
+        "weightBasis": "recency_7d_field_end",
+        "weightPercent": 3.8029408445786843
+      },
+      {
+        "name": "DataTrends",
+        "firstRoundMaePp": 2.61674,
+        "originalMaePp": 2.61674,
+        "weightBasis": "recency_7d_field_end",
+        "weightPercent": 4.635836815673316
+      },
+      {
+        "name": "Veritá",
+        "firstRoundMaePp": 2.45,
+        "originalMaePp": 2.45,
+        "weightBasis": "recency_7d_field_end",
+        "weightPercent": 9.271673631346632
       }
     ],
-    "sd": 1.5112887509371615,
-    "formula": "w_i = [1/(1+MAE_i)] / sum_j[1/(1+MAE_j)]",
+    "sd": 0.8625838000908133,
+    "formula": "adjusted_error_i = 2.45 + 0.5*(source_error_i - 2.45); weight_i = [1/(1+adjusted_error_i)] / sum_j[1/(1+adjusted_error_j)]",
     "sensitivityPp": 3,
     "statisticalInterval": false,
-    "policy": "Latest poll per institute; historical first-round MAE weights; no automatic exclusion or recency decay."
+    "policy": "One latest published national second-round poll per institute. Equal base weight; exponentially decreasing influence by days since fieldwork ended (half-life 7 days). No historical institute error weighting.",
+    "weightAudit": {
+      "status": "not_applicable",
+      "note": "Historical first-round MAE estimates do not enter the standard model."
+    },
+    "method": "equal-institute-base-with-7-day-exponential-field-end-recency",
+    "halfLifeDays": 7
   },
   "dataCutoffDate": "2026-10-18",
   "editorialPolicy": {
     "dataCutoff": "Latest confirmed publication date, normally previous day",
     "noNewPoll": "Preserve previous values and cutoff date",
-    "standardMean": "Seven fixed institutes weighted by verified historical first-round MAE, no recency decay, latest poll per institute",
-    "projection": "Separate exploratory slope anchored at standard mean; not an election forecast",
-    "excludedUntilHistoricalErrorVerified": [
-      "Ipespe/Abrapel",
-      "Veritá"
-    ]
+    "standardMean": "Weighted latest confirmed poll per included institute",
+    "projection": "Separate exploratory slope anchored at standard mean; not an election forecast"
   },
   "standardModelLegacy": {
     "enabled": true,
