@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261017-rejection-backfill-v1",
-  "referenceDate": "2026-10-17",
-  "publishedAt": "2026-10-17",
+  "revision": "standard-20261018-vox-new-round-v1",
+  "referenceDate": "2026-10-18",
+  "publishedAt": "2026-10-18",
   "polls": [
     {
       "name": "Indexa/Broadcast",
@@ -201,6 +201,29 @@
       "registrationSource": "Número informado pela CNN; consulta individual ao PesqEle pendente",
       "additionalSources": [
         "https://www.cnnbrasil.com.br/eleicoes/ipespe-flavio-e-lula-sao-igualmente-rejeitados-por-47-dos-eleitores/"
+      ]
+    },
+    {
+      "name": "Vox Brasil",
+      "date": "2026-10-18",
+      "field": "15 a 17/10",
+      "fieldEnd": "2026-10-17",
+      "f": 49.01,
+      "l": 50.99,
+      "totalF": 44.6,
+      "totalL": 46.4,
+      "n": 2100,
+      "margin": "±2,15 p.p.",
+      "converted": true,
+      "url": "https://www.metropoles.com/",
+      "registration": "BR-04332/2026",
+      "method": "Entrevistas presenciais domiciliares",
+      "confidence": 95,
+      "sourceType": "Metrópoles, reportagem publicada em 18/10 às 0h01, comprovada por captura de tela fornecida pelo leitor; URL específica e documento integral pendentes",
+      "voteBasis": "Votos válidos calculados dos totais informados na reportagem: Flávio 44,6/(44,6+46,4)=49,01%; Lula 46,4/(44,6+46,4)=50,99%.",
+      "registrationSource": "Registro BR-04332/2026 identificado em agenda; consulta direta ao PesqEle pendente",
+      "additionalSources": [
+        "https://e26.cog.ia.br/eleicoes/pesquisas"
       ]
     },
     {
@@ -479,7 +502,9 @@
       "registration": "BR-04332/2026",
       "field": "15 a 17/10",
       "source": "https://e26.cog.ia.br/eleicoes/pesquisas",
-      "status": "registered"
+      "status": "published",
+      "publicationSource": "https://www.metropoles.com/",
+      "note": "Reportagem de 18/10 às 0h01; URL específica e documento integral pendentes."
     },
     {
       "name": "AtlasIntel",
@@ -992,7 +1017,7 @@
     "method": "equal-institute-base-with-7-day-exponential-field-end-recency",
     "halfLifeDays": 7
   },
-  "dataCutoffDate": "2026-10-17",
+  "dataCutoffDate": "2026-10-18",
   "editorialPolicy": {
     "dataCutoff": "Latest confirmed publication date, normally previous day",
     "noNewPoll": "Preserve previous values and cutoff date",
