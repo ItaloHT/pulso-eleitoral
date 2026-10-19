@@ -668,6 +668,15 @@
       "status": "registered"
     },
     {
+      "name": "Paraná Pesquisas",
+      "date": "2026-10-19",
+      "registration": "A confirmar",
+      "field": "A confirmar",
+      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
+      "status": "announced",
+      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+    },
+    {
       "name": "Real Time Big Data",
       "date": "2026-10-20",
       "registration": "BR-02952/2026",
@@ -708,6 +717,24 @@
       "status": "registered"
     },
     {
+      "name": "Quaest",
+      "date": "2026-10-21",
+      "registration": "A confirmar",
+      "field": "A confirmar",
+      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
+      "status": "announced",
+      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+    },
+    {
+      "name": "Palver",
+      "date": "2026-10-21",
+      "registration": "A confirmar",
+      "field": "A confirmar",
+      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
+      "status": "announced",
+      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+    },
+    {
       "name": "Datafolha",
       "date": "2026-10-22",
       "registration": "BR-09709/2026",
@@ -716,12 +743,138 @@
       "status": "registered"
     },
     {
+      "name": "PoderData/Aya",
+      "date": "2026-10-22",
+      "registration": "A confirmar",
+      "field": "A confirmar",
+      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
+      "status": "announced",
+      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+    },
+    {
+      "name": "Gerp",
+      "date": "2026-10-22",
+      "registration": "A confirmar",
+      "field": "A confirmar",
+      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
+      "status": "announced",
+      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+    },
+    {
+      "name": "Indexa/Broadcast",
+      "date": "2026-10-22",
+      "registration": "A confirmar",
+      "field": "A confirmar",
+      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
+      "status": "announced",
+      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+    },
+    {
       "name": "Vetor Arrow",
       "date": "2026-10-23",
       "registration": "BR-06957/2026",
       "field": "22 a 23/10",
       "source": "https://agregador-ippi.vercel.app/disputa/presidente-2t",
       "status": "registered"
+    },
+    {
+      "name": "Alfa Inteligência",
+      "date": "2026-10-23",
+      "registration": "A confirmar",
+      "field": "A confirmar",
+      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
+      "status": "announced",
+      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+    },
+    {
+      "name": "Real Time Big Data",
+      "date": "2026-10-23",
+      "registration": "A confirmar",
+      "field": "A confirmar",
+      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
+      "status": "announced",
+      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+    },
+    {
+      "name": "Vox Brasil",
+      "date": "2026-10-23",
+      "registration": "A confirmar",
+      "field": "A confirmar",
+      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
+      "status": "announced",
+      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+    },
+    {
+      "name": "Ipespe/Abrapel",
+      "date": "2026-10-23",
+      "registration": "A confirmar",
+      "field": "A confirmar",
+      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
+      "status": "announced",
+      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+    },
+    {
+      "name": "AtlasIntel",
+      "date": "2026-10-24",
+      "registration": "A confirmar",
+      "field": "A confirmar",
+      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
+      "status": "announced",
+      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+    },
+    {
+      "name": "Quaest",
+      "date": "2026-10-24",
+      "registration": "A confirmar",
+      "field": "A confirmar",
+      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
+      "status": "announced",
+      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+    },
+    {
+      "name": "Datafolha",
+      "date": "2026-10-24",
+      "registration": "A confirmar",
+      "field": "A confirmar",
+      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
+      "status": "announced",
+      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+    },
+    {
+      "name": "Paraná Pesquisas",
+      "date": "2026-10-24",
+      "registration": "A confirmar",
+      "field": "A confirmar",
+      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
+      "status": "announced",
+      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+    },
+    {
+      "name": "Nexus/BTG",
+      "date": "2026-10-24",
+      "registration": "A confirmar",
+      "field": "A confirmar",
+      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
+      "status": "announced",
+      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+    },
+    {
+      "name": "Palver",
+      "date": "2026-10-24",
+      "registration": "A confirmar",
+      "field": "A confirmar",
+      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
+      "status": "announced",
+      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+    },
+    {
+      "name": "CNT/MDA",
+      "date": "2026-10-24",
+      "registration": "A confirmar",
+      "field": "A confirmar",
+      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
+      "status": "announced",
+      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
     }
   ],
   "rejection": [
