@@ -170,8 +170,6 @@ function openVoteSection(){
    const graph=ordered.length<2?'<p class="small">Ainda há apenas uma rodada comparável deste instituto.</p>':(()=>{
      const first=ordered[0],last=ordered.at(-1);
      const pct=v=>v.toLocaleString('pt-BR',{maximumFractionDigits:1})+'%';
-     const delta=v=>(v>0?'+':'')+v.toLocaleString('pt-BR',{maximumFractionDigits:1})+' p.p.';
-     const pct=v=>v.toLocaleString('pt-BR',{maximumFractionDigits:1})+'%';
      const total=p=>p.blankNull+p.undecided;
      const change=Math.round((total(last)-total(first))*10)/10;
      const delta=(change>0?'+':'')+change.toLocaleString('pt-BR',{maximumFractionDigits:1})+' p.p.';
