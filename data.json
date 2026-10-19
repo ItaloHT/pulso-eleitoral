@@ -1145,6 +1145,45 @@
       "question": "Intenção estimulada no segundo turno: branco/nulo/nenhum e não sabe/não respondeu",
       "registration": "BR-00223/2026",
       "source": "https://exame.com/brasil/pesquisa-para-presidente-flavio-tem-48-e-lula-46-aponta-ipespe/"
+    },
+    {
+      "institute": "PoderData/Aya",
+      "date": "2026-10-19",
+      "fieldEnd": "2026-10-18",
+      "blankNull": 4,
+      "undecided": 2,
+      "registration": "BR-02586/2026",
+      "source": "https://sbtnews.sbt.com.br/noticia/eleicoes/poder-data-aya-flavio-tem-52-e-lula-48-no-segundo-turno",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Intenção de voto estimulada no segundo turno: brancos/nulos e não sabe/não respondeu"
+    },
+    {
+      "institute": "BTG/Nexus",
+      "date": "2026-10-19",
+      "fieldEnd": "2026-10-18",
+      "blankNull": 4.7,
+      "undecided": 2.9,
+      "registration": "BR-04499/2026",
+      "source": "https://www.nexus.fsb.com.br/estudos-divulgados/pesquisa-btg-nexus-de-intencao-de-votos-para-presidente-do-brasil-19-de-outubro-de-2026/",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Intenção de voto estimulada no segundo turno: brancos/nulos e não sabe/não respondeu"
+    },
+    {
+      "institute": "Futura/100% Cidades",
+      "date": "2026-10-19",
+      "fieldEnd": "2026-10-17",
+      "blankNull": 2.4,
+      "undecided": 1.9,
+      "registration": "BR-06715/2026",
+      "source": "https://www.jota.info/eleicoes/eleicoes-2026/pesquisa-futura-flavio-bolsonaro-tem-504-dos-votos-validos-ante-496-de-lula",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Intenção de voto estimulada no segundo turno: brancos/nulos e não sabe/não respondeu"
     }
   ],
   "experimentalArchive": {
