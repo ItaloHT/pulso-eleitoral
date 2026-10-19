@@ -1,8 +1,46 @@
 {
-  "revision": "standard-20261019-btg-nexus-v1",
+  "revision": "standard-20261019-atlas-poderdata-v1",
   "referenceDate": "2026-10-19",
   "publishedAt": "2026-10-19",
   "polls": [
+    {
+      "name": "PoderData/Aya",
+      "date": "2026-10-19",
+      "field": "16 a 18/10",
+      "fieldEnd": "2026-10-18",
+      "f": 52,
+      "l": 48,
+      "totalF": 49,
+      "totalL": 46,
+      "n": 3000,
+      "margin": "±1,8 p.p.",
+      "converted": false,
+      "url": "https://noticias.uol.com.br/eleicoes/2026/10/19/poderdata-19-outubro.ghtm",
+      "registration": "BR-02586/2026",
+      "method": "Entrevistas telefônicas",
+      "confidence": 95,
+      "sourceType": "UOL, 19/10/2026; ficha técnica na reportagem; consulta direta ao PesqEle pendente",
+      "voteBasis": "Votos válidos 52%/48% informados; votos totais 49%/46% informados (arredondados)",
+      "registrationSource": "Registro BR-02586/2026 informado pelo UOL"
+    },
+    {
+      "name": "AtlasIntel",
+      "date": "2026-10-19",
+      "field": "13 a 18/10",
+      "fieldEnd": "2026-10-18",
+      "f": 51.1,
+      "l": 48.9,
+      "n": 4998,
+      "margin": "±1 p.p.",
+      "converted": false,
+      "url": "https://noticias.uol.com.br/eleicoes/2026/10/19/atlasintel-pesquisa-presidencial-segundo-turno.ghtm",
+      "registration": "BR-02418/2026",
+      "method": "Recrutamento digital aleatório; entrevistas pela internet",
+      "confidence": 95,
+      "sourceType": "UOL, 19/10/2026; ficha técnica na reportagem; consulta direta ao PesqEle pendente",
+      "voteBasis": "Votos válidos informados na reportagem; votos totais não transcritos por falta de conferência",
+      "registrationSource": "Registro BR-02418/2026 informado pelo UOL"
+    },
     {
       "name": "BTG/Nexus",
       "date": "2026-10-19",
@@ -535,7 +573,8 @@
       "registration": "BR-02418/2026",
       "field": "13 a 18/10",
       "source": "https://e26.cog.ia.br/eleicoes/pesquisas",
-      "status": "registered"
+      "status": "published",
+      "publicationSource": "https://noticias.uol.com.br/eleicoes/2026/10/19/atlasintel-pesquisa-presidencial-segundo-turno.ghtm"
     },
     {
       "name": "PoderData/Aya",
@@ -543,7 +582,8 @@
       "registration": "BR-02586/2026",
       "field": "16 a 18/10",
       "source": "https://e26.cog.ia.br/eleicoes/pesquisas",
-      "status": "registered"
+      "status": "published",
+      "publicationSource": "https://noticias.uol.com.br/eleicoes/2026/10/19/poderdata-19-outubro.ghtm"
     },
     {
       "name": "Nexus/BTG",
