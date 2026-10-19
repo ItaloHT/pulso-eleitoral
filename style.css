@@ -514,3 +514,12 @@ header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:b
  .hero .score small{font-size:.43em;letter-spacing:-.4px}
 }
 @media(max-width:350px){.hero .scores{column-gap:6px}.hero .score{font-size:clamp(26px,8.3vw,34px)}}
+
+/* Composicao dos votos em aberto: total destacado, categorias empilhadas. */
+.open-vote-total-summary{display:flex;align-items:baseline;gap:10px 16px;flex-wrap:wrap;margin:12px 0 16px}
+.open-vote-total-summary>span:first-child{font-size:13px;color:#625d6b}
+.open-vote-total-summary strong{font-size:32px;color:#25212b;font-variant-numeric:tabular-nums}
+.open-vote-total-summary>span:last-child{font-size:13px;font-weight:700;color:#625d6b}
+.open-vote-composition-legend{display:flex;gap:12px 20px;flex-wrap:wrap;margin-bottom:12px;font-size:13px;font-weight:600;color:#494450}
+.open-vote-composition-legend span{display:flex;align-items:center;gap:7px}
+.open-vote-composition-legend i{display:inline-block;width:11px;height:11px;border-radius:3px;flex-shrink:0}
