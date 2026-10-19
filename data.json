@@ -649,13 +649,21 @@
       "registration": "BR-06715/2026",
       "field": "16 a 17/10",
       "source": "https://e26.cog.ia.br/eleicoes/pesquisas",
-      "status": "registered"
+      "status": "published"
     },
     {
       "name": "DataTrends",
       "date": "2026-10-19",
       "registration": "BR-04454/2026",
       "field": "15 a 17/10",
+      "source": "https://e26.cog.ia.br/eleicoes/pesquisas",
+      "status": "published"
+    },
+    {
+      "name": "Ranking",
+      "date": "2026-10-19",
+      "registration": "BR-00152/2026",
+      "field": "14 a 16/10",
       "source": "https://e26.cog.ia.br/eleicoes/pesquisas",
       "status": "registered"
     },
@@ -668,11 +676,51 @@
       "status": "registered"
     },
     {
+      "name": "Veritá",
+      "date": "2026-10-20",
+      "registration": "BR-06396/2026",
+      "field": "15 a 19/10",
+      "source": "https://www.opovo.com.br/noticias/politica/eleicoes/2026/10/19/amp/pesquisas-do-2-turno-veja-quais-serao-publicadas-nesta-semana.html",
+      "status": "registered"
+    },
+    {
+      "name": "Alfa Inteligência",
+      "date": "2026-10-20",
+      "registration": "BR-00820/2026",
+      "field": "15 a 19/10",
+      "source": "https://www.opovo.com.br/noticias/politica/eleicoes/2026/10/19/amp/pesquisas-do-2-turno-veja-quais-serao-publicadas-nesta-semana.html",
+      "status": "registered"
+    },
+    {
+      "name": "IFP",
+      "date": "2026-10-20",
+      "registration": "BR-07896/2026",
+      "field": "16 a 20/10",
+      "source": "https://agregador-ippi.vercel.app/disputa/presidente-2t",
+      "status": "registered"
+    },
+    {
       "name": "Meio/Ideia",
       "date": "2026-10-21",
       "registration": "BR-08251/2026",
       "field": "15 a 19/10",
       "source": "https://e26.cog.ia.br/eleicoes/pesquisas",
+      "status": "registered"
+    },
+    {
+      "name": "Datafolha",
+      "date": "2026-10-22",
+      "registration": "BR-09709/2026",
+      "field": "20 a 22/10",
+      "source": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-divulga-nova-pesquisa-de-2o-turno-para-presidente-nesta-quinta-22-live-comenta-resultados.shtml",
+      "status": "registered"
+    },
+    {
+      "name": "Vetor Arrow",
+      "date": "2026-10-23",
+      "registration": "BR-06957/2026",
+      "field": "22 a 23/10",
+      "source": "https://agregador-ippi.vercel.app/disputa/presidente-2t",
       "status": "registered"
     }
   ],
