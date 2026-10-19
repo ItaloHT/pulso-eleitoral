@@ -670,10 +670,10 @@
     {
       "name": "Paraná Pesquisas",
       "date": "2026-10-19",
-      "registration": "A confirmar",
-      "field": "A confirmar",
-      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
-      "status": "announced",
+      "registration": "BR-09051/2026",
+      "field": "14 a 17/10",
+      "source": "https://www.metropoles.com/brasil/lula-x-flavio-veja-quando-saem-as-novas-pesquisas-datafolha-quaest-e-mais",
+      "status": "registered",
       "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
     },
     {
@@ -709,6 +709,14 @@
       "status": "registered"
     },
     {
+      "name": "DataTrends",
+      "date": "2026-10-20",
+      "registration": "BR-07585/2026",
+      "field": "16 a 18/10",
+      "source": "https://www.metropoles.com/brasil/lula-x-flavio-veja-quando-saem-as-novas-pesquisas-datafolha-quaest-e-mais",
+      "status": "registered"
+    },
+    {
       "name": "Meio/Ideia",
       "date": "2026-10-21",
       "registration": "BR-08251/2026",
@@ -719,10 +727,10 @@
     {
       "name": "Quaest",
       "date": "2026-10-21",
-      "registration": "A confirmar",
-      "field": "A confirmar",
-      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
-      "status": "announced",
+      "registration": "BR-08535/2026",
+      "field": "17 a 20/10",
+      "source": "https://www.metropoles.com/brasil/lula-x-flavio-veja-quando-saem-as-novas-pesquisas-datafolha-quaest-e-mais",
+      "status": "registered",
       "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
     },
     {
@@ -789,19 +797,19 @@
     {
       "name": "Real Time Big Data",
       "date": "2026-10-23",
-      "registration": "A confirmar",
-      "field": "A confirmar",
-      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
-      "status": "announced",
+      "registration": "BR-09670/2026",
+      "field": "19 a 22/10",
+      "source": "https://www.metropoles.com/brasil/lula-x-flavio-veja-quando-saem-as-novas-pesquisas-datafolha-quaest-e-mais",
+      "status": "registered",
       "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
     },
     {
       "name": "Vox Brasil",
       "date": "2026-10-23",
-      "registration": "A confirmar",
-      "field": "A confirmar",
-      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
-      "status": "announced",
+      "registration": "BR-03259/2026",
+      "field": "20 a 22/10",
+      "source": "https://www.metropoles.com/brasil/lula-x-flavio-veja-quando-saem-as-novas-pesquisas-datafolha-quaest-e-mais",
+      "status": "registered",
       "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
     },
     {
@@ -816,10 +824,10 @@
     {
       "name": "AtlasIntel",
       "date": "2026-10-24",
-      "registration": "A confirmar",
-      "field": "A confirmar",
-      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
-      "status": "announced",
+      "registration": "BR-06380/2026",
+      "field": "18 a 23/10",
+      "source": "https://www.metropoles.com/brasil/lula-x-flavio-veja-quando-saem-as-novas-pesquisas-datafolha-quaest-e-mais",
+      "status": "registered",
       "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
     },
     {
@@ -834,28 +842,28 @@
     {
       "name": "Datafolha",
       "date": "2026-10-24",
-      "registration": "A confirmar",
-      "field": "A confirmar",
-      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
-      "status": "announced",
+      "registration": "BR-09540/2026",
+      "field": "23 a 24/10",
+      "source": "https://www.metropoles.com/brasil/lula-x-flavio-veja-quando-saem-as-novas-pesquisas-datafolha-quaest-e-mais",
+      "status": "registered",
       "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
     },
     {
       "name": "Paraná Pesquisas",
       "date": "2026-10-24",
-      "registration": "A confirmar",
-      "field": "A confirmar",
-      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
-      "status": "announced",
+      "registration": "BR-05939/2026",
+      "field": "18 a 23/10",
+      "source": "https://www.metropoles.com/brasil/lula-x-flavio-veja-quando-saem-as-novas-pesquisas-datafolha-quaest-e-mais",
+      "status": "registered",
       "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
     },
     {
       "name": "Nexus/BTG",
       "date": "2026-10-24",
-      "registration": "A confirmar",
-      "field": "A confirmar",
-      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
-      "status": "announced",
+      "registration": "BR-08234/2026",
+      "field": "23 a 24/10",
+      "source": "https://www.metropoles.com/brasil/lula-x-flavio-veja-quando-saem-as-novas-pesquisas-datafolha-quaest-e-mais",
+      "status": "registered",
       "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
     },
     {
