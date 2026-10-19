@@ -668,15 +668,6 @@
       "status": "registered"
     },
     {
-      "name": "Paraná Pesquisas",
-      "date": "2026-10-19",
-      "registration": "BR-09051/2026",
-      "field": "14 a 17/10",
-      "source": "https://www.metropoles.com/brasil/lula-x-flavio-veja-quando-saem-as-novas-pesquisas-datafolha-quaest-e-mais",
-      "status": "registered",
-      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
-    },
-    {
       "name": "Real Time Big Data",
       "date": "2026-10-20",
       "registration": "BR-02952/2026",
@@ -1344,7 +1335,9 @@
     "dataCutoff": "Latest confirmed publication date, normally previous day",
     "noNewPoll": "Preserve previous values and cutoff date",
     "standardMean": "Weighted latest confirmed poll per included institute",
-    "projection": "Separate exploratory slope anchored at standard mean; not an election forecast"
+    "projection": "Separate exploratory slope anchored at standard mean; not an election forecast",
+    "nationalPollsOnly": "Agenda e média limitadas a pesquisas de abrangência nacional confirmada; pesquisas estaduais e levantamentos sem abrangência verificável ficam fora da agenda pública.",
+    "sourceVerification": "Resultado só entra na média com fonte rastreável, identificação da rodada, data de coleta/divulgação, amostra, registro TSE quando aplicável e distinção entre votos totais e válidos. Previsões não são resultados."
   },
   "standardModelLegacy": {
     "enabled": true,
