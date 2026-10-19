@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261019-atlas-poderdata-v1",
+  "revision": "standard-20261019-history-synced-14-v2",
   "referenceDate": "2026-10-19",
   "publishedAt": "2026-10-19",
   "polls": [
@@ -356,16 +356,22 @@
   ],
   "history": [
     {
-      "date": "2026-10-13",
-      "f": 51.98,
-      "l": 48.02,
-      "revision": "Base padrão 13/10"
+      "date": "2026-10-17",
+      "f": 51.114437,
+      "l": 48.885563,
+      "revision": "14 institutos; histórico recalculado com recência de 7 dias e ajuste de discrepâncias"
     },
     {
-      "date": "2026-10-17",
-      "f": 51.1515,
-      "l": 48.8485,
-      "revision": "Datafolha, PoderData/Aya e Gerp atualizados"
+      "date": "2026-10-18",
+      "f": 50.982581,
+      "l": 49.017419,
+      "revision": "Nova rodada Vox Brasil; modelo padrão de 14 institutos"
+    },
+    {
+      "date": "2026-10-19",
+      "f": 50.97751,
+      "l": 49.02249,
+      "revision": "Novas rodadas AtlasIntel, PoderData/Aya e BTG/Nexus; 14 institutos"
     }
   ],
   "instituteHistory": {
@@ -1069,7 +1075,7 @@
         "weightPercent": 9.271673631346632
       }
     ],
-    "sd": 0.8625838000908133,
+    "sd": 0.8689609171904685,
     "formula": "adjusted_error_i = 2.45 + 0.5*(source_error_i - 2.45); weight_i = [1/(1+adjusted_error_i)] / sum_j[1/(1+adjusted_error_j)]",
     "sensitivityPp": 3,
     "statisticalInterval": false,
@@ -1744,5 +1750,15 @@
       "interpretation": "Assumed 50% shrinkage, not measured accuracy. Historical errors remain unaudited.",
       "imputedCount": 7
     }
-  }
+  },
+  "legacyHistory": [
+    {
+      "date": "2026-10-13",
+      "f": 51.98,
+      "l": 48.02,
+      "revision": "Base padrão 13/10",
+      "model": "old-seven-institute-historical-MAE",
+      "note": "Not comparable with the current 14-institute standard"
+    }
+  ]
 }
