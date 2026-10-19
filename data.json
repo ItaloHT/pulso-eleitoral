@@ -1,8 +1,31 @@
 {
-  "revision": "standard-20261018-vox-new-round-v1",
-  "referenceDate": "2026-10-18",
-  "publishedAt": "2026-10-18",
+  "revision": "standard-20261019-btg-nexus-v1",
+  "referenceDate": "2026-10-19",
+  "publishedAt": "2026-10-19",
   "polls": [
+    {
+      "name": "BTG/Nexus",
+      "date": "2026-10-19",
+      "field": "16 a 18/10",
+      "fieldEnd": "2026-10-18",
+      "f": 50.3,
+      "l": 49.7,
+      "totalF": 46.5,
+      "totalL": 45.9,
+      "n": 2002,
+      "margin": "±2 p.p.",
+      "converted": false,
+      "url": "https://www1.folha.uol.com.br/poder/2026/10/btgnexus-flavio-bolsonaro-tem-503-e-lula-497-dos-votos-validos.shtml",
+      "registration": "BR-04499/2026",
+      "method": "Entrevistas por telefone",
+      "confidence": 95,
+      "sourceType": "Folha de S.Paulo e Band, 19/10/2026; relatório original e conferência direta PesqEle pendentes",
+      "voteBasis": "Votos válidos informados pelo instituto: Flávio 50,3%, Lula 49,7%; votos totais 46,5% e 45,9%.",
+      "additionalSources": [
+        "https://www.band.com.br/politica/eleicoes/btg-nexus-flavio-tem-503-dos-votos-validos-e-lula-497"
+      ],
+      "registrationSource": "BR-04499/2026 informado em reportagens com ficha técnica; PesqEle pendente"
+    },
     {
       "name": "Indexa/Broadcast",
       "date": "2026-10-15",
@@ -528,7 +551,8 @@
       "registration": "BR-04499/2026",
       "field": "16 a 18/10",
       "source": "https://e26.cog.ia.br/eleicoes/pesquisas",
-      "status": "registered"
+      "status": "published",
+      "publicationSource": "https://www1.folha.uol.com.br/poder/2026/10/btgnexus-flavio-bolsonaro-tem-503-e-lula-497-dos-votos-validos.shtml"
     },
     {
       "name": "Futura/100% Cidades",
@@ -1017,7 +1041,7 @@
     "method": "equal-institute-base-with-7-day-exponential-field-end-recency",
     "halfLifeDays": 7
   },
-  "dataCutoffDate": "2026-10-18",
+  "dataCutoffDate": "2026-10-19",
   "editorialPolicy": {
     "dataCutoff": "Latest confirmed publication date, normally previous day",
     "noNewPoll": "Preserve previous values and cutoff date",
