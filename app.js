@@ -170,20 +170,28 @@ function openVoteSection(){
    const graph=ordered.length<2?'<p class="small">Ainda há apenas uma rodada comparável deste instituto.</p>':(()=>{
      const first=ordered[0],last=ordered.at(-1);
      const pct=v=>v.toLocaleString('pt-BR',{maximumFractionDigits:1})+'%';
-     const total=p=>p.blankNull+p.undecided;
-     const change=Math.round((total(last)-total(first))*10)/10;
-     const delta=(change>0?'+':'')+change.toLocaleString('pt-BR',{maximumFractionDigits:1})+' p.p.';
-     const max=Math.max(10,Math.ceil(Math.max(...ordered.map(total))/2)*2);
-     const w=600,h=260,left=48,right=572,top=22,bottom=206;
-     const plotW=right-left,step=plotW/ordered.length,barW=Math.min(85,step*.48);
-     const y=v=>bottom-(v/max)*(bottom-top);
-     const grid=Array.from({length:6},(_,i)=>{const value=i*max/5,yy=y(value);return '<line x1="'+left+'" y1="'+yy+'" x2="'+right+'" y2="'+yy+'" stroke="#e8e5ed"/><text x="'+(left-8)+'" y="'+(yy+4)+'" text-anchor="end" fill="#77717e" font-size="12">'+pct(value)+'</text>';}).join('');
-     const bars=ordered.map((p,i)=>{
-       const x=left+step*(i+.5),bn=p.blankNull,ind=p.undecided;
-       const blankH=bottom-y(bn),indH=y(bn)-y(bn+ind);
-       return '<rect x="'+(x-barW/2)+'" y="'+y(bn)+'" width="'+barW+'" height="'+blankH+'" fill="#7774df" rx="2"/><rect x="'+(x-barW/2)+'" y="'+y(bn+ind)+'" width="'+barW+'" height="'+indH+'" fill="#e45440" rx="2"/><text x="'+x+'" y="'+(y(total(p))-8)+'" text-anchor="middle" font-size="15" font-weight="700" fill="#303039">'+pct(total(p))+'</text><text x="'+x+'" y="'+(bottom+27)+'" text-anchor="middle" font-size="14" fill="#5c5664">'+date(p.date)+'</text>';
+     const delta=v=>(v>0?'+':'')+v.toLocaleString('pt-BR',{maximumFractionDigits:1})+' p.p.';
+     const defs=[
+       {label:'Brancos/nulos',key:p=>p.blankNull,color:'#7774df'},
+       {label:'Indecisos',key:p=>p.undecided,color:'#e45440'},
+       {label:'Total',key:p=>p.blankNull+p.undecided,color:'#303039'}
+     ];
+     const legend=defs.map(d=>{
+       const before=d.key(first),after=d.key(last),change=Math.round((after-before)*10)/10;
+       return '<div class="open-vote-series-card" style="--series-color:'+d.color+'"><span class="open-vote-series-label"><i aria-hidden="true"></i>'+d.label+'</span><div class="open-vote-series-numbers"><span>'+pct(before)+'</span><span aria-hidden="true">→</span><strong>'+pct(after)+'</strong><em>'+delta(change)+'</em></div></div>';
      }).join('');
-     return '<div class="open-vote-evolution" aria-label="Composição dos votos em aberto entre '+date(first.date)+' e '+date(last.date)+'"><div class="open-vote-evolution-head"><strong>Composição dos votos em aberto</strong><span>'+date(first.date)+' → '+date(last.date)+'</span></div><div class="open-vote-total-summary"><span>Total na última rodada</span><strong>'+pct(total(last))+'</strong><span>Variação: '+delta+'</span></div><div class="open-vote-composition-legend"><span><i style="background:#7774df"></i>Brancos/nulos: '+pct(last.blankNull)+'</span><span><i style="background:#e45440"></i>Indecisos: '+pct(last.undecided)+'</span></div><svg class="open-vote-evolution-chart" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Barras empilhadas de brancos e nulos e indecisos; o valor sobre cada barra é a soma das categorias">'+grid+bars+'</svg><p class="small">Cada barra representa uma pesquisa. O total é a soma de brancos/nulos e indecisos, não uma terceira categoria. A variação está em pontos percentuais; duas rodadas não comprovam tendência consolidada.</p></div>';
+     const w=600,h=280,left=48,right=568,top=20,bottom=228;
+     const values=ordered.flatMap(p=>defs.map(d=>d.key(p)));
+     const max=Math.max(10,Math.ceil(Math.max(...values)/2)*2);
+     const x=i=>left+30+i*(right-left-60)/(ordered.length-1);
+     const y=v=>bottom-(v/max)*(bottom-top);
+     const grid=Array.from({length:6},(_,i)=>{const value=i*max/5,yy=y(value);return '<line x1="'+left+'" y1="'+yy+'" x2="'+right+'" y2="'+yy+'" stroke="#e8e5ed" stroke-width="1"/><text x="'+(left-8)+'" y="'+(yy+4)+'" text-anchor="end" fill="#77717e" font-size="12">'+value.toLocaleString('pt-BR',{maximumFractionDigits:1})+'%</text>';}).join('');
+     const lines=defs.map(d=>{
+       const points=ordered.map((p,i)=>x(i)+','+y(d.key(p))).join(' ');
+       return '<polyline points="'+points+'" fill="none" stroke="'+d.color+'" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>'+ordered.map((p,i)=>'<circle cx="'+x(i)+'" cy="'+y(d.key(p))+'" r="5.5" fill="#fff" stroke="'+d.color+'" stroke-width="3"/>').join('');
+     }).join('');
+     const dates=ordered.map((p,i)=>'<text x="'+x(i)+'" y="'+(bottom+30)+'" text-anchor="middle" font-size="14" fill="#5c5664">'+date(p.date)+'</text>').join('');
+     return '<div class="open-vote-evolution" aria-label="Evolução entre '+date(first.date)+' e '+date(last.date)+'"><div class="open-vote-evolution-head"><strong>Evolução das respostas</strong><span>'+date(first.date)+' → '+date(last.date)+'</span></div><div class="open-vote-series-legend" aria-label="Legenda e valores das séries">'+legend+'</div><svg class="open-vote-evolution-chart" viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Linhas de evolução de brancos e nulos, indecisos e total; valores exatos na legenda acima">'+grid+lines+dates+'</svg><p class="small">Os pontos são resultados de pesquisas, não estimativas diárias. A variação está em pontos percentuais; duas rodadas não comprovam tendência consolidada.</p></div>';
    })();
    return '<div class="open-vote-institute"><h3>'+safe(name)+'</h3>'+latestText+graph+table+'</div>';
  }).join('');
