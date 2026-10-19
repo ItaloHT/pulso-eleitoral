@@ -970,6 +970,36 @@
       "source": "https://www.cnnbrasil.com.br/eleicoes/ipespe-flavio-e-lula-sao-igualmente-rejeitados-por-47-dos-eleitores/",
       "scope": "second_round",
       "scopeEvidence": "Rejeição declarada de cada candidato, não rejeição exclusiva; não comparar diretamente com a categoria Datafolha."
+    },
+    {
+      "institute": "BTG/Nexus",
+      "date": "2026-10-19",
+      "field": "16 a 18/10",
+      "f": 46.8,
+      "l": 47.8,
+      "n": 2002,
+      "margin": 2,
+      "group": "declared",
+      "question": "Não votaria de jeito nenhum no candidato (rejeição declarada; não exclusiva)",
+      "method": "Entrevistas com eleitores",
+      "registration": "BR-04499/2026",
+      "source": "https://www.cnnbrasil.com.br/eleicoes/nexus-btg-lula-e-rejeitado-por-478-flavio-por-468/",
+      "scope": "second_round"
+    },
+    {
+      "institute": "PoderData/Aya",
+      "date": "2026-10-19",
+      "field": "16 a 18/10",
+      "f": 44,
+      "l": 48,
+      "n": 3000,
+      "margin": 1.8,
+      "group": "declared",
+      "question": "Não votaria de jeito nenhum no candidato (rejeição declarada; não exclusiva)",
+      "method": "Entrevistas telefônicas",
+      "registration": "BR-02586/2026",
+      "source": "https://www.poder360.com.br/poderdata/a-6-dias-do-2o-turno-rejeicao-a-lula-vai-a-48-e-de-flavio-e-de-44/",
+      "scope": "second_round"
     }
   ],
   "openVote": [
