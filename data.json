@@ -1,8 +1,26 @@
 {
-  "revision": "standard-20261019-history-synced-14-v2",
+  "revision": "standard-20261019-datatrends-14-v3",
   "referenceDate": "2026-10-19",
   "publishedAt": "2026-10-19",
   "polls": [
+    {
+      "name": "DataTrends",
+      "date": "2026-10-19",
+      "field": "15 a 17/10",
+      "fieldEnd": "2026-10-17",
+      "f": 51.5,
+      "l": 48.5,
+      "n": 2000,
+      "margin": "±2,19 p.p.",
+      "converted": false,
+      "url": "https://www.edmarlyra.com/datatrends-flavio-bolsonaro-tem-515-dos-votos-validos-contra-485-de-lula-na-disputa-presidencial/",
+      "registration": "BR-04454/2026",
+      "method": "Entrevistas telefônicas automatizadas",
+      "confidence": 95,
+      "sourceType": "Divulgação 19/10/2026; consulta direta ao PesqEle pendente",
+      "voteBasis": "Votos válidos publicados",
+      "registrationSource": "Registro informado na divulgação; conferência direta no PesqEle pendente"
+    },
     {
       "name": "PoderData/Aya",
       "date": "2026-10-19",
@@ -369,9 +387,9 @@
     },
     {
       "date": "2026-10-19",
-      "f": 50.97751,
-      "l": 49.02249,
-      "revision": "Novas rodadas AtlasIntel, PoderData/Aya e BTG/Nexus; 14 institutos"
+      "f": 50.942178,
+      "l": 49.057822,
+      "revision": "DataTrends 19/10 incorporada; 14 institutos, recência 7 dias, redutor padrão"
     }
   ],
   "instituteHistory": {
