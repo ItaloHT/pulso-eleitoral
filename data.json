@@ -1,8 +1,26 @@
 {
-  "revision": "standard-20261019-datatrends-14-v3",
+  "revision": "standard-20261019-futura-14-v4",
   "referenceDate": "2026-10-19",
   "publishedAt": "2026-10-19",
   "polls": [
+    {
+      "name": "Futura/100% Cidades",
+      "date": "2026-10-19",
+      "field": "16 a 17/10",
+      "fieldEnd": "2026-10-17",
+      "f": 50.4,
+      "l": 49.6,
+      "n": 2000,
+      "margin": "±2,2 p.p.",
+      "url": "https://tmc.com.br/politica/pesquisa-futura-inteliencia-flavio-lidera-segundo-turno-lula/",
+      "registration": "BR-06715/2026",
+      "method": "Telefone",
+      "confidence": 95,
+      "converted": false,
+      "registrationSource": "Número de registro informado pela TMC; consulta direta ao PesqEle pendente",
+      "sourceType": "TMC, divulgação 19/10/2026",
+      "voteBasis": "Votos válidos publicados; sem conversão."
+    },
     {
       "name": "DataTrends",
       "date": "2026-10-19",
@@ -387,9 +405,9 @@
     },
     {
       "date": "2026-10-19",
-      "f": 50.942178,
-      "l": 49.057822,
-      "revision": "DataTrends 19/10 incorporada; 14 institutos, recência 7 dias, redutor padrão"
+      "f": 50.908394,
+      "l": 49.091606,
+      "revision": "Futura/100% Cidades 19/10 incorporada; 14 institutos, recência 7 dias, redutor padrão"
     }
   ],
   "instituteHistory": {
@@ -422,6 +440,13 @@
         "f": 50.8,
         "l": 49.2,
         "url": "https://www.cnnbrasil.com.br/eleicoes/futura-flavio-tem-508-dos-votos-validos-no-2o-turno-lula-492/"
+      },
+      {
+        "date": "2026-10-19",
+        "f": 50.4,
+        "l": 49.6,
+        "url": "https://tmc.com.br/politica/pesquisa-futura-inteliencia-flavio-lidera-segundo-turno-lula/",
+        "registration": "BR-06715/2026"
       }
     ],
     "Gerp": [
@@ -1777,6 +1802,16 @@
       "revision": "Base padrão 13/10",
       "model": "old-seven-institute-historical-MAE",
       "note": "Not comparable with the current 14-institute standard"
+    }
+  ],
+  "aggregateHistoryRevisions": [
+    {
+      "date": "2026-10-19",
+      "f": 50.942178,
+      "l": 49.057822,
+      "revision": "DataTrends 19/10 incorporada; 14 institutos, recência 7 dias, redutor padrão",
+      "archivedAt": "2026-10-19",
+      "reason": "Média anterior à inclusão Futura 19/10"
     }
   ]
 }
