@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261019-futura-14-v4",
-  "referenceDate": "2026-10-19",
-  "publishedAt": "2026-10-19",
+  "revision": "standard-20261020-realtime-15-v1",
+  "referenceDate": "2026-10-20",
+  "publishedAt": "2026-10-20",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -388,6 +388,29 @@
         "https://politondata.com.br/eleicoes/pesquisas"
       ],
       "registrationSource": "Registro citado em notícia; verificação direta no PesqEle pendente"
+    },
+    {
+      "name": "Real Time Big Data",
+      "date": "2026-10-20",
+      "field": "15 a 19/10",
+      "fieldEnd": "2026-10-19",
+      "f": 52,
+      "l": 48,
+      "totalF": 48,
+      "totalL": 45,
+      "n": 2000,
+      "margin": "±2 p.p.",
+      "converted": false,
+      "url": "https://www.cnnbrasil.com.br/eleicoes/real-time-big-data-flavio-tem-52-dos-votos-validos-lula-48/",
+      "registration": "BR-02952/2026",
+      "method": "Entrevistas por telefone",
+      "confidence": 95,
+      "sourceType": "CNN Brasil e Metrópoles, publicação de 20/10/2026",
+      "voteBasis": "Votos válidos publicados",
+      "registrationSource": "Registro informado na reportagem; conferência direta no PesqEle pendente",
+      "additionalSources": [
+        "https://www.metropoles.com/brasil/real-time-flavio-tem-52-e-lula-aparece-com-48-dos-votos-validos"
+      ]
     }
   ],
   "history": [
@@ -408,6 +431,12 @@
       "f": 50.908394,
       "l": 49.091606,
       "revision": "Futura/100% Cidades 19/10 incorporada; 14 institutos, recência 7 dias, redutor padrão"
+    },
+    {
+      "date": "2026-10-20",
+      "f": 51.004714,
+      "l": 48.995286,
+      "revision": "Real Time Big Data incluído; modelo padrão ampliado para 15 institutos; recência 7 dias e redutor padrão"
     }
   ],
   "instituteHistory": {
@@ -1292,77 +1321,77 @@
         "name": "Indexa/Broadcast",
         "firstRoundMaePp": 2.45,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 7.605881689157369,
+        "weightPercent": 5.378076687899034,
         "originalMaePp": 2.45
       },
       {
         "name": "Palver",
         "firstRoundMaePp": 2.45,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 6.8888270334613635,
+        "weightPercent": 4.871051324456207,
         "originalMaePp": 2.45
       },
       {
         "name": "Quaest",
         "firstRoundMaePp": 2.45,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 6.8888270334613635,
+        "weightPercent": 4.871051324456207,
         "originalMaePp": 2.45
       },
       {
         "name": "PoderData/Aya",
         "firstRoundMaePp": 2.45,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 8.397574215242313,
+        "weightPercent": 7.991791244758518,
         "originalMaePp": 2.45
       },
       {
         "name": "BTG/Nexus",
         "firstRoundMaePp": 4.595,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 6.239373663226884,
+        "weightPercent": 7.991791244758518,
         "originalMaePp": 4.595
       },
       {
         "name": "Futura/100% Cidades",
         "firstRoundMaePp": 2.45,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 8.397574215242313,
+        "weightPercent": 7.238354450234893,
         "originalMaePp": 2.45
       },
       {
         "name": "Gerp",
         "firstRoundMaePp": 1.095,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 9.271673631346632,
+        "weightPercent": 6.5559489159077025,
         "originalMaePp": 1.095
       },
       {
         "name": "AtlasIntel",
         "firstRoundMaePp": 2.35,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 4.198787107621156,
+        "weightPercent": 7.991791244758518,
         "originalMaePp": 2.35
       },
       {
         "name": "Datafolha",
         "firstRoundMaePp": 2.6,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 7.605881689157369,
+        "weightPercent": 5.378076687899034,
         "originalMaePp": 2.6
       },
       {
         "name": "CNT/MDA",
         "firstRoundMaePp": 2.45,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 8.397574215242313,
+        "weightPercent": 5.93787807484291,
         "originalMaePp": 2.45
       },
       {
         "name": "Ipespe/Abrapel",
         "firstRoundMaePp": 2.45,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 8.397574215242313,
+        "weightPercent": 5.93787807484291,
         "originalMaePp": 2.45
       },
       {
@@ -1370,24 +1399,30 @@
         "firstRoundMaePp": 0.66,
         "originalMaePp": 0.66,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 3.8029408445786843
+        "weightPercent": 7.238354450234893
       },
       {
         "name": "DataTrends",
         "firstRoundMaePp": 2.61674,
         "originalMaePp": 2.61674,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 4.635836815673316
+        "weightPercent": 7.238354450234893
       },
       {
         "name": "Veritá",
         "firstRoundMaePp": 2.45,
         "originalMaePp": 2.45,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 9.271673631346632
+        "weightPercent": 6.5559489159077025
+      },
+      {
+        "name": "Real Time Big Data",
+        "firstRoundMaePp": null,
+        "weightBasis": "recency_7d_field_end",
+        "weightPercent": 8.823652908808064
       }
     ],
-    "sd": 0.8689609171904685,
+    "sd": 0.7966247143999146,
     "formula": "adjusted_error_i = 2.45 + 0.5*(source_error_i - 2.45); weight_i = [1/(1+adjusted_error_i)] / sum_j[1/(1+adjusted_error_j)]",
     "sensitivityPp": 3,
     "statisticalInterval": false,
@@ -1399,14 +1434,15 @@
     "method": "equal-institute-base-with-7-day-exponential-field-end-recency",
     "halfLifeDays": 7
   },
-  "dataCutoffDate": "2026-10-19",
+  "dataCutoffDate": "2026-10-20",
   "editorialPolicy": {
     "dataCutoff": "Latest confirmed publication date, normally previous day",
     "noNewPoll": "Preserve previous values and cutoff date",
     "standardMean": "Weighted latest confirmed poll per included institute",
     "projection": "Separate exploratory slope anchored at standard mean; not an election forecast",
     "nationalPollsOnly": "Agenda e média limitadas a pesquisas de abrangência nacional confirmada; pesquisas estaduais e levantamentos sem abrangência verificável ficam fora da agenda pública.",
-    "sourceVerification": "Resultado só entra na média com fonte rastreável, identificação da rodada, data de coleta/divulgação, amostra, registro TSE quando aplicável e distinção entre votos totais e válidos. Previsões não são resultados."
+    "sourceVerification": "Resultado só entra na média com fonte rastreável, identificação da rodada, data de coleta/divulgação, amostra, registro TSE quando aplicável e distinção entre votos totais e válidos. Previsões não são resultados.",
+    "modelExpansion": "Em 20/10/2026, Real Time Big Data incluído como 15º instituto após publicação nacional documentada; rodadas e histórico anteriores preservados."
   },
   "standardModelLegacy": {
     "enabled": true,
