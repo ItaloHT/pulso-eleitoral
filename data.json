@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261020-realtime-15-v1",
+  "revision": "standard-20261020-alfa-16-v1",
   "referenceDate": "2026-10-20",
   "publishedAt": "2026-10-20",
   "polls": [
@@ -411,6 +411,29 @@
       "additionalSources": [
         "https://www.metropoles.com/brasil/real-time-flavio-tem-52-e-lula-aparece-com-48-dos-votos-validos"
       ]
+    },
+    {
+      "name": "Alfa Inteligência",
+      "date": "2026-10-20",
+      "field": "15 a 19/10",
+      "fieldEnd": "2026-10-19",
+      "f": 51.5,
+      "l": 48.5,
+      "totalF": 48.8,
+      "totalL": 45.9,
+      "n": 2700,
+      "margin": "±1,9 p.p.",
+      "converted": false,
+      "url": "https://www.cnnbrasil.com.br/eleicoes/alfa-flavio-tem-515-dos-votos-validos-no-2o-turno-lula-485/",
+      "registration": "BR-00820/2026",
+      "method": "Entrevistas presenciais",
+      "confidence": 95,
+      "sourceType": "CNN Brasil, 20/10/2026, 7h",
+      "voteBasis": "Votos válidos publicados",
+      "registrationSource": "Registro informado pela CNN; conferência direta no PesqEle pendente",
+      "additionalSources": [
+        "https://www.cnnbrasil.com.br/eleicoes/alfa-lula-e-rejeitado-por-46-dos-eleitores-flavio-por-45/"
+      ]
     }
   ],
   "history": [
@@ -434,9 +457,9 @@
     },
     {
       "date": "2026-10-20",
-      "f": 51.004714,
-      "l": 48.995286,
-      "revision": "Real Time Big Data incluído; modelo padrão ampliado para 15 institutos; recência 7 dias e redutor padrão"
+      "f": 51.044873,
+      "l": 48.955127,
+      "revision": "Alfa Inteligência incluída; modelo padrão ampliado para 16 institutos; recência 7 dias e redutor padrão"
     }
   ],
   "instituteHistory": {
@@ -1321,77 +1344,77 @@
         "name": "Indexa/Broadcast",
         "firstRoundMaePp": 2.45,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 5.378076687899034,
+        "weightPercent": 4.942010807527064,
         "originalMaePp": 2.45
       },
       {
         "name": "Palver",
         "firstRoundMaePp": 2.45,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 4.871051324456207,
+        "weightPercent": 4.47609613742524,
         "originalMaePp": 2.45
       },
       {
         "name": "Quaest",
         "firstRoundMaePp": 2.45,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 4.871051324456207,
+        "weightPercent": 4.47609613742524,
         "originalMaePp": 2.45
       },
       {
         "name": "PoderData/Aya",
         "firstRoundMaePp": 2.45,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 7.991791244758518,
+        "weightPercent": 7.343799836838294,
         "originalMaePp": 2.45
       },
       {
         "name": "BTG/Nexus",
         "firstRoundMaePp": 4.595,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 7.991791244758518,
+        "weightPercent": 7.343799836838294,
         "originalMaePp": 4.595
       },
       {
         "name": "Futura/100% Cidades",
         "firstRoundMaePp": 2.45,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 7.238354450234893,
+        "weightPercent": 6.651453297841861,
         "originalMaePp": 2.45
       },
       {
         "name": "Gerp",
         "firstRoundMaePp": 1.095,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 6.5559489159077025,
+        "weightPercent": 6.024378653601575,
         "originalMaePp": 1.095
       },
       {
         "name": "AtlasIntel",
         "firstRoundMaePp": 2.35,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 7.991791244758518,
+        "weightPercent": 7.343799836838294,
         "originalMaePp": 2.35
       },
       {
         "name": "Datafolha",
         "firstRoundMaePp": 2.6,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 5.378076687899034,
+        "weightPercent": 4.942010807527064,
         "originalMaePp": 2.6
       },
       {
         "name": "CNT/MDA",
         "firstRoundMaePp": 2.45,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 5.93787807484291,
+        "weightPercent": 5.456422309053279,
         "originalMaePp": 2.45
       },
       {
         "name": "Ipespe/Abrapel",
         "firstRoundMaePp": 2.45,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 5.93787807484291,
+        "weightPercent": 5.456422309053279,
         "originalMaePp": 2.45
       },
       {
@@ -1399,30 +1422,36 @@
         "firstRoundMaePp": 0.66,
         "originalMaePp": 0.66,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 7.238354450234893
+        "weightPercent": 6.651453297841861
       },
       {
         "name": "DataTrends",
         "firstRoundMaePp": 2.61674,
         "originalMaePp": 2.61674,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 7.238354450234893
+        "weightPercent": 6.651453297841861
       },
       {
         "name": "Veritá",
         "firstRoundMaePp": 2.45,
         "originalMaePp": 2.45,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 6.5559489159077025
+        "weightPercent": 6.024378653601575
       },
       {
         "name": "Real Time Big Data",
         "firstRoundMaePp": null,
         "weightBasis": "recency_7d_field_end",
-        "weightPercent": 8.823652908808064
+        "weightPercent": 8.108212390372616
+      },
+      {
+        "name": "Alfa Inteligência",
+        "firstRoundMaePp": null,
+        "weightBasis": "recency_7d_field_end",
+        "weightPercent": 8.108212390372616
       }
     ],
-    "sd": 0.7966247143999146,
+    "sd": 0.7755209345849027,
     "formula": "adjusted_error_i = 2.45 + 0.5*(source_error_i - 2.45); weight_i = [1/(1+adjusted_error_i)] / sum_j[1/(1+adjusted_error_j)]",
     "sensitivityPp": 3,
     "statisticalInterval": false,
