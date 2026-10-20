@@ -447,11 +447,11 @@
       "n": 3000,
       "margin": "±1,8 p.p.",
       "converted": false,
-      "url": "https://www.google.com/search?q=%22BR-07896%2F2026%22+%22IFP%22",
+      "url": "https://fanf1.com.br/2026/10/20/instituto-franca-flavio-tem-508-e-lula-492-indecisos-sao-quase-9/",
       "registration": "BR-07896/2026",
       "method": "Não verificado na íntegra do levantamento",
       "confidence": 95,
-      "sourceType": "Resultado divulgado em 20/10/2026; publicação original e ficha integral pendentes de conferência",
+      "sourceType": "Fan F1, Narcizo Machado, 20/10/2026 às 07h09; ficha integral pendente",
       "voteBasis": "Votos válidos divulgados; totais 40,95% e 39,65%",
       "registrationSource": "Registro informado na divulgação; consulta direta ao PesqEle pendente"
     }
@@ -1264,7 +1264,7 @@
       "blankNull": 10.56,
       "undecided": 8.84,
       "registration": "BR-07896/2026",
-      "source": "https://www.google.com/search?q=%22BR-07896%2F2026%22+%22IFP%22",
+      "source": "https://fanf1.com.br/2026/10/20/instituto-franca-flavio-tem-508-e-lula-492-indecisos-sao-quase-9/",
       "scope": "second_round",
       "basis": "total_respondents",
       "categoriesExclusive": true,
