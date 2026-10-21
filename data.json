@@ -1041,6 +1041,15 @@
       "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
       "status": "announced",
       "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+    },
+    {
+      "name": "Phoenix & Associados",
+      "date": "2026-10-24",
+      "registration": "BR-06173/2026 (a confirmar no PesqEle)",
+      "field": "19 a 22/10 (informado em calendário; pendente de validação)",
+      "source": "https://pesqele-divulgacao.tse.jus.br/",
+      "status": "announced",
+      "note": "Nova rodada distinta da pesquisa Phoenix de 19/10. Divulgação prevista a partir de 24/10; registro, data e ficha técnica ainda não validados diretamente no TSE. Não entra na média até a divulgação e verificação dos resultados."
     }
   ],
   "rejection": [
