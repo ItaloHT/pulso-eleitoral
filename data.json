@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261021-quality-accuracy-recency19-v1",
+  "revision": "standard-20261021-phoenix-provisional20-v1",
   "referenceDate": "2026-10-21",
-  "publishedAt": "2026-10-21",
+  "publishedAt": "2026-10-21T17:36:10.146Z",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -498,6 +498,28 @@
       "sourceType": "Meio, publicação primária 21/10/2026; confirmação CNN e Poder360",
       "voteBasis": "Votos válidos divulgados; totais 48% e 46%; brancos/nulos 3,4%; indecisos 2,6%",
       "registrationSource": "Registro informado pelo Meio, CNN e Poder360; ficha individual PesqEle não consultada"
+    },
+    {
+      "name": "Phoenix",
+      "date": "2026-10-19",
+      "field": "13 a 16/10",
+      "fieldEnd": "2026-10-16",
+      "f": 48.7176724137931,
+      "l": 51.2823275862069,
+      "totalF": 45.21,
+      "totalL": 47.59,
+      "n": 3999,
+      "margin": "±1,55 p.p. (declarada)",
+      "converted": true,
+      "conversionNote": "Votos válidos calculados dos totais publicados: 45,21/(45,21+47,59) e 47,59/(45,21+47,59). A fonte arredonda para 48,7%/51,3%.",
+      "url": "https://www.phoenixnewsrondonia.com.br/pesquisa-do-instituto-phoenix-aponta-lula-com-51-3-e-flavio-bolsonaro-com-48-7-dos-votos-validos",
+      "registration": "BR-08809/2026 (atribuído por catálogos; fonte original cita TRE-RO 08809-2026)",
+      "registrationSource": "Registro nacional ainda não validado diretamente no PesqEle; divergência de identificação no material original",
+      "method": "Pesquisa em 311 municípios de 15 estados; amostragem nacional detalhada ainda não auditada",
+      "confidence": 95,
+      "sourceType": "Phoenix News RO, divulgação 19/10/2026; documentação técnica parcial",
+      "voteBasis": "Votos válidos normalizados dos totais; dados de origem sujeitos a conferência",
+      "qualityCaveat": "Inclusão editorial autorizada, registro e representatividade nacional pendentes de verificação direta."
     }
   ],
   "history": [
@@ -527,9 +549,9 @@
     },
     {
       "date": "2026-10-21",
-      "f": 50.980182,
-      "l": 49.019818,
-      "revision": "Mudança metodológica autorizada: 19 institutos, qualidade A/B/C provisória, acurácia moderada, recência de 7 dias e redutor padrão."
+      "f": 50.910531,
+      "l": 49.089469,
+      "revision": "20 institutos; Phoenix incluída com categoria C provisória, registro e ficha técnica ainda pendentes de validação direta"
     }
   ],
   "instituteHistory": {
@@ -1519,7 +1541,7 @@
         "name": "Indexa/Broadcast",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.7222468339443644,
+        "weightPercent": 3.6076593196134663,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1529,7 +1551,7 @@
         "name": "Palver",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.719857858428741,
+        "weightPercent": 4.574559385726597,
         "originalMaePp": 2.45,
         "qualityTier": "C",
         "qualityStatus": "provisional",
@@ -1539,7 +1561,7 @@
         "name": "Quaest",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 8.76545030851052,
+        "weightPercent": 8.495610287777968,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1549,7 +1571,7 @@
         "name": "PoderData/Aya",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.531237537999413,
+        "weightPercent": 5.3609611460973,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1559,7 +1581,7 @@
         "name": "BTG/Nexus",
         "firstRoundMaePp": 4.595,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.038895288455619,
+        "weightPercent": 3.9145599092092938,
         "originalMaePp": 4.595,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1569,7 +1591,7 @@
         "name": "Futura/100% Cidades",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.74265408346963,
+        "weightPercent": 6.535084836752283,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1579,7 +1601,7 @@
         "name": "Gerp",
         "firstRoundMaePp": 1.095,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.798973872640499,
+        "weightPercent": 5.620455351064766,
         "originalMaePp": 1.095,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1589,7 +1611,7 @@
         "name": "AtlasIntel",
         "firstRoundMaePp": 2.35,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 7.3420066397233885,
+        "weightPercent": 7.115986623163835,
         "originalMaePp": 2.35,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1599,7 +1621,7 @@
         "name": "Datafolha",
         "firstRoundMaePp": 2.6,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.697263136901965,
+        "weightPercent": 4.5526602314451585,
         "originalMaePp": 2.6,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1609,7 +1631,7 @@
         "name": "CNT/MDA",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.342601805662578,
+        "weightPercent": 5.178132470800678,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1619,7 +1641,7 @@
         "name": "Ipespe/Abrapel",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.109693696663522,
+        "weightPercent": 3.983178823692829,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1630,7 +1652,7 @@
         "firstRoundMaePp": 0.66,
         "originalMaePp": 0.66,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.402586242850793,
+        "weightPercent": 6.205485815182476,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -1640,7 +1662,7 @@
         "firstRoundMaePp": 2.61674,
         "originalMaePp": 2.61674,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.393273145431335,
+        "weightPercent": 3.288812922204082,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -1650,7 +1672,7 @@
         "firstRoundMaePp": 2.45,
         "originalMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.176228800428291,
+        "weightPercent": 3.0784501792287897,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -1659,7 +1681,7 @@
         "name": "Real Time Big Data",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.106981363344107,
+        "weightPercent": 5.918980984618772,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1668,7 +1690,7 @@
         "name": "Alfa Inteligência",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.106981363344107,
+        "weightPercent": 5.918980984618772,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1677,7 +1699,7 @@
         "name": "IFP (Instituto França)",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.719857858428741,
+        "weightPercent": 4.574559385726597,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1686,7 +1708,7 @@
         "name": "Data Ranking",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.176228800428291,
+        "weightPercent": 3.0784501792287897,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1695,13 +1717,22 @@
         "name": "Meio/Ideia",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.106981363344107,
+        "weightPercent": 5.918980984618772,
         "qualityTier": "B",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "missing_neutral"
+      },
+      {
+        "name": "Phoenix",
+        "firstRoundMaePp": null,
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 3.0784501792287897,
+        "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
       }
     ],
-    "sd": 0.7544637197025652,
+    "sd": 0.839300659248333,
     "formula": "weight_i ∝ tier_i * (MAE_i null ? 1 : sqrt(2.45/max(1.5,MAE_i))) * 2^(-days_since_field_end/7) * (1-min(.3,.1*max(0,abs(f_i-recency_median)-2.5)))",
     "sensitivityPp": 3,
     "statisticalInterval": false,
@@ -1722,7 +1753,7 @@
     "accuracyExponent": 0.5
   },
   "dataCutoffDate": "2026-10-21",
-  "editorialPolicy": "[object Object] | IFP 20/10: dados divulgados incluídos; link para documento primário e registro TSE pendentes de verificação.",
+  "editorialPolicy": "[object Object] | IFP 20/10: dados divulgados incluídos; link para documento primário e registro TSE pendentes de verificação. Phoenix (19/10) incluída a pedido do editor; fonte divulgadora encontrada, registro BR-08809/2026 não validado diretamente no TSE e ficha técnica nacional incompleta; qualidade C provisória.",
   "standardModelLegacy": {
     "enabled": true,
     "version": "1.0",
