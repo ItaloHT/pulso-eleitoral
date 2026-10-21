@@ -1,25 +1,27 @@
 {
-  "revision": "standard-20261021-quaest-w8-19-v1",
+  "revision": "standard-20261021-futura-w8-19-v1",
   "referenceDate": "2026-10-21",
   "publishedAt": "2026-10-21",
   "polls": [
     {
       "name": "Futura/100% Cidades",
-      "date": "2026-10-19",
-      "field": "16 a 17/10",
-      "fieldEnd": "2026-10-17",
-      "f": 50.4,
-      "l": 49.6,
+      "date": "2026-10-21",
+      "field": "19 a 20/10",
+      "fieldEnd": "2026-10-20",
+      "f": 51.1,
+      "l": 48.9,
       "n": 2000,
       "margin": "±2,2 p.p.",
-      "url": "https://tmc.com.br/politica/pesquisa-futura-inteliencia-flavio-lidera-segundo-turno-lula/",
-      "registration": "BR-06715/2026",
+      "url": "https://www.poder360.com.br/poder-pesquisas/flavio-tem-511-dos-votos-validos-contra-489-de-lula-diz-futura/",
+      "registration": "BR-06614/2026",
       "method": "Telefone",
       "confidence": 95,
       "converted": false,
-      "registrationSource": "Número de registro informado pela TMC; consulta direta ao PesqEle pendente",
-      "sourceType": "TMC, divulgação 19/10/2026",
-      "voteBasis": "Votos válidos publicados; sem conversão."
+      "registrationSource": "Registro informado por Poder360, CNN e Exame; consulta direta ao PesqEle pendente",
+      "sourceType": "Poder360, divulgação 21/10/2026",
+      "voteBasis": "Votos válidos publicados; sem conversão.",
+      "totalF": 48.9,
+      "totalL": 46.8
     },
     {
       "name": "DataTrends",
@@ -525,9 +527,9 @@
     },
     {
       "date": "2026-10-21",
-      "f": 50.947922,
-      "l": 49.052078,
-      "revision": "Quaest 21/10 substitui rodada 14/10 (BR-08535/2026); 19 institutos, recência 7 dias e redutor padrão"
+      "f": 50.985186,
+      "l": 49.014814,
+      "revision": "Futura/100% Cidades 21/10 substitui rodada 19/10 (BR-06614/2026); 19 institutos, recência 7 dias e redutor padrão"
     }
   ],
   "instituteHistory": {
@@ -1156,6 +1158,21 @@
       "registration": "BR-08535/2026",
       "source": "https://noticias.uol.com.br/eleicoes/2026/10/21/rejeicao-de-flavio-vai-de-54-a-52-e-a-de-lula-de-53-a-47-diz-quaest.ghtm",
       "scope": "second_round"
+    },
+    {
+      "institute": "Futura/100% Cidades",
+      "date": "2026-10-21",
+      "field": "19 a 20/10",
+      "f": 45.2,
+      "l": 47.3,
+      "n": 2000,
+      "margin": 2.2,
+      "group": "declared",
+      "question": "Não votaria no candidato (rejeição declarada; não exclusiva)",
+      "method": "Telefone (CATI)",
+      "registration": "BR-06614/2026",
+      "source": "https://exame.com/brasil/pesquisa-futura-flavio-bolsonaro-tem-511-e-lula-489-no-2o-turno/",
+      "scope": "second_round"
     }
   ],
   "openVote": [
@@ -1379,6 +1396,19 @@
       "basis": "total_respondents",
       "categoriesExclusive": true,
       "question": "Intenção de voto estimulada no segundo turno: brancos/nulos e indecisos/não responderam"
+    },
+    {
+      "institute": "Futura/100% Cidades",
+      "date": "2026-10-21",
+      "fieldEnd": "2026-10-20",
+      "blankNull": 2,
+      "undecided": 2.3,
+      "registration": "BR-06614/2026",
+      "source": "https://www.poder360.com.br/poder-pesquisas/flavio-tem-511-dos-votos-validos-contra-489-de-lula-diz-futura/",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Intenção de voto estimulada no segundo turno: brancos/nulos e não sabe/não respondeu"
     }
   ],
   "experimentalArchive": {
