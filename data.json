@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261021-phoenix-provisional20-v1",
+  "revision": "standard-20261021-verita-round21-v1",
   "referenceDate": "2026-10-21",
-  "publishedAt": "2026-10-21T17:36:10.146Z",
+  "publishedAt": "2026-10-21",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -372,26 +372,27 @@
     },
     {
       "name": "Veritá",
-      "date": "2026-10-17",
-      "field": "12 a 16/10",
-      "fieldEnd": "2026-10-16",
-      "f": 51.1,
-      "l": 48.9,
+      "date": "2026-10-21",
+      "field": "15 a 19/10",
+      "fieldEnd": "2026-10-19",
+      "f": 50.7,
+      "l": 49.3,
       "totalF": 49.7,
-      "totalL": 47.7,
+      "totalL": 48.2,
       "n": 15554,
       "margin": "±1,0 p.p.",
       "converted": false,
-      "url": "https://www.gp1.com.br/eleicoes-2026/noticia/2026/10/17/flavio-bolsonaro-tem-511-dos-votos-validos-contra-489-de-lula-no-segundo-turno-diz-instituto-verita-634181.html",
-      "registration": "BR-01107/2026",
+      "url": "https://www.cnnbrasil.com.br/eleicoes/verita-flavio-tem-507-dos-votos-validos-no-2o-turno-lula-493/",
+      "registration": "BR-06396/2026",
       "method": "Entrevistas estruturadas automatizadas com reconhecimento de voz e transcrição",
       "confidence": 95,
-      "sourceType": "GP1, notícia com votos válidos, amostra e ficha técnica; original e registro TSE ainda pendentes de conferência direta",
-      "voteBasis": "Votos válidos publicados: 51,1% × 48,9%; totais 49,7% × 47,7% reportados em catálogo de pesquisas.",
+      "sourceType": "CNN Brasil, Exame e R7; registro TSE informado pelas fontes",
+      "voteBasis": "Votos válidos publicados: 50,7% × 49,3%; votos totais 49,7% × 48,2%",
       "additionalSources": [
-        "https://politondata.com.br/eleicoes/pesquisas"
+        "https://exame.com/brasil/pesquisa-verita-flavio-bolsonaro-tem-507-e-lula-493-no-2o-turno-em-empate-tecnico/",
+        "https://noticias.r7.com/eleicoes/2026/verita-flavio-bolsonaro-tem-507-dos-votos-validos-e-lula-493-no-2-turno-21102026/"
       ],
-      "registrationSource": "Registro citado em notícia; verificação direta no PesqEle pendente"
+      "registrationSource": "Registro BR-06396/2026 citado por CNN, Exame e R7; consulta individual PesqEle não concluída"
     },
     {
       "name": "Real Time Big Data",
@@ -700,6 +701,13 @@
         "l": 48.9,
         "url": "https://www.gp1.com.br/eleicoes-2026/noticia/2026/10/17/flavio-bolsonaro-tem-511-dos-votos-validos-contra-489-de-lula-no-segundo-turno-diz-instituto-verita-634181.html",
         "registration": "BR-01107/2026"
+      },
+      {
+        "date": "2026-10-21",
+        "f": 50.7,
+        "l": 49.3,
+        "url": "https://www.cnnbrasil.com.br/eleicoes/verita-flavio-tem-507-dos-votos-validos-no-2o-turno-lula-493/",
+        "registration": "BR-06396/2026"
       }
     ],
     "Quaest": [
