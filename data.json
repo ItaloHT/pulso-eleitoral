@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261021-futura-w8-19-v1",
+  "revision": "standard-20261021-quality-accuracy-recency19-v1",
   "referenceDate": "2026-10-21",
   "publishedAt": "2026-10-21",
   "polls": [
@@ -527,9 +527,9 @@
     },
     {
       "date": "2026-10-21",
-      "f": 50.985186,
-      "l": 49.014814,
-      "revision": "Futura/100% Cidades 21/10 substitui rodada 19/10 (BR-06614/2026); 19 institutos, recência 7 dias e redutor padrão"
+      "f": 50.980182,
+      "l": 49.019818,
+      "revision": "Mudança metodológica autorizada: 19 institutos, qualidade A/B/C provisória, acurácia moderada, recência de 7 dias e redutor padrão."
     }
   ],
   "instituteHistory": {
@@ -737,11 +737,11 @@
     }
   ],
   "aggregate": {
-    "model": "Modelo padrão — erro médio absoluto no primeiro turno",
-    "provisional": false,
+    "model": "Modelo padrão: qualidade A/B/C provisória + acurácia moderada + recência de 7 dias",
+    "provisional": true,
     "previousDate": "2026-10-13",
     "newPoll": "Datafolha 15/10, PoderData/Aya 16/10, Gerp 16/10",
-    "sdBetweenInstitutesPp": 1.4661540420961179,
+    "sdBetweenInstitutesPp": 0.7544637197025652,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
   "sourcePolicy": {
@@ -754,7 +754,9 @@
     "enabled": true,
     "halfLifeDays": 7,
     "field": "fieldEnd",
-    "equalInstituteBase": true
+    "equalInstituteBase": false,
+    "qualityAdjusted": true,
+    "historicalAccuracyAdjusted": true
   },
   "agenda": [
     {
@@ -1511,148 +1513,213 @@
   },
   "standardModel": {
     "enabled": true,
-    "version": "3.0-recency-half-life-7d",
+    "version": "4.0-quality-accuracy-recency-7d",
     "institutes": [
       {
         "name": "Indexa/Broadcast",
         "firstRoundMaePp": 2.45,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 4.298276394590331,
-        "originalMaePp": 2.45
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 3.7222468339443644,
+        "originalMaePp": 2.45,
+        "qualityTier": "B",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "registered_not_independently_audited"
       },
       {
         "name": "Palver",
         "firstRoundMaePp": 2.45,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 3.8930506461274077,
-        "originalMaePp": 2.45
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 4.719857858428741,
+        "originalMaePp": 2.45,
+        "qualityTier": "C",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "registered_not_independently_audited"
       },
       {
         "name": "Quaest",
         "firstRoundMaePp": 2.45,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 3.8930506461274077,
-        "originalMaePp": 2.45
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 8.76545030851052,
+        "originalMaePp": 2.45,
+        "qualityTier": "A",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "registered_not_independently_audited"
       },
       {
         "name": "PoderData/Aya",
         "firstRoundMaePp": 2.45,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 6.3872141754933836,
-        "originalMaePp": 2.45
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 5.531237537999413,
+        "originalMaePp": 2.45,
+        "qualityTier": "B",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "registered_not_independently_audited"
       },
       {
         "name": "BTG/Nexus",
         "firstRoundMaePp": 4.595,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 6.3872141754933836,
-        "originalMaePp": 4.595
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 4.038895288455619,
+        "originalMaePp": 4.595,
+        "qualityTier": "B",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "registered_not_independently_audited"
       },
       {
         "name": "Futura/100% Cidades",
         "firstRoundMaePp": 2.45,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 5.785051027466235,
-        "originalMaePp": 2.45
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 6.74265408346963,
+        "originalMaePp": 2.45,
+        "qualityTier": "B",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "registered_not_independently_audited"
       },
       {
         "name": "Gerp",
         "firstRoundMaePp": 1.095,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 5.239657614550396,
-        "originalMaePp": 1.095
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 5.798973872640499,
+        "originalMaePp": 1.095,
+        "qualityTier": "B",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "registered_not_independently_audited"
       },
       {
         "name": "AtlasIntel",
         "firstRoundMaePp": 2.35,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 6.3872141754933836,
-        "originalMaePp": 2.35
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 7.3420066397233885,
+        "originalMaePp": 2.35,
+        "qualityTier": "A",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "registered_not_independently_audited"
       },
       {
         "name": "Datafolha",
         "firstRoundMaePp": 2.6,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 4.298276394590331,
-        "originalMaePp": 2.6
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 4.697263136901965,
+        "originalMaePp": 2.6,
+        "qualityTier": "A",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "registered_not_independently_audited"
       },
       {
         "name": "CNT/MDA",
         "firstRoundMaePp": 2.45,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 4.7456818941388645,
-        "originalMaePp": 2.45
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 5.342601805662578,
+        "originalMaePp": 2.45,
+        "qualityTier": "A",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "registered_not_independently_audited"
       },
       {
         "name": "Ipespe/Abrapel",
         "firstRoundMaePp": 2.45,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 4.7456818941388645,
-        "originalMaePp": 2.45
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 4.109693696663522,
+        "originalMaePp": 2.45,
+        "qualityTier": "B",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "registered_not_independently_audited"
       },
       {
         "name": "Vox Brasil",
         "firstRoundMaePp": 0.66,
         "originalMaePp": 0.66,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 5.785051027466235
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 6.402586242850793,
+        "qualityTier": "B",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "registered_not_independently_audited"
       },
       {
         "name": "DataTrends",
         "firstRoundMaePp": 2.61674,
         "originalMaePp": 2.61674,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 5.785051027466235
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 3.393273145431335,
+        "qualityTier": "C",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "registered_not_independently_audited"
       },
       {
         "name": "Veritá",
         "firstRoundMaePp": 2.45,
         "originalMaePp": 2.45,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 5.239657614550396
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 3.176228800428291,
+        "qualityTier": "C",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "registered_not_independently_audited"
       },
       {
         "name": "Real Time Big Data",
         "firstRoundMaePp": null,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 7.05205619275097
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 6.106981363344107,
+        "qualityTier": "B",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "missing_neutral"
       },
       {
         "name": "Alfa Inteligência",
         "firstRoundMaePp": null,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 7.05205619275097
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 6.106981363344107,
+        "qualityTier": "B",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "missing_neutral"
       },
       {
         "name": "IFP (Instituto França)",
         "firstRoundMaePp": null,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 7.786101292254815
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 4.719857858428741,
+        "qualityTier": "C",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "missing_neutral"
       },
       {
         "name": "Data Ranking",
         "firstRoundMaePp": null,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 5.239657614550396
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 3.176228800428291,
+        "qualityTier": "C",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "missing_neutral"
       },
       {
         "name": "Meio/Ideia",
         "firstRoundMaePp": null,
-        "weightBasis": "recency_7d_field_end",
-        "weightPercent": 5.2631578947368425
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 6.106981363344107,
+        "qualityTier": "B",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "missing_neutral"
       }
     ],
-    "sd": 0.7924254018139996,
-    "formula": "adjusted_error_i = 2.45 + 0.5*(source_error_i - 2.45); weight_i = [1/(1+adjusted_error_i)] / sum_j[1/(1+adjusted_error_j)]",
+    "sd": 0.7544637197025652,
+    "formula": "weight_i ∝ tier_i * (MAE_i null ? 1 : sqrt(2.45/max(1.5,MAE_i))) * 2^(-days_since_field_end/7) * (1-min(.3,.1*max(0,abs(f_i-recency_median)-2.5)))",
     "sensitivityPp": 3,
     "statisticalInterval": false,
-    "policy": "One latest published national second-round poll per institute. Equal base weight; exponentially decreasing influence by days since fieldwork ended (half-life 7 days). No historical institute error weighting.",
+    "policy": "Uma rodada nacional vigente por instituto; classificação A/B/C editorial provisória; acurácia histórica moderada com dados ainda não auditados; recência 7 dias pelo fim da coleta; redutor simétrico de discrepâncias acima de 2,5pp limitado a 30%.",
     "weightAudit": {
-      "status": "not_applicable",
-      "note": "Historical first-round MAE estimates do not enter the standard model."
+      "status": "provisional",
+      "note": "Categorias A/B/C e erros históricos não auditados individualmente. Institutos sem MAE usam fator neutro."
     },
-    "method": "equal-institute-base-with-7-day-exponential-field-end-recency",
-    "halfLifeDays": 7
+    "method": "quality-tier-accuracy-recency-7d",
+    "halfLifeDays": 7,
+    "qualityFactors": {
+      "A": 1.3,
+      "B": 1,
+      "C": 0.7
+    },
+    "accuracyReferencePp": 2.45,
+    "accuracyFloorPp": 1.5,
+    "accuracyExponent": 0.5
   },
   "dataCutoffDate": "2026-10-21",
   "editorialPolicy": "[object Object] | IFP 20/10: dados divulgados incluídos; link para documento primário e registro TSE pendentes de verificação.",
@@ -2331,6 +2398,13 @@
       "revision": "DataTrends 19/10 incorporada; 14 institutos, recência 7 dias, redutor padrão",
       "archivedAt": "2026-10-19",
       "reason": "Média anterior à inclusão Futura 19/10"
+    },
+    {
+      "date": "2026-10-21",
+      "revision": "standard-20261021-quality-accuracy-recency19-v1",
+      "description": "Nova metodologia aprovada; 19 institutos preservados; pesos e acurácia provisórios.",
+      "previousMeanF": 50.985186,
+      "newMeanF": 50.980182
     }
   ]
 }
