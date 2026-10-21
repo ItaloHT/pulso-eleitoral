@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261021-meio-ideia-19-v1",
+  "revision": "standard-20261021-palver-w8-19-v1",
   "referenceDate": "2026-10-21",
   "publishedAt": "2026-10-21",
   "polls": [
@@ -125,23 +125,24 @@
     },
     {
       "name": "Palver",
-      "date": "2026-10-15",
-      "field": "10 a 13/10",
-      "f": 50.51,
-      "l": 49.49,
+      "date": "2026-10-21",
+      "field": "18 a 20/10",
+      "fieldEnd": "2026-10-20",
+      "f": 51.02040816326531,
+      "l": 48.97959183673469,
       "totalF": 50,
-      "totalL": 49,
+      "totalL": 48,
       "n": 5000,
-      "margin": "±2,3 p.p.",
+      "margin": "±2,4 p.p.",
       "converted": true,
-      "url": "https://noticias.uol.com.br/eleicoes/2026/10/15/palver-flavio-bolsonaro-tem-50-e-lula-49-no-segundo-turno.ghtm",
-      "registration": "BR-08028/2026",
-      "method": "Questionário online",
+      "url": "https://noticias.uol.com.br/eleicoes/2026/10/21/palver-pesquisa-presidencial-segundo-turno-21-de-outubro.ghtm",
+      "registration": "BR-04612/2026",
+      "method": "Questionário online; recrutamento por anúncios em redes sociais; amostragem não probabilística",
       "confidence": 95,
-      "conversionNote": "Normalização dos votos totais arredondados: 50/(50+49) e 49/(50+49). Margem publicada não recalculada.",
-      "sourceType": "Reportagem com ficha técnica",
-      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
-      "fieldEnd": "2026-10-13"
+      "conversionNote": "Normalização dos percentuais totais arredondados: 50/(50+48) e 48/(50+48). Percentuais válidos estimados, não divulgados diretamente. Margem publicada não recalculada.",
+      "sourceType": "UOL 21/10/2026 07h; corroborado por Folha e Exame",
+      "voteBasis": "Votos válidos estimados a partir de totais arredondados",
+      "registrationSource": "Registro informado pelo UOL e Exame; ficha individual PesqEle não consultada"
     },
     {
       "name": "Quaest",
@@ -523,9 +524,9 @@
     },
     {
       "date": "2026-10-21",
-      "f": 50.960702,
-      "l": 49.039298,
-      "revision": "Meio/Ideia 21/10 incorporada; 19 institutos, recência 7 dias e redutor padrão"
+      "f": 50.980708,
+      "l": 49.019292,
+      "revision": "Meio/Ideia 21/10 incorporada; 19 institutos, recência 7 dias e redutor padrão; Palver 21/10 substitui rodada 15/10 (BR-04612/2026)"
     }
   ],
   "instituteHistory": {
@@ -588,6 +589,26 @@
         "l": 49.49,
         "converted": true,
         "url": "https://noticias.uol.com.br/eleicoes/2026/10/15/palver-flavio-bolsonaro-tem-50-e-lula-49-no-segundo-turno.ghtm"
+      },
+      {
+        "name": "Palver",
+        "date": "2026-10-15",
+        "field": "10 a 13/10",
+        "f": 50.51,
+        "l": 49.49,
+        "totalF": 50,
+        "totalL": 49,
+        "n": 5000,
+        "margin": "±2,3 p.p.",
+        "converted": true,
+        "url": "https://noticias.uol.com.br/eleicoes/2026/10/15/palver-flavio-bolsonaro-tem-50-e-lula-49-no-segundo-turno.ghtm",
+        "registration": "BR-08028/2026",
+        "method": "Questionário online",
+        "confidence": 95,
+        "conversionNote": "Normalização dos votos totais arredondados: 50/(50+49) e 49/(50+49). Margem publicada não recalculada.",
+        "sourceType": "Reportagem com ficha técnica",
+        "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
+        "fieldEnd": "2026-10-13"
       }
     ],
     "Indexa/Broadcast": [
@@ -832,15 +853,6 @@
       "field": "17 a 20/10",
       "source": "https://www.metropoles.com/brasil/lula-x-flavio-veja-quando-saem-as-novas-pesquisas-datafolha-quaest-e-mais",
       "status": "registered",
-      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
-    },
-    {
-      "name": "Palver",
-      "date": "2026-10-21",
-      "registration": "A confirmar",
-      "field": "A confirmar",
-      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
-      "status": "announced",
       "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
     },
     {
