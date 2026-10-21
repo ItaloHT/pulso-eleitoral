@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261020-ranking-18-v1",
-  "referenceDate": "2026-10-20",
-  "publishedAt": "2026-10-20",
+  "revision": "standard-20261021-meio-ideia-19-v1",
+  "referenceDate": "2026-10-21",
+  "publishedAt": "2026-10-21",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -474,6 +474,26 @@
       "sourceType": "Fonte83, divulgação 20/10/2026; fonte parceira da pesquisa",
       "voteBasis": "Votos válidos publicados",
       "registrationSource": "Registro informado pelo Fonte83; conferência direta no PesqEle pendente"
+    },
+    {
+      "name": "Meio/Ideia",
+      "date": "2026-10-21",
+      "field": "15 a 19/10",
+      "fieldEnd": "2026-10-19",
+      "f": 51.1,
+      "l": 48.9,
+      "totalF": 48,
+      "totalL": 46,
+      "n": 1500,
+      "margin": "±2,5 p.p.",
+      "converted": false,
+      "url": "https://www.canalmeio.com.br/2026/10/21/meio-ideia-empreendedorismo-e-religiao-distinguem-eleitores-de-flavio-e-lula/",
+      "registration": "BR-08251/2026",
+      "method": "Entrevistas telefônicas, abrangência nacional",
+      "confidence": 95,
+      "sourceType": "Meio, publicação primária 21/10/2026; confirmação CNN e Poder360",
+      "voteBasis": "Votos válidos divulgados; totais 48% e 46%; brancos/nulos 3,4%; indecisos 2,6%",
+      "registrationSource": "Registro informado pelo Meio, CNN e Poder360; ficha individual PesqEle não consultada"
     }
   ],
   "history": [
@@ -500,6 +520,12 @@
       "f": 50.950879,
       "l": 49.049121,
       "revision": "Data Ranking incluído; 18 institutos, recência 7 dias e redutor padrão; Gerp tracking 20/10 pendente de registro"
+    },
+    {
+      "date": "2026-10-21",
+      "f": 50.960702,
+      "l": 49.039298,
+      "revision": "Meio/Ideia 21/10 incorporada; 19 institutos, recência 7 dias e redutor padrão"
     }
   ],
   "instituteHistory": {
@@ -797,14 +823,6 @@
       "registration": "BR-07585/2026",
       "field": "16 a 18/10",
       "source": "https://www.metropoles.com/brasil/lula-x-flavio-veja-quando-saem-as-novas-pesquisas-datafolha-quaest-e-mais",
-      "status": "registered"
-    },
-    {
-      "name": "Meio/Ideia",
-      "date": "2026-10-21",
-      "registration": "BR-08251/2026",
-      "field": "15 a 19/10",
-      "source": "https://e26.cog.ia.br/eleicoes/pesquisas",
       "status": "registered"
     },
     {
@@ -1527,6 +1545,12 @@
         "firstRoundMaePp": null,
         "weightBasis": "recency_7d_field_end",
         "weightPercent": 5.239657614550396
+      },
+      {
+        "name": "Meio/Ideia",
+        "firstRoundMaePp": null,
+        "weightBasis": "recency_7d_field_end",
+        "weightPercent": 5.2631578947368425
       }
     ],
     "sd": 0.7924254018139996,
@@ -1541,7 +1565,7 @@
     "method": "equal-institute-base-with-7-day-exponential-field-end-recency",
     "halfLifeDays": 7
   },
-  "dataCutoffDate": "2026-10-20",
+  "dataCutoffDate": "2026-10-21",
   "editorialPolicy": "[object Object] | IFP 20/10: dados divulgados incluídos; link para documento primário e registro TSE pendentes de verificação.",
   "standardModelLegacy": {
     "enabled": true,
