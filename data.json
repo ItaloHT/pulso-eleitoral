@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261021-palver-w8-19-v1",
+  "revision": "standard-20261021-quaest-w8-19-v1",
   "referenceDate": "2026-10-21",
   "publishedAt": "2026-10-21",
   "polls": [
@@ -146,19 +146,20 @@
     },
     {
       "name": "Quaest",
-      "date": "2026-10-14",
-      "field": "10 a 13/10",
-      "f": 51.11,
-      "l": 48.89,
-      "totalF": 46,
+      "date": "2026-10-21",
+      "field": "17 a 20/10",
+      "f": 50.561797752808985,
+      "l": 49.438202247191015,
+      "totalF": 45,
       "totalL": 44,
       "n": 2154,
       "margin": "±2 p.p.",
       "converted": true,
-      "url": "https://noticias.uol.com.br/eleicoes/2026/10/14/quaest-presidencial-intencao-de-voto-segundo-turno.ghtm",
-      "registration": "BR-08729/2026",
-      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
-      "fieldEnd": "2026-10-13"
+      "url": "https://noticias.uol.com.br/eleicoes/2026/10/21/quaest-presidencial-segundo-tuno-21-de-outubro.ghtm",
+      "registration": "BR-08535/2026",
+      "registrationSource": "Número de registro confirmado por UOL, Folha e Money Times; conferência direta no PesqEle pendente",
+      "fieldEnd": "2026-10-20",
+      "method": "Entrevistas presenciais"
     },
     {
       "name": "PoderData/Aya",
@@ -524,9 +525,9 @@
     },
     {
       "date": "2026-10-21",
-      "f": 50.980708,
-      "l": 49.019292,
-      "revision": "Meio/Ideia 21/10 incorporada; 19 institutos, recência 7 dias e redutor padrão; Palver 21/10 substitui rodada 15/10 (BR-04612/2026)"
+      "f": 50.947922,
+      "l": 49.052078,
+      "revision": "Quaest 21/10 substitui rodada 14/10 (BR-08535/2026); 19 institutos, recência 7 dias e redutor padrão"
     }
   ],
   "instituteHistory": {
@@ -675,6 +676,24 @@
         "l": 48.9,
         "url": "https://www.gp1.com.br/eleicoes-2026/noticia/2026/10/17/flavio-bolsonaro-tem-511-dos-votos-validos-contra-489-de-lula-no-segundo-turno-diz-instituto-verita-634181.html",
         "registration": "BR-01107/2026"
+      }
+    ],
+    "Quaest": [
+      {
+        "name": "Quaest",
+        "date": "2026-10-14",
+        "field": "10 a 13/10",
+        "f": 51.11,
+        "l": 48.89,
+        "totalF": 46,
+        "totalL": 44,
+        "n": 2154,
+        "margin": "±2 p.p.",
+        "converted": true,
+        "url": "https://noticias.uol.com.br/eleicoes/2026/10/14/quaest-presidencial-intencao-de-voto-segundo-turno.ghtm",
+        "registration": "BR-08729/2026",
+        "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
+        "fieldEnd": "2026-10-13"
       }
     ]
   },
@@ -1122,6 +1141,21 @@
       "registration": "BR-02586/2026",
       "source": "https://www.poder360.com.br/poderdata/a-6-dias-do-2o-turno-rejeicao-a-lula-vai-a-48-e-de-flavio-e-de-44/",
       "scope": "second_round"
+    },
+    {
+      "institute": "Quaest",
+      "date": "2026-10-21",
+      "field": "17 a 20/10",
+      "f": 52,
+      "l": 47,
+      "n": 2154,
+      "margin": 2,
+      "group": "declared",
+      "question": "Não votaria no candidato (rejeição declarada; não exclusiva)",
+      "method": "Entrevistas presenciais",
+      "registration": "BR-08535/2026",
+      "source": "https://noticias.uol.com.br/eleicoes/2026/10/21/rejeicao-de-flavio-vai-de-54-a-52-e-a-de-lula-de-53-a-47-diz-quaest.ghtm",
+      "scope": "second_round"
     }
   ],
   "openVote": [
@@ -1332,6 +1366,19 @@
       "basis": "total_respondents",
       "categoriesExclusive": true,
       "question": "Intenção de voto estimulada segundo turno: branco/nulo/nenhum e não sabe"
+    },
+    {
+      "institute": "Quaest",
+      "date": "2026-10-21",
+      "fieldEnd": "2026-10-20",
+      "blankNull": 9,
+      "undecided": 2,
+      "registration": "BR-08535/2026",
+      "source": "https://noticias.uol.com.br/eleicoes/2026/10/21/quaest-presidencial-segundo-tuno-21-de-outubro.ghtm",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Intenção de voto estimulada no segundo turno: brancos/nulos e indecisos/não responderam"
     }
   ],
   "experimentalArchive": {
