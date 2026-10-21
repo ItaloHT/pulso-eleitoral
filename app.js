@@ -37,7 +37,7 @@ function sensitivityChart(latest){
   // plus an approximate combined sampling SE from each institute's published margin.
   const rec=recencyAggregate();
   const marginValue=p=>{
-    const m=String(p.margin||'').match(/±\\s*([0-9]+(?:[.,][0-9]+)?)/);
+    const m=String(p.margin||'').match(/±\s*([0-9]+(?:[.,][0-9]+)?)/);
     return m?Number(m[1].replace(',','.')):NaN;
   };
   const inputs=(rec?.rows||[]).map(r=>{
