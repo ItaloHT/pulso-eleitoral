@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261021-gerp-round21-v1",
-  "referenceDate": "2026-10-21",
-  "publishedAt": "2026-10-21",
+  "revision": "standard-20261022-poderdata-round22-v1",
+  "referenceDate": "2026-10-22",
+  "publishedAt": "2026-10-22T11:05:03.285Z",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -519,6 +519,24 @@
       "sourceType": "Phoenix News RO, divulgação 19/10/2026; documentação técnica parcial",
       "voteBasis": "Votos válidos normalizados dos totais; dados de origem sujeitos a conferência",
       "qualityCaveat": "Inclusão editorial autorizada, registro e representatividade nacional pendentes de verificação direta."
+    },
+    {
+      "name": "PoderData/Aya",
+      "date": "2026-10-22",
+      "field": "19 a 21/10",
+      "fieldEnd": "2026-10-21",
+      "f": 51,
+      "l": 49,
+      "n": 4000,
+      "margin": "±1,6 p.p.",
+      "converted": false,
+      "url": "https://noticias.uol.com.br/eleicoes/2026/",
+      "registration": "BR-07926/2026",
+      "method": "Entrevistas telefônicas",
+      "confidence": 95,
+      "sourceType": "UOL e Veja; resultados e registro corroborados por duas fontes jornalísticas; consulta direta ao PesqEle pendente",
+      "voteBasis": "Votos válidos 51%/49% divulgados",
+      "registrationSource": "BR-07926/2026 informado por UOL e Veja; ficha original do PesqEle ainda não consultada"
     }
   ],
   "history": [
@@ -551,6 +569,12 @@
       "f": 51.022209,
       "l": 48.977791,
       "revision": "20 institutos; Gerp 21/10 substitui rodada anterior; qualidade/acurácia/recência 7d e redutor padrão"
+    },
+    {
+      "date": "2026-10-22",
+      "f": 50.971494,
+      "l": 49.028506,
+      "revision": "PoderData/Aya 22/10 incorporada em substituição à rodada anterior; 20 institutos, parâmetros do modelo padrão preservados."
     }
   ],
   "instituteHistory": {
@@ -924,11 +948,12 @@
     {
       "name": "PoderData/Aya",
       "date": "2026-10-22",
-      "registration": "A confirmar",
-      "field": "A confirmar",
+      "registration": "BR-07926/2026",
+      "field": "19 a 21/10",
       "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
-      "status": "announced",
-      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+      "status": "published",
+      "note": "Divulgada em 22/10; corroborada por UOL e Veja; registro ainda não verificado diretamente no PesqEle.",
+      "publicationSource": "https://noticias.uol.com.br/eleicoes/2026/"
     },
     {
       "name": "Gerp",
@@ -1563,7 +1588,7 @@
         "name": "Indexa/Broadcast",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.446840178686062,
+        "weightPercent": 3.3868357606928394,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1573,7 +1598,7 @@
         "name": "Palver",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.370638603480238,
+        "weightPercent": 4.294552213608656,
         "originalMaePp": 2.45,
         "qualityTier": "C",
         "qualityStatus": "provisional",
@@ -1583,7 +1608,7 @@
         "name": "Quaest",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 8.116900263606158,
+        "weightPercent": 7.975596968130361,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1593,7 +1618,7 @@
         "name": "PoderData/Aya",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.121984821095268,
+        "weightPercent": 6.773671521385679,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1603,7 +1628,7 @@
         "name": "BTG/Nexus",
         "firstRoundMaePp": 4.595,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.7400600171919547,
+        "weightPercent": 3.674951073070016,
         "originalMaePp": 4.595,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1613,7 +1638,7 @@
         "name": "Futura/100% Cidades",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.243769433543198,
+        "weightPercent": 6.135074590869508,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1623,7 +1648,7 @@
         "name": "Gerp",
         "firstRoundMaePp": 1.095,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 8.810256550580304,
+        "weightPercent": 8.65688294191764,
         "originalMaePp": 1.095,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1633,7 +1658,7 @@
         "name": "AtlasIntel",
         "firstRoundMaePp": 2.35,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.798776278670796,
+        "weightPercent": 6.680419583112234,
         "originalMaePp": 2.35,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1643,7 +1668,7 @@
         "name": "Datafolha",
         "firstRoundMaePp": 2.6,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.34971565090372,
+        "weightPercent": 4.273993498863591,
         "originalMaePp": 2.6,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1653,7 +1678,7 @@
         "name": "CNT/MDA",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.947306125575906,
+        "weightPercent": 4.861180802291363,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1663,7 +1688,7 @@
         "name": "Ipespe/Abrapel",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.805620096596851,
+        "weightPercent": 3.739369847916433,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1674,7 +1699,7 @@
         "firstRoundMaePp": 0.66,
         "originalMaePp": 0.66,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.928862994283255,
+        "weightPercent": 5.825650209561353,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -1684,7 +1709,7 @@
         "firstRoundMaePp": 2.61674,
         "originalMaePp": 2.61674,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.1422070423350053,
+        "weightPercent": 3.087505839199618,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -1694,7 +1719,7 @@
         "firstRoundMaePp": 2.45,
         "originalMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.9585908111174057,
+        "weightPercent": 3.8896775672823027,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -1703,7 +1728,7 @@
         "name": "Real Time Big Data",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.655129730167722,
+        "weightPercent": 5.5566822389747195,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1712,7 +1737,7 @@
         "name": "Alfa Inteligência",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.655129730167722,
+        "weightPercent": 5.5566822389747195,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1721,7 +1746,7 @@
         "name": "IFP (Instituto França)",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.370638603480238,
+        "weightPercent": 4.294552213608656,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1730,7 +1755,7 @@
         "name": "Data Ranking",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.941221669175232,
+        "weightPercent": 2.8900193257828004,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1739,7 +1764,7 @@
         "name": "Meio/Ideia",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.655129730167722,
+        "weightPercent": 5.5566822389747195,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1748,7 +1773,7 @@
         "name": "Phoenix",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.941221669175232,
+        "weightPercent": 2.8900193257828004,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1774,7 +1799,7 @@
     "accuracyFloorPp": 1.5,
     "accuracyExponent": 0.5
   },
-  "dataCutoffDate": "2026-10-21",
+  "dataCutoffDate": "2026-10-22",
   "editorialPolicy": "[object Object] | IFP 20/10: dados divulgados incluídos; link para documento primário e registro TSE pendentes de verificação. Phoenix (19/10) incluída a pedido do editor; fonte divulgadora encontrada, registro BR-08809/2026 não validado diretamente no TSE e ficha técnica nacional incompleta; qualidade C provisória.",
   "standardModelLegacy": {
     "enabled": true,
