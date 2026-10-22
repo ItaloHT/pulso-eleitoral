@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261022-gerp-neutral-accuracy-v1",
+  "revision": "standard-20261022-datafolha-round22-v1",
   "referenceDate": "2026-10-22",
-  "publishedAt": "2026-10-22T13:45:35.122Z",
+  "publishedAt": "2026-10-22T19:14:00-03:00",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -537,6 +537,25 @@
       "sourceType": "UOL e Veja; resultados e registro corroborados por duas fontes jornalísticas; consulta direta ao PesqEle pendente",
       "voteBasis": "Votos válidos 51%/49% divulgados",
       "registrationSource": "BR-07926/2026 informado por UOL e Veja; ficha original do PesqEle ainda não consultada"
+    },
+    {
+      "name": "Datafolha",
+      "date": "2026-10-22",
+      "field": "20 a 22/10",
+      "f": 50,
+      "l": 50,
+      "n": 2520,
+      "margin": "±2 p.p.",
+      "url": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-flavio-bolsonaro-e-lula-empatam-com-50-dos-votos-validos-cada.shtml",
+      "registration": "BR-09709/2026",
+      "registrationSource": "Número informado pela Folha em publicação de 22/10; conferência direta no PesqEle pendente",
+      "primaryUrl": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-flavio-bolsonaro-e-lula-empatam-com-50-dos-votos-validos-cada.shtml",
+      "totalF": 47,
+      "totalL": 46,
+      "converted": false,
+      "voteBasis": "Votos válidos divulgados (50%/50%); totais 47%/46%; brancos/nulos 5%, indecisos 2%; sem conversão.",
+      "sourceType": "Folha de S.Paulo, divulgação 22/10/2026",
+      "fieldEnd": "2026-10-22"
     }
   ],
   "history": [
@@ -572,9 +591,9 @@
     },
     {
       "date": "2026-10-22",
-      "f": 50.908117,
-      "l": 49.091883,
-      "revision": "Gerp: bônus de acurácia pontual neutralizado; demais critérios e 20 institutos mantidos."
+      "f": 50.824086,
+      "l": 49.175914,
+      "revision": "Datafolha 22/10 incorporada; Gerp com acurácia neutra; 20 institutos, parâmetros padrão preservados."
     }
   ],
   "instituteHistory": {
@@ -695,6 +714,15 @@
         "l": 49,
         "url": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-flavio-bolsonaro-tem-51-e-lula-49-dos-votos-validos-um-empate-tecnico.shtml",
         "converted": false
+      },
+      {
+        "date": "2026-10-22",
+        "fieldEnd": "2026-10-22",
+        "f": 50,
+        "l": 50,
+        "converted": false,
+        "url": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-flavio-bolsonaro-e-lula-empatam-com-50-dos-votos-validos-cada.shtml",
+        "registration": "BR-09709/2026"
       }
     ],
     "Ipespe/Abrapel": [
@@ -807,8 +835,8 @@
     "model": "Modelo padrão: qualidade A/B/C provisória + acurácia moderada + recência de 7 dias",
     "provisional": true,
     "previousDate": "2026-10-13",
-    "newPoll": "Indexa/Broadcast 22/10 (50,6%/49,4%); substitui rodada de 15/10",
-    "sdBetweenInstitutesPp": 0.9448948648898586,
+    "newPoll": "Datafolha 22/10 (50%/50%); substitui rodada de 15/10",
+    "sdBetweenInstitutesPp": 0.9247072668700946,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
   "sourcePolicy": {
@@ -951,7 +979,9 @@
       "registration": "BR-09709/2026",
       "field": "20 a 22/10",
       "source": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-divulga-nova-pesquisa-de-2o-turno-para-presidente-nesta-quinta-22-live-comenta-resultados.shtml",
-      "status": "registered"
+      "status": "published",
+      "publicationSource": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-flavio-bolsonaro-e-lula-empatam-com-50-dos-votos-validos-cada.shtml",
+      "note": "Divulgada em 22/10 às 19h05; registro informado pela Folha, conferência direta no PesqEle pendente."
     },
     {
       "name": "PoderData/Aya",
@@ -1588,7 +1618,7 @@
         "name": "Indexa/Broadcast",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.67332971154372,
+        "weightPercent": 6.3502749619638985,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1598,7 +1628,7 @@
         "name": "Palver",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.230934847426404,
+        "weightPercent": 4.026116015343298,
         "originalMaePp": 2.45,
         "qualityTier": "C",
         "qualityStatus": "provisional",
@@ -1608,7 +1638,7 @@
         "name": "Quaest",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 7.85745043093475,
+        "weightPercent": 7.477072599923268,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1618,7 +1648,7 @@
         "name": "PoderData/Aya",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.67332971154372,
+        "weightPercent": 6.3502749619638985,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1628,7 +1658,7 @@
         "name": "BTG/Nexus",
         "firstRoundMaePp": 4.595,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.6205121708309154,
+        "weightPercent": 3.445243796083115,
         "originalMaePp": 4.595,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1638,7 +1668,7 @@
         "name": "Futura/100% Cidades",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.044192639180578,
+        "weightPercent": 5.751594307633283,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1648,7 +1678,7 @@
         "name": "Gerp",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.67332971154372,
+        "weightPercent": 6.3502749619638985,
         "originalMaePp": 1.095,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1659,7 +1689,7 @@
         "name": "AtlasIntel",
         "firstRoundMaePp": 2.35,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.581459161226287,
+        "weightPercent": 6.26285184926898,
         "originalMaePp": 2.35,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1669,7 +1699,7 @@
         "name": "Datafolha",
         "firstRoundMaePp": 2.6,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.210680679283434,
+        "weightPercent": 8.847825238774583,
         "originalMaePp": 2.6,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1679,7 +1709,7 @@
         "name": "CNT/MDA",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.78916968127215,
+        "weightPercent": 4.55732679639231,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1689,7 +1719,7 @@
         "name": "Ipespe/Abrapel",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.683976677901654,
+        "weightPercent": 3.5056359972248536,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1700,7 +1730,7 @@
         "firstRoundMaePp": 0.66,
         "originalMaePp": 0.66,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.739351917167335,
+        "weightPercent": 5.4615108728167705,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -1710,7 +1740,7 @@
         "firstRoundMaePp": 2.61674,
         "originalMaePp": 2.61674,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.0417690592532045,
+        "weightPercent": 2.894517539518332,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -1720,7 +1750,7 @@
         "firstRoundMaePp": 2.45,
         "originalMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.832057813272895,
+        "weightPercent": 3.6465485501683306,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -1729,7 +1759,7 @@
         "name": "Real Time Big Data",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.474368304675565,
+        "weightPercent": 5.209355071669044,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1738,7 +1768,7 @@
         "name": "Alfa Inteligência",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.474368304675565,
+        "weightPercent": 5.209355071669044,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1747,7 +1777,7 @@
         "name": "IFP (Instituto França)",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.230934847426404,
+        "weightPercent": 4.026116015343298,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1756,7 +1786,7 @@
         "name": "Data Ranking",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.8472080130830726,
+        "weightPercent": 2.7093751603053793,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1765,7 +1795,7 @@
         "name": "Meio/Ideia",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.474368304675565,
+        "weightPercent": 5.209355071669044,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1774,13 +1804,13 @@
         "name": "Phoenix",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.8472080130830726,
+        "weightPercent": 2.7093751603053793,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
       }
     ],
-    "sd": 0.9108686927826838,
+    "sd": 0.9247072668700946,
     "formula": "weight_i ∝ tier_i * (MAE_i null ? 1 : sqrt(2.45/max(1.5,MAE_i))) * 2^(-days_since_field_end/7) * (1-min(.3,.1*max(0,abs(f_i-recency_median)-2.5)))",
     "sensitivityPp": 3,
     "statisticalInterval": false,
