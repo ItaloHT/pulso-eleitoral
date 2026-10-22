@@ -100,49 +100,36 @@ function methodology(){
  main.innerHTML=intro('Transparência faz parte do método.','Qualidade, acurácia histórica moderada, recência de sete dias e redução de discrepâncias.')+`<section class="card"><h2>Modelo padrão: ${rows.length} institutos</h2><p>Entra uma pesquisa nacional mais recente por instituto, divulgada até a data de corte, em votos válidos. As rodadas anteriores permanecem no histórico. Data de referência: ${date(dataset.dataCutoffDate||dataset.referenceDate)}/2026.</p><h2>Como cada peso é calculado</h2><p><strong>Qualidade A/B/C:</strong> multiplicadores A = 1,30; B = 1,00; C = 0,70. As categorias são <strong>classificações editoriais provisórias</strong>, não certificações independentes de precisão. A distribuição por instituto está na tabela abaixo.</p><p><strong>Acurácia histórica moderada:</strong> fator = raiz quadrada de [2,45 ÷ máximo(1,5; erro histórico cadastrado em p.p.)]. Para institutos sem histórico, fator neutro 1,00. <strong>Os erros históricos cadastrados ainda não foram auditados individualmente</strong>; valores repetidos de 2,45 p.p. podem ser referências provisórias.</p><p><strong>Recência:</strong> peso reduzido à metade a cada sete dias desde o fim da coleta, não desde a divulgação.</p><p><strong>Discrepância:</strong> a mediana ponderada apenas pela recência é a referência; resultados acima de 2,5 pontos percentuais de distância recebem redução de 10% por ponto excedente, limitada a 30%. O critério é simétrico.</p><div class="formula">Peso bruto = categoria × acurácia × 2^(−dias desde o fim da coleta / 7) × (1 − redutor)</div><div class="formula">Redutor = mín(0,30; 0,10 × máx(0; |votos válidos − mediana| − 2,5))</div><div class="formula">Peso efetivo = peso bruto / soma de todos os pesos brutos</div><div class="formula">Média = soma (peso efetivo × percentual de votos válidos)</div><h2>Pesos efetivos dos institutos</h2><p>Pesos normalizados, recalculados quando entram novas pesquisas. Os pesos da tabela somam 100%.</p><div class="table-wrap"><table><thead><tr><th>Instituto</th><th>Categoria</th><th>Erro histórico cadastrado</th><th>Peso efetivo</th></tr></thead><tbody>${details}</tbody></table></div><h2>Limitações e interpretação</h2><p>A classificação de qualidade e parte dos indicadores históricos ainda carecem de validação documental. Não há garantia de que pesos maiores correspondam a maior precisão futura. O desvio padrão ponderado entre institutos é ${rec?fmt(rec.sd):'indisponível'} p.p., não uma margem de erro. A faixa de sensibilidade do painel é hipotética, não um intervalo de confiança validado. A média não indica probabilidade de vitória.</p><h2>Probabilidade experimental de vitória (modelo independente 1.0)</h2><p>O painel da aba Tendências não altera a média ponderada padrão. Parte da média atual de votos válidos de Flávio (M) e mede a evolução relativa da rejeição declarada dentro de cada instituto que tenha pelo menos duas rodadas nacionais comparáveis, divulgadas até a data de corte. Para cada instituto: Δ = (rejeição a Flávio − rejeição a Lula) na última rodada menos essa mesma diferença na primeira rodada cadastrada. R é a média simples dos Δ entre os institutos elegíveis. Rejeição exclusiva, como a do Datafolha, não é misturada com rejeição declarada. Institutos com uma única rodada não entram no cálculo da evolução.</p><div class="formula">Votação experimental de Flávio = M − 0,20 × R</div><div class="formula">Probabilidade de Flávio = Φ[(votação experimental − 50) ÷ 1,75]; probabilidade de Lula = 100% − probabilidade de Flávio</div><p>Φ é a distribuição normal acumulada. O fator de conversão de 20% e o desvio-padrão de 1,75 ponto percentual são <strong>hipóteses fixas e não calibradas historicamente</strong>. A evolução da rejeição pode já estar refletida nas intenções de voto; portanto, existe risco de dupla contagem. O modelo não incorpora rejeição exclusiva, ambiente digital, eventos políticos ou uma projeção linear adicional. Não representa chance comprovada de vitória, margem de erro, nem intervalo de confiança. É recalculado com os dados verificados e mantém os parâmetros constantes, mesmo se o resultado contrariar expectativas.</p><p>O histórico probabilístico começa no primeiro registro da versão 1.0. Não são atribuídas probabilidades retrospectivas a datas em que o modelo não estava publicado.</p><h2>Fontes e histórico</h2><p>As fontes e registros TSE informados aparecem na aba Pesquisas. O registro não equivale a certificação do TSE. Os resultados históricos de metodologias diferentes não devem ser comparados sem reconstrução dos pesos.</p></section>`;
 }
 function trendModel(){
- const day=s=>Date.parse(s+'T00:00:00Z')/86400000;
+ const rec=recencyAggregate();if(!rec)return null;
  const cutoff=dataset.dataCutoffDate||dataset.referenceDate;
- const current=recencyAggregate();
- const weights=new Map((current?.rows||[]).map(r=>[r.name,r.effective]));
- // One latest documented round per institute. Keep all observations on or before the cutoff.
- const input=polls.filter(p=>weights.has(p.name)&&p.url&&p.registration&&p.fieldEnd&&Number.isFinite(p.f)&&p.date<=cutoff&&p.fieldEnd<=cutoff)
-  .map(p=>({t:day(p.fieldEnd),f:p.f,w:weights.get(p.name)}));
- if(input.length<4)return null;
- const start=Math.min(...input.map(p=>p.t)),end=Math.max(...input.map(p=>p.t));
- if(end-start<2)return null;
- const points=[],bandwidth=3.5,ridge=18;
- for(let t=start;t<=end;t++){
-  let sw=0,sx=0,sxx=0,sy=0,sxy=0;
-  for(const p of input){const x=p.t-t,w=p.w*Math.exp(-.5*(x/bandwidth)**2);sw+=w;sx+=w*x;sxx+=w*x*x;sy+=w*p.f;sxy+=w*x*p.f;}
-  const denom=sw*(sxx+ridge)-sx*sx;
-  const f=Math.max(0,Math.min(100,denom>0?(sy*(sxx+ridge)-sx*sxy)/denom:sy/sw));
-  points.push({date:new Date(t*86400000).toISOString().slice(0,10),f,l:100-f});
+ const day=s=>Date.parse(s+'T00:00:00Z')/86400000;
+ const series=[];
+ for(const row of rec.rows){
+  const rounds=[...(dataset.instituteHistory?.[row.name]||[]),...polls.filter(p=>p.name===row.name)].filter(p=>Number.isFinite(p.f)&&p.date<=cutoff);
+  const unique=[...new Map(rounds.map(p=>[p.date,p])).values()].sort((a,b)=>a.date.localeCompare(b.date));
+  if(unique.length<2)continue;
+  const first=unique[0],last=unique.at(-1),t0=day(first.fieldEnd||first.date),t1=day(last.fieldEnd||last.date);
+  if(t1<=t0)continue;
+  series.push({name:row.name,w:row.effective,t0,t1,delta:last.f-first.f});
  }
- // The trend is a separate descriptive smoothing, not an anchored copy of the mean.
- // Preserve the fitted series for conditional slope estimation.
- const fittedPoints=points.map(p=>({...p}));
- return {points,fittedPoints,n:input.length,cutoff,displayDate:new Date(end*86400000).toISOString().slice(0,10),lastPollDate:new Date(end*86400000).toISOString().slice(0,10)};
+ if(series.length<4)return null;
+ const coverage=series.reduce((a,r)=>a+r.w,0);
+ const change=series.reduce((a,r)=>a+r.w*r.delta,0)/coverage;
+ const dates=[...new Set(series.flatMap(r=>[r.t0,r.t1]))].sort((a,b)=>a-b);
+ const points=dates.map(t=>{
+  const delta=series.reduce((a,r)=>a+r.w*r.delta*Math.max(0,Math.min(1,(t-r.t0)/(r.t1-r.t0))),0)/coverage;
+  const f=rec.f-change+delta;
+  return {date:new Date(t*86400000).toISOString().slice(0,10),f,l:100-f};
+ });
+ const days=series.reduce((a,r)=>a+r.w*(r.t1-r.t0),0)/coverage;
+ return {points,fittedPoints:points,n:series.length,cutoff,coverage,change,slope:change/days,meanF:rec.f,lastPollDate:points.at(-1).date};
 }
-
 function conditionalProjection(model){
- const observed=model.points,last=observed.at(-1),lastTime=Date.parse(last.date+'T00:00:00Z');
- const election='2026-10-25',days=Math.max(0,Math.round((Date.parse(election+'T00:00:00Z')-lastTime)/86400000));
- // Estimate the recent slope from unanchored fitted values; the last point
- // is anchored to the main aggregate and must not create a fictitious swing.
- const trend=Array.isArray(model.fittedPoints)?model.fittedPoints:observed;
- const recent=trend.slice(-6);
- const t0=Date.parse(recent[0].date+'T00:00:00Z')/86400000;
- const xs=recent.map(p=>Date.parse(p.date+'T00:00:00Z')/86400000-t0);
- const xm=xs.reduce((a,b)=>a+b,0)/xs.length;
- const ym=recent.reduce((a,p)=>a+p.f,0)/recent.length;
- const covariance=recent.reduce((a,p,i)=>a+(xs[i]-xm)*(p.f-ym),0);
- const variance=xs.reduce((a,x)=>a+(x-xm)**2,0);
- const rawSlope=variance>0?covariance/variance:0;
- const slope=Math.max(-.15,Math.min(.15,rawSlope));
- const f=Math.max(0,Math.min(100,last.f+slope*days));
- return {date:election,days,slope,rawSlope,f,l:100-f,from:last};
+ const days=Math.max(0,Math.round((Date.parse('2026-10-25T00:00:00Z')-Date.parse(model.cutoff+'T00:00:00Z'))/86400000));
+ const slope=Math.max(-.15,Math.min(.15,model.slope*.5));
+ const f=Math.max(0,Math.min(100,model.meanF+slope*days));
+ return {date:'2026-10-25',days,slope,rawSlope:model.slope,f,l:100-f,from:{date:model.cutoff,f:model.meanF,l:100-model.meanF}};
 }
-
 function projectionChart(points,projection){
  const start=Date.parse(points[0].date),finish=Date.parse(projection.date),x=p=>65+(Date.parse(p.date)-start)/(finish-start||1)*815;
  const vals=[...points.flatMap(p=>[p.f,p.l]),projection.f,projection.l];
@@ -232,14 +219,14 @@ function experimentalWinModel(){
  }).filter(Boolean);
  if(!series.length)return null;
  const rejectionChange=series.reduce((sum,r)=>sum+r.change,0)/series.length;
- const conversion=.20,sigma=1.75,projectedF=rec.f-conversion*rejectionChange;
+ const trend=trendModel(),forecast=trend?conditionalProjection(trend):null;const conversion=.20,sigma=1.75,projectedF=(forecast?forecast.f:rec.f)-conversion*rejectionChange;
  // Aproximação da função de distribuição normal acumulada.
  const x=(projectedF-50)/sigma;
  const z=Math.abs(x),t=1/(1+.2316419*z);
  const density=Math.exp(-z*z/2)/Math.sqrt(2*Math.PI);
  const cdf=1-density*(.319381530*t-.356563782*t*t+1.781477937*t**3-1.821255978*t**4+1.330274429*t**5);
  const probabilityF=100*(x>=0?cdf:1-cdf);
- return {cutoff,meanF:rec.f,rejectionChange,conversion,sigma,projectedF,probabilityF,probabilityL:100-probabilityF,series};
+ return {cutoff,meanF:rec.f,rejectionChange,conversion,sigma,projectedF,probabilityF,probabilityL:100-probabilityF,series,forecast};
 }
 function experimentalWinPanel(){
  const p=experimentalWinModel();
@@ -248,34 +235,34 @@ function experimentalWinPanel(){
  return '<section class="card" id="win-probability"><div class="card-head"><div><div class="eyebrow">MODELO INDEPENDENTE · EXPERIMENTAL 1.0</div><h2>Probabilidade estimada de vitória</h2><p class="small">Dados até '+date(p.cutoff)+'/2026 · Segundo turno em 25/10</p></div><span class="badge">Não calibrado</span></div>'+
  '<div class="forecast-numbers"><div><span>Flávio Bolsonaro</span><strong class="fv">'+fmt(p.probabilityF)+'%</strong></div><div><span>Lula</span><strong class="lv">'+fmt(p.probabilityL)+'%</strong></div></div>'+
  '<div class="split" style="--share:'+f+'%" role="img" aria-label="Probabilidade experimental: Flávio '+fmt(p.probabilityF)+' por cento, Lula '+fmt(p.probabilityL)+' por cento"><span></span><span></span></div>'+
- '<p class="small">Média de votos válidos: '+fmt(p.meanF)+'% para Flávio. Evolução relativa média da rejeição: '+fmt(p.rejectionChange)+' p.p. ('+p.series.length+' institutos com séries comparáveis). Conversão hipotética: 20%. Votação ajustada: '+fmt(p.projectedF)+'% para Flávio.</p>'+
+ '<p class="small">Média de votos válidos: '+fmt(p.meanF)+'% para Flávio. Cenário condicional com tendência: '+(p.forecast?fmt(p.forecast.f)+'%':'indisponível')+'. Evolução relativa média da rejeição: '+fmt(p.rejectionChange)+' p.p. ('+p.series.length+' institutos com séries comparáveis). Conversão hipotética: 20%. Votação ajustada: '+fmt(p.projectedF)+'% para Flávio.</p>'+
  '<h3>Histórico do modelo</h3><p class="small">Primeiro registro verificável: '+date(p.cutoff)+'/2026. O histórico será ampliado a partir das próximas atualizações; não há probabilidades retrospectivas inventadas.</p>'+
  '<div class="table-wrap"><table><thead><tr><th>Data</th><th>Flávio</th><th>Lula</th></tr></thead><tbody><tr><td>'+date(p.cutoff)+'</td><td>'+fmt(p.probabilityF)+'%</td><td>'+fmt(p.probabilityL)+'%</td></tr></tbody></table></div>'+
- '<p class="notice"><strong>Estimativa experimental, não uma previsão validada.</strong> O fator de conversão de 20% e a incerteza de 1,75 p.p. são hipóteses fixas; rejeição não equivale a transferência de votos. <a href="#metodologia">Conheça a metodologia</a>.</p></section>';
+ '<p class="notice"><strong>Estimativa experimental, não uma previsão validada.</strong> A tendência é extrapolada com redução de 50%; o fator de conversão de 20% e a incerteza de 1,75 p.p. são hipóteses não calibradas; rejeição não equivale a transferência de votos. <a href="#metodologia">Conheça a metodologia</a>.</p></section>';
 }
 
 function experimentalTrend(){
  const model=trendModel();
  if(!model){main.innerHTML=intro('Tendência experimental.','Ainda não há observações suficientes para calcular uma trajetória.')+'<p class="notice">Sem dados suficientes para exibir a curva. O painel principal permanece disponível.</p>';return;}
  const ps=model.points,first=ps[0],last=ps.at(-1),change=last.f-first.f,projection=conditionalProjection(model);
- const direction=Math.abs(change)<.5?'Estabilidade aparente':change>0?'Alta aparente de Flávio':'Alta aparente de Lula';
+ const direction=Math.abs(model.change)<.2?'Estabilidade aparente':model.change>0?'Alta aparente de Flávio':'Aproximação aparente de Lula';
  main.innerHTML=intro('Tendência experimental.','Uma leitura exploratória da direção das pesquisas, separada da média principal.')+
- `<section class="card trend-card experimental-trend-card"><div class="card-head"><div><div class="eyebrow">MODELO ESTATÍSTICO EXPERIMENTAL</div><h2>Movimento das pesquisas</h2><p class="sub">Curva suavizada de pesquisas com fonte e registro informados até ${date(model.cutoff)}/2026, encerrada na última data de coleta, ${date(model.lastPollDate)}. Usa os pesos por recência do modelo padrão, mas não força o último ponto a coincidir com a média principal. A curva é uma suavização descritiva distinta da fotografia atual.</p></div><span class="badge">${model.n} institutos</span></div>
- <div class="trend-summary"><div><span>Leitura do período</span><strong>${direction}</strong></div><div><span>Variação suavizada de Flávio</span><strong class="fv">${change>0?'+':''}${fmt(change)} p.p.</strong></div><div><span>Período da curva</span><strong>${date(first.date)} a ${date(last.date)}</strong></div></div>
+ `<section class="card trend-card experimental-trend-card"><div class="card-head"><div><div class="eyebrow">MODELO ESTATÍSTICO EXPERIMENTAL</div><h2>Movimento das pesquisas</h2><p class="sub">Reconstrução experimental das mudanças dentro de cada instituto até ${date(model.cutoff)}/2026, encerrada na última data de coleta, ${date(model.lastPollDate)}. Usa os pesos atuais e ancora a série na média oficial. Datas intermediárias são interpoladas entre rodadas, não observações diárias.</p></div><span class="badge">${model.n} institutos</span></div>
+ <div class="trend-summary"><div><span>Leitura do período</span><strong>${direction}</strong></div><div><span>Variação entre rodadas de Flávio</span><strong class="fv">${model.change>0?'+':''}${fmt(model.change)} p.p.</strong></div><div><span>Período da curva</span><strong>${date(first.date)} a ${date(last.date)}</strong></div></div>
  <div class="forecast-numbers trend-current-numbers" aria-label="Valores suavizados em ${date(last.date)}"><div><span>Flávio Bolsonaro</span><strong class="fv">${fmt(last.f)}%</strong></div><div><span>Lula</span><strong class="lv">${fmt(last.l)}%</strong></div></div>
  <p class="small">Estimativas suavizadas em ${date(last.date)}. Não são resultados de uma pesquisa realizada nesse dia.</p>
  <div class="legend"><span><i class="dot"></i>Flávio Bolsonaro</span><span><i class="dot r"></i>Lula · linha tracejada</span></div>
  ${timeChart(ps)}
- <section class="conditional-forecast" aria-labelledby="conditional-title"><div class="eyebrow">SIMULAÇÃO · NÃO É PREVISÃO ELEITORAL</div><h3 id="conditional-title">E se a tendência continuar até 25/10?</h3><p class="small">Continuação condicional até 25/10, com inclinação estimada na curva suavizada e limitada a 0,15 ponto percentual por dia. Não é previsão eleitoral.</p>
+ <section class="conditional-forecast" aria-labelledby="conditional-title"><div class="eyebrow">SIMULAÇÃO · NÃO É PREVISÃO ELEITORAL</div><h3 id="conditional-title">E se a tendência continuar até 25/10?</h3><p class="small">Continuação condicional a partir da média oficial, com metade da inclinação média entre rodadas e limite de 0,15 ponto percentual por dia. Não é previsão eleitoral.</p>
  <div class="forecast-numbers"><div><span>Flávio Bolsonaro</span><strong class="fv">${fmt(projection.f)}%</strong></div><div><span>Lula</span><strong class="lv">${fmt(projection.l)}%</strong></div></div>
  <div class="legend"><span><i class="dot"></i>Flávio</span><span><i class="dot r"></i>Lula</span><span>Linha tracejada: simulação</span></div>
  ${projectionChart(ps,projection)}
- <p class="notice">A simulação parte da curva suavizada, não da média do painel principal. Pressupõe continuidade da tendência recente e não incorpora eventos futuros, indecisos, abstenção nem mudanças de comportamento. Não possui intervalo de confiança validado. Não indica probabilidade de vitória.</p></section>
- <p class="small"><strong>Como ler:</strong> cada ponto é uma estimativa suavizada baseada nas pesquisas próximas daquela data, posicionadas pela data final da coleta. A curva termina na última coleta documentada; não cria pontos em dias posteriores sem pesquisa. O ponto final não é ancorado na média principal: a tendência e a média são indicadores diferentes. A simulação começa no último ponto suavizado e usa sua inclinação recente. A regressão usa pesos institucionais e dá mais influência a levantamentos temporalmente próximos, restringindo oscilações bruscas. Não são novas pesquisas nem percentuais de intenção de voto observados diariamente.</p>
+ <p class="notice">A simulação parte da média do painel principal. Pressupõe continuidade da tendência recente e não incorpora eventos futuros, indecisos, abstenção nem mudanças de comportamento. Não possui intervalo de confiança validado. Não indica probabilidade de vitória.</p></section>
+ <p class="small"><strong>Como ler:</strong> reconstrução interpolada das mudanças dentro de cada instituto; não são observações diárias. O último ponto é ancorado na média oficial. Cobertura: ${fmt(model.coverage)}% do peso atual em ${model.n} institutos com rodadas comparáveis. Quando falta data de coleta histórica, utiliza-se a data de publicação como aproximação.</p>
  ${experimentalWinPanel()}
  ${openVoteSection()}
- <p class="notice"><strong>Limitações:</strong> curva descritiva com poucos levantamentos e sem correção validada de efeitos próprios de cada instituto. Não é rede neural, previsão de resultado ou tendência estatisticamente comprovada. Não há intervalo de confiança calibrado. A tendência utiliza os mesmos pesos por recência do modelo principal.</p>
- <details><summary>Dados da curva e parâmetros</summary><p class="small">Janela gaussiana: 3,5 dias; regularização da inclinação: 18; pesos do modelo padrão; uma pesquisa recente por instituto; sem ancoragem na média principal. Parâmetros exploratórios, sem validação retrospectiva. A extrapolação condicional usa a inclinação dos últimos seis pontos suavizados, limitada a ±0,15 p.p. por dia até 25/10. Não foi calibrada em eleições anteriores.</p><div class="table-wrap"><table><tr><th>Data</th><th>Flávio suavizado</th><th>Lula suavizado</th></tr>${ps.map(p=>`<tr><td>${date(p.date)}</td><td>${fmt(p.f)}%</td><td>${fmt(p.l)}%</td></tr>`).join('')}</table></div></details></section>`;
+ <p class="notice"><strong>Limitações:</strong> série reconstruída com cobertura parcial e datas aproximadas; não é trajetória observada dia a dia. Probabilidade experimental não calibrada.</p>
+ <details><summary>Dados da curva e parâmetros</summary><p class="small">Variação dentro dos institutos, ponderada pelo peso atual; interpolação entre primeira e última rodadas; projeção reduzida em 50%, limitada a ±0,15 p.p./dia.</p><div class="table-wrap"><table><tr><th>Data estimada</th><th>Flávio</th><th>Lula</th></tr>${ps.map(p=>`<tr><td>${date(p.date)}</td><td>${fmt(p.f)}%</td><td>${fmt(p.l)}%</td></tr>`).join('')}</table></div></details></section>`;
 }
 
 function rejection(){
