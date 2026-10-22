@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261022-indexa-round22-v1",
+  "revision": "standard-20261022-indexa-selection-fix-v1",
   "referenceDate": "2026-10-22",
-  "publishedAt": "2026-10-22",
+  "publishedAt": "2026-10-22T13:45:35.122Z",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -572,9 +572,9 @@
     },
     {
       "date": "2026-10-22",
-      "f": 50.994813,
-      "l": 49.005187,
-      "revision": "20 institutos; PoderData/Aya e Indexa/Broadcast 22/10 vigentes; parâmetros padrão preservados."
+      "f": 50.946221,
+      "l": 49.053779,
+      "revision": "Correção: rodada vigente por fim de coleta; PoderData 22/10 e Indexa 22/10; 20 institutos, pesos padrão."
     }
   ],
   "instituteHistory": {
@@ -808,7 +808,7 @@
     "provisional": true,
     "previousDate": "2026-10-13",
     "newPoll": "Indexa/Broadcast 22/10 (50,6%/49,4%); substitui rodada de 15/10",
-    "sdBetweenInstitutesPp": 0.9800742148412719,
+    "sdBetweenInstitutesPp": 0.9448948648898586,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
   "sourcePolicy": {
@@ -1597,7 +1597,7 @@
         "name": "Indexa/Broadcast",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.663983496706633,
+        "weightPercent": 6.551773706533144,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1607,7 +1607,7 @@
         "name": "Palver",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.225009285861933,
+        "weightPercent": 4.153867542236381,
         "originalMaePp": 2.45,
         "qualityTier": "C",
         "qualityStatus": "provisional",
@@ -1617,7 +1617,7 @@
         "name": "Quaest",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 7.846445816600734,
+        "weightPercent": 7.714325435581851,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1627,7 +1627,7 @@
         "name": "PoderData/Aya",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.951320709504464,
+        "weightPercent": 6.551773706533144,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1637,7 +1637,7 @@
         "name": "BTG/Nexus",
         "firstRoundMaePp": 4.595,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.6154415260356587,
+        "weightPercent": 3.5545638340033365,
         "originalMaePp": 4.595,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1647,7 +1647,7 @@
         "name": "Futura/100% Cidades",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.035727551231334,
+        "weightPercent": 5.934096488909116,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1657,7 +1657,7 @@
         "name": "Gerp",
         "firstRoundMaePp": 1.095,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 8.516699529306214,
+        "weightPercent": 8.373293251720684,
         "originalMaePp": 1.095,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1667,7 +1667,7 @@
         "name": "AtlasIntel",
         "firstRoundMaePp": 2.35,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.572241614076484,
+        "weightPercent": 6.461576596246013,
         "originalMaePp": 2.35,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1677,7 +1677,7 @@
         "name": "Datafolha",
         "firstRoundMaePp": 2.6,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.204783484338776,
+        "weightPercent": 4.133982307724851,
         "originalMaePp": 2.6,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1687,7 +1687,7 @@
         "name": "CNT/MDA",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.782462293705939,
+        "weightPercent": 4.701934019475582,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1697,7 +1697,7 @@
         "name": "Ipespe/Abrapel",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.678817149004569,
+        "weightPercent": 3.6168723226735247,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1708,7 +1708,7 @@
         "firstRoundMaePp": 0.66,
         "originalMaePp": 0.66,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.731313768542564,
+        "weightPercent": 5.6348085002290365,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -1718,7 +1718,7 @@
         "firstRoundMaePp": 2.61674,
         "originalMaePp": 2.61674,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.037508962968227,
+        "weightPercent": 2.986362641319441,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -1728,7 +1728,7 @@
         "firstRoundMaePp": 2.45,
         "originalMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.8266908919399016,
+        "weightPercent": 3.762256131221243,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -1737,7 +1737,7 @@
         "name": "Real Time Big Data",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.46670127419986,
+        "weightPercent": 5.374651616030348,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1746,7 +1746,7 @@
         "name": "Alfa Inteligência",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.46670127419986,
+        "weightPercent": 5.374651616030348,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1755,7 +1755,7 @@
         "name": "IFP (Instituto França)",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.225009285861933,
+        "weightPercent": 4.153867542236381,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1764,7 +1764,7 @@
         "name": "Data Ranking",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.8432204058575348,
+        "weightPercent": 2.7953455626326185,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1773,7 +1773,7 @@
         "name": "Meio/Ideia",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.46670127419986,
+        "weightPercent": 5.374651616030348,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1782,13 +1782,13 @@
         "name": "Phoenix",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.8432204058575348,
+        "weightPercent": 2.7953455626326185,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
       }
     ],
-    "sd": 0.9800742148412719,
+    "sd": 0.9448948648898586,
     "formula": "weight_i ∝ tier_i * (MAE_i null ? 1 : sqrt(2.45/max(1.5,MAE_i))) * 2^(-days_since_field_end/7) * (1-min(.3,.1*max(0,abs(f_i-recency_median)-2.5)))",
     "sensitivityPp": 3,
     "statisticalInterval": false,
