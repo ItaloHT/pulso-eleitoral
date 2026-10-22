@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261022-poderdata-round22-v1",
+  "revision": "standard-20261022-indexa-round22-v1",
   "referenceDate": "2026-10-22",
-  "publishedAt": "2026-10-22T11:05:03.285Z",
+  "publishedAt": "2026-10-22",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -104,26 +104,26 @@
     },
     {
       "name": "Indexa/Broadcast",
-      "date": "2026-10-15",
-      "field": "13 a 14/10",
-      "f": 51,
-      "l": 49,
-      "totalF": 44,
-      "totalL": 42,
+      "date": "2026-10-22",
+      "field": "20 a 21/10",
+      "f": 50.6,
+      "l": 49.4,
+      "totalF": 45.2,
+      "totalL": 44.1,
       "n": 2000,
       "margin": "±2,2 p.p.",
       "converted": false,
-      "url": "https://viva.com.br/politica/indexabroadcast-no-2-turno-flavio-bolsonaro-tem-44-ante-42-de-lula.html",
-      "registration": "BR-04629/2026",
+      "url": "https://www.cnnbrasil.com.br/eleicoes/indexa-broadcast-flavio-tem-506-dos-votos-validos-lula-494/",
+      "registration": "BR-02348/2026",
       "method": "Entrevistas individuais por telefone",
       "confidence": 95,
-      "sourceType": "Reportagem da Broadcast com ficha técnica",
-      "voteBasis": "Votos válidos publicados; sem conversão pelo Pulso.",
+      "sourceType": "CNN Brasil e Gazeta do Povo, 22/10/2026",
+      "voteBasis": "Votos válidos publicados; sem conversão.",
       "additionalSources": [
-        "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/indexa-broadcast-presidente-outubro-2026-segundo-turno/"
+        "https://www.gazetadopovo.com.br/eleicoes/2026/pesquisa-eleitoral-2026/indexa-broadcast-presidente-outubro-2026-segundo-turno-2/"
       ],
-      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
-      "fieldEnd": "2026-10-14"
+      "registrationSource": "Registro BR-02348/2026 informado por CNN Brasil e Gazeta do Povo; conferência direta no PesqEle pendente",
+      "fieldEnd": "2026-10-21"
     },
     {
       "name": "Palver",
@@ -572,9 +572,9 @@
     },
     {
       "date": "2026-10-22",
-      "f": 50.971494,
-      "l": 49.028506,
-      "revision": "PoderData/Aya 22/10 incorporada em substituição à rodada anterior; 20 institutos, parâmetros do modelo padrão preservados."
+      "f": 50.994813,
+      "l": 49.005187,
+      "revision": "20 institutos; PoderData/Aya e Indexa/Broadcast 22/10 vigentes; parâmetros padrão preservados."
     }
   ],
   "instituteHistory": {
@@ -673,6 +673,14 @@
         "l": 49,
         "converted": false,
         "url": "https://viva.com.br/politica/indexabroadcast-no-2-turno-flavio-bolsonaro-tem-44-ante-42-de-lula.html"
+      },
+      {
+        "date": "2026-10-22",
+        "f": 50.6,
+        "l": 49.4,
+        "converted": false,
+        "url": "https://www.cnnbrasil.com.br/eleicoes/indexa-broadcast-flavio-tem-506-dos-votos-validos-lula-494/",
+        "registration": "BR-02348/2026"
       }
     ],
     "Datafolha": [
@@ -799,8 +807,8 @@
     "model": "Modelo padrão: qualidade A/B/C provisória + acurácia moderada + recência de 7 dias",
     "provisional": true,
     "previousDate": "2026-10-13",
-    "newPoll": "Gerp 21/10 (53%/47%); substitui Gerp 16/10",
-    "sdBetweenInstitutesPp": 0.9910391792397801,
+    "newPoll": "Indexa/Broadcast 22/10 (50,6%/49,4%); substitui rodada de 15/10",
+    "sdBetweenInstitutesPp": 0.9800742148412719,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
   "sourcePolicy": {
@@ -1589,7 +1597,7 @@
         "name": "Indexa/Broadcast",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.3868357606928394,
+        "weightPercent": 6.663983496706633,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1599,7 +1607,7 @@
         "name": "Palver",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.294552213608656,
+        "weightPercent": 4.225009285861933,
         "originalMaePp": 2.45,
         "qualityTier": "C",
         "qualityStatus": "provisional",
@@ -1609,7 +1617,7 @@
         "name": "Quaest",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 7.975596968130361,
+        "weightPercent": 7.846445816600734,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1619,7 +1627,7 @@
         "name": "PoderData/Aya",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.773671521385679,
+        "weightPercent": 4.951320709504464,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1629,7 +1637,7 @@
         "name": "BTG/Nexus",
         "firstRoundMaePp": 4.595,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.674951073070016,
+        "weightPercent": 3.6154415260356587,
         "originalMaePp": 4.595,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1639,7 +1647,7 @@
         "name": "Futura/100% Cidades",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.135074590869508,
+        "weightPercent": 6.035727551231334,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1649,7 +1657,7 @@
         "name": "Gerp",
         "firstRoundMaePp": 1.095,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 8.65688294191764,
+        "weightPercent": 8.516699529306214,
         "originalMaePp": 1.095,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1659,7 +1667,7 @@
         "name": "AtlasIntel",
         "firstRoundMaePp": 2.35,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.680419583112234,
+        "weightPercent": 6.572241614076484,
         "originalMaePp": 2.35,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1669,7 +1677,7 @@
         "name": "Datafolha",
         "firstRoundMaePp": 2.6,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.273993498863591,
+        "weightPercent": 4.204783484338776,
         "originalMaePp": 2.6,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1679,7 +1687,7 @@
         "name": "CNT/MDA",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.861180802291363,
+        "weightPercent": 4.782462293705939,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -1689,7 +1697,7 @@
         "name": "Ipespe/Abrapel",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.739369847916433,
+        "weightPercent": 3.678817149004569,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -1700,7 +1708,7 @@
         "firstRoundMaePp": 0.66,
         "originalMaePp": 0.66,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.825650209561353,
+        "weightPercent": 5.731313768542564,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -1710,7 +1718,7 @@
         "firstRoundMaePp": 2.61674,
         "originalMaePp": 2.61674,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.087505839199618,
+        "weightPercent": 3.037508962968227,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -1720,7 +1728,7 @@
         "firstRoundMaePp": 2.45,
         "originalMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.8896775672823027,
+        "weightPercent": 3.8266908919399016,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -1729,7 +1737,7 @@
         "name": "Real Time Big Data",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.5566822389747195,
+        "weightPercent": 5.46670127419986,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1738,7 +1746,7 @@
         "name": "Alfa Inteligência",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.5566822389747195,
+        "weightPercent": 5.46670127419986,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1747,7 +1755,7 @@
         "name": "IFP (Instituto França)",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.294552213608656,
+        "weightPercent": 4.225009285861933,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1756,7 +1764,7 @@
         "name": "Data Ranking",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.8900193257828004,
+        "weightPercent": 2.8432204058575348,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1765,7 +1773,7 @@
         "name": "Meio/Ideia",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.5566822389747195,
+        "weightPercent": 5.46670127419986,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -1774,13 +1782,13 @@
         "name": "Phoenix",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.8900193257828004,
+        "weightPercent": 2.8432204058575348,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
       }
     ],
-    "sd": 0.9910391792397801,
+    "sd": 0.9800742148412719,
     "formula": "weight_i ∝ tier_i * (MAE_i null ? 1 : sqrt(2.45/max(1.5,MAE_i))) * 2^(-days_since_field_end/7) * (1-min(.3,.1*max(0,abs(f_i-recency_median)-2.5)))",
     "sensitivityPp": 3,
     "statisticalInterval": false,
