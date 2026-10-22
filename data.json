@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261022-datafolha-round22-v1",
+  "revision": "standard-20261022-rejection-datafolha-meio-v1",
   "referenceDate": "2026-10-22",
   "publishedAt": "2026-10-22T19:14:00-03:00",
   "polls": [
@@ -1274,6 +1274,37 @@
       "registration": "BR-06614/2026",
       "source": "https://exame.com/brasil/pesquisa-futura-flavio-bolsonaro-tem-511-e-lula-489-no-2o-turno/",
       "scope": "second_round"
+    },
+    {
+      "institute": "Meio/Ideia",
+      "date": "2026-10-21",
+      "field": "15 a 19/10",
+      "f": 46.5,
+      "l": 47.7,
+      "n": 1500,
+      "margin": 2.5,
+      "group": "declared",
+      "question": "Não votaria no candidato (rejeição declarada; não exclusiva)",
+      "registration": "BR-08251/2026",
+      "source": "https://www1.folha.uol.com.br/poder/2026/10/flavio-bolsonaro-tem-511-e-lula-489-dos-votos-validos-e-seguem-empatados-diz-meioideia.shtml",
+      "scope": "second_round",
+      "scopeEvidence": "Folha informa rejeição 46,5% Flávio e 47,7% Lula na rodada 21/10."
+    },
+    {
+      "institute": "Datafolha",
+      "date": "2026-10-22",
+      "field": "20 a 22/10",
+      "f": 48,
+      "l": 48,
+      "n": 2520,
+      "margin": 2,
+      "group": "exclusive",
+      "question": "Não votaria de jeito nenhum em cada candidato; categoria de rejeição exclusiva conforme séries anteriores do Datafolha. Totais de ambos/nenhum não informados nesta fonte.",
+      "method": "Entrevistas presenciais",
+      "registration": "BR-09709/2026",
+      "source": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-48-rejeitam-lula-e-flavio-bolsonaro.shtml",
+      "scope": "second_round",
+      "scopeEvidence": "Folha 22/10 publica 48% para cada candidato; detalhamento de ambos/nenhum não disponível na matéria, portanto não preenchido."
     }
   ],
   "openVote": [
