@@ -966,11 +966,12 @@
     {
       "name": "Indexa/Broadcast",
       "date": "2026-10-22",
-      "registration": "A confirmar",
-      "field": "A confirmar",
-      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
-      "status": "announced",
-      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+      "registration": "BR-02348/2026",
+      "field": "20 a 21/10",
+      "source": "https://www.cnnbrasil.com.br/eleicoes/indexa-broadcast-flavio-tem-506-dos-votos-validos-lula-494/",
+      "status": "published",
+      "note": "Pesquisa divulgada em 22/10 e incorporada ao Pulsa; conferência direta do registro no PesqEle pendente.",
+      "publicationSource": "https://www.cnnbrasil.com.br/eleicoes/indexa-broadcast-flavio-tem-506-dos-votos-validos-lula-494/"
     },
     {
       "name": "Vetor Arrow",
