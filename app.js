@@ -121,6 +121,7 @@ function trendModel(){
   const f=rec.f-change+delta;
   return {date:new Date(t*86400000).toISOString().slice(0,10),f,l:100-f};
  });
+ if(points.at(-1).date!==cutoff)points.push({date:cutoff,f:rec.f,l:100-rec.f});
  const days=series.reduce((a,r)=>a+r.w*(r.t1-r.t0),0)/coverage;
  return {points,fittedPoints:points,n:series.length,cutoff,coverage,change,slope:change/days,meanF:rec.f,lastPollDate:points.at(-1).date};
 }
@@ -244,13 +245,13 @@ function experimentalWinPanel(){
 function experimentalTrend(){
  const model=trendModel();
  if(!model){main.innerHTML=intro('Tendência experimental.','Ainda não há observações suficientes para calcular uma trajetória.')+'<p class="notice">Sem dados suficientes para exibir a curva. O painel principal permanece disponível.</p>';return;}
- const ps=model.points,first=ps[0],last=ps.at(-1),change=last.f-first.f,projection=conditionalProjection(model);
+ const ps=model.points,first=ps[0],last=ps.at(-1),projection=conditionalProjection(model);
  const direction=Math.abs(model.change)<.2?'Estabilidade aparente':model.change>0?'Alta aparente de Flávio':'Aproximação aparente de Lula';
  main.innerHTML=intro('Tendência experimental.','Uma leitura exploratória da direção das pesquisas, separada da média principal.')+
  `<section class="card trend-card experimental-trend-card"><div class="card-head"><div><div class="eyebrow">MODELO ESTATÍSTICO EXPERIMENTAL</div><h2>Movimento das pesquisas</h2><p class="sub">Reconstrução experimental das mudanças dentro de cada instituto até ${date(model.cutoff)}/2026, encerrada na última data de coleta, ${date(model.lastPollDate)}. Usa os pesos atuais e ancora a série na média oficial. Datas intermediárias são interpoladas entre rodadas, não observações diárias.</p></div><span class="badge">${model.n} institutos</span></div>
  <div class="trend-summary"><div><span>Leitura do período</span><strong>${direction}</strong></div><div><span>Variação entre rodadas de Flávio</span><strong class="fv">${model.change>0?'+':''}${fmt(model.change)} p.p.</strong></div><div><span>Período da curva</span><strong>${date(first.date)} a ${date(last.date)}</strong></div></div>
- <div class="forecast-numbers trend-current-numbers" aria-label="Valores suavizados em ${date(last.date)}"><div><span>Flávio Bolsonaro</span><strong class="fv">${fmt(last.f)}%</strong></div><div><span>Lula</span><strong class="lv">${fmt(last.l)}%</strong></div></div>
- <p class="small">Estimativas suavizadas em ${date(last.date)}. Não são resultados de uma pesquisa realizada nesse dia.</p>
+ <div class="forecast-numbers trend-current-numbers" aria-label="Valores reconstruídos em ${date(last.date)}"><div><span>Flávio Bolsonaro</span><strong class="fv">${fmt(last.f)}%</strong></div><div><span>Lula</span><strong class="lv">${fmt(last.l)}%</strong></div></div>
+ <p class="small">Estimativas reconstruídas, ancoradas na média atual; não são pesquisas realizadas diariamente.</p>
  <div class="legend"><span><i class="dot"></i>Flávio Bolsonaro</span><span><i class="dot r"></i>Lula · linha tracejada</span></div>
  ${timeChart(ps)}
  <section class="conditional-forecast" aria-labelledby="conditional-title"><div class="eyebrow">SIMULAÇÃO · NÃO É PREVISÃO ELEITORAL</div><h3 id="conditional-title">E se a tendência continuar até 25/10?</h3><p class="small">Continuação condicional a partir da média oficial, com metade da inclinação média entre rodadas e limite de 0,15 ponto percentual por dia. Não é previsão eleitoral.</p>
