@@ -249,16 +249,18 @@ function experimentalWinModel(){
 }
 function experimentalWinPanel(){
  const p=experimentalWinModel();
- if(!p)return '<section class="card"><h2>Probabilidade experimental de vitória</h2><p class="notice">Ainda não há séries comparáveis de rejeição suficientes para calcular a estimativa.</p></section>';
- const f=Math.max(0,Math.min(100,p.probabilityF));
- return '<section class="card" id="win-probability"><div class="card-head"><div><div class="eyebrow">MODELO INDEPENDENTE · EXPERIMENTAL 1.0</div><h2>Probabilidade estimada de vitória</h2><p class="small">Dados até '+date(p.cutoff)+'/2026 · Segundo turno em 25/10</p></div><span class="badge">Não calibrado</span></div>'+
- '<div class="forecast-numbers"><div><span>Flávio Bolsonaro</span><strong class="fv">'+fmt(p.probabilityF)+'%</strong></div><div><span>Lula</span><strong class="lv">'+fmt(p.probabilityL)+'%</strong></div></div>'+
- '<div class="split" style="--share:'+f+'%" role="img" aria-label="Probabilidade experimental: Flávio '+fmt(p.probabilityF)+' por cento, Lula '+fmt(p.probabilityL)+' por cento"><span></span><span></span></div>'+
- '<p class="small"><strong>Cenário ajustado pela rejeição declarada:</strong> '+fmt(p.projectedF)+'% Flávio e '+fmt(100-p.projectedF)+'% Lula (votos válidos, cenário experimental). Rejeição exclusiva não entra neste ajuste.</p>'+ 
- '<p class="small">Média de votos válidos: '+fmt(p.meanF)+'% para Flávio. Cenário condicional com tendência: '+(p.forecast?fmt(p.forecast.f)+'%':'indisponível')+'. Evolução relativa média da rejeição: '+fmt(p.rejectionChange)+' p.p. ('+p.series.length+' institutos com séries comparáveis). Conversão hipotética: 15%. Votação ajustada: '+fmt(p.projectedF)+'% para Flávio.</p>'+
- '<h3>Histórico do modelo</h3><p class="small">Primeiro registro verificável: '+date(p.cutoff)+'/2026. O histórico será ampliado a partir das próximas atualizações; não há probabilidades retrospectivas inventadas.</p>'+
- '<div class="table-wrap"><table><thead><tr><th>Data</th><th>Flávio</th><th>Lula</th></tr></thead><tbody><tr><td>'+date(p.cutoff)+'</td><td>'+fmt(p.probabilityF)+'%</td><td>'+fmt(p.probabilityL)+'%</td></tr></tbody></table></div>'+
- '<p class="notice"><strong>Estimativa experimental, não uma previsão validada.</strong> A tendência é extrapolada com redução de 50%; o fator de conversão de 15% e a incerteza de 1,75 p.p. são hipóteses não calibradas; rejeição não equivale a transferência de votos. <a href="#metodologia">Conheça a metodologia</a>.</p></section>';
+ if(!p)return '<section class="card"><h2>Cenário e probabilidade experimental</h2><p class="notice">Ainda não há séries comparáveis de rejeição suficientes para calcular a estimativa.</p></section>';
+ const votes=Math.max(0,Math.min(100,p.projectedF));
+ const chance=Math.max(0,Math.min(100,p.probabilityF));
+ const difference=Math.abs(2*votes-100);
+ return '<section class="card pulsa-combined" id="win-probability"><div class="card-head"><div><div class="eyebrow">PULSA · MODELO EXPERIMENTAL</div><h2>Cenário e probabilidade de vitória</h2><p class="small">Dados até '+date(p.cutoff)+'/2026 · Projeção condicional para 25/10, às 8h</p></div><span class="badge">Não calibrado</span></div>'+
+ '<h3>Cenário eleitoral projetado</h3><p class="small">Estimativa de votos válidos com tendência e ajuste pela evolução da rejeição declarada.</p>'+
+ '<div class="pulsa-combined-votes"><div><span>Flávio Bolsonaro</span><strong class="fv">'+fmt(votes)+'%</strong></div><div><span>Lula</span><strong class="lv">'+fmt(100-votes)+'%</strong></div></div>'+
+ '<div class="split" style="--share:'+votes+'%" role="img" aria-label="Votos válidos projetados: Flávio '+fmt(votes)+' por cento, Lula '+fmt(100-votes)+' por cento"><span></span><span></span></div>'+
+ '<p class="pulsa-combined-gap">Diferença projetada: '+fmt(difference)+' ponto(s) percentual(is)</p>'+
+ '<div class="pulsa-combined-secondary"><h3>E qual é a chance de vitória?</h3><p class="small">Probabilidade matemática experimental, não calibrada.</p>'+
+ '<div class="pulsa-combined-chances"><div><span>Flávio</span><strong class="fv">'+fmt(chance)+'%</strong></div><div><span>Lula</span><strong class="lv">'+fmt(p.probabilityL)+'%</strong></div></div></div>'+
+ '<p class="small">O cenário considera a tendência das pesquisas e a evolução da rejeição declarada ('+p.series.length+' institutos comparáveis). Conversão hipotética de 15%; incerteza fixa de 1,75 p.p. A rejeição exclusiva não entra neste ajuste. Esses parâmetros não foram calibrados e os percentuais de probabilidade não constituem previsão validada. <a href="#metodologia">Entenda a metodologia</a>.</p></section>';
 }
 
 function experimentalTrend(){
