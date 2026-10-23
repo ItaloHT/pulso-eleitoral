@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261023-vetor-arrow-br06957-v1",
+  "revision": "standard-20261023-vetor-arrow-quarantine-v1",
   "referenceDate": "2026-10-23",
   "publishedAt": "2026-10-23T13:41:00-03:00",
   "polls": [
@@ -563,7 +563,11 @@
       "sourceType": "Rádio Corredor, divulgação 23/10/2026; relatório integral não conferido",
       "voteBasis": "Votos válidos publicados 52,7%/47,3%; totais 50,0%/44,9%; brancos/nulos 3,6%; indecisos 1,5%",
       "registrationSource": "Registro informado em reportagem; base secundária do PesqEle apresenta divergência entre amostra e datas de divulgação/coleta; ficha original pendente",
-      "qualityCaveat": "Inclusão editorial autorizada; 6.867 entrevistas na divulgação versus 3.000 no registro secundário; data de divulgação no cadastro anterior ao campo; verificar relatório original e retificação do TSE antes de considerar plenamente auditada."
+      "qualityCaveat": "Inclusão editorial autorizada; 6.867 entrevistas na divulgação versus 3.000 no registro secundário; data de divulgação no cadastro anterior ao campo; verificar relatório original e retificação do TSE antes de considerar plenamente auditada. Excluída de todos os cálculos até validação documental.",
+      "eligible": false,
+      "excludeFromCalculations": true,
+      "weight": 0,
+      "auditStatus": "pending_primary_verification"
     }
   ],
   "history": [
