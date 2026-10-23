@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261023-vox-br03259-v1",
+  "revision": "standard-20261023-realtime-br09670-v1",
   "referenceDate": "2026-10-23",
-  "publishedAt": "2026-10-23T02:36:48-03:00",
+  "publishedAt": "2026-10-23T07:36:00-03:00",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -535,6 +535,24 @@
         "https://www.poder360.com.br/poder-eleicoes-2026/lula-tem-506-contra-494-de-flavio-em-votos-validos-diz-vox/",
         "https://static.poder360.com.br/uploads/2026/10/estimuladavoxbrasil-23out.png"
       ]
+    },
+    {
+      "name": "Real Time Big Data",
+      "date": "2026-10-23",
+      "field": "19 a 22/10",
+      "fieldEnd": "2026-10-22",
+      "f": 52,
+      "l": 48,
+      "n": 2000,
+      "margin": "±2 p.p.",
+      "converted": false,
+      "url": "https://noticias.uol.com.br/eleicoes/2026/10/23/realtime-big-data-flavio-tem-52-e-lula-48-dos-votos-validos.ghtm",
+      "registration": "BR-09670/2026",
+      "method": "Telefone e internet (segundo UOL)",
+      "confidence": 95,
+      "sourceType": "UOL, divulgação 23/10/2026",
+      "voteBasis": "Votos válidos publicados; votos totais não transcritos por falta de confirmação independente",
+      "registrationSource": "Registro informado pelo UOL; consulta direta ao PesqEle pendente"
     }
   ],
   "history": [
