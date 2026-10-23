@@ -144,17 +144,17 @@ function trendModel(){
  return {points,fittedPoints:points,n:series.length,cutoff,coverage,change,slope:change/days,meanF:today.f,officialF:rec.f,todayAdjustment:today.adjustment,todayCoverage:today.coverage,lastPollDate:points.at(-1).date};
 }
 function conditionalProjection(model){
- const days=Math.max(0,Math.round((Date.parse('2026-10-25T00:00:00Z')-Date.parse(model.cutoff+'T00:00:00Z'))/86400000));
+ const days=Math.max(0,(Date.parse('2026-10-25T11:00:00Z')-Date.parse(model.cutoff+'T03:00:00Z'))/86400000);
  const slope=Math.max(-.15,Math.min(.15,model.slope*.5));
  const f=Math.max(0,Math.min(100,model.meanF+slope*days));
  return {date:'2026-10-25',days,slope,rawSlope:model.slope,f,l:100-f,from:{date:model.cutoff,f:model.meanF,l:100-model.meanF}};
 }
 function projectionChart(points,projection){
- const start=Date.parse(points[0].date),finish=Date.parse(projection.date),x=p=>65+(Date.parse(p.date)-start)/(finish-start||1)*815;
+ const start=Date.parse(points[0].date),finish=Date.parse('2026-10-25T08:00:00Z'),x=p=>65+((p===projection?finish:Date.parse(p.date))-start)/(finish-start||1)*815;
  const vals=[...points.flatMap(p=>[p.f,p.l]),projection.f,projection.l];
  const low=Math.floor(Math.min(43,...vals)-1),high=Math.ceil(Math.max(57,...vals)+1),y=v=>25+(high-v)/(high-low)*265;
  const last=projection.from,xf=x(projection),xl=x(last);
- let out=`<svg class="projection-svg" viewBox="0 0 970 350" role="img" aria-label="Curvas suavizadas até ${date(last.date)} e extrapolação condicional tracejada até 25 de outubro: Flávio ${fmt(projection.f)}%, Lula ${fmt(projection.l)}%. Não é previsão eleitoral.">`;
+ let out=`<svg class="projection-svg" viewBox="0 0 970 350" role="img" aria-label="Curvas suavizadas até ${date(last.date)} e extrapolação condicional tracejada até 25 de outubro às 8h (Brasília): Flávio ${fmt(projection.f)}%, Lula ${fmt(projection.l)}%. Não é previsão eleitoral.">`;
  for(let i=0;i<=4;i++){const v=low+(high-low)*i/4;out+=`<path d="M65 ${y(v)}H880" stroke="#e3e0e5" stroke-dasharray="3 6"/><text x="10" y="${y(v)+5}" font-size="15" fill="#68636c">${fmt(v)}%</text>`;}
  out+=`<path d="M${xl} 25V290" stroke="#aaa" stroke-dasharray="3 5"/>`;
  for(const [key,color] of [['f','#7774df'],['l','#f44330']]){
@@ -162,7 +162,7 @@ function projectionChart(points,projection){
    out+=`<path d="M${xl} ${y(last[key])}L${xf} ${y(projection[key])}" stroke="${color}" stroke-width="3" stroke-dasharray="9 7" fill="none"/>`;
    out+=`<circle cx="${xf}" cy="${y(projection[key])}" r="5" fill="${color}"/><text x="890" y="${y(projection[key])+5}" fill="${color}" font-size="17" font-weight="700">${fmt(projection[key])}%</text>`;
  }
- out+=`<text x="65" y="326" fill="#68636c" font-size="15">${date(points[0].date)}</text><text x="${xl}" y="326" text-anchor="middle" fill="#68636c" font-size="15">${date(last.date)}</text><text x="${xf}" y="326" text-anchor="middle" fill="#68636c" font-size="15">25/10</text></svg>`;
+ out+=`<text x="65" y="326" fill="#68636c" font-size="15">${date(points[0].date)}</text><text x="${xl}" y="326" text-anchor="middle" fill="#68636c" font-size="15">${date(last.date)}</text><text x="${xf}" y="326" text-anchor="middle" fill="#68636c" font-size="15">25/10 · 8h</text></svg>`;
  return out;
 }
 
@@ -272,7 +272,7 @@ function experimentalTrend(){
  <p class="small">Cenário de hoje: estimativa experimental independente da média oficial. A diferença decorre de extrapolação limitada entre a última coleta e a data de corte; institutos sem duas rodadas comparáveis mantêm o valor observado. Não são pesquisas realizadas diariamente.</p>
  <div class="legend"><span><i class="dot"></i>Flávio Bolsonaro</span><span><i class="dot r"></i>Lula · linha tracejada</span></div>
  ${timeChart(ps)}
- <section class="conditional-forecast" aria-labelledby="conditional-title"><div class="eyebrow">SIMULAÇÃO · NÃO É PREVISÃO ELEITORAL</div><h3 id="conditional-title">E se a tendência continuar até 25/10?</h3><p class="small">Continuação condicional a partir do cenário de hoje, com metade da inclinação média entre rodadas e limite de 0,15 ponto percentual por dia. Não é previsão eleitoral.</p>
+ <section class="conditional-forecast" aria-labelledby="conditional-title"><div class="eyebrow">SIMULAÇÃO · NÃO É PREVISÃO ELEITORAL</div><h3 id="conditional-title">E se a tendência continuar até 25/10 às 8h?</h3><p class="small">Continuação condicional até a abertura da votação, às 8h de Brasília, a partir do cenário de hoje, com metade da inclinação média entre rodadas e limite de 0,15 ponto percentual por dia. Não é previsão eleitoral.</p>
  <div class="forecast-numbers"><div><span>Flávio Bolsonaro</span><strong class="fv">${fmt(projection.f)}%</strong></div><div><span>Lula</span><strong class="lv">${fmt(projection.l)}%</strong></div></div>
  <div class="legend"><span><i class="dot"></i>Flávio</span><span><i class="dot r"></i>Lula</span><span>Linha tracejada: simulação</span></div>
  ${projectionChart(ps,projection)}
