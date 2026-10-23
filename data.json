@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261023-vetor-arrow-quarantine-v1",
+  "revision": "standard-20261023-verita-br06070-v1",
   "referenceDate": "2026-10-23",
-  "publishedAt": "2026-10-23T13:41:00-03:00",
+  "publishedAt": "2026-10-23T17:13:00-03:00",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -288,27 +288,26 @@
     },
     {
       "name": "Veritá",
-      "date": "2026-10-21",
-      "field": "15 a 19/10",
-      "fieldEnd": "2026-10-19",
-      "f": 50.7,
-      "l": 49.3,
-      "totalF": 49.7,
-      "totalL": 48.2,
+      "date": "2026-10-23",
+      "field": "18 a 22/10",
+      "fieldEnd": "2026-10-22",
+      "f": 51.3,
+      "l": 48.7,
+      "totalF": 50.2,
+      "totalL": 47.5,
       "n": 15554,
       "margin": "±1,0 p.p.",
       "converted": false,
-      "url": "https://www.cnnbrasil.com.br/eleicoes/verita-flavio-tem-507-dos-votos-validos-no-2o-turno-lula-493/",
-      "registration": "BR-06396/2026",
+      "url": "https://noticias.r7.com/eleicoes/2026/verita-flavio-bolsonaro-tem-513-dos-votos-validos-e-lula-487-no-2-turno-23102026/",
+      "registration": "BR-06070/2026",
       "method": "Entrevistas estruturadas automatizadas com reconhecimento de voz e transcrição",
       "confidence": 95,
-      "sourceType": "CNN Brasil, Exame e R7; registro TSE informado pelas fontes",
-      "voteBasis": "Votos válidos publicados: 50,7% × 49,3%; votos totais 49,7% × 48,2%",
+      "sourceType": "R7, divulgação 23/10/2026 às 15h20",
+      "voteBasis": "Votos válidos publicados 51,3% × 48,7%; votos totais 50,2% × 47,5%; brancos/nulos 1,4%; não sabe/não respondeu 0,9%",
       "additionalSources": [
-        "https://exame.com/brasil/pesquisa-verita-flavio-bolsonaro-tem-507-e-lula-493-no-2o-turno-em-empate-tecnico/",
-        "https://noticias.r7.com/eleicoes/2026/verita-flavio-bolsonaro-tem-507-dos-votos-validos-e-lula-493-no-2-turno-21102026/"
+        "https://midiabahia.com.br/pesquisa-verita-flavio-bolsonaro-lula/"
       ],
-      "registrationSource": "Registro BR-06396/2026 citado por CNN, Exame e R7; consulta individual PesqEle não concluída"
+      "registrationSource": "BR-06070/2026 informado na reportagem R7 de 23/10; consulta individual PesqEle não concluída"
     },
     {
       "name": "Real Time Big Data",
@@ -873,6 +872,14 @@
         "l": 49.3,
         "url": "https://www.cnnbrasil.com.br/eleicoes/verita-flavio-tem-507-dos-votos-validos-no-2o-turno-lula-493/",
         "registration": "BR-06396/2026"
+      },
+      {
+        "date": "2026-10-23",
+        "fieldEnd": "2026-10-22",
+        "f": 51.3,
+        "l": 48.7,
+        "url": "https://noticias.r7.com/eleicoes/2026/verita-flavio-bolsonaro-tem-513-dos-votos-validos-e-lula-487-no-2-turno-23102026/",
+        "registration": "BR-06070/2026"
       }
     ],
     "Quaest": [
@@ -960,7 +967,7 @@
     "model": "Modelo padrão: qualidade A/B/C provisória + acurácia moderada + recência de 7 dias",
     "provisional": true,
     "previousDate": "2026-10-13",
-    "newPoll": "DataTrends 23/10 (51,9% Flávio, 48,1% Lula), substitui rodada de 19/10; brancos/nulos 4%, indecisos 1%; sem rejeição comparável publicada. Ipespe/Abrapel 23/10 já incorporada. Parâmetros padrão preservados; médias e cenários calculados dinamicamente pelo app.",
+    "newPoll": "Veritá 23/10 (51,3% Flávio, 48,7% Lula) substitui rodada de 21/10 (50,7% × 49,3%); registro BR-06070/2026; 20 institutos e parâmetros padrão preservados; médias calculadas dinamicamente pelo app.",
     "sdBetweenInstitutesPp": 0.9416641490941496,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
