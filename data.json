@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261023-realtime-br09670-v1",
+  "revision": "standard-20261023-alfa-br08496-v1",
   "referenceDate": "2026-10-23",
-  "publishedAt": "2026-10-23T07:36:00-03:00",
+  "publishedAt": "2026-10-23T09:17:00-03:00",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -370,29 +370,6 @@
       ]
     },
     {
-      "name": "Alfa Inteligência",
-      "date": "2026-10-20",
-      "field": "15 a 19/10",
-      "fieldEnd": "2026-10-19",
-      "f": 51.5,
-      "l": 48.5,
-      "totalF": 48.8,
-      "totalL": 45.9,
-      "n": 2700,
-      "margin": "±1,9 p.p.",
-      "converted": false,
-      "url": "https://www.cnnbrasil.com.br/eleicoes/alfa-flavio-tem-515-dos-votos-validos-no-2o-turno-lula-485/",
-      "registration": "BR-00820/2026",
-      "method": "Entrevistas presenciais",
-      "confidence": 95,
-      "sourceType": "CNN Brasil, 20/10/2026, 7h",
-      "voteBasis": "Votos válidos publicados",
-      "registrationSource": "Registro informado pela CNN; conferência direta no PesqEle pendente",
-      "additionalSources": [
-        "https://www.cnnbrasil.com.br/eleicoes/alfa-lula-e-rejeitado-por-46-dos-eleitores-flavio-por-45/"
-      ]
-    },
-    {
       "name": "IFP (Instituto França)",
       "date": "2026-10-20",
       "field": "16 a 20/10",
@@ -551,8 +528,36 @@
       "method": "Telefone e internet (segundo UOL)",
       "confidence": 95,
       "sourceType": "UOL, divulgação 23/10/2026",
-      "voteBasis": "Votos válidos publicados; votos totais não transcritos por falta de confirmação independente",
-      "registrationSource": "Registro informado pelo UOL; consulta direta ao PesqEle pendente"
+      "voteBasis": "Votos válidos publicados; votos totais estimulados confirmados por Exame (49% e 45%)",
+      "registrationSource": "Registro informado pelo UOL; consulta direta ao PesqEle pendente",
+      "totalF": 49,
+      "totalL": 45,
+      "additionalSources": [
+        "https://exame.com/brasil/pesquisa-para-presidente-real-time-flavio-bolsonaro-tem-52-e-lula-48-2-turno/"
+      ]
+    },
+    {
+      "name": "Alfa Inteligência",
+      "date": "2026-10-23",
+      "field": "18 a 22/10",
+      "fieldEnd": "2026-10-22",
+      "f": 52,
+      "l": 48,
+      "totalF": 49.9,
+      "totalL": 46,
+      "n": 2700,
+      "margin": "±1,9 p.p.",
+      "converted": false,
+      "url": "https://exame.com/brasil/pesquisa-alfa-a-dois-dias-do-2o-turno-flavio-bolsonaro-tem-52-e-lula-48/",
+      "registration": "BR-08496/2026",
+      "method": "Entrevistas presenciais nas cinco regiões",
+      "confidence": 95,
+      "sourceType": "Exame, 23/10/2026, 7h30; corroborado por CNN Brasil",
+      "voteBasis": "Votos válidos publicados; votos totais estimulados 49,9% e 46%",
+      "registrationSource": "Registro informado por CNN Brasil e Exame; consulta direta ao PesqEle pendente",
+      "additionalSources": [
+        "https://www.cnnbrasil.com.br/eleicoes/alfa-flavio-tem-52-dos-votos-validos-no-2o-turno-lula-48/"
+      ]
     }
   ],
   "history": [
@@ -828,6 +833,31 @@
         "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
         "fieldEnd": "2026-10-13"
       }
+    ],
+    "Alfa Inteligência": [
+      {
+        "name": "Alfa Inteligência",
+        "date": "2026-10-20",
+        "field": "15 a 19/10",
+        "fieldEnd": "2026-10-19",
+        "f": 51.5,
+        "l": 48.5,
+        "totalF": 48.8,
+        "totalL": 45.9,
+        "n": 2700,
+        "margin": "±1,9 p.p.",
+        "converted": false,
+        "url": "https://www.cnnbrasil.com.br/eleicoes/alfa-flavio-tem-515-dos-votos-validos-no-2o-turno-lula-485/",
+        "registration": "BR-00820/2026",
+        "method": "Entrevistas presenciais",
+        "confidence": 95,
+        "sourceType": "CNN Brasil, 20/10/2026, 7h",
+        "voteBasis": "Votos válidos publicados",
+        "registrationSource": "Registro informado pela CNN; conferência direta no PesqEle pendente",
+        "additionalSources": [
+          "https://www.cnnbrasil.com.br/eleicoes/alfa-lula-e-rejeitado-por-46-dos-eleitores-flavio-por-45/"
+        ]
+      }
     ]
   },
   "weights": [
@@ -871,7 +901,7 @@
     "model": "Modelo padrão: qualidade A/B/C provisória + acurácia moderada + recência de 7 dias",
     "provisional": true,
     "previousDate": "2026-10-13",
-    "newPoll": "Vox Brasil 23/10 (Flávio 49,4%; Lula 50,6%); substitui rodada de 18/10; metodologia preservada.",
+    "newPoll": "Alfa Inteligência 23/10 (Flávio 52%, Lula 48%); substitui rodada de 20/10; metodologia preservada. Real Time Big Data 23/10 teve votos totais, rejeição exclusiva e voto em aberto documentados.",
     "sdBetweenInstitutesPp": 0.9247072668700946,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
@@ -1050,11 +1080,12 @@
     {
       "name": "Alfa Inteligência",
       "date": "2026-10-23",
-      "registration": "A confirmar",
-      "field": "A confirmar",
-      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
-      "status": "announced",
-      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+      "registration": "BR-08496/2026",
+      "field": "18 a 22/10",
+      "source": "https://exame.com/brasil/pesquisa-alfa-a-dois-dias-do-2o-turno-flavio-bolsonaro-tem-52-e-lula-48/",
+      "status": "published",
+      "note": "Divulgada em 23/10 às 7h30; registro informado por CNN Brasil e Exame; consulta direta PesqEle pendente.",
+      "publicationSource": "https://exame.com/brasil/pesquisa-alfa-a-dois-dias-do-2o-turno-flavio-bolsonaro-tem-52-e-lula-48/"
     },
     {
       "name": "Real Time Big Data",
@@ -1062,8 +1093,9 @@
       "registration": "BR-09670/2026",
       "field": "19 a 22/10",
       "source": "https://www.metropoles.com/brasil/lula-x-flavio-veja-quando-saem-as-novas-pesquisas-datafolha-quaest-e-mais",
-      "status": "registered",
-      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+      "status": "published",
+      "note": "Divulgada em 23/10 às 7h; registro informado por CNN Brasil e Exame; consulta direta PesqEle pendente.",
+      "publicationSource": "https://www.cnnbrasil.com.br/eleicoes/real-time-flavio-tem-52-dos-votos-validos-no-2o-turno-lula-48/"
     },
     {
       "name": "Vox Brasil",
@@ -1362,6 +1394,56 @@
       "source": "https://static.poder360.com.br/uploads/2026/10/rejeicaovoxbrasil-23out.png",
       "scope": "second_round",
       "scopeEvidence": "Gráfico original do instituto apresenta categorias mutuamente exclusivas somando 100%; não comparar diretamente à rejeição declarada não exclusiva de outros institutos."
+    },
+    {
+      "institute": "Alfa Inteligência",
+      "date": "2026-10-20",
+      "field": "15 a 19/10",
+      "f": 45,
+      "l": 46,
+      "n": 2700,
+      "margin": 1.9,
+      "group": "declared",
+      "question": "Não votaria de jeito nenhum em cada candidato; sem categorias exclusivas publicadas",
+      "method": "Entrevistas presenciais",
+      "registration": "BR-00820/2026",
+      "source": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/10/20/alfa-inteligencia-flavio-tem-488-dos-votos-totais-contra-459-de-lula-em-empate-tecnico.htm",
+      "scope": "second_round",
+      "scopeEvidence": "Percentuais individuais publicados; questionário integral não conferido; não inferir exclusividade ou transferência de votos."
+    },
+    {
+      "institute": "Alfa Inteligência",
+      "date": "2026-10-23",
+      "field": "18 a 22/10",
+      "f": 44,
+      "l": 45,
+      "n": 2700,
+      "margin": 1.9,
+      "group": "declared",
+      "question": "Não votaria de jeito nenhum em cada candidato; sem categorias exclusivas publicadas",
+      "method": "Entrevistas presenciais",
+      "registration": "BR-08496/2026",
+      "source": "https://exame.com/brasil/pesquisa-alfa-a-dois-dias-do-2o-turno-flavio-bolsonaro-tem-52-e-lula-48/",
+      "scope": "second_round",
+      "scopeEvidence": "Exame informa rejeição Flávio 45→44%, Lula 46→45%; sem informação de categorias exclusivas."
+    },
+    {
+      "institute": "Real Time Big Data",
+      "date": "2026-10-23",
+      "field": "19 a 22/10",
+      "f": 33,
+      "l": 36,
+      "both": 28,
+      "neither": 3,
+      "n": 2000,
+      "margin": 2,
+      "group": "exclusive",
+      "question": "Rejeita apenas Flávio (33%), apenas Lula (36%), ambos (28%) ou nenhum (3%). Categorias exclusivas, soma 100%.",
+      "method": "Entrevistas telefônicas",
+      "registration": "BR-09670/2026",
+      "source": "https://exame.com/brasil/pesquisa-para-presidente-real-time-flavio-bolsonaro-tem-52-e-lula-48-2-turno/",
+      "scope": "second_round",
+      "scopeEvidence": "Quatro categorias publicadas somam 100%; não somar ambos às parcelas exclusivas nem misturar com rejeição declarada."
     }
   ],
   "openVote": [
@@ -1637,6 +1719,45 @@
       "scope": "second_round",
       "basis": "total_respondents",
       "categoriesExclusive": true
+    },
+    {
+      "institute": "Alfa Inteligência",
+      "date": "2026-10-20",
+      "fieldEnd": "2026-10-19",
+      "blankNull": 3.5,
+      "undecided": 1.8,
+      "registration": "BR-00820/2026",
+      "source": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/10/20/alfa-inteligencia-flavio-tem-488-dos-votos-totais-contra-459-de-lula-em-empate-tecnico.htm",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Intenção estimulada: branco/nulo/nenhum e não sabe/não respondeu"
+    },
+    {
+      "institute": "Alfa Inteligência",
+      "date": "2026-10-23",
+      "fieldEnd": "2026-10-22",
+      "blankNull": 2,
+      "undecided": 2.1,
+      "registration": "BR-08496/2026",
+      "source": "https://exame.com/brasil/pesquisa-alfa-a-dois-dias-do-2o-turno-flavio-bolsonaro-tem-52-e-lula-48/",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Intenção estimulada: branco/nulo/nenhum e não sabe/não respondeu"
+    },
+    {
+      "institute": "Real Time Big Data",
+      "date": "2026-10-23",
+      "fieldEnd": "2026-10-22",
+      "blankNull": 5,
+      "undecided": 1,
+      "registration": "BR-09670/2026",
+      "source": "https://exame.com/brasil/pesquisa-para-presidente-real-time-flavio-bolsonaro-tem-52-e-lula-48-2-turno/",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Intenção estimulada: branco/nulo e não sabe/não respondeu; não confundir com espontânea (5% e 3%)"
     }
   ],
   "experimentalArchive": {
