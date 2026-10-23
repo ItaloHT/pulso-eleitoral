@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261023-alfa-br08496-v1",
+  "revision": "standard-20261023-ipespe-br04350-v1",
   "referenceDate": "2026-10-23",
-  "publishedAt": "2026-10-23T09:17:00-03:00",
+  "publishedAt": "2026-10-23T10:13:00-03:00",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -283,23 +283,25 @@
     },
     {
       "name": "Ipespe/Abrapel",
-      "date": "2026-10-17",
-      "field": "13 a 15/10",
-      "fieldEnd": "2026-10-15",
-      "f": 51.2,
-      "l": 48.8,
+      "date": "2026-10-23",
+      "field": "20 a 22/10",
+      "fieldEnd": "2026-10-22",
+      "f": 50.5,
+      "l": 49.5,
+      "totalF": 48,
+      "totalL": 47,
       "n": 1500,
       "margin": "±2,6 p.p.",
       "converted": false,
-      "url": "https://www.cnnbrasil.com.br/eleicoes/ipespe-abrapel-flavio-tem-512-dos-votos-validos-no-2o-turno-lula-488/",
-      "registration": "BR-00223/2026",
-      "method": "Entrevistas telefônicas (CATI)",
-      "confidence": 95.45,
-      "sourceType": "CNN Brasil, divulgação 17/10 às 10h, com ficha técnica",
-      "voteBasis": "Votos válidos publicados; sem conversão pelo Pulso.",
-      "registrationSource": "Número informado pela CNN; consulta individual ao PesqEle pendente",
+      "url": "https://www.cnnbrasil.com.br/eleicoes/ipespe-abrapel-flavio-tem-505-dos-votos-validos-lula-495/",
+      "registration": "BR-04350/2026",
+      "method": "Entrevistas telefônicas com eleitores de 16 anos ou mais, abrangência nacional",
+      "confidence": 95,
+      "sourceType": "CNN Brasil e Folha de S.Paulo, divulgação em 23/10/2026 às 10h",
+      "voteBasis": "Votos válidos publicados diretamente (50,5%/49,5%); votos totais estimulados 48%/47%, brancos/nulos 3%, indecisos/não responderam 2%. Não utilizar subamostra de comparecimento 51,5%/48,5%.",
+      "registrationSource": "Registro BR-04350/2026 informado por CNN Brasil e Folha; conferência direta no PesqEle pendente",
       "additionalSources": [
-        "https://www.cnnbrasil.com.br/eleicoes/ipespe-flavio-e-lula-sao-igualmente-rejeitados-por-47-dos-eleitores/"
+        "https://www1.folha.uol.com.br/poder/2026/10/ipespeabrapel-flavio-bolsonaro-tem-505-dos-votos-validos-no-2o-turno-e-lula-495.shtml"
       ]
     },
     {
@@ -596,6 +598,12 @@
       "f": 50.824086,
       "l": 49.175914,
       "revision": "Datafolha 22/10 incorporada; Gerp com acurácia neutra; 20 institutos, parâmetros padrão preservados."
+    },
+    {
+      "date": "2026-10-23",
+      "f": 50.827698,
+      "l": 49.172302,
+      "revision": "Ipespe/Abrapel 23/10 incorporada; média dinâmica do modelo padrão 20 institutos, pesos qualidade/acurácia/recência 7d, redutor padrão; histórico anterior preservado."
     }
   ],
   "instituteHistory": {
@@ -740,7 +748,19 @@
         "f": 51.2,
         "l": 48.8,
         "url": "https://www.cnnbrasil.com.br/eleicoes/ipespe-abrapel-flavio-tem-512-dos-votos-validos-no-2o-turno-lula-488/",
-        "registration": "BR-00223/2026"
+        "registration": "BR-00223/2026",
+        "fieldEnd": "2026-10-15",
+        "field": "13 a 15/10",
+        "n": 1500,
+        "margin": "±2,6 p.p."
+      },
+      {
+        "date": "2026-10-23",
+        "fieldEnd": "2026-10-22",
+        "f": 50.5,
+        "l": 49.5,
+        "url": "https://www.cnnbrasil.com.br/eleicoes/ipespe-abrapel-flavio-tem-505-dos-votos-validos-lula-495/",
+        "registration": "BR-04350/2026"
       }
     ],
     "Vox Brasil": [
@@ -901,7 +921,7 @@
     "model": "Modelo padrão: qualidade A/B/C provisória + acurácia moderada + recência de 7 dias",
     "provisional": true,
     "previousDate": "2026-10-13",
-    "newPoll": "Alfa Inteligência 23/10 (Flávio 52%, Lula 48%); substitui rodada de 20/10; metodologia preservada. Real Time Big Data 23/10 teve votos totais, rejeição exclusiva e voto em aberto documentados.",
+    "newPoll": "Ipespe/Abrapel 23/10 (50,5% Flávio, 49,5% Lula), substitui rodada de 17/10; rejeição declarada 48%/47%, brancos/nulos 3%, indecisos 2%. Parâmetros padrão preservados; histórico anterior não recalculado.",
     "sdBetweenInstitutesPp": 0.9436144790832922,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
@@ -1110,11 +1130,12 @@
     {
       "name": "Ipespe/Abrapel",
       "date": "2026-10-23",
-      "registration": "A confirmar",
-      "field": "A confirmar",
-      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
-      "status": "announced",
-      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+      "registration": "BR-04350/2026",
+      "field": "20 a 22/10",
+      "source": "https://www.cnnbrasil.com.br/eleicoes/ipespe-abrapel-flavio-tem-505-dos-votos-validos-lula-495/",
+      "status": "published",
+      "note": "Divulgada às 10h de 23/10; votos válidos 50,5%/49,5%, amostra nacional de 1.500, registro informado por CNN Brasil e Folha. Consulta direta ao PesqEle pendente.",
+      "publicationSource": "https://www1.folha.uol.com.br/poder/2026/10/ipespeabrapel-flavio-bolsonaro-tem-505-dos-votos-validos-no-2o-turno-e-lula-495.shtml"
     },
     {
       "name": "AtlasIntel",
@@ -1444,6 +1465,22 @@
       "source": "https://exame.com/brasil/pesquisa-para-presidente-real-time-flavio-bolsonaro-tem-52-e-lula-48-2-turno/",
       "scope": "second_round",
       "scopeEvidence": "Quatro categorias publicadas somam 100%; não somar ambos às parcelas exclusivas nem misturar com rejeição declarada."
+    },
+    {
+      "institute": "Ipespe/Abrapel",
+      "date": "2026-10-23",
+      "field": "20 a 22/10",
+      "f": 48,
+      "l": 47,
+      "n": 1500,
+      "margin": 2.6,
+      "group": "declared",
+      "question": "Não votaria de jeito nenhum no candidato (rejeição declarada individual, não exclusiva)",
+      "method": "Entrevistas telefônicas",
+      "registration": "BR-04350/2026",
+      "source": "https://www1.folha.uol.com.br/poder/2026/10/ipespeabrapel-flavio-bolsonaro-tem-505-dos-votos-validos-no-2o-turno-e-lula-495.shtml",
+      "scope": "second_round",
+      "scopeEvidence": "Folha relata rejeição declarada: Flávio 48% (47% na rodada anterior), Lula 47% (estável). Não confundir com confiança nem rejeição exclusiva."
     }
   ],
   "openVote": [
@@ -1758,6 +1795,19 @@
       "basis": "total_respondents",
       "categoriesExclusive": true,
       "question": "Intenção estimulada: branco/nulo e não sabe/não respondeu; não confundir com espontânea (5% e 3%)"
+    },
+    {
+      "institute": "Ipespe/Abrapel",
+      "date": "2026-10-23",
+      "fieldEnd": "2026-10-22",
+      "blankNull": 3,
+      "undecided": 2,
+      "registration": "BR-04350/2026",
+      "source": "https://www1.folha.uol.com.br/poder/2026/10/ipespeabrapel-flavio-bolsonaro-tem-505-dos-votos-validos-no-2o-turno-e-lula-495.shtml",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Intenção estimulada no segundo turno: brancos/nulos e não sabe/não respondeu (amostra integral, não subamostra de comparecimento)."
     }
   ],
   "experimentalArchive": {
