@@ -523,3 +523,17 @@ header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:b
 .open-vote-composition-legend{display:flex;gap:12px 20px;flex-wrap:wrap;margin-bottom:12px;font-size:13px;font-weight:600;color:#494450}
 .open-vote-composition-legend span{display:flex;align-items:center;gap:7px}
 .open-vote-composition-legend i{display:inline-block;width:11px;height:11px;border-radius:3px;flex-shrink:0}
+
+/* Painel unico: projecao de votos em destaque, probabilidade secundaria. */
+.pulsa-combined .pulsa-combined-votes,.pulsa-combined .pulsa-combined-chances{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin:14px 0}
+.pulsa-combined-votes>div,.pulsa-combined-chances>div{min-width:0;display:flex;flex-direction:column;gap:6px}
+.pulsa-combined-votes>div:last-child,.pulsa-combined-chances>div:last-child{text-align:right;align-items:flex-end}
+.pulsa-combined-votes span,.pulsa-combined-chances span{font-size:13px;color:#504b57}
+.pulsa-combined-votes strong{font-size:clamp(28px,7vw,46px);line-height:1.15;letter-spacing:-1px;font-variant-numeric:tabular-nums}
+.pulsa-combined-chances strong{font-size:clamp(25px,6vw,35px);line-height:1.2;font-variant-numeric:tabular-nums}
+.pulsa-combined-gap{text-align:center;font-size:13px;color:#615b68;margin:10px 0 22px}
+.pulsa-combined-secondary{border-top:1px solid #e7e4ea;padding-top:16px;margin-top:16px}
+.pulsa-combined-secondary h3{margin:0 0 5px}
+.pulsa-combined-secondary .small{margin-top:0}
+.pulsa-combined-chances>div{background:#f5f4f7;border-radius:14px;padding:14px}
+.pulsa-combined>.small:last-child{margin-top:18px}
