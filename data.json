@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261022-rejection-datafolha-meio-v1",
-  "referenceDate": "2026-10-22",
-  "publishedAt": "2026-10-22T19:14:00-03:00",
+  "revision": "standard-20261023-vox-br03259-v1",
+  "referenceDate": "2026-10-23",
+  "publishedAt": "2026-10-23T02:36:48-03:00",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -303,52 +303,6 @@
       ]
     },
     {
-      "name": "Vox Brasil",
-      "date": "2026-10-18",
-      "field": "15 a 17/10",
-      "fieldEnd": "2026-10-17",
-      "f": 49.01,
-      "l": 50.99,
-      "totalF": 44.6,
-      "totalL": 46.4,
-      "n": 2100,
-      "margin": "±2,15 p.p.",
-      "converted": true,
-      "url": "https://www.metropoles.com/",
-      "registration": "BR-04332/2026",
-      "method": "Entrevistas presenciais domiciliares",
-      "confidence": 95,
-      "sourceType": "Metrópoles, reportagem publicada em 18/10 às 0h01, comprovada por captura de tela fornecida pelo leitor; URL específica e documento integral pendentes",
-      "voteBasis": "Votos válidos calculados dos totais informados na reportagem: Flávio 44,6/(44,6+46,4)=49,01%; Lula 46,4/(44,6+46,4)=50,99%.",
-      "registrationSource": "Registro BR-04332/2026 identificado em agenda; consulta direta ao PesqEle pendente",
-      "additionalSources": [
-        "https://e26.cog.ia.br/eleicoes/pesquisas"
-      ]
-    },
-    {
-      "name": "Vox Brasil",
-      "date": "2026-10-09",
-      "field": "05 a 07/10",
-      "fieldEnd": "2026-10-07",
-      "f": 49.14,
-      "l": 50.86,
-      "totalF": 42.7,
-      "totalL": 44.2,
-      "n": 2100,
-      "margin": "±2,15 p.p.",
-      "converted": true,
-      "url": "https://www.cnnbrasil.com.br/eleicoes/vox-lula-tem-442-das-intencoes-de-voto-no-2o-turno-flavio-427/",
-      "registration": "BR-09623/2026",
-      "method": "Entrevistas presenciais domiciliares",
-      "confidence": 95,
-      "sourceType": "CNN Brasil (votos totais e ficha técnica); Metrópoles (votos válidos, brancos/nulos e indecisos)",
-      "voteBasis": "Votos válidos calculados: Flávio 42,7/(42,7+44,2)=49,14%; Lula 44,2/(42,7+44,2)=50,86%.",
-      "registrationSource": "Registro informado pela CNN; conferência individual no PesqEle pendente",
-      "additionalSources": [
-        "https://archive.ph/2026.10.09-144112/https%3A/www.metropoles.com/brasil/vox-brasil-no-2o-turno-lula-tem-5086-e-flavio-4914-dos-votos-validos"
-      ]
-    },
-    {
       "name": "DataTrends",
       "date": "2026-10-11",
       "field": "07 a 09/10",
@@ -556,6 +510,31 @@
       "voteBasis": "Votos válidos divulgados (50%/50%); totais 47%/46%; brancos/nulos 5%, indecisos 2%; sem conversão.",
       "sourceType": "Folha de S.Paulo, divulgação 22/10/2026",
       "fieldEnd": "2026-10-22"
+    },
+    {
+      "name": "Vox Brasil",
+      "date": "2026-10-23",
+      "field": "20 a 22/10",
+      "fieldEnd": "2026-10-22",
+      "f": 49.4,
+      "l": 50.6,
+      "totalF": 44.3,
+      "totalL": 45.4,
+      "n": 2100,
+      "margin": "±2,15 p.p.",
+      "converted": false,
+      "url": "https://www.cnnbrasil.com.br/eleicoes/vox-lula-tem-506-dos-votos-validos-no-2o-turno-flavio-494/",
+      "registration": "BR-03259/2026",
+      "confidence": 95,
+      "sourceType": "Gráfico original do Vox Brasil publicado pelo Poder360; resultados corroborados pela CNN Brasil em 23/10/2026",
+      "primaryUrl": "https://static.poder360.com.br/uploads/2026/10/estimuladavoxbrasil-23out.png",
+      "verificationUrl": "https://static.poder360.com.br/uploads/2026/10/estimuladavoxbrasil-23out.png",
+      "registrationSource": "Registro BR-03259/2026 localizado em espelhos dos dados abertos do TSE e informado por CNN Brasil e Poder360; consulta direta ao PesqEle pendente",
+      "voteBasis": "Votos válidos publicados diretamente (Flávio 49,4%; Lula 50,6%). Votos totais publicados no gráfico original: Flávio 44,3%; Lula 45,4%; sem conversão.",
+      "additionalSources": [
+        "https://www.poder360.com.br/poder-eleicoes-2026/lula-tem-506-contra-494-de-flavio-em-votos-validos-diz-vox/",
+        "https://static.poder360.com.br/uploads/2026/10/estimuladavoxbrasil-23out.png"
+      ]
     }
   ],
   "history": [
@@ -747,7 +726,46 @@
         "f": 49.14,
         "l": 50.86,
         "url": "https://www.cnnbrasil.com.br/eleicoes/vox-lula-tem-442-das-intencoes-de-voto-no-2o-turno-flavio-427/",
-        "registration": "BR-09623/2026"
+        "registration": "BR-09623/2026",
+        "name": "Vox Brasil",
+        "field": "05 a 07/10",
+        "fieldEnd": "2026-10-07",
+        "totalF": 42.7,
+        "totalL": 44.2,
+        "n": 2100,
+        "margin": "±2,15 p.p.",
+        "converted": true,
+        "method": "Entrevistas presenciais domiciliares",
+        "confidence": 95,
+        "sourceType": "CNN Brasil (votos totais e ficha técnica); Metrópoles (votos válidos, brancos/nulos e indecisos)",
+        "voteBasis": "Votos válidos calculados: Flávio 42,7/(42,7+44,2)=49,14%; Lula 44,2/(42,7+44,2)=50,86%.",
+        "registrationSource": "Registro informado pela CNN; conferência individual no PesqEle pendente",
+        "additionalSources": [
+          "https://archive.ph/2026.10.09-144112/https%3A/www.metropoles.com/brasil/vox-brasil-no-2o-turno-lula-tem-5086-e-flavio-4914-dos-votos-validos"
+        ]
+      },
+      {
+        "name": "Vox Brasil",
+        "date": "2026-10-18",
+        "field": "15 a 17/10",
+        "fieldEnd": "2026-10-17",
+        "f": 49.01,
+        "l": 50.99,
+        "totalF": 44.6,
+        "totalL": 46.4,
+        "n": 2100,
+        "margin": "±2,15 p.p.",
+        "converted": true,
+        "url": "https://www.metropoles.com/",
+        "registration": "BR-04332/2026",
+        "method": "Entrevistas presenciais domiciliares",
+        "confidence": 95,
+        "sourceType": "Metrópoles, reportagem publicada em 18/10 às 0h01, comprovada por captura de tela fornecida pelo leitor; URL específica e documento integral pendentes",
+        "voteBasis": "Votos válidos calculados dos totais informados na reportagem: Flávio 44,6/(44,6+46,4)=49,01%; Lula 46,4/(44,6+46,4)=50,99%.",
+        "registrationSource": "Registro BR-04332/2026 identificado em agenda; consulta direta ao PesqEle pendente",
+        "additionalSources": [
+          "https://e26.cog.ia.br/eleicoes/pesquisas"
+        ]
       }
     ],
     "DataTrends": [
@@ -835,7 +853,7 @@
     "model": "Modelo padrão: qualidade A/B/C provisória + acurácia moderada + recência de 7 dias",
     "provisional": true,
     "previousDate": "2026-10-13",
-    "newPoll": "Datafolha 22/10 (50%/50%); substitui rodada de 15/10",
+    "newPoll": "Vox Brasil 23/10 (Flávio 49,4%; Lula 50,6%); substitui rodada de 18/10; metodologia preservada.",
     "sdBetweenInstitutesPp": 0.9247072668700946,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
@@ -843,7 +861,7 @@
     "registry": "https://pesqele-divulgacao.tse.jus.br/",
     "openData": "https://dadosabertos.tse.jus.br/dataset/pesquisas-eleitorais-2026",
     "note": "Os números de registro foram conferidos em divulgações públicas, mas a consulta individual ao PesqEle não pôde ser completada nesta revisão. O TSE registra dados metodológicos, não certifica os resultados.",
-    "checkedOn": "2026-10-17"
+    "checkedOn": "2026-10-23"
   },
   "recencyModel": {
     "enabled": true,
@@ -1034,9 +1052,10 @@
       "date": "2026-10-23",
       "registration": "BR-03259/2026",
       "field": "20 a 22/10",
-      "source": "https://www.metropoles.com/brasil/lula-x-flavio-veja-quando-saem-as-novas-pesquisas-datafolha-quaest-e-mais",
-      "status": "registered",
-      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+      "source": "https://static.poder360.com.br/uploads/2026/10/estimuladavoxbrasil-23out.png",
+      "status": "published",
+      "note": "Resultados publicados em 23/10/2026 e conferidos em gráfico original Vox Brasil e em duas reportagens; número de registro consta de espelhos dos dados abertos TSE, consulta direta ao PesqEle pendente.",
+      "publicationSource": "https://www.cnnbrasil.com.br/eleicoes/vox-lula-tem-506-dos-votos-validos-no-2o-turno-flavio-494/"
     },
     {
       "name": "Ipespe/Abrapel",
@@ -1305,6 +1324,24 @@
       "source": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-48-rejeitam-lula-e-flavio-bolsonaro.shtml",
       "scope": "second_round",
       "scopeEvidence": "Folha 22/10 publica 48% para cada candidato; detalhamento de ambos/nenhum não disponível na matéria, portanto não preenchido."
+    },
+    {
+      "institute": "Vox Brasil",
+      "date": "2026-10-23",
+      "field": "20 a 22/10",
+      "f": 47.1,
+      "l": 44.8,
+      "both": 3.9,
+      "neither": 2.2,
+      "undecided": 2,
+      "n": 2100,
+      "margin": 2.15,
+      "group": "exclusive",
+      "question": "Em qual candidato você não votaria de jeito nenhum? Resposta única: Flávio, Lula, ambos, nenhum ou não sabe.",
+      "registration": "BR-03259/2026",
+      "source": "https://static.poder360.com.br/uploads/2026/10/rejeicaovoxbrasil-23out.png",
+      "scope": "second_round",
+      "scopeEvidence": "Gráfico original do instituto apresenta categorias mutuamente exclusivas somando 100%; não comparar diretamente à rejeição declarada não exclusiva de outros institutos."
     }
   ],
   "openVote": [
@@ -1541,6 +1578,19 @@
       "basis": "total_respondents",
       "categoriesExclusive": true,
       "question": "Intenção de voto estimulada no segundo turno: brancos/nulos e não sabe/não respondeu"
+    },
+    {
+      "institute": "Vox Brasil",
+      "date": "2026-10-23",
+      "fieldEnd": "2026-10-22",
+      "blankNull": 6,
+      "undecided": 4.3,
+      "registration": "BR-03259/2026",
+      "source": "https://static.poder360.com.br/uploads/2026/10/estimuladavoxbrasil-23out.png",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Votos estimulados totais no segundo turno: nenhum/branco/nulo e não sabe/não opinou"
     }
   ],
   "experimentalArchive": {
@@ -1861,7 +1911,7 @@
     "accuracyFloorPp": 1.5,
     "accuracyExponent": 0.5
   },
-  "dataCutoffDate": "2026-10-22",
+  "dataCutoffDate": "2026-10-23",
   "editorialPolicy": "[object Object] | IFP 20/10: dados divulgados incluídos; link para documento primário e registro TSE pendentes de verificação. Phoenix (19/10) incluída a pedido do editor; fonte divulgadora encontrada, registro BR-08809/2026 não validado diretamente no TSE e ficha técnica nacional incompleta; qualidade C provisória.",
   "standardModelLegacy": {
     "enabled": true,
