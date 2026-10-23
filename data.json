@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261023-datatrends-br03365-v1",
+  "revision": "standard-20261023-vetor-arrow-br06957-v1",
   "referenceDate": "2026-10-23",
-  "publishedAt": "2026-10-23T13:05:00-03:00",
+  "publishedAt": "2026-10-23T13:41:00-03:00",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -543,6 +543,27 @@
       "sourceType": "Divulgação nacional em 23/10/2026 às 11h57 por Edmar Lyra, CEO do instituto DataTrends",
       "voteBasis": "Votos válidos publicados diretamente 51,9%/48,1%; votos totais 50%/46%, brancos/nulos 4%, indecisos 1%. Totais arredondados publicados somam 101%.",
       "registrationSource": "Registro BR-03365/2026 informado na publicação; conferência direta no PesqEle pendente"
+    },
+    {
+      "name": "Vetor/Arrow",
+      "date": "2026-10-23",
+      "field": "22 a 23/10",
+      "fieldEnd": "2026-10-23",
+      "f": 52.7,
+      "l": 47.3,
+      "totalF": 50,
+      "totalL": 44.9,
+      "n": 6867,
+      "margin": "±1,2 p.p. (declarada)",
+      "converted": false,
+      "url": "https://radiocorredor.com.br/posts/vetor-arrow-flavio-52-7-lula-47-3-validos-2-turno-2310",
+      "registration": "BR-06957/2026",
+      "method": "Entrevistas telefônicas automatizadas (URA); ponderação por sexo, idade e UF; coleta complementar de jovens",
+      "confidence": 95,
+      "sourceType": "Rádio Corredor, divulgação 23/10/2026; relatório integral não conferido",
+      "voteBasis": "Votos válidos publicados 52,7%/47,3%; totais 50,0%/44,9%; brancos/nulos 3,6%; indecisos 1,5%",
+      "registrationSource": "Registro informado em reportagem; base secundária do PesqEle apresenta divergência entre amostra e datas de divulgação/coleta; ficha original pendente",
+      "qualityCaveat": "Inclusão editorial autorizada; 6.867 entrevistas na divulgação versus 3.000 no registro secundário; data de divulgação no cadastro anterior ao campo; verificar relatório original e retificação do TSE antes de considerar plenamente auditada."
     }
   ],
   "history": [
