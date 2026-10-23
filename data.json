@@ -1331,17 +1331,19 @@
       "institute": "Datafolha",
       "date": "2026-10-22",
       "field": "20 a 22/10",
-      "f": 48,
-      "l": 48,
+      "f": 46,
+      "l": 45,
       "n": 2520,
       "margin": 2,
       "group": "exclusive",
-      "question": "Não votaria de jeito nenhum em cada candidato; categoria de rejeição exclusiva conforme séries anteriores do Datafolha. Totais de ambos/nenhum não informados nesta fonte.",
+      "question": "Rejeita exclusivamente Flávio ou exclusivamente Lula no segundo turno; 3% rejeitam ambos e 6% não rejeitam nenhum.",
       "method": "Entrevistas presenciais",
       "registration": "BR-09709/2026",
       "source": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-48-rejeitam-lula-e-flavio-bolsonaro.shtml",
       "scope": "second_round",
-      "scopeEvidence": "Folha 22/10 publica 48% para cada candidato; detalhamento de ambos/nenhum não disponível na matéria, portanto não preenchido."
+      "scopeEvidence": "Categorias exclusivas: 46% apenas Flávio, 45% apenas Lula, 3% ambos, 6% nenhum. Os 48% publicados como rejeição de cada candidato incluem os 3% que rejeitam ambos e não devem ser usados como exclusivos.",
+      "both": 3,
+      "neither": 6
     },
     {
       "institute": "Vox Brasil",
@@ -1609,6 +1611,32 @@
       "basis": "total_respondents",
       "categoriesExclusive": true,
       "question": "Votos estimulados totais no segundo turno: nenhum/branco/nulo e não sabe/não opinou"
+    },
+    {
+      "institute": "Datafolha",
+      "date": "2026-10-22",
+      "fieldEnd": "2026-10-22",
+      "blankNull": 5,
+      "undecided": 2,
+      "registration": "BR-09709/2026",
+      "source": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-flavio-bolsonaro-e-lula-empatam-com-50-dos-votos-validos-cada.shtml",
+      "question": "Intenção estimulada no segundo turno: branco/nulo/nenhum e não sabe/não respondeu",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true
+    },
+    {
+      "institute": "PoderData/Aya",
+      "date": "2026-10-22",
+      "fieldEnd": "2026-10-21",
+      "blankNull": 3,
+      "undecided": 1,
+      "registration": "BR-07926/2026",
+      "source": "https://noticias.uol.com.br/eleicoes/2026/10/22/nova-pesquisa-poderdata-para-presidente-2026-veja-resultados-do-2-turno.ghtm",
+      "question": "Intenção estimulada no segundo turno: brancos/nulos e não sabe. Percentuais arredondados na fonte podem somar 101%.",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true
     }
   ],
   "experimentalArchive": {
