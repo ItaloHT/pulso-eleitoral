@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261024-cnt-mda-colectta-verified-v3",
+  "revision": "standard-20261024-colectta-included-21-v4",
   "referenceDate": "2026-10-24",
-  "publishedAt": "2026-10-24T11:37:00-03:00",
+  "publishedAt": "2026-10-24T11:48:00-03:00",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -590,12 +590,11 @@
       "confidence": 95,
       "sourceType": "Brazil Economy (publicação original); Transmissão Política (24/10/2026, 11h22) e Mídia Bahia (11h11)",
       "voteBasis": "Votos válidos publicados 49,7% Flávio / 50,3% Lula; votos totais e indecisos não verificados.",
-      "registrationSource": "Registro informado por Transmissão Política; conferência direta PesqEle pendente",
-      "eligible": false,
-      "excludeFromCalculations": true,
-      "weight": 0,
-      "auditStatus": "verified_publication_pending_standard_model_tier",
-      "qualityCaveat": "Pesquisa nacional divulgada, mas ainda sem classe de qualidade e acurácia histórica no modelo padrão de 20 institutos. Preservada em Pesquisas, sem peso até classificação autorizada; não inventar parâmetros."
+      "registrationSource": "Registro BR-05601/2026 com campo em 23/10, divulgação 24/10 e 3.000 entrevistas confirmado em cadastro que reproduz dados do TSE; fonte primária Brazil Economy e cobertura jornalística independente.",
+      "eligible": true,
+      "excludeFromCalculations": false,
+      "auditStatus": "included_provisional_tier_B_neutral_accuracy",
+      "qualityCaveat": "Classe B editorial provisória com base em pesquisa presencial domiciliar nacional, 3.000 entrevistas e registro BR-05601/2026; plano amostral registrado com seleção por cotas nos setores censitários. Sem histórico de acurácia auditado: fator neutro. Verificação direta do relatório integral e execução de campo ainda pendente."
     }
   ],
   "history": [
@@ -643,9 +642,9 @@
     },
     {
       "date": "2026-10-24",
-      "f": 50.893874,
-      "l": 49.106126,
-      "revision": "CNT/MDA 24/10 incorporada; Colectta 24/10 publicada sem peso; 20 institutos, parâmetros padrão preservados."
+      "f": 50.820632,
+      "l": 49.179368,
+      "revision": "CNT/MDA e Colectta 24/10 incorporadas; 21 institutos; Colectta classe B provisória, acurácia neutra, parâmetros padrão preservados."
     }
   ],
   "instituteHistory": {
@@ -1046,8 +1045,8 @@
     "model": "Modelo padrão: qualidade A/B/C provisória + acurácia moderada + recência de 7 dias",
     "provisional": true,
     "previousDate": "2026-10-13",
-    "newPoll": "CNT/MDA 24/10 BR-02136/2026 substitui rodada de 16/10; Colectta/Brazil Economy BR-05601/2026 publicada sem peso, pendente de classificação no modelo padrão. Indicadores calculados dinamicamente.",
-    "sdBetweenInstitutesPp": 0.9224719003716354,
+    "newPoll": "CNT/MDA 24/10 e Colectta/Brazil Economy 24/10 incorporadas à média dinâmica; Colectta classe B provisória com acurácia neutra; 21 institutos e fórmula padrão preservada.",
+    "sdBetweenInstitutesPp": 0.9385240699563416,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
   "sourcePolicy": {
@@ -2102,7 +2101,7 @@
         "name": "Indexa/Broadcast",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.361563950754929,
+        "weightPercent": 5.032639695899094,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2112,7 +2111,7 @@
         "name": "Palver",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.3992667433641155,
+        "weightPercent": 3.1907266064028046,
         "originalMaePp": 2.45,
         "qualityTier": "C",
         "qualityStatus": "provisional",
@@ -2122,7 +2121,7 @@
         "name": "Quaest",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.312923951961929,
+        "weightPercent": 5.925635126176637,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2132,7 +2131,7 @@
         "name": "PoderData/Aya",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.361563950754929,
+        "weightPercent": 5.032639695899094,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2142,7 +2141,7 @@
         "name": "BTG/Nexus",
         "firstRoundMaePp": 4.595,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.908833877159964,
+        "weightPercent": 2.730381092798504,
         "originalMaePp": 4.595,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2152,7 +2151,7 @@
         "name": "Futura/100% Cidades",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.856095347663022,
+        "weightPercent": 4.55818086628972,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2162,7 +2161,7 @@
         "name": "Gerp",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.361563950754929,
+        "weightPercent": 5.032639695899094,
         "originalMaePp": 1.095,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2173,7 +2172,7 @@
         "name": "AtlasIntel",
         "firstRoundMaePp": 2.35,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.28775224775067,
+        "weightPercent": 4.963356234958776,
         "originalMaePp": 2.35,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2183,7 +2182,7 @@
         "name": "Datafolha",
         "firstRoundMaePp": 2.6,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 7.470256189996944,
+        "weightPercent": 7.0119666921106125,
         "originalMaePp": 2.6,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2193,7 +2192,7 @@
         "name": "CNT/MDA",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 8.496565563018976,
+        "weightPercent": 7.975313457790192,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2203,7 +2202,7 @@
         "name": "Ipespe/Abrapel",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.919646534920053,
+        "weightPercent": 5.556484714340754,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2214,7 +2213,7 @@
         "firstRoundMaePp": 0.66,
         "originalMaePp": 0.66,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 7.565422525810348,
+        "weightPercent": 7.101294709779854,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -2224,7 +2223,7 @@
         "firstRoundMaePp": 2.61674,
         "originalMaePp": 2.61674,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.6315521579742365,
+        "weightPercent": 3.408761644142245,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -2234,7 +2233,7 @@
         "firstRoundMaePp": 2.45,
         "originalMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.143752574444037,
+        "weightPercent": 3.889539300038528,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -2243,7 +2242,7 @@
         "name": "Real Time Big Data",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.919646534920053,
+        "weightPercent": 5.556484714340754,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2252,7 +2251,7 @@
         "name": "Alfa Inteligência",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.919646534920053,
+        "weightPercent": 5.556484714340754,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2261,7 +2260,7 @@
         "name": "IFP (Instituto França)",
         "firstRoundMaePp": 5.3,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.110593126828031,
+        "weightPercent": 2.9197627020118673,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "provisional_single_election_comparison",
@@ -2272,7 +2271,7 @@
         "name": "Data Ranking",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.287536882351262,
+        "weightPercent": 2.147199777097359,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2281,7 +2280,7 @@
         "name": "Meio/Ideia",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.398280472300262,
+        "weightPercent": 4.128452276593554,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2290,13 +2289,24 @@
         "name": "Phoenix",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.287536882351262,
+        "weightPercent": 2.147199777097359,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
+      },
+      {
+        "name": "Colectta/Brazil Economy",
+        "firstRoundMaePp": null,
+        "originalMaePp": null,
+        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
+        "weightPercent": 6.134856505992455,
+        "qualityTier": "B",
+        "qualityStatus": "provisional",
+        "accuracyStatus": "missing_neutral",
+        "accuracyNote": "Sem erro histórico auditado; fator de acurácia neutro. Classe B editorial provisória por abrangência nacional e metodologia presencial domiciliar."
       }
     ],
-    "sd": 0.9224719003716354,
+    "sd": 0.9385240699563416,
     "formula": "weight_i ∝ tier_i * (MAE_i null ? 1 : sqrt(2.45/max(1.5,MAE_i))) * 2^(-days_since_field_end/7) * (1-min(.3,.1*max(0,abs(f_i-recency_median)-2.5)))",
     "sensitivityPp": 3,
     "statisticalInterval": false,
@@ -3027,6 +3037,16 @@
         "f": 50.895256,
         "l": 49.104744,
         "revision": "Pesos e média consolidados sincronizados com penalização provisória do Instituto França; cálculo dinâmico padrão de 20 institutos, sem mudança de parâmetros."
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "revision": "Before Colectta inclusion in 21-institute standard model",
+      "previous": {
+        "date": "2026-10-24",
+        "f": 50.893874,
+        "l": 49.106126,
+        "revision": "CNT/MDA 24/10 incorporada; Colectta 24/10 publicada sem peso; 20 institutos, parâmetros padrão preservados."
       }
     }
   ]
