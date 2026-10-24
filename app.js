@@ -122,7 +122,8 @@ function shortWindowTrend(cutoff){
  for(let k=3;k>=0;k--){
   const date=new Date((day(cutoff)-k)*86400000).toISOString().slice(0,10);
   const rows=model.institutes.map(i=>{
-   const p=polls.filter(q=>q.name===i.name&&q.date<=date&&q.fieldEnd&&q.fieldEnd<=date&&q.eligible!==false&&!q.excludeFromCalculations&&Number.isFinite(q.f)).sort((a,b)=>b.fieldEnd.localeCompare(a.fieldEnd)||b.date.localeCompare(a.date))[0];
+   const rounds=[...(dataset.instituteHistory?.[i.name]||[]),...polls.filter(q=>q.name===i.name)];
+   const p=rounds.filter(q=>q.date<=date&&q.fieldEnd&&q.fieldEnd<=date&&q.eligible!==false&&!q.excludeFromCalculations&&Number.isFinite(q.f)).sort((a,b)=>b.fieldEnd.localeCompare(a.fieldEnd)||b.date.localeCompare(a.date))[0];
    if(!p)return null;
    const age=Math.max(0,day(date)-day(p.fieldEnd));
    const raw=Math.pow(2,-age/(model.halfLifeDays||7));
