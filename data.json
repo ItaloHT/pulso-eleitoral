@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261024-ifp-accuracy-adjustment-v1",
+  "revision": "standard-20261024-ifp-weights-consistent-v2",
   "referenceDate": "2026-10-24",
   "publishedAt": "2026-10-24T09:09:51-03:00",
   "polls": [
@@ -620,9 +620,9 @@
     },
     {
       "date": "2026-10-24",
-      "f": 50.902891,
-      "l": 49.097109,
-      "revision": "Instituto França 24/10 (BR-04863/2026) substitui rodada de 20/10; 20 institutos, pesos dinâmicos por qualidade/acurácia/recência 7d e redutor padrão; histórico preservado. Rejeição sem novos dados."
+      "f": 50.895256,
+      "l": 49.104744,
+      "revision": "Pesos e média consolidados sincronizados com penalização provisória do Instituto França; cálculo dinâmico padrão de 20 institutos, sem mudança de parâmetros."
     }
   ],
   "instituteHistory": {
@@ -1001,8 +1001,8 @@
     "model": "Modelo padrão: qualidade A/B/C provisória + acurácia moderada + recência de 7 dias",
     "provisional": true,
     "previousDate": "2026-10-13",
-    "newPoll": "Instituto França 24/10 (51,4% Flávio, 48,6% Lula) substitui rodada de 20/10 (50,81% × 49,19%); registro BR-04863/2026, 20 institutos e parâmetros padrão preservados; médias calculadas dinamicamente pelo app.",
-    "sdBetweenInstitutesPp": 0.941064951,
+    "newPoll": "Instituto França 24/10 (51,4% Flávio, 48,6% Lula) substitui rodada de 20/10 (50,81% × 49,19%); registro BR-04863/2026, 20 institutos e parâmetros padrão preservados; médias calculadas dinamicamente pelo app. Penalização provisória de acurácia do Instituto França incorporada aos pesos consolidados.",
+    "sdBetweenInstitutesPp": 0.9462300601140364,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
   "sourcePolicy": {
@@ -2044,7 +2044,7 @@
         "name": "Indexa/Broadcast",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.669118022113639,
+        "weightPercent": 5.622964039610524,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2054,7 +2054,7 @@
         "name": "Palver",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.594258043693321,
+        "weightPercent": 3.5649961157861556,
         "originalMaePp": 2.45,
         "qualityTier": "C",
         "qualityStatus": "provisional",
@@ -2064,7 +2064,7 @@
         "name": "Quaest",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.675050652573311,
+        "weightPercent": 6.620707072174289,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2074,7 +2074,7 @@
         "name": "PoderData/Aya",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.669118022113639,
+        "weightPercent": 5.622964039610524,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2084,7 +2084,7 @@
         "name": "BTG/Nexus",
         "firstRoundMaePp": 4.595,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.075692597869753,
+        "weightPercent": 3.0506524660902925,
         "originalMaePp": 4.595,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2094,7 +2094,7 @@
         "name": "Futura/100% Cidades",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.134654348133316,
+        "weightPercent": 5.092851593980222,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2104,7 +2104,7 @@
         "name": "Gerp",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.669118022113639,
+        "weightPercent": 5.622964039610524,
         "originalMaePp": 1.095,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2115,7 +2115,7 @@
         "name": "AtlasIntel",
         "firstRoundMaePp": 2.35,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.5910722765834695,
+        "weightPercent": 5.545553687797613,
         "originalMaePp": 2.35,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2125,7 +2125,7 @@
         "name": "Datafolha",
         "firstRoundMaePp": 2.6,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 7.898770654512967,
+        "weightPercent": 7.834464404199874,
         "originalMaePp": 2.6,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2135,7 +2135,7 @@
         "name": "CNT/MDA",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.06848894399668,
+        "weightPercent": 4.035366160734296,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2145,7 +2145,7 @@
         "name": "Ipespe/Abrapel",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.259213759994893,
+        "weightPercent": 6.208255631898918,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2156,7 +2156,7 @@
         "firstRoundMaePp": 0.66,
         "originalMaePp": 0.66,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 7.999395993390504,
+        "weightPercent": 7.934270522148895,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -2166,7 +2166,7 @@
         "firstRoundMaePp": 2.61674,
         "originalMaePp": 2.61674,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.8398679892867076,
+        "weightPercent": 3.8086064774782553,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -2176,7 +2176,7 @@
         "firstRoundMaePp": 2.45,
         "originalMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.2554045656439357,
+        "weightPercent": 4.345778942329243,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -2185,7 +2185,7 @@
         "name": "Real Time Big Data",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.259213759994893,
+        "weightPercent": 6.208255631898918,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2194,7 +2194,7 @@
         "name": "Alfa Inteligência",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.259213759994893,
+        "weightPercent": 6.208255631898918,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2203,7 +2203,7 @@
         "name": "IFP (Instituto França)",
         "firstRoundMaePp": 5.3,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.594258043693321,
+        "weightPercent": 3.2622483765303047,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "provisional_single_election_comparison",
@@ -2214,7 +2214,7 @@
         "name": "Data Ranking",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.4187562966886182,
+        "weightPercent": 2.399064479485094,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2223,7 +2223,7 @@
         "name": "Meio/Ideia",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.650577950919907,
+        "weightPercent": 4.612716207252045,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2232,13 +2232,13 @@
         "name": "Phoenix",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.4187562966886182,
+        "weightPercent": 2.399064479485094,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
       }
     ],
-    "sd": 0.9416641490941496,
+    "sd": 0.9462300601140364,
     "formula": "weight_i ∝ tier_i * (MAE_i null ? 1 : sqrt(2.45/max(1.5,MAE_i))) * 2^(-days_since_field_end/7) * (1-min(.3,.1*max(0,abs(f_i-recency_median)-2.5)))",
     "sensitivityPp": 3,
     "statisticalInterval": false,
@@ -2950,6 +2950,16 @@
       "revision": "Ipespe/Abrapel 23/10 incorporada; média dinâmica do modelo padrão 20 institutos, pesos qualidade/acurácia/recência 7d, redutor padrão; histórico anterior preservado.",
       "archivedAt": "2026-10-23",
       "reason": "Revisão intradiária da média de 23/10 após DataTrends BR-03365/2026"
+    },
+    {
+      "date": "2026-10-24",
+      "revision": "Before IFP accuracy consolidation",
+      "previous": {
+        "date": "2026-10-24",
+        "f": 50.902891,
+        "l": 49.097109,
+        "revision": "Instituto França 24/10 (BR-04863/2026) substitui rodada de 20/10; 20 institutos, pesos dinâmicos por qualidade/acurácia/recência 7d e redutor padrão; histórico preservado. Rejeição sem novos dados."
+      }
     }
   ]
 }
