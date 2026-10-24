@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261023-verita-br06070-openvote-v2",
-  "referenceDate": "2026-10-23",
-  "publishedAt": "2026-10-23T17:14:00-03:00",
+  "revision": "standard-20261024-ifp-br04863-v1",
+  "referenceDate": "2026-10-24",
+  "publishedAt": "2026-10-24T09:09:51-03:00",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -333,26 +333,6 @@
       ]
     },
     {
-      "name": "IFP (Instituto França)",
-      "date": "2026-10-20",
-      "field": "16 a 20/10",
-      "fieldEnd": "2026-10-20",
-      "f": 50.81,
-      "l": 49.19,
-      "totalF": 40.95,
-      "totalL": 39.65,
-      "n": 3000,
-      "margin": "±1,8 p.p.",
-      "converted": false,
-      "url": "https://fanf1.com.br/2026/10/20/instituto-franca-flavio-tem-508-e-lula-492-indecisos-sao-quase-9/",
-      "registration": "BR-07896/2026",
-      "method": "Não verificado na íntegra do levantamento",
-      "confidence": 95,
-      "sourceType": "Fan F1, Narcizo Machado, 20/10/2026 às 07h09; ficha integral pendente",
-      "voteBasis": "Votos válidos divulgados; totais 40,95% e 39,65%",
-      "registrationSource": "Registro informado na divulgação; consulta direta ao PesqEle pendente"
-    },
-    {
       "name": "Data Ranking",
       "date": "2026-10-20",
       "field": "14 a 16/10",
@@ -567,6 +547,32 @@
       "excludeFromCalculations": true,
       "weight": 0,
       "auditStatus": "pending_primary_verification"
+    },
+    {
+      "name": "IFP (Instituto França)",
+      "date": "2026-10-24",
+      "publicationTime": "07:28",
+      "field": "21 a 23/10",
+      "fieldEnd": "2026-10-23",
+      "f": 51.4,
+      "l": 48.6,
+      "totalF": 45.6,
+      "totalL": 43.1,
+      "n": 1537,
+      "margin": "±2,5 p.p.",
+      "converted": false,
+      "url": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-514-contra-486-de-lula-em-votos-validos-diz-pesquisa/",
+      "primaryUrl": "https://static.poder360.com.br/uploads/2026/10/Pesquisa-presidencial-Instituto-Franca-24out2026.pdf",
+      "registration": "BR-04863/2026",
+      "method": "Pesquisa nacional nas 5 regiões e 27 UFs; registro TSE descreve amostra de números telefônicos fixos e celulares estratificada por região; dossiê para imprensa informa seleção por cotas.",
+      "confidence": 95,
+      "sourceType": "Poder360, 24/10/2026 às 7h28, com dossiê PDF e registro TSE identificado",
+      "voteBasis": "Votos válidos publicados diretamente: Flávio 51,4%, Lula 48,6%; totais 45,6% e 43,1%; brancos/nulos 7,4%; não sabe/não respondeu 3,9%. Sem conversão.",
+      "registrationSource": "BR-04863/2026 informado no dossiê e reportagem; dados de registro corroborados por espelho dos dados abertos TSE.",
+      "additionalSources": [
+        "https://www.pesquisaeleitoral.com.br/pesquisas/2026/instituto-franca-de-pesquisas-br-04863"
+      ],
+      "qualityCaveat": "Relatório de imprensa e cadastro do TSE usam descrições amostrais diferentes; ficha metodológica integral e execução de campo não auditadas independentemente."
     }
   ],
   "history": [
@@ -611,6 +617,12 @@
       "f": 50.8515,
       "l": 49.1485,
       "revision": "DataTrends 23/10 e Ipespe/Abrapel 23/10 incorporadas; média dinâmica do modelo padrão 20 institutos, pesos qualidade/acurácia/recência 7d, redutor padrão; revisão anterior preservada em aggregateHistoryRevisions."
+    },
+    {
+      "date": "2026-10-24",
+      "f": 50.902891,
+      "l": 49.097109,
+      "revision": "Instituto França 24/10 (BR-04863/2026) substitui rodada de 20/10; 20 institutos, pesos dinâmicos por qualidade/acurácia/recência 7d e redutor padrão; histórico preservado. Rejeição sem novos dados."
     }
   ],
   "instituteHistory": {
@@ -924,6 +936,28 @@
           "https://www.cnnbrasil.com.br/eleicoes/alfa-lula-e-rejeitado-por-46-dos-eleitores-flavio-por-45/"
         ]
       }
+    ],
+    "IFP (Instituto França)": [
+      {
+        "name": "IFP (Instituto França)",
+        "date": "2026-10-20",
+        "field": "16 a 20/10",
+        "fieldEnd": "2026-10-20",
+        "f": 50.81,
+        "l": 49.19,
+        "totalF": 40.95,
+        "totalL": 39.65,
+        "n": 3000,
+        "margin": "±1,8 p.p.",
+        "converted": false,
+        "url": "https://fanf1.com.br/2026/10/20/instituto-franca-flavio-tem-508-e-lula-492-indecisos-sao-quase-9/",
+        "registration": "BR-07896/2026",
+        "method": "Não verificado na íntegra do levantamento",
+        "confidence": 95,
+        "sourceType": "Fan F1, Narcizo Machado, 20/10/2026 às 07h09; ficha integral pendente",
+        "voteBasis": "Votos válidos divulgados; totais 40,95% e 39,65%",
+        "registrationSource": "Registro informado na divulgação; consulta direta ao PesqEle pendente"
+      }
     ]
   },
   "weights": [
@@ -967,8 +1001,8 @@
     "model": "Modelo padrão: qualidade A/B/C provisória + acurácia moderada + recência de 7 dias",
     "provisional": true,
     "previousDate": "2026-10-13",
-    "newPoll": "Veritá 23/10 (51,3% Flávio, 48,7% Lula) substitui rodada de 21/10 (50,7% × 49,3%); registro BR-06070/2026; 20 institutos e parâmetros padrão preservados; médias calculadas dinamicamente pelo app.",
-    "sdBetweenInstitutesPp": 0.9416641490941496,
+    "newPoll": "Instituto França 24/10 (51,4% Flávio, 48,6% Lula) substitui rodada de 20/10 (50,81% × 49,19%); registro BR-04863/2026, 20 institutos e parâmetros padrão preservados; médias calculadas dinamicamente pelo app.",
+    "sdBetweenInstitutesPp": 0.941064951,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
   "sourcePolicy": {
@@ -1254,6 +1288,15 @@
       "source": "https://pesqele-divulgacao.tse.jus.br/",
       "status": "announced",
       "note": "Nova rodada distinta da pesquisa Phoenix de 19/10. Divulgação prevista a partir de 24/10; registro, data e ficha técnica ainda não validados diretamente no TSE. Não entra na média até a divulgação e verificação dos resultados."
+    },
+    {
+      "name": "IFP (Instituto França)",
+      "date": "2026-10-24",
+      "registration": "BR-04863/2026",
+      "field": "21 a 23/10",
+      "source": "https://static.poder360.com.br/uploads/2026/10/Pesquisa-presidencial-Instituto-Franca-24out2026.pdf",
+      "status": "published",
+      "publicationSource": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-514-contra-486-de-lula-em-votos-validos-diz-pesquisa/"
     }
   ],
   "rejection": [
@@ -1880,6 +1923,19 @@
       "basis": "total_respondents",
       "categoriesExclusive": true,
       "question": "Intenção estimulada no segundo turno: brancos/nulos e não sabe/não respondeu, amostra integral de entrevistados."
+    },
+    {
+      "institute": "IFP (Instituto França)",
+      "date": "2026-10-24",
+      "fieldEnd": "2026-10-23",
+      "blankNull": 7.4,
+      "undecided": 3.9,
+      "registration": "BR-04863/2026",
+      "source": "https://static.poder360.com.br/uploads/2026/10/Pesquisa-presidencial-Instituto-Franca-24out2026.pdf",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Intenção estimulada de 2º turno: brancos/nulos 7,4% e não sabe/não respondeu 3,9% em categorias distintas da amostra total."
     }
   ],
   "experimentalArchive": {
@@ -2200,7 +2256,7 @@
     "accuracyFloorPp": 1.5,
     "accuracyExponent": 0.5
   },
-  "dataCutoffDate": "2026-10-23",
+  "dataCutoffDate": "2026-10-24",
   "editorialPolicy": "[object Object] | IFP 20/10: dados divulgados incluídos; link para documento primário e registro TSE pendentes de verificação. Phoenix (19/10) incluída a pedido do editor; fonte divulgadora encontrada, registro BR-08809/2026 não validado diretamente no TSE e ficha técnica nacional incompleta; qualidade C provisória.",
   "standardModelLegacy": {
     "enabled": true,
