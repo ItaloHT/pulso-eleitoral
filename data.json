@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261024-atlasintel-v12",
+  "revision": "standard-20261024-datafolha-rejection-openvote-v13",
   "referenceDate": "2026-10-24",
-  "publishedAt": "2026-10-24T20:29:00-03:00",
+  "publishedAt": "2026-10-24T20:31:00-03:00",
   "polls": [
     {
       "name": "Palver",
@@ -1792,6 +1792,40 @@
       "source": "https://noticias.uol.com.br/eleicoes/2026/10/24/pesquisa-palver-presidencial-segundo-turno-24-de-outubro.ghtm",
       "scope": "second_round",
       "scopeEvidence": "UOL 24/10: Flávio 47% e Lula 49% em rejeição; categorias exclusivas não informadas."
+    },
+    {
+      "institute": "Datafolha",
+      "date": "2026-10-24",
+      "field": "23 a 24/10",
+      "n": 4050,
+      "margin": 2,
+      "method": "Entrevistas presenciais em 124 municípios",
+      "registration": "BR-09540/2026",
+      "source": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-lula-e-rejeitado-por-46-e-flavio-bolsonaro-por-45.shtml",
+      "scope": "second_round",
+      "f": 45,
+      "l": 46,
+      "both": 2,
+      "neither": 6,
+      "group": "exclusive",
+      "question": "Rejeita exclusivamente Flávio ou exclusivamente Lula no segundo turno; 2% rejeitam ambos e 6% nenhum.",
+      "scopeEvidence": "Folha 24/10: 45% rejeitam só Flávio, 46% só Lula; categorias exclusivas. Somatório 99% por arredondamento."
+    },
+    {
+      "institute": "Datafolha",
+      "date": "2026-10-24",
+      "field": "23 a 24/10",
+      "n": 4050,
+      "margin": 2,
+      "method": "Entrevistas presenciais em 124 municípios",
+      "registration": "BR-09540/2026",
+      "source": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-lula-e-rejeitado-por-46-e-flavio-bolsonaro-por-45.shtml",
+      "scope": "second_round",
+      "f": 48,
+      "l": 49,
+      "group": "declared",
+      "question": "Não votaria de jeito nenhum em cada candidato, incluindo respostas que rejeitam ambos; não somar à rejeição exclusiva.",
+      "scopeEvidence": "Folha 24/10: na pergunta sobre em quem não votaria de forma alguma, 48% citam Flávio e 49% Lula. Valores publicados arredondados; não somar categorias."
     }
   ],
   "openVote": [
@@ -2212,6 +2246,19 @@
       "basis": "total_respondents",
       "categoriesExclusive": true,
       "question": "Intenção estimulada de segundo turno: brancos/nulos 8% e não sabe/não respondeu 1%."
+    },
+    {
+      "institute": "Datafolha",
+      "date": "2026-10-24",
+      "fieldEnd": "2026-10-24",
+      "blankNull": 3,
+      "undecided": 2,
+      "registration": "BR-09540/2026",
+      "source": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-flavio-bolsonaro-tem-51-dos-votos-validos-e-lula-49-em-empate-tecnico.shtml",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Intenção estimulada no segundo turno: brancos/nulos 3% e indecisos 2% da amostra total, mesma rodada BR-09540/2026."
     }
   ],
   "experimentalArchive": {
