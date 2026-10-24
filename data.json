@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261024-ifp-weights-consistent-v2",
+  "revision": "standard-20261024-cnt-mda-colectta-verified-v3",
   "referenceDate": "2026-10-24",
-  "publishedAt": "2026-10-24T09:09:51-03:00",
+  "publishedAt": "2026-10-24T11:37:00-03:00",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -242,26 +242,6 @@
       "voteBasis": "Votos válidos publicados pelo Datafolha; sem conversão pelo Pulso.",
       "sourceType": "Publicação da Folha, contratante da pesquisa, atualizada em 15/10 às 19h12",
       "fieldEnd": "2026-10-14"
-    },
-    {
-      "name": "CNT/MDA",
-      "date": "2026-10-16",
-      "field": "13 a 15/10",
-      "fieldEnd": "2026-10-15",
-      "f": 50.5,
-      "l": 49.5,
-      "totalF": 46.8,
-      "totalL": 45.9,
-      "n": 2014,
-      "margin": "±2,2 p.p.",
-      "converted": false,
-      "url": "https://www.poder360.com.br/poder-eleicoes-2026/cnt-mda-confirma-poderdata-aya-e-da-flavio-com-505-e-lula-com-495/",
-      "registration": "BR-00652/2026",
-      "method": "Entrevistas presenciais domiciliares e em pontos de fluxo",
-      "confidence": 95,
-      "sourceType": "Divulgação com ficha técnica e link para relatório integral",
-      "voteBasis": "Votos válidos publicados; sem conversão pelo Pulsa.",
-      "registrationSource": "Número informado em publicação; conferência individual no PesqEle pendente"
     },
     {
       "name": "Ipespe/Abrapel",
@@ -573,6 +553,49 @@
         "https://www.pesquisaeleitoral.com.br/pesquisas/2026/instituto-franca-de-pesquisas-br-04863"
       ],
       "qualityCaveat": "Relatório de imprensa e cadastro do TSE usam descrições amostrais diferentes; ficha metodológica integral e execução de campo não auditadas independentemente."
+    },
+    {
+      "name": "CNT/MDA",
+      "date": "2026-10-24",
+      "field": "21 a 23/10",
+      "fieldEnd": "2026-10-23",
+      "f": 50.7,
+      "l": 49.3,
+      "totalF": 46.3,
+      "totalL": 45,
+      "n": 2032,
+      "margin": "±2,2 p.p.",
+      "converted": false,
+      "url": "https://www.cnnbrasil.com.br/eleicoes/cnt-mda-flavio-tem-507-dos-votos-validos-lula-493/",
+      "registration": "BR-02136/2026",
+      "method": "Entrevistas presenciais, abrangência nacional",
+      "confidence": 95,
+      "sourceType": "CNN Brasil (11h03), Reuters e Gazeta do Povo (24/10/2026); amostra efetiva 2.032",
+      "voteBasis": "Votos válidos publicados 50,7%/49,3%; votos totais estimulados 46,3%/45,0%; brancos/nulos 5,8%; não sabe/não respondeu 2,9%.",
+      "registrationSource": "Número informado por CNN Brasil e Gazeta do Povo; conferência direta no PesqEle pendente"
+    },
+    {
+      "name": "Colectta/Brazil Economy",
+      "date": "2026-10-24",
+      "field": "23/10",
+      "fieldEnd": "2026-10-23",
+      "f": 49.7,
+      "l": 50.3,
+      "n": 3000,
+      "margin": "±2,0 p.p.",
+      "converted": false,
+      "url": "https://brazileconomy.com.br/eleicoes-2026/2026/10/lula-tem-503-dos-votos-validos-e-flavio-497-aponta-pesquisa-brazil-economycolectta/",
+      "registration": "BR-05601/2026",
+      "method": "Entrevistas presenciais domiciliares em 101 municípios nas 27 UFs",
+      "confidence": 95,
+      "sourceType": "Brazil Economy (publicação original); Transmissão Política (24/10/2026, 11h22) e Mídia Bahia (11h11)",
+      "voteBasis": "Votos válidos publicados 49,7% Flávio / 50,3% Lula; votos totais e indecisos não verificados.",
+      "registrationSource": "Registro informado por Transmissão Política; conferência direta PesqEle pendente",
+      "eligible": false,
+      "excludeFromCalculations": true,
+      "weight": 0,
+      "auditStatus": "verified_publication_pending_standard_model_tier",
+      "qualityCaveat": "Pesquisa nacional divulgada, mas ainda sem classe de qualidade e acurácia histórica no modelo padrão de 20 institutos. Preservada em Pesquisas, sem peso até classificação autorizada; não inventar parâmetros."
     }
   ],
   "history": [
@@ -620,9 +643,9 @@
     },
     {
       "date": "2026-10-24",
-      "f": 50.895256,
-      "l": 49.104744,
-      "revision": "Pesos e média consolidados sincronizados com penalização provisória do Instituto França; cálculo dinâmico padrão de 20 institutos, sem mudança de parâmetros."
+      "f": 50.893874,
+      "l": 49.106126,
+      "revision": "CNT/MDA 24/10 incorporada; Colectta 24/10 publicada sem peso; 20 institutos, parâmetros padrão preservados."
     }
   ],
   "instituteHistory": {
@@ -958,6 +981,28 @@
         "voteBasis": "Votos válidos divulgados; totais 40,95% e 39,65%",
         "registrationSource": "Registro informado na divulgação; consulta direta ao PesqEle pendente"
       }
+    ],
+    "CNT/MDA": [
+      {
+        "name": "CNT/MDA",
+        "date": "2026-10-16",
+        "field": "13 a 15/10",
+        "fieldEnd": "2026-10-15",
+        "f": 50.5,
+        "l": 49.5,
+        "totalF": 46.8,
+        "totalL": 45.9,
+        "n": 2014,
+        "margin": "±2,2 p.p.",
+        "converted": false,
+        "url": "https://www.poder360.com.br/poder-eleicoes-2026/cnt-mda-confirma-poderdata-aya-e-da-flavio-com-505-e-lula-com-495/",
+        "registration": "BR-00652/2026",
+        "method": "Entrevistas presenciais domiciliares e em pontos de fluxo",
+        "confidence": 95,
+        "sourceType": "Divulgação com ficha técnica e link para relatório integral",
+        "voteBasis": "Votos válidos publicados; sem conversão pelo Pulsa.",
+        "registrationSource": "Número informado em publicação; conferência individual no PesqEle pendente"
+      }
     ]
   },
   "weights": [
@@ -1001,8 +1046,8 @@
     "model": "Modelo padrão: qualidade A/B/C provisória + acurácia moderada + recência de 7 dias",
     "provisional": true,
     "previousDate": "2026-10-13",
-    "newPoll": "Instituto França 24/10 (51,4% Flávio, 48,6% Lula) substitui rodada de 20/10 (50,81% × 49,19%); registro BR-04863/2026, 20 institutos e parâmetros padrão preservados; médias calculadas dinamicamente pelo app. Penalização provisória de acurácia do Instituto França incorporada aos pesos consolidados.",
-    "sdBetweenInstitutesPp": 0.9462300601140364,
+    "newPoll": "CNT/MDA 24/10 BR-02136/2026 substitui rodada de 16/10; Colectta/Brazil Economy BR-05601/2026 publicada sem peso, pendente de classificação no modelo padrão. Indicadores calculados dinamicamente.",
+    "sdBetweenInstitutesPp": 0.9224719003716354,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
   "sourcePolicy": {
@@ -1274,11 +1319,11 @@
     {
       "name": "CNT/MDA",
       "date": "2026-10-24",
-      "registration": "A confirmar",
-      "field": "A confirmar",
-      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
-      "status": "announced",
-      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+      "registration": "BR-02136/2026",
+      "field": "21 a 23/10",
+      "source": "https://www.cnnbrasil.com.br/eleicoes/cnt-mda-flavio-tem-507-dos-votos-validos-lula-493/",
+      "status": "published",
+      "note": "Divulgada em 24/10/2026 às 11h03 (Brasília)."
     },
     {
       "name": "Phoenix & Associados",
@@ -1936,6 +1981,19 @@
       "basis": "total_respondents",
       "categoriesExclusive": true,
       "question": "Intenção estimulada de 2º turno: brancos/nulos 7,4% e não sabe/não respondeu 3,9% em categorias distintas da amostra total."
+    },
+    {
+      "institute": "CNT/MDA",
+      "date": "2026-10-24",
+      "fieldEnd": "2026-10-23",
+      "blankNull": 5.8,
+      "undecided": 2.9,
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Intenção estimulada do segundo turno: brancos/nulos e não sabe/não respondeu (não confundir com espontânea)",
+      "registration": "BR-02136/2026",
+      "source": "https://timesbrasil.com.br/brasil/decisao-2026-na-vespera-da-eleicao-flavio-bolsonaro-amplia-vantagem-sobre-lula-e-chega-a-507-dos-votos-validos/"
     }
   ],
   "experimentalArchive": {
@@ -2044,7 +2102,7 @@
         "name": "Indexa/Broadcast",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.622964039610524,
+        "weightPercent": 5.361563950754929,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2054,7 +2112,7 @@
         "name": "Palver",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.5649961157861556,
+        "weightPercent": 3.3992667433641155,
         "originalMaePp": 2.45,
         "qualityTier": "C",
         "qualityStatus": "provisional",
@@ -2064,7 +2122,7 @@
         "name": "Quaest",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.620707072174289,
+        "weightPercent": 6.312923951961929,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2074,7 +2132,7 @@
         "name": "PoderData/Aya",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.622964039610524,
+        "weightPercent": 5.361563950754929,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2084,7 +2142,7 @@
         "name": "BTG/Nexus",
         "firstRoundMaePp": 4.595,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.0506524660902925,
+        "weightPercent": 2.908833877159964,
         "originalMaePp": 4.595,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2094,7 +2152,7 @@
         "name": "Futura/100% Cidades",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.092851593980222,
+        "weightPercent": 4.856095347663022,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2104,7 +2162,7 @@
         "name": "Gerp",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.622964039610524,
+        "weightPercent": 5.361563950754929,
         "originalMaePp": 1.095,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2115,7 +2173,7 @@
         "name": "AtlasIntel",
         "firstRoundMaePp": 2.35,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.545553687797613,
+        "weightPercent": 5.28775224775067,
         "originalMaePp": 2.35,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2125,7 +2183,7 @@
         "name": "Datafolha",
         "firstRoundMaePp": 2.6,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 7.834464404199874,
+        "weightPercent": 7.470256189996944,
         "originalMaePp": 2.6,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2135,7 +2193,7 @@
         "name": "CNT/MDA",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.035366160734296,
+        "weightPercent": 8.496565563018976,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2145,7 +2203,7 @@
         "name": "Ipespe/Abrapel",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.208255631898918,
+        "weightPercent": 5.919646534920053,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2156,7 +2214,7 @@
         "firstRoundMaePp": 0.66,
         "originalMaePp": 0.66,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 7.934270522148895,
+        "weightPercent": 7.565422525810348,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -2166,7 +2224,7 @@
         "firstRoundMaePp": 2.61674,
         "originalMaePp": 2.61674,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.8086064774782553,
+        "weightPercent": 3.6315521579742365,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -2176,7 +2234,7 @@
         "firstRoundMaePp": 2.45,
         "originalMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.345778942329243,
+        "weightPercent": 4.143752574444037,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -2185,7 +2243,7 @@
         "name": "Real Time Big Data",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.208255631898918,
+        "weightPercent": 5.919646534920053,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2194,7 +2252,7 @@
         "name": "Alfa Inteligência",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.208255631898918,
+        "weightPercent": 5.919646534920053,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2203,7 +2261,7 @@
         "name": "IFP (Instituto França)",
         "firstRoundMaePp": 5.3,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.2622483765303047,
+        "weightPercent": 3.110593126828031,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "provisional_single_election_comparison",
@@ -2214,7 +2272,7 @@
         "name": "Data Ranking",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.399064479485094,
+        "weightPercent": 2.287536882351262,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2223,7 +2281,7 @@
         "name": "Meio/Ideia",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.612716207252045,
+        "weightPercent": 4.398280472300262,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2232,13 +2290,13 @@
         "name": "Phoenix",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.399064479485094,
+        "weightPercent": 2.287536882351262,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
       }
     ],
-    "sd": 0.9462300601140364,
+    "sd": 0.9224719003716354,
     "formula": "weight_i ∝ tier_i * (MAE_i null ? 1 : sqrt(2.45/max(1.5,MAE_i))) * 2^(-days_since_field_end/7) * (1-min(.3,.1*max(0,abs(f_i-recency_median)-2.5)))",
     "sensitivityPp": 3,
     "statisticalInterval": false,
@@ -2959,6 +3017,16 @@
         "f": 50.902891,
         "l": 49.097109,
         "revision": "Instituto França 24/10 (BR-04863/2026) substitui rodada de 20/10; 20 institutos, pesos dinâmicos por qualidade/acurácia/recência 7d e redutor padrão; histórico preservado. Rejeição sem novos dados."
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "revision": "Before CNT/MDA 24/10 and Colectta",
+      "previous": {
+        "date": "2026-10-24",
+        "f": 50.895256,
+        "l": 49.104744,
+        "revision": "Pesos e média consolidados sincronizados com penalização provisória do Instituto França; cálculo dinâmico padrão de 20 institutos, sem mudança de parâmetros."
       }
     }
   ]
