@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261024-colectta-included-21-v4",
+  "revision": "standard-20261024-cnt-mda-rejection-verified-v5",
   "referenceDate": "2026-10-24",
-  "publishedAt": "2026-10-24T11:48:00-03:00",
+  "publishedAt": "2026-10-24T15:38:00-03:00",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -1614,6 +1614,22 @@
       "source": "https://www1.folha.uol.com.br/poder/2026/10/ipespeabrapel-flavio-bolsonaro-tem-505-dos-votos-validos-no-2o-turno-e-lula-495.shtml",
       "scope": "second_round",
       "scopeEvidence": "Folha relata rejeição declarada: Flávio 48% (47% na rodada anterior), Lula 47% (estável). Não confundir com confiança nem rejeição exclusiva."
+    },
+    {
+      "institute": "CNT/MDA",
+      "date": "2026-10-24",
+      "field": "21 a 23/10",
+      "f": 47.3,
+      "l": 47.4,
+      "n": 2032,
+      "margin": 2.2,
+      "group": "declared",
+      "question": "Não votaria de jeito nenhum em cada candidato (potencial de voto, perguntas individuais; rejeição declarada, não exclusiva).",
+      "method": "Entrevistas presenciais, abrangência nacional",
+      "registration": "BR-02136/2026",
+      "source": "https://www.cnnbrasil.com.br/eleicoes/cnt-mda-lula-e-rejeitado-por-474-flavio-por-473/",
+      "scope": "second_round",
+      "scopeEvidence": "CNN Brasil, 24/10/2026 às 11h24: Flávio 47,3% e Lula 47,4% no item 'não votaria'; percentuais de perguntas individuais, não categorias exclusivas."
     }
   ],
   "openVote": [
