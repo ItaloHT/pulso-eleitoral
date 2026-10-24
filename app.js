@@ -175,7 +175,7 @@ function trendModel(){
  return {points:short?.points||points,fittedPoints:short?.points||points,n:series.length,cutoff,coverage,change,slope:short?.slope??change/days,meanF:rec.f,officialF:rec.f,todayAdjustment:today.adjustment,todayCoverage:today.coverage,lastPollDate:cutoff,trendWindowDays:4};
 }
 function conditionalProjection(model){
- const days=Math.max(0,(Date.parse('2026-10-25T00:00:00Z')-Date.parse(model.cutoff+'T00:00:00Z'))/86400000);
+ const days=Math.max(0,(Date.parse('2026-10-25T11:00:00Z')-Date.parse(model.cutoff+'T00:00:00Z'))/86400000);
  const slope=Math.max(-.15,Math.min(.15,model.slope));
  const f=Math.max(0,Math.min(100,model.meanF+slope*days));
  return {date:'2026-10-25',days,slope,rawSlope:model.slope,f,l:100-f,from:{date:model.cutoff,f:model.meanF,l:100-model.meanF}};
