@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261024-quaest-franca-excluded-v11",
+  "revision": "standard-20261024-atlasintel-v12",
   "referenceDate": "2026-10-24",
-  "publishedAt": "2026-10-24T19:12:07-03:00",
+  "publishedAt": "2026-10-24T20:29:00-03:00",
   "polls": [
     {
       "name": "Palver",
@@ -63,24 +63,6 @@
       "sourceType": "UOL, 19/10/2026; ficha técnica na reportagem; consulta direta ao PesqEle pendente",
       "voteBasis": "Votos válidos 52%/48% informados; votos totais 49%/46% informados (arredondados)",
       "registrationSource": "Registro BR-02586/2026 informado pelo UOL"
-    },
-    {
-      "name": "AtlasIntel",
-      "date": "2026-10-19",
-      "field": "13 a 18/10",
-      "fieldEnd": "2026-10-18",
-      "f": 51.1,
-      "l": 48.9,
-      "n": 4998,
-      "margin": "±1 p.p.",
-      "converted": false,
-      "url": "https://noticias.uol.com.br/eleicoes/2026/10/19/atlasintel-pesquisa-presidencial-segundo-turno.ghtm",
-      "registration": "BR-02418/2026",
-      "method": "Recrutamento digital aleatório; entrevistas pela internet",
-      "confidence": 95,
-      "sourceType": "UOL, 19/10/2026; ficha técnica na reportagem; consulta direta ao PesqEle pendente",
-      "voteBasis": "Votos válidos informados na reportagem; votos totais não transcritos por falta de conferência",
-      "registrationSource": "Registro BR-02418/2026 informado pelo UOL"
     },
     {
       "name": "Indexa/Broadcast",
@@ -589,6 +571,29 @@
       "confidence": 95,
       "sourceType": "UOL, divulgação 24/10/2026 às 19h05; levantamento nacional encomendado pela TV Globo",
       "voteBasis": "Votos válidos 51% e 49% divulgados pelo instituto; totais 46% e 45% divulgados separadamente; sem conversão pelo Pulsa."
+    },
+    {
+      "name": "AtlasIntel",
+      "date": "2026-10-24",
+      "field": "18 a 23/10",
+      "fieldEnd": "2026-10-23",
+      "f": 50.8,
+      "l": 49.2,
+      "totalF": 49.9,
+      "totalL": 48.4,
+      "n": 4990,
+      "margin": "±1 p.p.",
+      "converted": false,
+      "url": "https://noticias.uol.com.br/eleicoes/2026/10/24/atlasintel-presidencial-24-de-outubro.ghtm",
+      "registration": "BR-06380/2026",
+      "method": "Recrutamento digital; entrevistas nacionais",
+      "confidence": 95,
+      "sourceType": "UOL, CNN Brasil e CartaCapital, 24/10/2026; consulta direta ao PesqEle pendente",
+      "voteBasis": "Votos válidos publicados 50,8%/49,2%; totais 49,9%/48,4%; demais respostas 1,7%.",
+      "registrationSource": "Registro informado por UOL, CNN Brasil e CartaCapital; consulta direta ao PesqEle pendente",
+      "additionalSources": [
+        "https://www.cnnbrasil.com.br/eleicoes/atlasintel-flavio-tem-508-dos-votos-validos-no-2o-turno-lula-492/"
+      ]
     }
   ],
   "history": [
@@ -651,6 +656,12 @@
       "f": 50.83940741790566,
       "l": 49.16059258209434,
       "revision": "Datafolha 24/10 e Gerp 24/10 atualizados; 21 institutos; mesma fórmula padrão."
+    },
+    {
+      "date": "2026-10-24",
+      "f": 50.83766476846019,
+      "l": 49.16233523153981,
+      "revision": "AtlasIntel 24/10 incorporada; 21 institutos; fórmula padrão preservada."
     }
   ],
   "instituteHistory": {
@@ -1084,6 +1095,26 @@
         ],
         "registrationSource": "BR-04499/2026 informado em reportagens com ficha técnica; PesqEle pendente"
       }
+    ],
+    "AtlasIntel": [
+      {
+        "name": "AtlasIntel",
+        "date": "2026-10-19",
+        "field": "13 a 18/10",
+        "fieldEnd": "2026-10-18",
+        "f": 51.1,
+        "l": 48.9,
+        "n": 4998,
+        "margin": "±1 p.p.",
+        "converted": false,
+        "url": "https://noticias.uol.com.br/eleicoes/2026/10/19/atlasintel-pesquisa-presidencial-segundo-turno.ghtm",
+        "registration": "BR-02418/2026",
+        "method": "Recrutamento digital aleatório; entrevistas pela internet",
+        "confidence": 95,
+        "sourceType": "UOL, 19/10/2026; ficha técnica na reportagem; consulta direta ao PesqEle pendente",
+        "voteBasis": "Votos válidos informados na reportagem; votos totais não transcritos por falta de conferência",
+        "registrationSource": "Registro BR-02418/2026 informado pelo UOL"
+      }
     ]
   },
   "weights": [
@@ -1127,8 +1158,8 @@
     "model": "Modelo padrão: qualidade A/B/C provisória + acurácia moderada + recência de 7 dias",
     "provisional": true,
     "previousDate": "2026-10-13",
-    "newPoll": "Quaest 24/10 incorporada; Instituto França excluído dos cálculos conforme determinação editorial anterior, com dados preservados para auditoria; média histórica congelada conforme AGENTS.md; indicadores dinâmicos no app.js.",
-    "sdBetweenInstitutesPp": 0.8042031060086463,
+    "newPoll": "AtlasIntel/Bloomberg 24/10 substitui rodada de 19/10; 21 institutos; pesos padrão preservados.",
+    "sdBetweenInstitutesPp": 0.7841896026491192,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
   "sourcePolicy": {
@@ -2289,7 +2320,7 @@
         "name": "Indexa/Broadcast",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.701523487085811,
+        "weightPercent": 4.567541474894223,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2299,7 +2330,7 @@
         "name": "Palver",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.429446956854037,
+        "weightPercent": 4.3032184656414865,
         "originalMaePp": 2.45,
         "qualityTier": "C",
         "qualityStatus": "provisional",
@@ -2309,7 +2340,7 @@
         "name": "Quaest",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.535765404450035,
+        "weightPercent": 7.991691436191332,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2319,7 +2350,7 @@
         "name": "PoderData/Aya",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.701523487085811,
+        "weightPercent": 4.567541474894223,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2329,7 +2360,7 @@
         "name": "BTG/Nexus",
         "firstRoundMaePp": 4.595,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.620529524127458,
+        "weightPercent": 4.48885564336653,
         "originalMaePp": 4.595,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2339,7 +2370,7 @@
         "name": "Futura/100% Cidades",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.25828108034618,
+        "weightPercent": 4.136930401318564,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2349,7 +2380,7 @@
         "name": "Gerp",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.327781366934339,
+        "weightPercent": 6.147454950916409,
         "originalMaePp": 1.095,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2360,7 +2391,7 @@
         "name": "AtlasIntel",
         "firstRoundMaePp": 2.35,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.636798444452035,
+        "weightPercent": 7.390665270069456,
         "originalMaePp": 2.35,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2370,7 +2401,7 @@
         "name": "Datafolha",
         "firstRoundMaePp": 2.6,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 7.98529906244258,
+        "weightPercent": 7.757737413696928,
         "originalMaePp": 2.6,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2380,7 +2411,7 @@
         "name": "CNT/MDA",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 7.450587724216835,
+        "weightPercent": 7.238264051253697,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2390,7 +2421,7 @@
         "name": "Ipespe/Abrapel",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.190902780382579,
+        "weightPercent": 5.04297464570093,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2401,7 +2432,7 @@
         "firstRoundMaePp": 0.66,
         "originalMaePp": 0.66,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.6340739421409225,
+        "weightPercent": 6.445018930879718,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -2411,7 +2442,7 @@
         "firstRoundMaePp": 2.61674,
         "originalMaePp": 2.61674,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.1844864524816443,
+        "weightPercent": 3.093736315026773,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -2421,7 +2452,7 @@
         "firstRoundMaePp": 2.45,
         "originalMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.6336319462678053,
+        "weightPercent": 3.5300822519906507,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -2430,7 +2461,7 @@
         "name": "Real Time Big Data",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.190902780382579,
+        "weightPercent": 5.04297464570093,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2439,7 +2470,7 @@
         "name": "Alfa Inteligência",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.190902780382579,
+        "weightPercent": 5.04297464570093,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2448,7 +2479,7 @@
         "name": "Data Ranking",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.0059274642122245,
+        "weightPercent": 1.9487633984144566,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2457,7 +2488,7 @@
         "name": "Meio/Ideia",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.8568259435568093,
+        "weightPercent": 3.7469157618870033,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2466,7 +2497,7 @@
         "name": "Phoenix",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.0059274642122245,
+        "weightPercent": 1.9487633984144566,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2476,14 +2507,14 @@
         "firstRoundMaePp": null,
         "originalMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.731221326320642,
+        "weightPercent": 5.567895424041305,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral",
         "accuracyNote": "Sem erro histórico auditado; fator de acurácia neutro. Classe B editorial provisória por abrangência nacional e metodologia presencial domiciliar."
       }
     ],
-    "sd": 0.8042031060086463,
+    "sd": 0.7841896026491192,
     "formula": "weight_i ∝ tier_i * (MAE_i null ? 1 : sqrt(2.45/max(1.5,MAE_i))) * 2^(-days_since_field_end/7) * (1-min(.3,.1*max(0,abs(f_i-recency_median)-2.5)))",
     "sensitivityPp": 3,
     "statisticalInterval": false,
