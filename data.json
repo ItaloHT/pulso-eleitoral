@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261024-quaest-final-v10",
+  "revision": "standard-20261024-quaest-franca-excluded-v11",
   "referenceDate": "2026-10-24",
   "publishedAt": "2026-10-24T19:12:07-03:00",
   "polls": [
@@ -464,7 +464,8 @@
       "additionalSources": [
         "https://www.pesquisaeleitoral.com.br/pesquisas/2026/instituto-franca-de-pesquisas-br-04863"
       ],
-      "qualityCaveat": "Relatório de imprensa e cadastro do TSE usam descrições amostrais diferentes; ficha metodológica integral e execução de campo não auditadas independentemente."
+      "qualityCaveat": "Relatório de imprensa e cadastro do TSE usam descrições amostrais diferentes; ficha metodológica integral e execução de campo não auditadas independentemente.",
+      "excludeFromCalculations": true
     },
     {
       "name": "CNT/MDA",
@@ -1126,7 +1127,7 @@
     "model": "Modelo padrão: qualidade A/B/C provisória + acurácia moderada + recência de 7 dias",
     "provisional": true,
     "previousDate": "2026-10-13",
-    "newPoll": "Quaest 24/10 incorporada como rodada vigente; histórico preservado; série de média histórica permanece congelada conforme AGENTS.md, e indicadores dinâmicos seguem o cálculo existente em app.js.",
+    "newPoll": "Quaest 24/10 incorporada; Instituto França excluído dos cálculos conforme determinação editorial anterior, com dados preservados para auditoria; média histórica congelada conforme AGENTS.md; indicadores dinâmicos no app.js.",
     "sdBetweenInstitutesPp": 0.8042031060086463,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
@@ -1956,7 +1957,8 @@
       "scope": "second_round",
       "basis": "total_respondents",
       "categoriesExclusive": true,
-      "question": "Segundo turno, brancos/nulos e indecisos informados separadamente; confirmar questionário original"
+      "question": "Segundo turno, brancos/nulos e indecisos informados separadamente; confirmar questionário original",
+      "excludeFromCalculations": true
     },
     {
       "institute": "Data Ranking",
@@ -2125,7 +2127,8 @@
       "scope": "second_round",
       "basis": "total_respondents",
       "categoriesExclusive": true,
-      "question": "Intenção estimulada de 2º turno: brancos/nulos 7,4% e não sabe/não respondeu 3,9% em categorias distintas da amostra total."
+      "question": "Intenção estimulada de 2º turno: brancos/nulos 7,4% e não sabe/não respondeu 3,9% em categorias distintas da amostra total.",
+      "excludeFromCalculations": true
     },
     {
       "institute": "CNT/MDA",
@@ -2440,17 +2443,6 @@
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
-      },
-      {
-        "name": "IFP (Instituto França)",
-        "firstRoundMaePp": 5.3,
-        "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.727660581664887,
-        "qualityTier": "C",
-        "qualityStatus": "provisional",
-        "accuracyStatus": "provisional_single_election_comparison",
-        "originalMaePp": 5.3,
-        "accuracyNote": "Valor pontual de 5,3 p.p. usado provisoriamente no fator de acurácia existente; não representa MAE histórico auditado. Revisar mediante validação documental comparável."
       },
       {
         "name": "Data Ranking",
