@@ -116,6 +116,35 @@ function independentToday(rec,cutoff){
  }
  return {f:Math.max(0,Math.min(100,rec.f+adjustment)),adjustment,coverage};
 }
+function shortWindowTrend(cutoff){
+ const model=dataset.standardModel,day=s=>Date.parse(s+'T00:00:00Z')/86400000;
+ const values=[];
+ for(let k=3;k>=0;k--){
+  const date=new Date((day(cutoff)-k)*86400000).toISOString().slice(0,10);
+  const rows=model.institutes.map(i=>{
+   const p=polls.filter(q=>q.name===i.name&&q.date<=date&&q.fieldEnd&&q.fieldEnd<=date&&q.eligible!==false&&!q.excludeFromCalculations&&Number.isFinite(q.f)).sort((a,b)=>b.fieldEnd.localeCompare(a.fieldEnd)||b.date.localeCompare(a.date))[0];
+   if(!p)return null;
+   const age=Math.max(0,day(date)-day(p.fieldEnd));
+   const raw=Math.pow(2,-age/(model.halfLifeDays||7));
+   const quality=model.qualityFactors?.[i.qualityTier]??1;
+   const accuracy=Number.isFinite(i.firstRoundMaePp)?Math.sqrt((model.accuracyReferencePp||2.45)/Math.max(model.accuracyFloorPp||1.5,i.firstRoundMaePp)):1;
+   return {f:p.f,raw,quality,accuracy};
+  }).filter(Boolean);
+  if(!rows.length)return null;
+  const ordered=[...rows].sort((a,b)=>a.f-b.f);
+  const rawTotal=rows.reduce((a,b)=>a+b.raw,0);let cum=0,reference=ordered.at(-1).f;
+  for(const row of ordered){cum+=row.raw;if(cum>=rawTotal/2){reference=row.f;break;}}
+  let total=0,sum=0;
+  for(const row of rows){
+   const w=row.raw*row.quality*row.accuracy*(1-Math.min(.3,.1*Math.max(0,Math.abs(row.f-reference)-2.5)));
+   total+=w;sum+=w*row.f;
+  }
+  values.push({date,f:sum/total,l:100-sum/total,available:rows.length});
+ }
+ const avg=values.reduce((a,b)=>a+b.f,0)/values.length;
+ const slope=values.reduce((a,v,i)=>a+(i-1.5)*(v.f-avg),0)/5;
+ return {points:values,slope};
+}
 function trendModel(){
  const rec=recencyAggregate();if(!rec)return null;
  const cutoff=dataset.dataCutoffDate||dataset.referenceDate;
@@ -141,11 +170,12 @@ function trendModel(){
  });
  if(points.at(-1).date!==cutoff)points.push({date:cutoff,f:today.f,l:100-today.f});
  const days=series.reduce((a,r)=>a+r.w*(r.t1-r.t0),0)/coverage;
- return {points,fittedPoints:points,n:series.length,cutoff,coverage,change,slope:change/days,meanF:today.f,officialF:rec.f,todayAdjustment:today.adjustment,todayCoverage:today.coverage,lastPollDate:points.at(-1).date};
+ const short=shortWindowTrend(cutoff);
+ return {points:short?.points||points,fittedPoints:short?.points||points,n:series.length,cutoff,coverage,change,slope:short?.slope??change/days,meanF:rec.f,officialF:rec.f,todayAdjustment:today.adjustment,todayCoverage:today.coverage,lastPollDate:cutoff,trendWindowDays:4};
 }
 function conditionalProjection(model){
- const days=Math.max(0,(Date.parse('2026-10-25T11:00:00Z')-Date.parse(model.cutoff+'T03:00:00Z'))/86400000);
- const slope=Math.max(-.15,Math.min(.15,model.slope*.5));
+ const days=Math.max(0,(Date.parse('2026-10-25T00:00:00Z')-Date.parse(model.cutoff+'T00:00:00Z'))/86400000);
+ const slope=Math.max(-.15,Math.min(.15,model.slope));
  const f=Math.max(0,Math.min(100,model.meanF+slope*days));
  return {date:'2026-10-25',days,slope,rawSlope:model.slope,f,l:100-f,from:{date:model.cutoff,f:model.meanF,l:100-model.meanF}};
 }
