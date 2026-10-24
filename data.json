@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261024-nexus-palver-v8",
+  "revision": "standard-20261024-nexus-palver-v8-dedup",
   "referenceDate": "2026-10-24",
-  "publishedAt": "2026-10-24T18:23:00-03:00",
+  "publishedAt": "2026-10-24T18:25:00-03:00",
   "polls": [
     {
       "name": "Palver",
@@ -226,7 +226,10 @@
       "converted": false,
       "voteBasis": "Votos válidos publicados 50%/50% (arredondados); totais 47% Flávio, 46% Lula, 5% brancos/nulos e 2% indecisos.",
       "sourceType": "Datafolha/Folha e CNN Brasil, divulgação 22/10/2026",
-      "fieldEnd": "2026-10-22"
+      "fieldEnd": "2026-10-22",
+      "additionalSources": [
+        "https://www1.folha.uol.com.br/poder/2026/10/datafolha-flavio-bolsonaro-e-lula-empatam-com-50-dos-votos-validos-cada.shtml"
+      ]
     },
     {
       "name": "Ipespe/Abrapel",
@@ -376,25 +379,6 @@
       "sourceType": "UOL e Veja; resultados e registro corroborados por duas fontes jornalísticas; consulta direta ao PesqEle pendente",
       "voteBasis": "Votos válidos 51%/49% divulgados",
       "registrationSource": "BR-07926/2026 informado por UOL e Veja; ficha original do PesqEle ainda não consultada"
-    },
-    {
-      "name": "Datafolha",
-      "date": "2026-10-22",
-      "field": "20 a 22/10",
-      "f": 50,
-      "l": 50,
-      "n": 2520,
-      "margin": "±2 p.p.",
-      "url": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-flavio-bolsonaro-e-lula-empatam-com-50-dos-votos-validos-cada.shtml",
-      "registration": "BR-09709/2026",
-      "registrationSource": "Número informado pela Folha em publicação de 22/10; conferência direta no PesqEle pendente",
-      "primaryUrl": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-flavio-bolsonaro-e-lula-empatam-com-50-dos-votos-validos-cada.shtml",
-      "totalF": 47,
-      "totalL": 46,
-      "converted": false,
-      "voteBasis": "Votos válidos divulgados (50%/50%); totais 47%/46%; brancos/nulos 5%, indecisos 2%; sem conversão.",
-      "sourceType": "Folha de S.Paulo, divulgação 22/10/2026",
-      "fieldEnd": "2026-10-22"
     },
     {
       "name": "Vox Brasil",
