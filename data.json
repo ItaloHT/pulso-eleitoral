@@ -1,8 +1,29 @@
 {
-  "revision": "standard-20261024-nexus-final-v7",
+  "revision": "standard-20261024-nexus-palver-v8",
   "referenceDate": "2026-10-24",
-  "publishedAt": "2026-10-24T18:00:00-03:00",
+  "publishedAt": "2026-10-24T18:23:00-03:00",
   "polls": [
+    {
+      "name": "Palver",
+      "date": "2026-10-24",
+      "publicationTime": "18:00",
+      "field": "22 a 24/10",
+      "fieldEnd": "2026-10-24",
+      "f": 50.505050505050505,
+      "l": 49.494949494949495,
+      "totalF": 50,
+      "totalL": 49,
+      "n": 5000,
+      "margin": "±2,2 p.p.",
+      "converted": true,
+      "url": "https://noticias.uol.com.br/eleicoes/2026/10/24/pesquisa-palver-presidencial-segundo-turno-24-de-outubro.ghtm",
+      "registration": "BR-01794/2026",
+      "confidence": 95,
+      "conversionNote": "Normalização dos percentuais totais arredondados publicados: 50/(50+49) e 49/(50+49); votos válidos estimados, não divulgados diretamente. Margem publicada não recalculada.",
+      "sourceType": "UOL 24/10/2026 às 18h00, atualizado às 18h08",
+      "voteBasis": "Votos totais estimulados publicados: Flávio 50%, Lula 49%, brancos/nulos/não votaria 1%, indecisos 0%. Votos válidos estimados por normalização dos totais arredondados.",
+      "registrationSource": "Registro BR-01794/2026 informado pelo UOL; conferência direta no PesqEle pendente"
+    },
     {
       "name": "Futura/100% Cidades",
       "date": "2026-10-21",
@@ -632,6 +653,12 @@
       "f": 50.839373,
       "l": 49.160627,
       "revision": "Datafolha 22/10 corrigido na rodada vigente; CNT/MDA 16/10 rejeição comparável incorporada; 21 institutos, metodologia preservada."
+    },
+    {
+      "date": "2026-10-24",
+      "f": 50.798485620753624,
+      "l": 49.201514379246376,
+      "revision": "Palver 24/10 incorporada após BTG/Nexus; 21 institutos; mesma fórmula qualidade/acurácia/recência de 7 dias e discrepância."
     }
   ],
   "instituteHistory": {
@@ -721,6 +748,27 @@
         "sourceType": "Reportagem com ficha técnica",
         "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
         "fieldEnd": "2026-10-13"
+      },
+      {
+        "name": "Palver",
+        "date": "2026-10-21",
+        "field": "18 a 20/10",
+        "fieldEnd": "2026-10-20",
+        "f": 51.02040816326531,
+        "l": 48.97959183673469,
+        "totalF": 50,
+        "totalL": 48,
+        "n": 5000,
+        "margin": "±2,4 p.p.",
+        "converted": true,
+        "url": "https://noticias.uol.com.br/eleicoes/2026/10/21/palver-pesquisa-presidencial-segundo-turno-21-de-outubro.ghtm",
+        "registration": "BR-04612/2026",
+        "method": "Questionário online; recrutamento por anúncios em redes sociais; amostragem não probabilística",
+        "confidence": 95,
+        "conversionNote": "Normalização dos percentuais totais arredondados: 50/(50+48) e 48/(50+48). Percentuais válidos estimados, não divulgados diretamente. Margem publicada não recalculada.",
+        "sourceType": "UOL 21/10/2026 07h; corroborado por Folha e Exame",
+        "voteBasis": "Votos válidos estimados a partir de totais arredondados",
+        "registrationSource": "Registro informado pelo UOL e Exame; ficha individual PesqEle não consultada"
       }
     ],
     "Indexa/Broadcast": [
@@ -1070,8 +1118,8 @@
     "model": "Modelo padrão: qualidade A/B/C provisória + acurácia moderada + recência de 7 dias",
     "provisional": true,
     "previousDate": "2026-10-13",
-    "newPoll": "Datafolha 22/10 (rodada já publicada e omitida da média) incorporado; rejeição CNT/MDA 16/10 adicionada à série comparável. 21 institutos.",
-    "sdBetweenInstitutesPp": 0.9677291013048513,
+    "newPoll": "BTG/Nexus e Palver 24/10 atualizados em rodadas independentes; Palver 50%/49% totais convertidos para válidos, rejeição declarada e brancos/nulos/indecisos verificados; parâmetros preservados.",
+    "sdBetweenInstitutesPp": 0.9216606023331451,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
   "sourcePolicy": {
@@ -1335,11 +1383,12 @@
     {
       "name": "Palver",
       "date": "2026-10-24",
-      "registration": "A confirmar",
-      "field": "A confirmar",
+      "registration": "BR-01794/2026",
+      "field": "22 a 24/10",
       "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
-      "status": "announced",
-      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+      "status": "published",
+      "note": "Divulgação confirmada pelo UOL em 24/10/2026 às 18h00.",
+      "publicationSource": "https://noticias.uol.com.br/eleicoes/2026/10/24/pesquisa-palver-presidencial-segundo-turno-24-de-outubro.ghtm"
     },
     {
       "name": "CNT/MDA",
@@ -1687,6 +1736,21 @@
       "registration": "BR-08234/2026",
       "source": "https://veja.abril.com.br/politica/a-nova-pesquisa-btg-nexus-sobre-a-disputa-flavio-x-lula-a-ultima-antes-do-segundo-turno/",
       "scope": "second_round"
+    },
+    {
+      "institute": "Palver",
+      "date": "2026-10-24",
+      "field": "22 a 24/10",
+      "f": 47,
+      "l": 49,
+      "n": 5000,
+      "margin": 2.2,
+      "group": "declared",
+      "question": "Não votaria de jeito nenhum em cada candidato; rejeição declarada, não exclusiva.",
+      "registration": "BR-01794/2026",
+      "source": "https://noticias.uol.com.br/eleicoes/2026/10/24/pesquisa-palver-presidencial-segundo-turno-24-de-outubro.ghtm",
+      "scope": "second_round",
+      "scopeEvidence": "UOL 24/10: Flávio 47% e Lula 49% em rejeição; categorias exclusivas não informadas."
     }
   ],
   "openVote": [
@@ -2079,6 +2143,19 @@
       "basis": "total_respondents",
       "categoriesExclusive": true,
       "question": "Intenção estimulada no segundo turno: brancos/nulos 5,2% e não sabe/não respondeu 1,8%, categorias distintas."
+    },
+    {
+      "institute": "Palver",
+      "date": "2026-10-24",
+      "fieldEnd": "2026-10-24",
+      "blankNull": 1,
+      "undecided": 0,
+      "registration": "BR-01794/2026",
+      "source": "https://noticias.uol.com.br/eleicoes/2026/10/24/pesquisa-palver-presidencial-segundo-turno-24-de-outubro.ghtm",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Votos totais estimulados: branco/nulo/não votaria 1%; indecisos 0%."
     }
   ],
   "experimentalArchive": {
@@ -2187,7 +2264,7 @@
         "name": "Indexa/Broadcast",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.173431276212577,
+        "weightPercent": 4.849978105885592,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2197,7 +2274,7 @@
         "name": "Palver",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.2799893926161285,
+        "weightPercent": 4.56931052688189,
         "originalMaePp": 2.45,
         "qualityTier": "C",
         "qualityStatus": "provisional",
@@ -2207,7 +2284,7 @@
         "name": "Quaest",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.091408872001381,
+        "weightPercent": 5.710561924161146,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2217,7 +2294,7 @@
         "name": "PoderData/Aya",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.8438446658471825,
+        "weightPercent": 4.849978105885592,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2227,7 +2304,7 @@
         "name": "BTG/Nexus",
         "firstRoundMaePp": 4.595,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.8067653945053004,
+        "weightPercent": 4.766426689384979,
         "originalMaePp": 4.595,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2237,7 +2314,7 @@
         "name": "Futura/100% Cidades",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.685699132308755,
+        "weightPercent": 4.39273994166242,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2247,7 +2324,7 @@
         "name": "Gerp",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.173431276212577,
+        "weightPercent": 4.849978105885592,
         "originalMaePp": 1.095,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2258,7 +2335,7 @@
         "name": "AtlasIntel",
         "firstRoundMaePp": 2.35,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.102209562477543,
+        "weightPercent": 4.783209314761058,
         "originalMaePp": 2.35,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2268,7 +2345,7 @@
         "name": "Datafolha",
         "firstRoundMaePp": 2.6,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 7.208131315716036,
+        "weightPercent": 6.757464668819272,
         "originalMaePp": 2.6,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2278,7 +2355,7 @@
         "name": "CNT/MDA",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 8.198428374229103,
+        "weightPercent": 7.685846393767485,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2288,7 +2365,7 @@
         "name": "Ipespe/Abrapel",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.711931221778435,
+        "weightPercent": 5.354809968255861,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2299,7 +2376,7 @@
         "firstRoundMaePp": 0.66,
         "originalMaePp": 0.66,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 7.299958346534216,
+        "weightPercent": 6.843550491790268,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -2309,7 +2386,7 @@
         "firstRoundMaePp": 2.61674,
         "originalMaePp": 2.61674,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.5041241115133634,
+        "weightPercent": 3.285039331495179,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -2319,7 +2396,7 @@
         "firstRoundMaePp": 2.45,
         "originalMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.998351855244904,
+        "weightPercent": 3.748366977779103,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -2328,7 +2405,7 @@
         "name": "Real Time Big Data",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.243948587752893,
+        "weightPercent": 5.354809968255861,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2337,7 +2414,7 @@
         "name": "Alfa Inteligência",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.711931221778435,
+        "weightPercent": 5.354809968255861,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2346,7 +2423,7 @@
         "name": "IFP (Instituto França)",
         "firstRoundMaePp": 5.3,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.0014450853725494,
+        "weightPercent": 2.813788793717539,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "provisional_single_election_comparison",
@@ -2357,7 +2434,7 @@
         "name": "Data Ranking",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.2072691776770657,
+        "weightPercent": 2.0692663367835533,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2366,7 +2443,7 @@
         "name": "Meio/Ideia",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.243948587752893,
+        "weightPercent": 3.9786085161209064,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2375,7 +2452,7 @@
         "name": "Phoenix",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.2072691776770657,
+        "weightPercent": 2.0692663367835533,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2385,14 +2462,14 @@
         "firstRoundMaePp": null,
         "originalMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.3064833647916165,
+        "weightPercent": 5.912189533667296,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral",
         "accuracyNote": "Sem erro histórico auditado; fator de acurácia neutro. Classe B editorial provisória por abrangência nacional e metodologia presencial domiciliar."
       }
     ],
-    "sd": 0.9677291013048513,
+    "sd": 0.9216606023331451,
     "formula": "weight_i ∝ tier_i * (MAE_i null ? 1 : sqrt(2.45/max(1.5,MAE_i))) * 2^(-days_since_field_end/7) * (1-min(.3,.1*max(0,abs(f_i-recency_median)-2.5)))",
     "sensitivityPp": 3,
     "statisticalInterval": false,
@@ -3144,6 +3221,13 @@
         "l": 49.179368,
         "revision": "CNT/MDA e Colectta 24/10 incorporadas; 21 institutos; Colectta classe B provisória, acurácia neutra, parâmetros padrão preservados."
       }
+    },
+    {
+      "date": "2026-10-24",
+      "previousRevision": "standard-20261024-nexus-final-v7",
+      "previousMeanF": 50.81902444922633,
+      "previousMeanL": 49.18097555077367,
+      "note": "Média dinâmica anterior à incorporação da Palver de 24/10, preservada para auditoria."
     }
   ]
 }
