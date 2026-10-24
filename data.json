@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261024-cnt-mda-rejection-verified-v5",
+  "revision": "standard-20261024-datafolha22-cnt-rejection-series-v6",
   "referenceDate": "2026-10-24",
-  "publishedAt": "2026-10-24T15:38:00-03:00",
+  "publishedAt": "2026-10-24T15:43:00-03:00",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -226,22 +226,22 @@
     },
     {
       "name": "Datafolha",
-      "date": "2026-10-15",
-      "field": "13 a 14/10",
-      "f": 51,
-      "l": 49,
+      "date": "2026-10-22",
+      "field": "20 a 22/10",
+      "f": 50,
+      "l": 50,
       "n": 2520,
       "margin": "±2 p.p.",
-      "url": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-flavio-bolsonaro-tem-51-e-lula-49-dos-votos-validos-um-empate-tecnico.shtml",
-      "registration": "BR-00466/2026",
-      "registrationSource": "Número informado em publicação sobre a pesquisa; conferência individual no PesqEle pendente",
-      "primaryUrl": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-flavio-bolsonaro-tem-51-e-lula-49-dos-votos-validos-um-empate-tecnico.shtml",
+      "url": "https://datafolha.folha.uol.com.br/eleicoes/2026/10/flavio-bolsonaro-pl-tem-47-e-tem-empate-tecnico-com-lula-pt-que-aparece-com-46.shtml",
+      "registration": "BR-09709/2026",
+      "registrationSource": "Publicação original Datafolha e CNN Brasil, 22/10/2026",
+      "primaryUrl": "https://datafolha.folha.uol.com.br/eleicoes/2026/10/flavio-bolsonaro-pl-tem-47-e-tem-empate-tecnico-com-lula-pt-que-aparece-com-46.shtml",
       "totalF": 47,
-      "totalL": 45,
+      "totalL": 46,
       "converted": false,
-      "voteBasis": "Votos válidos publicados pelo Datafolha; sem conversão pelo Pulso.",
-      "sourceType": "Publicação da Folha, contratante da pesquisa, atualizada em 15/10 às 19h12",
-      "fieldEnd": "2026-10-14"
+      "voteBasis": "Votos válidos publicados 50%/50% (arredondados); totais 47% Flávio, 46% Lula, 5% brancos/nulos e 2% indecisos.",
+      "sourceType": "Datafolha/Folha e CNN Brasil, divulgação 22/10/2026",
+      "fieldEnd": "2026-10-22"
     },
     {
       "name": "Ipespe/Abrapel",
@@ -642,9 +642,9 @@
     },
     {
       "date": "2026-10-24",
-      "f": 50.820632,
-      "l": 49.179368,
-      "revision": "CNT/MDA e Colectta 24/10 incorporadas; 21 institutos; Colectta classe B provisória, acurácia neutra, parâmetros padrão preservados."
+      "f": 50.839373,
+      "l": 49.160627,
+      "revision": "Datafolha 22/10 corrigido na rodada vigente; CNT/MDA 16/10 rejeição comparável incorporada; 21 institutos, metodologia preservada."
     }
   ],
   "instituteHistory": {
@@ -1045,8 +1045,8 @@
     "model": "Modelo padrão: qualidade A/B/C provisória + acurácia moderada + recência de 7 dias",
     "provisional": true,
     "previousDate": "2026-10-13",
-    "newPoll": "CNT/MDA 24/10 e Colectta/Brazil Economy 24/10 incorporadas à média dinâmica; Colectta classe B provisória com acurácia neutra; 21 institutos e fórmula padrão preservada.",
-    "sdBetweenInstitutesPp": 0.9385240699563416,
+    "newPoll": "Datafolha 22/10 (rodada já publicada e omitida da média) incorporado; rejeição CNT/MDA 16/10 adicionada à série comparável. 21 institutos.",
+    "sdBetweenInstitutesPp": 0.9677291013048513,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
   "sourcePolicy": {
@@ -1423,6 +1423,22 @@
       "scopeEvidence": "A publicação explicita rejeição exclusiva no segundo turno entre Lula e Flávio Bolsonaro."
     },
     {
+      "institute": "CNT/MDA",
+      "date": "2026-10-16",
+      "field": "13 a 15/10",
+      "f": 46.6,
+      "l": 48.8,
+      "n": 2014,
+      "margin": 2.2,
+      "group": "declared",
+      "question": "Não votaria de jeito nenhum em cada candidato (perguntas individuais; rejeição declarada, não exclusiva).",
+      "method": "Entrevistas presenciais, abrangência nacional",
+      "registration": "BR-00652/2026",
+      "source": "https://www.cnnbrasil.com.br/eleicoes/cnt-mda-488-rejeitam-voto-em-lula-466-em-flavio/",
+      "scope": "second_round",
+      "scopeEvidence": "CNN Brasil 16/10/2026: rejeição Flávio 46,6%, Lula 48,8%, amostra 2.014."
+    },
+    {
       "institute": "Ipespe/Abrapel",
       "date": "2026-10-17",
       "field": "13 a 15/10",
@@ -1467,6 +1483,22 @@
       "registration": "BR-02586/2026",
       "source": "https://www.poder360.com.br/poderdata/a-6-dias-do-2o-turno-rejeicao-a-lula-vai-a-48-e-de-flavio-e-de-44/",
       "scope": "second_round"
+    },
+    {
+      "institute": "Alfa Inteligência",
+      "date": "2026-10-20",
+      "field": "15 a 19/10",
+      "f": 45,
+      "l": 46,
+      "n": 2700,
+      "margin": 1.9,
+      "group": "declared",
+      "question": "Não votaria de jeito nenhum em cada candidato; sem categorias exclusivas publicadas",
+      "method": "Entrevistas presenciais",
+      "registration": "BR-00820/2026",
+      "source": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/10/20/alfa-inteligencia-flavio-tem-488-dos-votos-totais-contra-459-de-lula-em-empate-tecnico.htm",
+      "scope": "second_round",
+      "scopeEvidence": "Percentuais individuais publicados; questionário integral não conferido; não inferir exclusividade ou transferência de votos."
     },
     {
       "institute": "Quaest",
@@ -1548,22 +1580,6 @@
       "source": "https://static.poder360.com.br/uploads/2026/10/rejeicaovoxbrasil-23out.png",
       "scope": "second_round",
       "scopeEvidence": "Gráfico original do instituto apresenta categorias mutuamente exclusivas somando 100%; não comparar diretamente à rejeição declarada não exclusiva de outros institutos."
-    },
-    {
-      "institute": "Alfa Inteligência",
-      "date": "2026-10-20",
-      "field": "15 a 19/10",
-      "f": 45,
-      "l": 46,
-      "n": 2700,
-      "margin": 1.9,
-      "group": "declared",
-      "question": "Não votaria de jeito nenhum em cada candidato; sem categorias exclusivas publicadas",
-      "method": "Entrevistas presenciais",
-      "registration": "BR-00820/2026",
-      "source": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/10/20/alfa-inteligencia-flavio-tem-488-dos-votos-totais-contra-459-de-lula-em-empate-tecnico.htm",
-      "scope": "second_round",
-      "scopeEvidence": "Percentuais individuais publicados; questionário integral não conferido; não inferir exclusividade ou transferência de votos."
     },
     {
       "institute": "Alfa Inteligência",
@@ -2117,7 +2133,7 @@
         "name": "Indexa/Broadcast",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.032639695899094,
+        "weightPercent": 5.173431276212577,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2127,7 +2143,7 @@
         "name": "Palver",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.1907266064028046,
+        "weightPercent": 3.2799893926161285,
         "originalMaePp": 2.45,
         "qualityTier": "C",
         "qualityStatus": "provisional",
@@ -2137,7 +2153,7 @@
         "name": "Quaest",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.925635126176637,
+        "weightPercent": 6.091408872001381,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2147,7 +2163,7 @@
         "name": "PoderData/Aya",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.032639695899094,
+        "weightPercent": 3.8438446658471825,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2157,7 +2173,7 @@
         "name": "BTG/Nexus",
         "firstRoundMaePp": 4.595,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.730381092798504,
+        "weightPercent": 2.8067653945053004,
         "originalMaePp": 4.595,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2167,7 +2183,7 @@
         "name": "Futura/100% Cidades",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.55818086628972,
+        "weightPercent": 4.685699132308755,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2177,7 +2193,7 @@
         "name": "Gerp",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.032639695899094,
+        "weightPercent": 5.173431276212577,
         "originalMaePp": 1.095,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2188,7 +2204,7 @@
         "name": "AtlasIntel",
         "firstRoundMaePp": 2.35,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.963356234958776,
+        "weightPercent": 5.102209562477543,
         "originalMaePp": 2.35,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2198,7 +2214,7 @@
         "name": "Datafolha",
         "firstRoundMaePp": 2.6,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 7.0119666921106125,
+        "weightPercent": 7.208131315716036,
         "originalMaePp": 2.6,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2208,7 +2224,7 @@
         "name": "CNT/MDA",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 7.975313457790192,
+        "weightPercent": 8.198428374229103,
         "originalMaePp": 2.45,
         "qualityTier": "A",
         "qualityStatus": "provisional",
@@ -2218,7 +2234,7 @@
         "name": "Ipespe/Abrapel",
         "firstRoundMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.556484714340754,
+        "weightPercent": 5.711931221778435,
         "originalMaePp": 2.45,
         "qualityTier": "B",
         "qualityStatus": "provisional",
@@ -2229,7 +2245,7 @@
         "firstRoundMaePp": 0.66,
         "originalMaePp": 0.66,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 7.101294709779854,
+        "weightPercent": 7.299958346534216,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -2239,7 +2255,7 @@
         "firstRoundMaePp": 2.61674,
         "originalMaePp": 2.61674,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.408761644142245,
+        "weightPercent": 3.5041241115133634,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -2249,7 +2265,7 @@
         "firstRoundMaePp": 2.45,
         "originalMaePp": 2.45,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 3.889539300038528,
+        "weightPercent": 3.998351855244904,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "registered_not_independently_audited"
@@ -2258,7 +2274,7 @@
         "name": "Real Time Big Data",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.556484714340754,
+        "weightPercent": 4.243948587752893,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2267,7 +2283,7 @@
         "name": "Alfa Inteligência",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 5.556484714340754,
+        "weightPercent": 5.711931221778435,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2276,7 +2292,7 @@
         "name": "IFP (Instituto França)",
         "firstRoundMaePp": 5.3,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.9197627020118673,
+        "weightPercent": 3.0014450853725494,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "provisional_single_election_comparison",
@@ -2287,7 +2303,7 @@
         "name": "Data Ranking",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.147199777097359,
+        "weightPercent": 2.2072691776770657,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2296,7 +2312,7 @@
         "name": "Meio/Ideia",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 4.128452276593554,
+        "weightPercent": 4.243948587752893,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2305,7 +2321,7 @@
         "name": "Phoenix",
         "firstRoundMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 2.147199777097359,
+        "weightPercent": 2.2072691776770657,
         "qualityTier": "C",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral"
@@ -2315,14 +2331,14 @@
         "firstRoundMaePp": null,
         "originalMaePp": null,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
-        "weightPercent": 6.134856505992455,
+        "weightPercent": 6.3064833647916165,
         "qualityTier": "B",
         "qualityStatus": "provisional",
         "accuracyStatus": "missing_neutral",
         "accuracyNote": "Sem erro histórico auditado; fator de acurácia neutro. Classe B editorial provisória por abrangência nacional e metodologia presencial domiciliar."
       }
     ],
-    "sd": 0.9385240699563416,
+    "sd": 0.9677291013048513,
     "formula": "weight_i ∝ tier_i * (MAE_i null ? 1 : sqrt(2.45/max(1.5,MAE_i))) * 2^(-days_since_field_end/7) * (1-min(.3,.1*max(0,abs(f_i-recency_median)-2.5)))",
     "sensitivityPp": 3,
     "statisticalInterval": false,
@@ -3063,6 +3079,16 @@
         "f": 50.893874,
         "l": 49.106126,
         "revision": "CNT/MDA 24/10 incorporada; Colectta 24/10 publicada sem peso; 20 institutos, parâmetros padrão preservados."
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "revision": "Before verified Datafolha 22/10 round",
+      "previous": {
+        "date": "2026-10-24",
+        "f": 50.820632,
+        "l": 49.179368,
+        "revision": "CNT/MDA e Colectta 24/10 incorporadas; 21 institutos; Colectta classe B provisória, acurácia neutra, parâmetros padrão preservados."
       }
     }
   ]
