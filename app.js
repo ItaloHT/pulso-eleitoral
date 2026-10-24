@@ -199,7 +199,7 @@ function projectionChart(points,projection){
 
 function openVoteSection(){
  const raw=Array.isArray(dataset.openVote)?dataset.openVote:[];
- const rows=raw.filter(p=>p.scope==='second_round'&&p.basis==='total_respondents'&&p.categoriesExclusive===true&&typeof p.institute==='string'&&/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(p.date)&&Number.isFinite(p.blankNull)&&Number.isFinite(p.undecided)&&p.blankNull>=0&&p.undecided>=0&&p.blankNull+p.undecided<=100&&typeof p.source==='string'&&p.source.startsWith('https://'));
+ const rows=raw.filter(p=>!p.excludeFromCalculations&&p.scope==='second_round'&&p.basis==='total_respondents'&&p.categoriesExclusive===true&&typeof p.institute==='string'&&/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(p.date)&&Number.isFinite(p.blankNull)&&Number.isFinite(p.undecided)&&p.blankNull>=0&&p.undecided>=0&&p.blankNull+p.undecided<=100&&typeof p.source==='string'&&p.source.startsWith('https://'));
  const safe=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const groups=rows.reduce((a,p)=>((a[p.institute]??=[]).push(p),a),{});
  const latest=[...new Map([...rows].sort((a,b)=>a.date.localeCompare(b.date)).map(p=>[p.institute,p])).values()];
