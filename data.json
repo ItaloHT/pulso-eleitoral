@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261024-datafolha22-cnt-rejection-series-v6",
+  "revision": "standard-20261024-nexus-final-v7",
   "referenceDate": "2026-10-24",
-  "publishedAt": "2026-10-24T15:43:00-03:00",
+  "publishedAt": "2026-10-24T18:00:00-03:00",
   "polls": [
     {
       "name": "Futura/100% Cidades",
@@ -60,29 +60,6 @@
       "sourceType": "UOL, 19/10/2026; ficha técnica na reportagem; consulta direta ao PesqEle pendente",
       "voteBasis": "Votos válidos informados na reportagem; votos totais não transcritos por falta de conferência",
       "registrationSource": "Registro BR-02418/2026 informado pelo UOL"
-    },
-    {
-      "name": "BTG/Nexus",
-      "date": "2026-10-19",
-      "field": "16 a 18/10",
-      "fieldEnd": "2026-10-18",
-      "f": 50.3,
-      "l": 49.7,
-      "totalF": 46.5,
-      "totalL": 45.9,
-      "n": 2002,
-      "margin": "±2 p.p.",
-      "converted": false,
-      "url": "https://www1.folha.uol.com.br/poder/2026/10/btgnexus-flavio-bolsonaro-tem-503-e-lula-497-dos-votos-validos.shtml",
-      "registration": "BR-04499/2026",
-      "method": "Entrevistas por telefone",
-      "confidence": 95,
-      "sourceType": "Folha de S.Paulo e Band, 19/10/2026; relatório original e conferência direta PesqEle pendentes",
-      "voteBasis": "Votos válidos informados pelo instituto: Flávio 50,3%, Lula 49,7%; votos totais 46,5% e 45,9%.",
-      "additionalSources": [
-        "https://www.band.com.br/politica/eleicoes/btg-nexus-flavio-tem-503-dos-votos-validos-e-lula-497"
-      ],
-      "registrationSource": "BR-04499/2026 informado em reportagens com ficha técnica; PesqEle pendente"
     },
     {
       "name": "Indexa/Broadcast",
@@ -158,19 +135,6 @@
       "registrationSource": "Registro informado na divulgação; conferência direta no PesqEle pendente",
       "primaryUrl": "https://www.poder360.com.br/poderdata/flavio-e-lula-empatam-em-50-dos-votos-validos-diz-poderdata-aya/",
       "fieldEnd": "2026-10-15"
-    },
-    {
-      "name": "BTG/Nexus",
-      "date": "2026-10-13",
-      "field": "10 a 12/10",
-      "f": 52,
-      "l": 48,
-      "n": 2002,
-      "margin": "±2 p.p.",
-      "url": "https://noticias.uol.com.br/eleicoes/2026/10/13/btgnexus-pesquisa-presidencial-segundo-turno.ghtm",
-      "registration": "BR-07997/2026",
-      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
-      "fieldEnd": "2026-10-12"
     },
     {
       "name": "Futura/100% Cidades",
@@ -595,6 +559,29 @@
       "excludeFromCalculations": false,
       "auditStatus": "included_provisional_tier_B_neutral_accuracy",
       "qualityCaveat": "Classe B editorial provisória com base em pesquisa presencial domiciliar nacional, 3.000 entrevistas e registro BR-05601/2026; plano amostral registrado com seleção por cotas nos setores censitários. Sem histórico de acurácia auditado: fator neutro. Verificação direta do relatório integral e execução de campo ainda pendente."
+    },
+    {
+      "name": "BTG/Nexus",
+      "date": "2026-10-24",
+      "field": "23 a 24/10",
+      "fieldEnd": "2026-10-24",
+      "f": 50.5,
+      "l": 49.5,
+      "totalF": 47,
+      "totalL": 46,
+      "n": 2000,
+      "margin": "±2,2 p.p.",
+      "converted": false,
+      "url": "https://noticias.uol.com.br/eleicoes/2026/10/24/btgnexus-presidencial-segundo-turno-24-de-outubro.ghtm",
+      "registration": "BR-08234/2026",
+      "method": "Entrevistas por telefone",
+      "confidence": 95,
+      "sourceType": "UOL/BOL e VEJA, 24/10/2026; conferência direta no PesqEle pendente",
+      "voteBasis": "Votos válidos publicados: Flávio 50,5%, Lula 49,5%; votos totais 47% e 46%.",
+      "additionalSources": [
+        "https://veja.abril.com.br/politica/a-nova-pesquisa-btg-nexus-sobre-a-disputa-flavio-x-lula-a-ultima-antes-do-segundo-turno/"
+      ],
+      "registrationSource": "Registro BR-08234/2026 informado por UOL e VEJA; conferência direta no PesqEle pendente"
     }
   ],
   "history": [
@@ -1002,6 +989,44 @@
         "voteBasis": "Votos válidos publicados; sem conversão pelo Pulsa.",
         "registrationSource": "Número informado em publicação; conferência individual no PesqEle pendente"
       }
+    ],
+    "BTG/Nexus": [
+      {
+        "name": "BTG/Nexus",
+        "date": "2026-10-13",
+        "field": "10 a 12/10",
+        "f": 52,
+        "l": 48,
+        "n": 2002,
+        "margin": "±2 p.p.",
+        "url": "https://noticias.uol.com.br/eleicoes/2026/10/13/btgnexus-pesquisa-presidencial-segundo-turno.ghtm",
+        "registration": "BR-07997/2026",
+        "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
+        "fieldEnd": "2026-10-12"
+      },
+      {
+        "name": "BTG/Nexus",
+        "date": "2026-10-19",
+        "field": "16 a 18/10",
+        "fieldEnd": "2026-10-18",
+        "f": 50.3,
+        "l": 49.7,
+        "totalF": 46.5,
+        "totalL": 45.9,
+        "n": 2002,
+        "margin": "±2 p.p.",
+        "converted": false,
+        "url": "https://www1.folha.uol.com.br/poder/2026/10/btgnexus-flavio-bolsonaro-tem-503-e-lula-497-dos-votos-validos.shtml",
+        "registration": "BR-04499/2026",
+        "method": "Entrevistas por telefone",
+        "confidence": 95,
+        "sourceType": "Folha de S.Paulo e Band, 19/10/2026; relatório original e conferência direta PesqEle pendentes",
+        "voteBasis": "Votos válidos informados pelo instituto: Flávio 50,3%, Lula 49,7%; votos totais 46,5% e 45,9%.",
+        "additionalSources": [
+          "https://www.band.com.br/politica/eleicoes/btg-nexus-flavio-tem-503-dos-votos-validos-e-lula-497"
+        ],
+        "registrationSource": "BR-04499/2026 informado em reportagens com ficha técnica; PesqEle pendente"
+      }
     ]
   },
   "weights": [
@@ -1302,9 +1327,10 @@
       "date": "2026-10-24",
       "registration": "BR-08234/2026",
       "field": "23 a 24/10",
-      "source": "https://www.metropoles.com/brasil/lula-x-flavio-veja-quando-saem-as-novas-pesquisas-datafolha-quaest-e-mais",
-      "status": "registered",
-      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+      "source": "https://noticias.uol.com.br/eleicoes/2026/10/24/btgnexus-presidencial-segundo-turno-24-de-outubro.ghtm",
+      "status": "published",
+      "note": "Divulgada em 24/10/2026; ficha técnica confirmada em UOL e VEJA, consulta direta ao PesqEle pendente.",
+      "publicationSource": "https://noticias.uol.com.br/eleicoes/2026/10/24/btgnexus-presidencial-segundo-turno-24-de-outubro.ghtm"
     },
     {
       "name": "Palver",
@@ -1646,6 +1672,21 @@
       "source": "https://www.cnnbrasil.com.br/eleicoes/cnt-mda-lula-e-rejeitado-por-474-flavio-por-473/",
       "scope": "second_round",
       "scopeEvidence": "CNN Brasil, 24/10/2026 às 11h24: Flávio 47,3% e Lula 47,4% no item 'não votaria'; percentuais de perguntas individuais, não categorias exclusivas."
+    },
+    {
+      "institute": "BTG/Nexus",
+      "date": "2026-10-24",
+      "field": "23 a 24/10",
+      "f": 46.5,
+      "l": 49.1,
+      "n": 2000,
+      "margin": 2.2,
+      "group": "declared",
+      "question": "Não votaria de jeito nenhum no candidato (rejeição declarada; não exclusiva)",
+      "method": "Entrevistas telefônicas",
+      "registration": "BR-08234/2026",
+      "source": "https://veja.abril.com.br/politica/a-nova-pesquisa-btg-nexus-sobre-a-disputa-flavio-x-lula-a-ultima-antes-do-segundo-turno/",
+      "scope": "second_round"
     }
   ],
   "openVote": [
@@ -2025,6 +2066,19 @@
       "question": "Intenção estimulada do segundo turno: brancos/nulos e não sabe/não respondeu (não confundir com espontânea)",
       "registration": "BR-02136/2026",
       "source": "https://timesbrasil.com.br/brasil/decisao-2026-na-vespera-da-eleicao-flavio-bolsonaro-amplia-vantagem-sobre-lula-e-chega-a-507-dos-votos-validos/"
+    },
+    {
+      "institute": "BTG/Nexus",
+      "date": "2026-10-24",
+      "fieldEnd": "2026-10-24",
+      "blankNull": 5.2,
+      "undecided": 1.8,
+      "registration": "BR-08234/2026",
+      "source": "https://veja.abril.com.br/politica/a-nova-pesquisa-btg-nexus-sobre-a-disputa-flavio-x-lula-a-ultima-antes-do-segundo-turno/",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Intenção estimulada no segundo turno: brancos/nulos 5,2% e não sabe/não respondeu 1,8%, categorias distintas."
     }
   ],
   "experimentalArchive": {
