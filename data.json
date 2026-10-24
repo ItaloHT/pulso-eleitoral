@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261024-ifp-br04863-v1",
+  "revision": "standard-20261024-ifp-accuracy-adjustment-v1",
   "referenceDate": "2026-10-24",
   "publishedAt": "2026-10-24T09:09:51-03:00",
   "polls": [
@@ -2201,12 +2201,14 @@
       },
       {
         "name": "IFP (Instituto França)",
-        "firstRoundMaePp": null,
+        "firstRoundMaePp": 5.3,
         "weightBasis": "quality_accuracy_recency_7d_discrepancy",
         "weightPercent": 3.594258043693321,
         "qualityTier": "C",
         "qualityStatus": "provisional",
-        "accuracyStatus": "missing_neutral"
+        "accuracyStatus": "provisional_single_election_comparison",
+        "originalMaePp": 5.3,
+        "accuracyNote": "Valor pontual de 5,3 p.p. usado provisoriamente no fator de acurácia existente; não representa MAE histórico auditado. Revisar mediante validação documental comparável."
       },
       {
         "name": "Data Ranking",
