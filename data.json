@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261024-datafolha-gerp-v9",
+  "revision": "standard-20261024-quaest-final-v10",
   "referenceDate": "2026-10-24",
-  "publishedAt": "2026-10-24T18:51:00-03:00",
+  "publishedAt": "2026-10-24T19:12:07-03:00",
   "polls": [
     {
       "name": "Palver",
@@ -125,23 +125,6 @@
       "sourceType": "UOL 21/10/2026 07h; corroborado por Folha e Exame",
       "voteBasis": "Votos válidos estimados a partir de totais arredondados",
       "registrationSource": "Registro informado pelo UOL e Exame; ficha individual PesqEle não consultada"
-    },
-    {
-      "name": "Quaest",
-      "date": "2026-10-21",
-      "field": "17 a 20/10",
-      "f": 50.561797752808985,
-      "l": 49.438202247191015,
-      "totalF": 45,
-      "totalL": 44,
-      "n": 2154,
-      "margin": "±2 p.p.",
-      "converted": true,
-      "url": "https://noticias.uol.com.br/eleicoes/2026/10/21/quaest-presidencial-segundo-tuno-21-de-outubro.ghtm",
-      "registration": "BR-08535/2026",
-      "registrationSource": "Número de registro confirmado por UOL, Folha e Money Times; conferência direta no PesqEle pendente",
-      "fieldEnd": "2026-10-20",
-      "method": "Entrevistas presenciais"
     },
     {
       "name": "PoderData/Aya",
@@ -585,6 +568,26 @@
       "registrationSource": "Poder360 e CNN Brasil, 24/10/2026; conferência direta no PesqEle pendente",
       "sourceType": "Poder360 e CNN Brasil, 24/10/2026",
       "converted": false
+    },
+    {
+      "name": "Quaest",
+      "date": "2026-10-24",
+      "field": "23 a 24/10",
+      "fieldEnd": "2026-10-24",
+      "f": 51,
+      "l": 49,
+      "totalF": 46,
+      "totalL": 45,
+      "n": 3702,
+      "margin": "±2 p.p.",
+      "converted": false,
+      "url": "https://noticias.uol.com.br/eleicoes/2026/10/24/quaest-presidencial-segundo-turno-24-de-outubro.ghtm",
+      "registration": "BR-09158/2026",
+      "registrationSource": "Registro informado pelo UOL em 24/10/2026; consulta individual direta ao PesqEle pendente",
+      "method": "Entrevistas presenciais",
+      "confidence": 95,
+      "sourceType": "UOL, divulgação 24/10/2026 às 19h05; levantamento nacional encomendado pela TV Globo",
+      "voteBasis": "Votos válidos 51% e 49% divulgados pelo instituto; totais 46% e 45% divulgados separadamente; sem conversão pelo Pulsa."
     }
   ],
   "history": [
@@ -955,6 +958,23 @@
         "registration": "BR-08729/2026",
         "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
         "fieldEnd": "2026-10-13"
+      },
+      {
+        "name": "Quaest",
+        "date": "2026-10-21",
+        "field": "17 a 20/10",
+        "f": 50.561797752808985,
+        "l": 49.438202247191015,
+        "totalF": 45,
+        "totalL": 44,
+        "n": 2154,
+        "margin": "±2 p.p.",
+        "converted": true,
+        "url": "https://noticias.uol.com.br/eleicoes/2026/10/21/quaest-presidencial-segundo-tuno-21-de-outubro.ghtm",
+        "registration": "BR-08535/2026",
+        "registrationSource": "Número de registro confirmado por UOL, Folha e Money Times; conferência direta no PesqEle pendente",
+        "fieldEnd": "2026-10-20",
+        "method": "Entrevistas presenciais"
       }
     ],
     "Alfa Inteligência": [
@@ -1106,7 +1126,7 @@
     "model": "Modelo padrão: qualidade A/B/C provisória + acurácia moderada + recência de 7 dias",
     "provisional": true,
     "previousDate": "2026-10-13",
-    "newPoll": "Datafolha e Gerp 24/10 substituem as rodadas anteriores; 21 institutos; metodologia padrão preservada.",
+    "newPoll": "Quaest 24/10 incorporada como rodada vigente; histórico preservado; série de média histórica permanece congelada conforme AGENTS.md, e indicadores dinâmicos seguem o cálculo existente em app.js.",
     "sdBetweenInstitutesPp": 0.8042031060086463,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
@@ -1334,11 +1354,12 @@
     {
       "name": "Quaest",
       "date": "2026-10-24",
-      "registration": "A confirmar",
-      "field": "A confirmar",
-      "source": "https://oglobo.globo.com/politica/eleicoes-2026/",
-      "status": "announced",
-      "note": "Data anunciada no calendário de O Globo fornecido pelo usuário; registro e ficha técnica desta rodada ainda não verificados."
+      "registration": "BR-09158/2026",
+      "field": "23 a 24/10",
+      "source": "https://noticias.uol.com.br/eleicoes/2026/10/24/quaest-presidencial-segundo-turno-24-de-outubro.ghtm",
+      "status": "published",
+      "note": "Divulgada em 24/10/2026 às 19h05; registro e ficha técnica confirmados na reportagem do UOL. Conferência direta no PesqEle pendente.",
+      "publicationSource": "https://noticias.uol.com.br/eleicoes/2026/10/24/quaest-presidencial-segundo-turno-24-de-outubro.ghtm"
     },
     {
       "name": "Datafolha",
@@ -2144,6 +2165,19 @@
       "basis": "total_respondents",
       "categoriesExclusive": true,
       "question": "Votos totais estimulados: branco/nulo/não votaria 1%; indecisos 0%."
+    },
+    {
+      "institute": "Quaest",
+      "date": "2026-10-24",
+      "fieldEnd": "2026-10-24",
+      "blankNull": 8,
+      "undecided": 1,
+      "registration": "BR-09158/2026",
+      "source": "https://noticias.uol.com.br/eleicoes/2026/10/24/quaest-presidencial-segundo-turno-24-de-outubro.ghtm",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Intenção estimulada de segundo turno: brancos/nulos 8% e não sabe/não respondeu 1%."
     }
   ],
   "experimentalArchive": {
