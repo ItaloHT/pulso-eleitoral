@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261024-datafolha-precise-v8",
+  "revision": "standard-20261025-futura-open-vote-v9",
   "referenceDate": "2026-10-24",
-  "publishedAt": "2026-10-24T23:20:00-03:00",
+  "publishedAt": "2026-10-25T01:40:00-03:00",
   "polls": [
     {
       "name": "Palver",
@@ -2369,6 +2369,19 @@
       "basis": "total_respondents",
       "categoriesExclusive": true,
       "question": "Intenção estimulada no segundo turno: brancos/nulos 1,43% e não sabe/não respondeu 2,67% da amostra total, categorias exclusivas."
+    },
+    {
+      "institute": "Futura/100% Cidades",
+      "date": "2026-10-24",
+      "fieldEnd": "2026-10-24",
+      "blankNull": 2.3,
+      "undecided": 1.6,
+      "registration": "BR-09726/2026",
+      "source": "https://exame.com/brasil/pesquisa-futura-flavio-bolsonaro-tem-501-e-lula-499-no-2o-turno/",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Intenção de voto estimulada no segundo turno: brancos/nulos 2,3% e indecisos/não respondeu 1,6% da amostra total, mesma rodada BR-09726/2026. Não confundir com espontânea."
     }
   ],
   "experimentalArchive": {
