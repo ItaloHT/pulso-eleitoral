@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261024-quaest-rejection-v5",
+  "revision": "standard-20261024-futura-rejection-series-v6",
   "referenceDate": "2026-10-24",
   "publishedAt": "2026-10-24T23:20:00-03:00",
   "polls": [
@@ -1878,6 +1878,38 @@
       "source": "https://noticias.uol.com.br/eleicoes/2026/10/24/quaest-presidencial-segundo-turno-24-de-outubro.ghtm",
       "scope": "second_round",
       "scopeEvidence": "Cobertura UOL e Folha de 24/10: rejeição de Flávio 49% e de Lula 47%; não misturar com rejeição exclusiva do Datafolha."
+    },
+    {
+      "institute": "Futura/100% Cidades",
+      "date": "2026-10-19",
+      "field": "16 a 17/10",
+      "f": 45.8,
+      "l": 47.4,
+      "registration": "BR-06715/2026",
+      "source": "https://www.cnnbrasil.com.br/eleicoes/futura-474-rejeitam-voto-em-lula-458-em-flavio/",
+      "n": 2000,
+      "margin": 2.2,
+      "group": "declared",
+      "question": "Não votaria de jeito nenhum em cada candidato; rejeição declarada, não exclusiva",
+      "method": "Entrevistas telefônicas (CATI)",
+      "scope": "second_round",
+      "scopeEvidence": "Rejeição individual divulgada pela imprensa; não somar com rejeição a ambos."
+    },
+    {
+      "institute": "Futura/100% Cidades",
+      "date": "2026-10-24",
+      "field": "23 a 24/10",
+      "f": 46.6,
+      "l": 46.2,
+      "registration": "BR-09726/2026",
+      "source": "https://exame.com/brasil/pesquisa-futura-flavio-bolsonaro-tem-501-e-lula-499-no-2o-turno/",
+      "n": 2000,
+      "margin": 2.2,
+      "group": "declared",
+      "question": "Não votaria de jeito nenhum em cada candidato; rejeição declarada, não exclusiva",
+      "method": "Entrevistas telefônicas (CATI)",
+      "scope": "second_round",
+      "scopeEvidence": "Rejeição individual divulgada pela imprensa; não somar com rejeição a ambos."
     }
   ],
   "openVote": [
