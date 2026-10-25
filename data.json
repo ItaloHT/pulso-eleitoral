@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261024-datafolha-rejection-openvote-v13",
+  "revision": "standard-20261024-futura-br09726-v1",
   "referenceDate": "2026-10-24",
   "publishedAt": "2026-10-24T20:31:00-03:00",
   "polls": [
@@ -26,23 +26,27 @@
     },
     {
       "name": "Futura/100% Cidades",
-      "date": "2026-10-21",
-      "field": "19 a 20/10",
-      "fieldEnd": "2026-10-20",
-      "f": 51.1,
-      "l": 48.9,
+      "date": "2026-10-24",
+      "field": "21 a 24/10 (registro TSE); imprensa informa 23 a 24/10",
+      "fieldEnd": "2026-10-24",
+      "f": 50.1,
+      "l": 49.9,
       "n": 2000,
       "margin": "±2,2 p.p.",
-      "url": "https://www.poder360.com.br/poder-pesquisas/flavio-tem-511-dos-votos-validos-contra-489-de-lula-diz-futura/",
-      "registration": "BR-06614/2026",
+      "url": "https://www.cnnbrasil.com.br/eleicoes/futura-flavio-tem-501-dos-votos-validos-no-2o-turno-lula-499/",
+      "registration": "BR-09726/2026",
       "method": "Telefone",
       "confidence": 95,
       "converted": false,
-      "registrationSource": "Registro informado por Poder360, CNN e Exame; consulta direta ao PesqEle pendente",
-      "sourceType": "Poder360, divulgação 21/10/2026",
-      "voteBasis": "Votos válidos publicados; sem conversão.",
-      "totalF": 48.9,
-      "totalL": 46.8
+      "registrationSource": "Registro BR-09726/2026, período previsto 21–24/10 conforme dados abertos TSE; CNN/Exame informam 23–24/10; fim da coleta coincidente",
+      "sourceType": "CNN Brasil 24/10/2026 20h32; Exame 24/10/2026 20h35",
+      "voteBasis": "Votos válidos 50,1% × 49,9%; votos totais 48,2% × 47,9%; brancos/nulos 2,3%, indecisos 1,6%",
+      "totalF": 48.2,
+      "totalL": 47.9,
+      "additionalSources": [
+        "https://exame.com/brasil/pesquisa-futura-flavio-bolsonaro-tem-501-e-lula-499-no-2o-turno/",
+        "https://www.pesquisaeleitoral.com.br/pesquisas/2026/100-cidades-participacoes-br-09726"
+      ]
     },
     {
       "name": "PoderData/Aya",
@@ -121,26 +125,6 @@
       "registrationSource": "Registro informado na divulgação; conferência direta no PesqEle pendente",
       "primaryUrl": "https://www.poder360.com.br/poderdata/flavio-e-lula-empatam-em-50-dos-votos-validos-diz-poderdata-aya/",
       "fieldEnd": "2026-10-15"
-    },
-    {
-      "name": "Futura/100% Cidades",
-      "date": "2026-10-16",
-      "field": "14 a 15/10",
-      "f": 50.8,
-      "l": 49.2,
-      "n": 2000,
-      "margin": "±2,2 p.p.",
-      "url": "https://www.cnnbrasil.com.br/eleicoes/futura-flavio-tem-508-dos-votos-validos-no-2o-turno-lula-492/",
-      "registration": "BR-03764/2026",
-      "method": "Telefone",
-      "confidence": 95,
-      "converted": false,
-      "registrationSource": "Divulgação com número de registro citado; conferência direta no PesqEle pendente",
-      "fieldEnd": "2026-10-15",
-      "totalF": 49,
-      "totalL": 47.5,
-      "sourceType": "CNN Brasil, divulgação 16/10",
-      "voteBasis": "Votos válidos publicados; sem conversão."
     },
     {
       "name": "AtlasIntel",
@@ -701,6 +685,30 @@
         "l": 49.6,
         "url": "https://tmc.com.br/politica/pesquisa-futura-inteliencia-flavio-lidera-segundo-turno-lula/",
         "registration": "BR-06715/2026"
+      },
+      {
+        "date": "2026-10-21",
+        "fieldEnd": "2026-10-20",
+        "f": 51.1,
+        "l": 48.9,
+        "url": "https://www.poder360.com.br/poder-pesquisas/flavio-tem-511-dos-votos-validos-contra-489-de-lula-diz-futura/",
+        "registration": "BR-06614/2026"
+      },
+      {
+        "date": "2026-10-16",
+        "fieldEnd": "2026-10-15",
+        "f": 50.8,
+        "l": 49.2,
+        "url": "https://www.cnnbrasil.com.br/eleicoes/futura-flavio-tem-508-dos-votos-validos-no-2o-turno-lula-492/",
+        "registration": "BR-03764/2026"
+      },
+      {
+        "date": "2026-10-24",
+        "fieldEnd": "2026-10-24",
+        "f": 50.1,
+        "l": 49.9,
+        "url": "https://www.cnnbrasil.com.br/eleicoes/futura-flavio-tem-501-dos-votos-validos-no-2o-turno-lula-499/",
+        "registration": "BR-09726/2026"
       }
     ],
     "Gerp": [
@@ -1158,7 +1166,7 @@
     "model": "Modelo padrão: qualidade A/B/C provisória + acurácia moderada + recência de 7 dias",
     "provisional": true,
     "previousDate": "2026-10-13",
-    "newPoll": "AtlasIntel/Bloomberg 24/10 substitui rodada de 19/10; 21 institutos; pesos padrão preservados.",
+    "newPoll": "Futura/100% Cidades 24/10 BR-09726/2026: 50,1% × 49,9% válidos; substitui 21/10 BR-06614/2026 (51,1% × 48,9%); fim da coleta 24/10; divergência início da coleta documentada; modelo padrão e 20 institutos preservados.",
     "sdBetweenInstitutesPp": 0.7841896026491192,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
