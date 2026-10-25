@@ -1,5 +1,5 @@
 {
-  "revision": "standard-20261024-futura-bonus-150-v7",
+  "revision": "standard-20261024-datafolha-precise-v8",
   "referenceDate": "2026-10-24",
   "publishedAt": "2026-10-24T23:20:00-03:00",
   "polls": [
@@ -480,8 +480,8 @@
       "date": "2026-10-24",
       "field": "23 a 24/10",
       "fieldEnd": "2026-10-24",
-      "f": 51,
-      "l": 49,
+      "f": 50.89,
+      "l": 49.11,
       "totalF": 48,
       "totalL": 47,
       "n": 4050,
@@ -489,10 +489,11 @@
       "registration": "BR-09540/2026",
       "url": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-flavio-bolsonaro-tem-51-dos-votos-validos-e-lula-49-em-empate-tecnico.shtml",
       "method": "Entrevistas presenciais em 124 municípios",
-      "voteBasis": "Votos válidos publicados 51%/49%; votos totais 48%/47%; brancos/nulos 3%; indecisos 2%.",
+      "voteBasis": "Votos válidos sem arredondamento publicados: Flávio 50,89%, Lula 49,11%; arredondados 51%/49%. Votos totais arredondados 48%/47%; brancos/nulos 3%; indecisos 2%.",
       "registrationSource": "Folha de S.Paulo e GZH, 24/10/2026; conferência direta no PesqEle pendente",
       "sourceType": "Datafolha/Folha de S.Paulo, 24/10/2026",
-      "converted": false
+      "converted": false,
+      "precisionSource": "https://www1.folha.uol.com.br/poder/2026/10/datafolha-flavio-bolsonaro-tem-51-dos-votos-validos-e-lula-49-em-empate-tecnico.shtml"
     },
     {
       "name": "Gerp",
@@ -670,6 +671,12 @@
       "f": 50.782926610239834,
       "l": 49.217073389760166,
       "revision": "Bônus editorial Futura (MAE de referência 1,50 p.p.); 20 institutos."
+    },
+    {
+      "date": "2026-10-24",
+      "f": 50.77472817568208,
+      "l": 49.22527182431792,
+      "revision": "Precisão Datafolha 24/10: 50,89%/49,11%; pesos preservados."
     }
   ],
   "instituteHistory": {
@@ -1190,8 +1197,8 @@
     "model": "Modelo padrão: qualidade A/B/C provisória + acurácia moderada + recência de 7 dias",
     "provisional": true,
     "previousDate": "2026-10-13",
-    "newPoll": "Bônus editorial maior de acurácia para Futura/100% Cidades; 20 institutos; nenhuma pesquisa adicionada.",
-    "sdBetweenInstitutesPp": 0.7990219064480202,
+    "newPoll": "Datafolha 24/10 corrigido para votos válidos sem arredondamento (50,89%/49,11%), conforme Folha; pesos e 20 institutos preservados.",
+    "sdBetweenInstitutesPp": 0.7973150547278202,
     "uncertainty": "Faixa ilustrativa ±3 p.p.; não estatística. Desvio padrão entre institutos não é margem de erro."
   },
   "sourcePolicy": {
@@ -2665,7 +2672,7 @@
         "accuracyStatus": "missing_neutral"
       }
     ],
-    "sd": 0.7990219064480202,
+    "sd": 0.7973150547278202,
     "formula": "weight_i ∝ tier_i * (MAE_i null ? 1 : sqrt(2.45/max(1.5,MAE_i))) * 2^(-days_since_field_end/7) * (1-min(.3,.1*max(0,abs(f_i-recency_median)-2.5)))",
     "sensitivityPp": 3,
     "statisticalInterval": false,
