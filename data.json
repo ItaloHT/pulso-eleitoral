@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261025-gerp-complements-v10",
-  "referenceDate": "2026-10-24",
-  "publishedAt": "2026-10-25T01:45:00-03:00",
+  "revision": "standard-20261025-poderdata-25out-v11",
+  "referenceDate": "2026-10-25",
+  "publishedAt": "2026-10-25T02:29:21-03:00",
   "polls": [
     {
       "name": "Palver",
@@ -49,26 +49,6 @@
       ]
     },
     {
-      "name": "PoderData/Aya",
-      "date": "2026-10-19",
-      "field": "16 a 18/10",
-      "fieldEnd": "2026-10-18",
-      "f": 52,
-      "l": 48,
-      "totalF": 49,
-      "totalL": 46,
-      "n": 3000,
-      "margin": "±1,8 p.p.",
-      "converted": false,
-      "url": "https://noticias.uol.com.br/eleicoes/2026/10/19/poderdata-19-outubro.ghtm",
-      "registration": "BR-02586/2026",
-      "method": "Entrevistas telefônicas",
-      "confidence": 95,
-      "sourceType": "UOL, 19/10/2026; ficha técnica na reportagem; consulta direta ao PesqEle pendente",
-      "voteBasis": "Votos válidos 52%/48% informados; votos totais 49%/46% informados (arredondados)",
-      "registrationSource": "Registro BR-02586/2026 informado pelo UOL"
-    },
-    {
       "name": "Indexa/Broadcast",
       "date": "2026-10-22",
       "field": "20 a 21/10",
@@ -111,20 +91,6 @@
       "sourceType": "UOL 21/10/2026 07h; corroborado por Folha e Exame",
       "voteBasis": "Votos válidos estimados a partir de totais arredondados",
       "registrationSource": "Registro informado pelo UOL e Exame; ficha individual PesqEle não consultada"
-    },
-    {
-      "name": "PoderData/Aya",
-      "date": "2026-10-16",
-      "field": "13 a 15/10",
-      "f": 50,
-      "l": 50,
-      "n": 3000,
-      "margin": "±1,8 p.p.",
-      "url": "https://www.poder360.com.br/poderdata/flavio-e-lula-empatam-em-50-dos-votos-validos-diz-poderdata-aya/",
-      "registration": "BR-04258/2026",
-      "registrationSource": "Registro informado na divulgação; conferência direta no PesqEle pendente",
-      "primaryUrl": "https://www.poder360.com.br/poderdata/flavio-e-lula-empatam-em-50-dos-votos-validos-diz-poderdata-aya/",
-      "fieldEnd": "2026-10-15"
     },
     {
       "name": "AtlasIntel",
@@ -247,24 +213,6 @@
       "sourceType": "Phoenix News RO, divulgação 19/10/2026; documentação técnica parcial",
       "voteBasis": "Votos válidos normalizados dos totais; dados de origem sujeitos a conferência",
       "qualityCaveat": "Inclusão editorial autorizada, registro e representatividade nacional pendentes de verificação direta."
-    },
-    {
-      "name": "PoderData/Aya",
-      "date": "2026-10-22",
-      "field": "19 a 21/10",
-      "fieldEnd": "2026-10-21",
-      "f": 51,
-      "l": 49,
-      "n": 4000,
-      "margin": "±1,6 p.p.",
-      "converted": false,
-      "url": "https://noticias.uol.com.br/eleicoes/2026/",
-      "registration": "BR-07926/2026",
-      "method": "Entrevistas telefônicas",
-      "confidence": 95,
-      "sourceType": "UOL e Veja; resultados e registro corroborados por duas fontes jornalísticas; consulta direta ao PesqEle pendente",
-      "voteBasis": "Votos válidos 51%/49% divulgados",
-      "registrationSource": "BR-07926/2026 informado por UOL e Veja; ficha original do PesqEle ainda não consultada"
     },
     {
       "name": "Vox Brasil",
@@ -579,6 +527,27 @@
         "https://exame.com/brasil/pesquisa-verita-flavio-bolsonaro-tem-5156-e-lula-4844-no-2o-turno/"
       ],
       "registrationSource": "BR-03181/2026 informado em R7 e Exame; conferência individual PesqEle pendente"
+    },
+    {
+      "name": "PoderData/Aya",
+      "date": "2026-10-25",
+      "field": "23 a 24/10",
+      "fieldEnd": "2026-10-24",
+      "f": 51,
+      "l": 49,
+      "n": 4000,
+      "margin": "±1,6 p.p.",
+      "converted": false,
+      "url": "https://www.poder360.com.br/poderdata/flavio-tem-51-e-lula-tem-49-dos-votos-validos-diz-poderdata-aya-2/",
+      "registration": "BR-02828/2026",
+      "method": "Entrevistas telefônicas (URA)",
+      "confidence": 95,
+      "sourceType": "Divulgação primária PoderData/Poder360, 25/10/2026 às 0h01; CNN Brasil, 25/10 às 1h34; conferência direta no PesqEle pendente",
+      "voteBasis": "Votos válidos 51%/49% publicados pelo instituto; votos totais e categorias de brancos/nulos/indecisos não confirmados nesta rodada.",
+      "additionalSources": [
+        "https://www.cnnbrasil.com.br/eleicoes/poderdata-aya-flavio-tem-51-dos-votos-validos-no-2o-turno-lula-49-3/"
+      ],
+      "registrationSource": "BR-02828/2026 divulgado por PoderData/Poder360 e CNN Brasil; dados cadastrais corroborados em consulta secundária; verificação direta no PesqEle pendente."
     }
   ],
   "history": [
@@ -692,9 +661,56 @@
         "l": 49
       },
       {
+        "name": "PoderData/Aya",
         "date": "2026-10-16",
+        "field": "13 a 15/10",
         "f": 50,
-        "l": 50
+        "l": 50,
+        "n": 3000,
+        "margin": "±1,8 p.p.",
+        "url": "https://www.poder360.com.br/poderdata/flavio-e-lula-empatam-em-50-dos-votos-validos-diz-poderdata-aya/",
+        "registration": "BR-04258/2026",
+        "registrationSource": "Registro informado na divulgação; conferência direta no PesqEle pendente",
+        "primaryUrl": "https://www.poder360.com.br/poderdata/flavio-e-lula-empatam-em-50-dos-votos-validos-diz-poderdata-aya/",
+        "fieldEnd": "2026-10-15"
+      },
+      {
+        "name": "PoderData/Aya",
+        "date": "2026-10-19",
+        "field": "16 a 18/10",
+        "fieldEnd": "2026-10-18",
+        "f": 52,
+        "l": 48,
+        "totalF": 49,
+        "totalL": 46,
+        "n": 3000,
+        "margin": "±1,8 p.p.",
+        "converted": false,
+        "url": "https://noticias.uol.com.br/eleicoes/2026/10/19/poderdata-19-outubro.ghtm",
+        "registration": "BR-02586/2026",
+        "method": "Entrevistas telefônicas",
+        "confidence": 95,
+        "sourceType": "UOL, 19/10/2026; ficha técnica na reportagem; consulta direta ao PesqEle pendente",
+        "voteBasis": "Votos válidos 52%/48% informados; votos totais 49%/46% informados (arredondados)",
+        "registrationSource": "Registro BR-02586/2026 informado pelo UOL"
+      },
+      {
+        "name": "PoderData/Aya",
+        "date": "2026-10-22",
+        "field": "19 a 21/10",
+        "fieldEnd": "2026-10-21",
+        "f": 51,
+        "l": 49,
+        "n": 4000,
+        "margin": "±1,6 p.p.",
+        "converted": false,
+        "url": "https://noticias.uol.com.br/eleicoes/2026/",
+        "registration": "BR-07926/2026",
+        "method": "Entrevistas telefônicas",
+        "confidence": 95,
+        "sourceType": "UOL e Veja; resultados e registro corroborados por duas fontes jornalísticas; consulta direta ao PesqEle pendente",
+        "voteBasis": "Votos válidos 51%/49% divulgados",
+        "registrationSource": "BR-07926/2026 informado por UOL e Veja; ficha original do PesqEle ainda não consultada"
       }
     ],
     "Futura/100% Cidades": [
@@ -1506,6 +1522,16 @@
       "status": "published",
       "publicationSource": "https://noticias.r7.com/eleicoes/2026/verita-flavio-bolsonaro-tem-5156-dos-votos-validos-e-lula-4844-25102026/",
       "note": "Divulgada em 24/10/2026 às 21h40–21h50; registro e ficha técnica informados por R7 e Exame; consulta direta ao PesqEle pendente."
+    },
+    {
+      "name": "PoderData/Aya",
+      "date": "2026-10-25",
+      "registration": "BR-02828/2026",
+      "field": "23 a 24/10",
+      "source": "https://www.poder360.com.br/poderdata/flavio-tem-51-e-lula-tem-49-dos-votos-validos-diz-poderdata-aya-2/",
+      "status": "published",
+      "publicationSource": "https://www.poder360.com.br/poderdata/flavio-tem-51-e-lula-tem-49-dos-votos-validos-diz-poderdata-aya-2/",
+      "note": "Divulgada às 0h01 de 25/10/2026, 4.000 entrevistas em 914 municípios. Sem novos dados verificáveis de rejeição ou brancos/nulos/indecisos."
     }
   ],
   "rejection": [
@@ -2737,7 +2763,7 @@
     "accuracyFloorPp": 1.5,
     "accuracyExponent": 0.5
   },
-  "dataCutoffDate": "2026-10-24",
+  "dataCutoffDate": "2026-10-25",
   "editorialPolicy": "[object Object] | IFP 20/10: dados divulgados incluídos; link para documento primário e registro TSE pendentes de verificação. Phoenix (19/10) incluída a pedido do editor; fonte divulgadora encontrada, registro BR-08809/2026 não validado diretamente no TSE e ficha técnica nacional incompleta; qualidade C provisória.",
   "standardModelLegacy": {
     "enabled": true,
