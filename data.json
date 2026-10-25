@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261024-restore-oldest-20-v4",
+  "revision": "standard-20261024-quaest-rejection-v5",
   "referenceDate": "2026-10-24",
-  "publishedAt": "2026-10-24T23:15:00-03:00",
+  "publishedAt": "2026-10-24T23:20:00-03:00",
   "polls": [
     {
       "name": "Palver",
@@ -1862,6 +1862,22 @@
       "group": "declared",
       "question": "Não votaria de jeito nenhum em cada candidato, incluindo respostas que rejeitam ambos; não somar à rejeição exclusiva.",
       "scopeEvidence": "Folha 24/10: na pergunta sobre em quem não votaria de forma alguma, 48% citam Flávio e 49% Lula. Valores publicados arredondados; não somar categorias."
+    },
+    {
+      "institute": "Quaest",
+      "date": "2026-10-24",
+      "field": "23 a 24/10",
+      "f": 49,
+      "l": 47,
+      "n": 3702,
+      "margin": 2,
+      "group": "declared",
+      "question": "Não votaria no candidato (rejeição declarada individual, não exclusiva)",
+      "method": "Entrevistas presenciais, abrangência nacional",
+      "registration": "BR-09158/2026",
+      "source": "https://noticias.uol.com.br/eleicoes/2026/10/24/quaest-presidencial-segundo-turno-24-de-outubro.ghtm",
+      "scope": "second_round",
+      "scopeEvidence": "Cobertura UOL e Folha de 24/10: rejeição de Flávio 49% e de Lula 47%; não misturar com rejeição exclusiva do Datafolha."
     }
   ],
   "openVote": [
