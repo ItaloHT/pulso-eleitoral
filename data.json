@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261025-futura-open-vote-v9",
+  "revision": "standard-20261025-gerp-complements-v10",
   "referenceDate": "2026-10-24",
-  "publishedAt": "2026-10-25T01:40:00-03:00",
+  "publishedAt": "2026-10-25T01:45:00-03:00",
   "polls": [
     {
       "name": "Palver",
@@ -1923,6 +1923,25 @@
       "method": "Entrevistas telefônicas (CATI)",
       "scope": "second_round",
       "scopeEvidence": "Rejeição individual divulgada pela imprensa; não somar com rejeição a ambos."
+    },
+    {
+      "institute": "Gerp",
+      "date": "2026-10-24",
+      "field": "22 a 24/10",
+      "f": 45,
+      "l": 48,
+      "both": 2,
+      "neither": 2,
+      "unknown": 3,
+      "n": 2400,
+      "margin": 2,
+      "group": "exclusive",
+      "question": "Resposta única: em qual dos candidatos não votaria de jeito nenhum? Flávio 45%, Lula 48%, não votaria em nenhum 2%, votaria em qualquer um 2%, não sabe 3%. Categorias mutuamente exclusivas, não somar à rejeição declarada individual.",
+      "method": "Entrevistas por telefone em todas as UFs",
+      "registration": "BR-09327/2026",
+      "source": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-52-dos-votos-validos-contra-48-de-lula-diz-gerp/",
+      "scope": "second_round",
+      "scopeEvidence": "Poder360 24/10/2026: distribuição em cinco categorias totaliza 100%; codificada como rejeição exclusiva por resposta única, não comparável diretamente à rejeição declarada individual."
     }
   ],
   "openVote": [
@@ -2382,6 +2401,19 @@
       "basis": "total_respondents",
       "categoriesExclusive": true,
       "question": "Intenção de voto estimulada no segundo turno: brancos/nulos 2,3% e indecisos/não respondeu 1,6% da amostra total, mesma rodada BR-09726/2026. Não confundir com espontânea."
+    },
+    {
+      "institute": "Gerp",
+      "date": "2026-10-24",
+      "fieldEnd": "2026-10-24",
+      "blankNull": 1,
+      "undecided": 3,
+      "registration": "BR-09327/2026",
+      "source": "https://www.poder360.com.br/poder-eleicoes-2026/flavio-tem-52-dos-votos-validos-contra-48-de-lula-diz-gerp/",
+      "scope": "second_round",
+      "basis": "total_respondents",
+      "categoriesExclusive": true,
+      "question": "Intenção estimulada de segundo turno: nenhum dos candidatos 1% (brancos/nulos/nenhum) e não sabe/não respondeu 3%. Percentuais arredondados, somam 99% com votos totais."
     }
   ],
   "experimentalArchive": {
