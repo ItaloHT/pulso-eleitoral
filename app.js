@@ -72,11 +72,11 @@ function liveCountPanel(){return '<section class="card" id="live-count-panel" ar
 function drawLiveCount(){
  const panel=document.getElementById('live-count-panel');if(!panel)return;
  const d=liveCountData;
- panel.innerHTML='<div class="eyebrow">APURAÇÃO OFICIAL · PRESIDENTE · 2º TURNO</div><h2 id="live-count-title">Acompanhe a contagem.</h2><p class="small">Consulta automática a cada 60 segundos enquanto esta página estiver aberta.</p>'+
- (d?`<div class="rejection-scores">${d.candidates.map(c=>`<div><span>${liveEscape(c.name)} · ${liveEscape(c.party)}</span><strong>${fmt(c.percent)}%</strong><span>${fmt(c.votes)} votos</span></div>`).join('')}</div>
+ panel.innerHTML='<div class="eyebrow">APURAÇÃO OFICIAL · PRESIDENTE · 2º TURNO</div><h2 id="live-count-title">Total Brasil</h2><p class="small">Consulta automática a cada 60 segundos enquanto esta página estiver aberta.</p>'+
+ (d?`<div id="national-count-total" style="background:#f0eef9;border:1px solid var(--line);border-radius:14px;padding:18px;margin:18px 0"><span class="small">TOTAL DE VOTOS CONTABILIZADOS · BRASIL + EXTERIOR</span><strong style="display:block;font-size:clamp(30px,7vw,44px);line-height:1.2;margin:8px 0;font-variant-numeric:tabular-nums">${fmt(d.votes)}</strong><span class="small">${fmt(d.valid)} válidos · ${fmt(d.blank)} brancos · ${fmt(d.nullVotes)} nulos</span></div><div class="rejection-scores">${d.candidates.map(c=>`<div><span>${liveEscape(c.name)} · ${liveEscape(c.party)}</span><strong>${fmt(c.percent)}%</strong><span>${fmt(c.votes)} votos</span></div>`).join('')}</div>
  <p><strong>${fmt(d.percent)}% das seções totalizadas</strong> · ${fmt(d.sections)} de ${fmt(d.total)}</p>
  <progress max="100" value="${d.percent}" style="width:100%;accent-color:#7774df" aria-label="Seções totalizadas"></progress>
- <div style="display:flex;flex-wrap:wrap;gap:12px 24px;margin:18px 0;font-size:13px"><span>Votos contabilizados: <strong>${fmt(d.votes)}</strong></span><span>Válidos: <strong>${fmt(d.valid)}</strong></span><span>Brancos: <strong>${fmt(d.blank)}</strong></span><span>Nulos: <strong>${fmt(d.nullVotes)}</strong></span></div>
+ 
  <p class="small">Boletim do TSE: <strong>${liveEscape(d.day)} às ${liveEscape(d.time)}</strong> · horário de Brasília.</p>`:'<p role="status">Aguardando o primeiro boletim oficial validado.</p>')+
  (liveCountError?'<p class="notice" role="status">'+liveEscape(liveCountError)+'</p>':'')+
  '<p class="small">'+(liveCountChecked?'Última consulta bem-sucedida: '+liveEscape(liveCountChecked)+' · Brasília. ':'')+'O TSE pode manter o mesmo boletim entre consultas. Os percentuais representam votos já contabilizados, não chances de vitória. Seções totalizadas não equivalem ao percentual de votos apurados.</p>'+
