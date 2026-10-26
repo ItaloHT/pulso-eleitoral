@@ -186,15 +186,18 @@ function recencyAggregate(){
  return {f,l:100-f,sd,reference,rows,excluded:polls.filter(p=>!rows.some(r=>r.name===p.name)).map(p=>p.name)};
 }
 function instituteAccuracyMarkup(officialF){
- if(!Number.isFinite(officialF))return '<p class="notice">A classificação por proximidade aparecerá após a leitura do boletim oficial do TSE.</p>';
  const cutoff=dataset.dataCutoffDate||dataset.referenceDate;
  const rows=dataset.standardModel.institutes.map(i=>{
   const p=polls.filter(q=>q.name===i.name&&q.date<=cutoff&&q.fieldEnd&&Number.isFinite(q.f)&&Number.isFinite(q.l)).sort((a,b)=>b.fieldEnd.localeCompare(a.fieldEnd)||b.date.localeCompare(a.date))[0];
-  return p?{name:i.name,p,error:Math.abs(p.f-officialF)}:null;
- }).filter(Boolean).sort((a,b)=>a.error-b.error);
- if(!rows.length)return '<p class="notice">Sem rodadas comparáveis.</p>';
- const best=rows[0],tie=rows.filter(r=>Math.abs(r.error-best.error)<0.005);
- return '<div class="election-accuracy"><h3>Qual instituto chegou mais perto?</h3><div class="election-accuracy-winner"><span>Menor erro absoluto na última rodada</span><strong>'+tie.map(r=>liveEscape(r.name)).join(' · ')+'</strong><span>'+fmt(best.error)+' p.p. de erro por candidato em votos válidos</span></div><details><summary>Ver comparação dos '+rows.length+' institutos</summary><div class="table-wrap"><table><thead><tr><th>Instituto</th><th>Última rodada</th><th>Flávio (válidos)</th><th>Erro absoluto</th></tr></thead><tbody>'+rows.map(r=>'<tr><td><a href="'+liveEscape(r.p.url||'#')+'" target="_blank" rel="noopener noreferrer">'+liveEscape(r.name)+'</a>'+(r.p.converted?' <small>(estimado)</small>':'')+'</td><td>'+date(r.p.date)+'</td><td>'+fmt(r.p.f)+'%</td><td>'+fmt(r.error)+' p.p.</td></tr>').join('')+'</tbody></table></div></details><p class="small">Critério: distância absoluta entre a última estimativa de votos válidos de cada instituto e o percentual oficial de Flávio. Em disputa de dois candidatos, o erro absoluto de Lula é equivalente. Resultados convertidos de votos totais são identificados como estimados; não é uma avaliação de intenção ou de desempenho histórico.</p></div>';
+  return {name:i.name,p,error:p&&Number.isFinite(officialF)?Math.abs(p.f-officialF):null};
+ }).sort((a,b)=>(a.error??Infinity)-(b.error??Infinity));
+ const ranked=rows.filter(r=>Number.isFinite(r.error)),best=ranked[0],tie=best?ranked.filter(r=>Math.abs(r.error-best.error)<0.005):[];
+ return '<div class="election-accuracy"><h3>Comparação dos '+rows.length+' institutos</h3>'+
+ (best?'<div class="election-accuracy-winner"><span>Menor erro absoluto na última rodada</span><strong>'+tie.map(r=>liveEscape(r.name)).join(' · ')+'</strong><span>'+fmt(best.error)+' p.p. de erro por candidato em votos válidos</span></div>':'<p class="notice">Aguardando boletim oficial do TSE para ordenar os erros. Todas as últimas rodadas estão listadas abaixo.</p>')+
+ '<p class="small">Última rodada por instituto · votos válidos · ordem '+(best?'do menor para o maior erro':'alfabética/por cadastro')+'. Arraste a tabela horizontalmente no celular.</p>'+
+ '<div class="table-wrap election-accuracy-table"><table><thead><tr><th>#</th><th>Instituto</th><th>Data</th><th>Flávio</th><th>Lula</th><th>Erro (p.p.)</th></tr></thead><tbody>'+
+ rows.map((r,i)=>'<tr><td>'+(Number.isFinite(r.error)?i+1:'—')+'</td><td>'+(r.p?.url?'<a href="'+liveEscape(r.p.url)+'" target="_blank" rel="noopener noreferrer">'+liveEscape(r.name)+'</a>':liveEscape(r.name))+(r.p?.converted?' <small>(estimado)</small>':'')+'</td><td>'+(r.p?date(r.p.date):'—')+'</td><td>'+(r.p?fmt(r.p.f)+'%':'—')+'</td><td>'+(r.p?fmt(r.p.l)+'%':'—')+'</td><td>'+(Number.isFinite(r.error)?fmt(r.error):'Aguardando TSE')+'</td></tr>').join('')+
+ '</tbody></table></div><p class="small">Erro: diferença absoluta entre o percentual de votos válidos da última rodada e o resultado do TSE, por candidato. Pesquisas convertidas de votos totais são marcadas como estimadas. Um erro em uma eleição não comprova viés intencional ou persistente.</p></div>';
 }
 function electionComparisonMarkup(f,l){
  const d=liveCountData,fl=d?.candidates.find(c=>c.number==='22'),lu=d?.candidates.find(c=>c.number==='13');
