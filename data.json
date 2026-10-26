@@ -1,7 +1,7 @@
 {
-  "revision": "standard-20261025-poderdata-25out-v11",
+  "revision": "standard-20261026-simplex-archived-v12",
   "referenceDate": "2026-10-25",
-  "publishedAt": "2026-10-25T02:29:21-03:00",
+  "publishedAt": "2026-10-26T19:26:42-03:00",
   "polls": [
     {
       "name": "Palver",
@@ -548,6 +548,30 @@
         "https://www.cnnbrasil.com.br/eleicoes/poderdata-aya-flavio-tem-51-dos-votos-validos-no-2o-turno-lula-49-3/"
       ],
       "registrationSource": "BR-02828/2026 divulgado por PoderData/Poder360 e CNN Brasil; dados cadastrais corroborados em consulta secundária; verificação direta no PesqEle pendente."
+    },
+    {
+      "name": "Simplex/CBN",
+      "date": "2026-10-24",
+      "field": "19 a 23/10",
+      "fieldEnd": "2026-10-23",
+      "f": 47.7,
+      "l": 52.3,
+      "n": 1200,
+      "margin": "±2,8 p.p.",
+      "converted": false,
+      "url": "https://www.cbnrecife.com/blogdoelielson/2026/10/24/lula-tem-523-flavio-477-dos-votos-validos/",
+      "registration": "BR-01823/2026",
+      "method": "Entrevistas telefônicas; amostragem nacional com distribuição proporcional por UF e região, conforme plano registrado",
+      "confidence": 95,
+      "sourceType": "Divulgação do Blog do Elielson/CBN Recife em 24/10/2026; republicação CBN Recife em 25/10/2026; registro e plano amostral corroborados por base secundária derivada dos dados abertos do TSE; consulta individual direta ao PesqEle indisponível",
+      "voteBasis": "Votos válidos publicados: Flávio 47,7%, Lula 52,3%; votos totais, rejeição, brancos/nulos e indecisos não divulgados nas fontes verificadas.",
+      "additionalSources": [
+        "https://www.cbnrecife.com/2026/10/25/simplex-lula-tem-523-e-flavio-bolsonaro-477-dos-votos-validos/",
+        "https://www.pesquisaeleitoral.com.br/pesquisas/2026/simplex-consultoria-economica-e-empresarial-br-01823"
+      ],
+      "registrationSource": "BR-01823/2026 confirmado na divulgação e em ficha de registro derivada dos dados abertos do TSE; consulta direta ao PesqEle não concluída",
+      "excludeFromCalculations": true,
+      "exclusionReason": "Fora dos 20 institutos previamente parametrizados no modelo padrão; inclusão na média exigiria atribuição editorial nova de qualidade e peso, não autorizada. Preservado como levantamento nacional publicado para consulta e auditoria."
     }
   ],
   "history": [
@@ -1532,6 +1556,16 @@
       "status": "published",
       "publicationSource": "https://www.poder360.com.br/poderdata/flavio-tem-51-e-lula-tem-49-dos-votos-validos-diz-poderdata-aya-2/",
       "note": "Divulgada às 0h01 de 25/10/2026, 4.000 entrevistas em 914 municípios. Sem novos dados verificáveis de rejeição ou brancos/nulos/indecisos."
+    },
+    {
+      "name": "Simplex/CBN",
+      "date": "2026-10-24",
+      "registration": "BR-01823/2026",
+      "field": "19 a 23/10",
+      "source": "https://www.cbnrecife.com/blogdoelielson/2026/10/24/lula-tem-523-flavio-477-dos-votos-validos/",
+      "status": "published",
+      "publicationSource": "https://www.cbnrecife.com/blogdoelielson/2026/10/24/lula-tem-523-flavio-477-dos-votos-validos/",
+      "note": "Divulgação identificada no Blog do Elielson com data 24/10; CBN Recife publicou também em 25/10 às 21h46. Fora da média por não possuir parâmetros de qualidade autorizados no modelo padrão."
     }
   ],
   "rejection": [
