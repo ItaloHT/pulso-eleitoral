@@ -553,3 +553,13 @@ header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:b
 .accuracy-accordion[open]>summary span{transform:rotate(180deg)}
 .accuracy-mobile-list{display:none}
 @media(max-width:680px){.election-accuracy .accuracy-accordion .table-wrap{display:none}.accuracy-mobile-list{display:block;padding:0 14px}.accuracy-mobile-row{padding:15px 0;border-bottom:1px solid var(--line)}.accuracy-mobile-row:last-child{border-bottom:0}.accuracy-mobile-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:6px}.accuracy-mobile-head strong{font-size:14px}.accuracy-mobile-head b{white-space:nowrap;font-size:15px;color:var(--purple-dark)}.accuracy-mobile-row .small{margin-bottom:9px}.accuracy-mobile-row .link{display:inline-block;margin-top:7px}}
+
+/* Acordeões de apuração regional e pesos */
+.regional-accordion,.weights-accordion{border:1px solid var(--line);border-radius:14px;padding:0;margin:14px 0;overflow:hidden}
+.regional-accordion>summary,.weights-accordion>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;list-style:none;cursor:pointer;padding:16px;font-size:16px;font-weight:700;color:var(--purple-dark)}
+.regional-accordion>summary::-webkit-details-marker,.weights-accordion>summary::-webkit-details-marker{display:none}
+.regional-accordion[open]>summary,.weights-accordion[open]>summary{border-bottom:1px solid var(--line)}
+.regional-accordion[open]>summary span,.weights-accordion[open]>summary span{transform:rotate(180deg)}
+.regional-accordion>.small,.regional-accordion>.regional-count-grid,.weights-accordion>.small,.weights-accordion>.weight-legend,.weights-accordion>.weight-comparison,.weights-accordion>.table-wrap,.weights-accordion>.link{margin-left:14px;margin-right:14px}
+.regional-accordion>.regional-count-grid{margin-bottom:14px}
+@media(max-width:680px){.weights-accordion>.table-wrap{display:block;overflow-x:auto}}
