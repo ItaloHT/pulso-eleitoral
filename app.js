@@ -20,7 +20,7 @@ function regionalCountMarkup(){
  <div class="regional-count-grid">${countRegions.map(r=>{
  const d=regionCounts[r.name],error=regionErrors[r.name];
  return `<article class="regional-count-card"><h4>${r.name}</h4>${d?`
- <div class="rejection-scores">${d.candidates.map(c=>`<div><span>${c.number==='13'?'Lula · PT':'Flávio · PL'}</span><strong>${c.percent===null?'—':fmt(c.percent)+'%'}</strong><span>${fmt(c.votes)} votos</span></div>`).join('')}</div>
+ <div class="rejection-scores">${d.candidates.map(c=>`<div><span>${c.number==='13'?'Lula':'Flávio'}</span><strong>${c.percent===null?'—':fmt(c.percent)+'%'}</strong><span>${fmt(c.votes)} votos</span></div>`).join('')}</div>
  <p class="small"><strong>${fmt(d.percent)}% das seções totalizadas</strong><br>${fmt(d.sections)} de ${fmt(d.total)} seções · ${fmt(d.valid)} votos válidos</p>
  <progress value="${d.percent}" max="100" aria-label="Seções totalizadas na região ${r.name}" style="width:100%;accent-color:#7774df"></progress>
  <p class="region-note">Consulta completa: ${liveEscape(d.checked)} · Brasília · ${d.states.length} UFs</p>
