@@ -129,9 +129,7 @@ function chart(){
  if(valid.length<2)return '<p class="notice">Histórico comparável ainda insuficiente. Há '+valid.length+' data(s) calculável(is) com os 18 institutos e a mesma regra de recência de 7 dias. Não ligamos médias de metodologias diferentes nem estimamos valores ausentes.</p>'+(valid.length?'<p class="small">Data comparável disponível: '+valid.map(p=>date(p.date)+': Flávio '+fmt(p.f)+'%, Lula '+fmt(p.l)+'%').join('; ')+'</p>':'');
  return timeChart(valid);
 }
-function sensitivityChart(latest){
-  // Sensitivity scenario, not a confidence interval: shared-error SD of 1.5 pp
-  // plus an approximate combined sampling SE from each institute's published margin.
+function pulsaSensitivityRange(){
   const rec=recencyAggregate();
   const marginValue=p=>{
     const m=String(p.margin||'').match(/±\s*([0-9]+(?:[.,][0-9]+)?)/);
@@ -142,10 +140,16 @@ function sensitivityChart(latest){
     return {weight:r.effective/100,margin:marginValue(p||{})};
   });
   const valid=inputs.length===dataset.standardModel.institutes.length&&inputs.every(r=>Number.isFinite(r.margin)&&r.margin>0);
-  if(!valid)return '<p class="notice">Faixa de sensibilidade indisponível: faltam margens publicadas para todos os institutos.</p>';
+  if(!valid)return null;
   const samplingSE=Math.sqrt(inputs.reduce((sum,r)=>sum+Math.pow(r.weight*r.margin/1.96,2),0));
   const sharedSE=1.5;
-  const range=1.96*Math.hypot(samplingSE,sharedSE);
+  return 1.96*Math.hypot(samplingSE,sharedSE);
+}
+function sensitivityChart(latest){
+  // Sensitivity scenario, not a confidence interval: shared-error SD of 1.5 pp
+  // plus an approximate combined sampling SE from each institute's published margin.
+  const range=pulsaSensitivityRange();
+  if(!Number.isFinite(range))return '<p class="notice">Faixa de sensibilidade indisponível: faltam margens publicadas para todos os institutos.</p>';
   const values=[latest.f,latest.l];
   const axisMin=Math.floor(Math.min(...values)-range-1),axisMax=Math.ceil(Math.max(...values)+range+1);
   const x=n=>((n-axisMin)/(axisMax-axisMin)*100).toFixed(4)+'%';
@@ -211,9 +215,9 @@ function electionComparisonMarkup(f,l){
  const line=(label,a,b,meta)=>'<div class="election-compare-row"><div class="election-compare-label"><strong>'+label+'</strong><span>'+meta+'</span></div><div class="election-compare-bar" role="img" aria-label="'+label+': Flávio '+fmt(a)+' por cento; Lula '+fmt(b)+' por cento"><span style="width:'+a+'%;background:#7774df"></span><span style="width:'+b+'%;background:#f44330"></span></div><div class="election-compare-values"><span>Flávio '+fmt(a)+'%</span><span>Lula '+fmt(b)+'%</span></div></div>';
  const gapPoll=f-l,gapElection=fl&&lu?fl.percent-lu.percent:null;
  const inversion=gapElection!==null&&Math.sign(gapPoll)!==Math.sign(gapElection)&&Math.abs(gapPoll)>0.01&&Math.abs(gapElection)>0.01;
- const error=fl&&lu?Math.abs(fl.percent-f):null; const gapError=gapElection===null?null:Math.abs(gapPoll-gapElection);
+ const error=fl&&lu?Math.abs(fl.percent-f):null; const pulsaRange=pulsaSensitivityRange(); const pulsaStatus=error===null||!Number.isFinite(pulsaRange)?'Faixa indisponível':error<=pulsaRange?'Dentro da faixa de sensibilidade':'Fora da faixa de sensibilidade'; const pulsaClass=error===null||!Number.isFinite(pulsaRange)?'unknown':error<=pulsaRange?'inside':'outside'; const gapError=gapElection===null?null:Math.abs(gapPoll-gapElection);
  return '<section class="card election-compare" id="election-comparison" aria-labelledby="election-compare-title"><div class="eyebrow">AUDITORIA · PESQUISAS × URNAS</div><h2 id="election-compare-title">O erro das pesquisas em 2026</h2>'+
- (error!==null?'<div class="election-error-highlight"><strong>'+fmt(error)+' p.p. por candidato</strong><div><strong class="margin-status margin-status-unknown">Pulsa: sem margem de erro estatística validada</strong></div><span>de erro absoluto da média ponderada em votos válidos, mesma medida do ranking dos institutos. Diferença entre vantagens: '+fmt(gapError)+' p.p.</span>'+(inversion?'<b>A média indicou a ordem inversa do resultado eleitoral.</b>':'')+'</div>':'<p class="notice">Aguardando dados oficiais para calcular a dimensão do erro.</p>')+
+ (error!==null?'<div class="election-error-highlight"><strong>'+fmt(error)+' p.p. por candidato</strong><div><strong class="margin-status margin-status-'+pulsaClass+'">Pulsa: '+pulsaStatus+(Number.isFinite(pulsaRange)?' (±'+fmt(pulsaRange)+' p.p.)':'')+'</strong></div><span>de erro absoluto da média ponderada em votos válidos, mesma medida do ranking dos institutos. A faixa do Pulsa é de sensibilidade, não margem de erro estatística validada. Diferença entre vantagens: '+fmt(gapError)+' p.p.</span>'+(inversion?'<b>A média indicou a ordem inversa do resultado eleitoral.</b>':'')+'</div>':'<p class="notice">Aguardando dados oficiais para calcular a dimensão do erro.</p>')+
  '<p class="small">Comparação em votos válidos, na mesma escala de 0 a 100%. Roxo: Flávio Bolsonaro. Vermelho: Lula.</p>'+
  line('Média final das pesquisas',f,l,'Modelo padrão do Pulsa · corte '+date(dataset.dataCutoffDate||dataset.referenceDate)+'/2026')+
  (fl&&lu?line('Resultado da eleição',fl.percent,lu.percent,fmt(d.percent)+'% das seções totalizadas · boletim '+liveEscape(d.day)+' às '+liveEscape(d.time)):'<p class="notice">Aguardando dados oficiais do TSE para exibir a segunda barra.</p>')+
