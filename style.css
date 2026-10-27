@@ -576,3 +576,7 @@ header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:b
 .margin-status-inside{color:#77737d;background:none}
 .margin-status-outside{color:#c0392b;background:none}
 .margin-status-unknown{color:#77737d;background:none}
+
+/* Status do Pulsa: menor que o erro principal e sem vermelho quando dentro */
+.election-error-highlight .pulsa-range-status{display:block;font-size:clamp(14px,3.5vw,18px);font-weight:700;line-height:1.4;margin-top:8px;color:#77737d}
+.election-error-highlight .pulsa-range-status.margin-status-outside{color:#c0392b}
