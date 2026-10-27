@@ -563,3 +563,10 @@ header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:b
 .regional-accordion>.small,.regional-accordion>.regional-count-grid,.weights-accordion>.small,.weights-accordion>.weight-legend,.weights-accordion>.weight-comparison,.weights-accordion>.table-wrap,.weights-accordion>.link{margin-left:14px;margin-right:14px}
 .regional-accordion>.regional-count-grid{margin-bottom:14px}
 @media(max-width:680px){.weights-accordion>.table-wrap{display:block;overflow-x:auto}}
+
+/* Situação frente à margem amostral publicada */
+.margin-status{display:inline-block;font-weight:800;font-size:12px;line-height:1.4;padding:4px 8px;border-radius:7px;white-space:normal}
+.margin-status-inside{color:#17663c;background:#e6f4ea}
+.margin-status-outside{color:#a62920;background:#fff0ec}
+.margin-status-unknown{color:#625c6c;background:#eeeaf2}
+.election-error-highlight .margin-status{margin-top:10px}
