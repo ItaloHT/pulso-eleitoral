@@ -580,3 +580,7 @@ header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:b
 /* Status do Pulsa: menor que o erro principal e sem vermelho quando dentro */
 .election-error-highlight .pulsa-range-status{display:block;font-size:clamp(14px,3.5vw,18px);font-weight:700;line-height:1.4;margin-top:8px;color:#77737d}
 .election-error-highlight .pulsa-range-status.margin-status-outside{color:#c0392b}
+
+/* Prioridade explícita para status no ranking mobile */
+.election-accuracy .accuracy-mobile-row .small strong.margin-status-outside,.election-accuracy .election-accuracy-winner strong.margin-status-outside{color:#c0392b;font-weight:800}
+.election-accuracy .accuracy-mobile-row .small strong.margin-status-inside,.election-accuracy .election-accuracy-winner strong.margin-status-inside{color:#77737d;font-weight:800}
