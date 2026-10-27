@@ -584,3 +584,6 @@ header .brand-dot{clip-path:circle(50% at 50% 50%);border-radius:50%;animation:b
 /* Prioridade explícita para status no ranking mobile */
 .election-accuracy .accuracy-mobile-row .small strong.margin-status-outside,.election-accuracy .election-accuracy-winner strong.margin-status-outside{color:#c0392b;font-weight:800}
 .election-accuracy .accuracy-mobile-row .small strong.margin-status-inside,.election-accuracy .election-accuracy-winner strong.margin-status-inside{color:#77737d;font-weight:800}
+
+/* Ranking: hierarquia tipográfica do status de margem no destaque */
+.election-accuracy-winner .margin-status{font-size:clamp(13px,3.2vw,16px);line-height:1.4;font-weight:700}
