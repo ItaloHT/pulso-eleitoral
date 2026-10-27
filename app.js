@@ -187,17 +187,21 @@ function recencyAggregate(){
 }
 function instituteAccuracyMarkup(officialF){
  const cutoff=dataset.dataCutoffDate||dataset.referenceDate;
- const rows=dataset.standardModel.institutes.map(i=>{
-  const p=polls.filter(q=>q.name===i.name&&q.date<=cutoff&&q.fieldEnd&&Number.isFinite(q.f)&&Number.isFinite(q.l)).sort((a,b)=>b.fieldEnd.localeCompare(a.fieldEnd)||b.date.localeCompare(a.date))[0];
-  return {name:i.name,p,error:p&&Number.isFinite(officialF)?Math.abs(p.f-officialF):null};
- }).sort((a,b)=>(a.error??Infinity)-(b.error??Infinity));
+ const latest=new Map();
+ polls.filter(p=>p.date<=cutoff&&Number.isFinite(p.f)&&Number.isFinite(p.l)).forEach(p=>{
+  const prev=latest.get(p.name);
+  if(!prev||(p.fieldEnd||p.date)>(prev.fieldEnd||prev.date)||((p.fieldEnd||p.date)===(prev.fieldEnd||prev.date)&&p.date>prev.date))latest.set(p.name,p);
+ });
+ const rows=[...latest.values()].map(p=>({name:p.name,p,error:Number.isFinite(officialF)?Math.abs(p.f-officialF):null}))
+  .sort((a,b)=>Number.isFinite(a.error)&&Number.isFinite(b.error)?a.error-b.error||a.name.localeCompare(b.name,'pt-BR'):a.name.localeCompare(b.name,'pt-BR'));
  const ranked=rows.filter(r=>Number.isFinite(r.error)),best=ranked[0],tie=best?ranked.filter(r=>Math.abs(r.error-best.error)<0.005):[];
- return '<div class="election-accuracy"><h3>Comparação dos '+rows.length+' institutos</h3>'+
- (best?'<div class="election-accuracy-winner"><span>Menor erro absoluto na última rodada</span><strong>'+tie.map(r=>liveEscape(r.name)).join(' · ')+'</strong><span>'+fmt(best.error)+' p.p. de erro por candidato em votos válidos</span></div>':'<p class="notice">Aguardando boletim oficial do TSE para ordenar os erros. Todas as últimas rodadas estão listadas abaixo.</p>')+
- '<p class="small">Última rodada por instituto · votos válidos · ordem '+(best?'do menor para o maior erro':'alfabética/por cadastro')+'. Arraste a tabela horizontalmente no celular.</p>'+
- '<div class="table-wrap election-accuracy-table"><table><thead><tr><th>#</th><th>Instituto</th><th>Data</th><th>Flávio</th><th>Lula</th><th>Erro (p.p.)</th></tr></thead><tbody>'+
- rows.map((r,i)=>'<tr><td>'+(Number.isFinite(r.error)?i+1:'—')+'</td><td>'+(r.p?.url?'<a href="'+liveEscape(r.p.url)+'" target="_blank" rel="noopener noreferrer">'+liveEscape(r.name)+'</a>':liveEscape(r.name))+(r.p?.converted?' <small>(estimado)</small>':'')+'</td><td>'+(r.p?date(r.p.date):'—')+'</td><td>'+(r.p?fmt(r.p.f)+'%':'—')+'</td><td>'+(r.p?fmt(r.p.l)+'%':'—')+'</td><td>'+(Number.isFinite(r.error)?fmt(r.error):'Aguardando TSE')+'</td></tr>').join('')+
- '</tbody></table></div><p class="small">Erro: diferença absoluta entre o percentual de votos válidos da última rodada e o resultado do TSE, por candidato. Pesquisas convertidas de votos totais são marcadas como estimadas. Um erro em uma eleição não comprova viés intencional ou persistente.</p></div>';
+ const bar=r=>Number.isFinite(r.error)?'<div style="height:7px;background:var(--line);border-radius:6px;min-width:72px;overflow:hidden"><span style="display:block;height:100%;width:'+Math.min(100,r.error/10*100)+'%;background:#7774df"></span></div>':'—';
+ return '<div class="election-accuracy"><h3>Ranking de precisão: '+rows.length+' institutos</h3>'+
+ (best?'<div class="election-accuracy-winner"><span>Menor erro absoluto na última rodada</span><strong>'+tie.map(r=>liveEscape(r.name)).join(' · ')+'</strong><span>'+fmt(best.error)+' p.p. por candidato em votos válidos</span></div>':'<p class="notice">Aguardando boletim oficial do TSE para ordenar os erros. Todas as últimas rodadas estão listadas abaixo.</p>')+
+ '<p class="small">Todos os institutos cadastrados, inclusive os excluídos da média. Última rodada divulgada até a votação, sem duplicar institutos. Ordem do menor para o maior erro quando houver resultado oficial. Arraste a tabela no celular.</p>'+
+ '<div class="table-wrap election-accuracy-table"><table><thead><tr><th>#</th><th>Instituto</th><th>Pesquisa</th><th>Flávio</th><th>Lula</th><th>Erro</th><th>Visualização</th></tr></thead><tbody>'+
+ rows.map((r,i)=>'<tr><td>'+(Number.isFinite(r.error)?i+1:'—')+'</td><td>'+(r.p.url?'<a href="'+liveEscape(r.p.url)+'" target="_blank" rel="noopener noreferrer">'+liveEscape(r.name)+'</a>':liveEscape(r.name))+(r.p.converted?' <small>(estimado)</small>':'')+(r.p.excludeFromCalculations?' <small>(fora da média)</small>':'')+'</td><td>'+date(r.p.date)+'</td><td>'+fmt(r.p.f)+'%</td><td>'+fmt(r.p.l)+'%</td><td>'+(Number.isFinite(r.error)?fmt(r.error)+' p.p.':'Aguardando TSE')+'</td><td>'+bar(r)+'</td></tr>').join('')+
+ '</tbody></table></div><p class="small">Erro absoluto em pontos percentuais entre votos válidos da última pesquisa e resultado oficial, por candidato. A escala visual vai de 0 a 10 p.p. e é limitada em 10 p.p. Pesquisas convertidas de votos totais são estimativas. Uma única eleição não comprova viés intencional.</p></div>';
 }
 function electionComparisonMarkup(f,l){
  const d=liveCountData,fl=d?.candidates.find(c=>c.number==='22'),lu=d?.candidates.find(c=>c.number==='13');
